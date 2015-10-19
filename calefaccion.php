@@ -294,7 +294,7 @@
        echo "<form method=\"post\" >";
        echo "<input type=\"text\" name=\"detalle_prod\" value=\"$detalle\" hidden=hidden>";
 						//echo "<li><a name=\"$detalle\" href=\"detalle-producto.php\" class=\"precio--detail-ver\">ver detalle</a></li>";
-       echo "<li><button type=\"submit\" formaction=\"detalle-producto.php\">Detalle Producto</button></li>";
+       echo "<li><button type=\"submit\" formaction=\"detalle-producto.php\">ver detalle</button></li>";
        echo "</form>";
        echo "</ul>";
        echo "</div>";

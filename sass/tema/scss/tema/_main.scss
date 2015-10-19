@@ -1,3 +1,7 @@
+*{
+	outline: none;
+}
+
 #logos_juntos_home{
 	text-align:center;
 	margin: 10px 0px;
@@ -43,25 +47,25 @@
 
 	}
 	.buscar_search{
-		width: 5%;
-		border: 0px none;
-		background: #E65524 url("../img/search.png") no-repeat scroll center center;
-		padding: 0.4em;
-		margin-left: -5px;
-		color: #FFF;
-		margin-bottom: 15px;
-		height: 16px;
-		position: relative;
-		top: -6px;
-		height: 33px;
+		// width: 5%;
+		// border: 0px none;
+		// background: #E65524 url("../img/search.png") no-repeat scroll center center;
+		// padding: 0.4em;
+		// margin-left: -5px;
+		// color: #FFF;
+		// margin-bottom: 15px;
+		// height: 16px;
+		// position: relative;
+		// top: -6px;
+		// height: 33px;
 
 		// @include desde(movil){
 		// 	width: 30%;
 		// }
 
 	}
-}
 
+}
 //buscador initerior
 
 .buscar--interior{
@@ -76,6 +80,8 @@
     	-webkit-border-radius: 0;
     	padding:8px;
 		margin-left: 8px;
+		float: left;
+		display: block;
 		// @include desde(web){
 		// 	width: 81%;
 		// 	height: 30px;
@@ -89,14 +95,14 @@
 	    padding: 0.4em;
 	    margin-left: -5px;
 	    height: 33px;
-	    position: relative;
-	    top: 6px;
-
+	    display: block;
+	    // position: relative;
+	    // top: 6px;
 		// @include desde(movil){
 		// 	width: 30%;
 		// }
-
 	}
+
 }
 
 
@@ -108,6 +114,10 @@
 	margin:0px 0px;
 	p.cotizaciones{
 		padding: 0 10px;
+		a{
+		color: #000;
+		text-decoration: none;
+		}
 	}
 }
 span.numero--items{
@@ -147,6 +157,12 @@ section.margen-top{
 	color: $color-corporativo;
 	font-size:0.8em;
 	overflow:hidden;
+	form li button{
+		border: none;
+		background: transparent;
+		text-transform: uppercase;
+		padding:0;
+	}
 }
 
 .filtro{
@@ -205,12 +221,17 @@ section.margen-top{
 	}
 		li{
 			display: inline-block;
-			padding: 0 12px;
+			//padding: 0 12px;
+			padding: 0 8px;
 			border-right: 1px solid $color-corporativo;
 			&:last-child{
 				margin-right: 0;
 				border-right:0;
 			}
+		}
+
+		form{
+			padding:0;
 		}
 			a{
 				color: $color-corporativo;
@@ -331,7 +352,8 @@ section.margen-top{
 		width: 100%;
 		padding:8px;
 		background: $color-corporativo;
-		margin-top: 8px;		
+		margin-top: 8px;
+		overflow: hidden;		
 		ul{
 			margin: 0;
 			padding:0;
@@ -339,7 +361,7 @@ section.margen-top{
 		li{
 			display: inline-block;
 			border-right: 1px solid #fff;
-			padding-right: 20%;
+			padding-right: 10%;
 				&:last-child{
 					padding-right: 0;
 					border-right:none;
@@ -348,13 +370,18 @@ section.margen-top{
 					color: #fff;
 				}
 		}
-		a.precio--detail-ver{
+		form{
+			float: right;
+		}
+		button{
 			color:#fff;
-			margin-left:18px; 
-			text-decoration: none;
+			border:none;
+			background:transparent;
+			//margin-left:18px; 
+			//text-decoration: none;
 			font-weight: bold;
 			-webkit-font-smoothing: antialiased;
-			    -moz-osx-font-smoothing: grayscale;
+			-moz-osx-font-smoothing: grayscale;
 			&:hover{
 				text-decoration: underline;
 			}
@@ -522,7 +549,7 @@ section.margen-top{
 		width: 50%;
 		height: auto;
 		float: left;
-		border-right:1px solid $color-corporativo;
+		border-left:1px solid $color-corporativo;
 		padding: 0px 10px;
 		&:last-child{
 			border-right: none;
@@ -537,6 +564,8 @@ section.margen-top{
 	.bor{
 		padding-left:30px !important;
 	}
+	.border-none{
+		border-left:0;	}
 	
 		p.resena{
 			color: $gris-corporativo;
@@ -557,19 +586,33 @@ section.margen-top{
 				margin-top: 0px;
 				margin-bottom: 5px;
 			}
-		.btn--cotizar--p{
-			padding: 10px 90px;
-			background: $color-corporativo;
-			color: #fff;
-			text-transform: uppercase;
-			text-align: center;
-			font-size: 0.8em;
-			text-decoration: none;
-			float: left;
-			&:hover{
-				background: $gris-corporativo;
+		// .btn--cotizar--p{
+		// 	padding: 10px 90px;
+		// 	background: $color-corporativo;
+		// 	color: #fff;
+		// 	text-transform: uppercase;
+		// 	text-align: center;
+		// 	font-size: 0.8em;
+		// 	text-decoration: none;
+		// 	float: left;
+		// 	&:hover{
+		// 		background: $gris-corporativo;
+		// 	}
+		// }
+		button{
+				padding: 10px 90px;
+				background: $color-corporativo;
+				color: #fff;
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 0.8em;
+				text-decoration: none;
+				float: left;
+				border:none;
+				&:hover{
+					background: $gris-corporativo;
+				}
 			}
-		}
 
 	p.caracteristicas--titulo{
 		color: $gris-corporativo;

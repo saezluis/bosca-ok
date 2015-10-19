@@ -333,7 +333,7 @@
 		
 		//Aqui oculto el boton detalle en caso de que sea un accesorio de parrilla
 		if($variable!='valor3'){
-			echo "<li><button type=\"submit\" formaction=\"detalle-parrilla.php\">Detalle Producto</button></li>";
+			echo "<li><button type=\"submit\" formaction=\"detalle-parrilla.php\">ver detalle</button></li>";
 		}
 		if($variable=='valor3'){
 			echo "<li><button type=\"submit\" formaction=\"cotizar.php\">Cotizar</button></li>";

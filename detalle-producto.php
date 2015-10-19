@@ -152,7 +152,7 @@ session_start();
       <div class="caja movil-60">
         <div class="full--ficha-datos">
           <div class="logo-marca"><img src="img/mini-bosca.png"></div>
-          <div class="caracteristicas--producto"><img src="img/ecoflame360.png">
+          <div class="caracteristicas--producto border-none"><img src="img/ecoflame360.png">
             <p class="sku">SKU: <?php echo $sku; ?></p>
             <p class="resena"><?php echo $ventaja_comparativa; ?></p>
             <div class="box-in">

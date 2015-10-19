@@ -1492,6 +1492,9 @@ h1 {
 
   #footer .sociales {
     text-align: right; } }
+* {
+  outline: none; }
+
 #logos_juntos_home {
   text-align: center;
   margin: 10px 0px; }
@@ -1525,18 +1528,6 @@ h1 {
     .buscar input {
       width: 81%;
       height: 30px; } }
-.buscar .buscar_search {
-  width: 5%;
-  border: 0px none;
-  background: #E65524 url("../img/search.png") no-repeat scroll center center;
-  padding: 0.4em;
-  margin-left: -5px;
-  color: #FFF;
-  margin-bottom: 15px;
-  height: 16px;
-  position: relative;
-  top: -6px;
-  height: 33px; }
 
 .buscar--interior {
   width: 100%;
@@ -1549,7 +1540,9 @@ h1 {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
     padding: 8px;
-    margin-left: 8px; }
+    margin-left: 8px;
+    float: left;
+    display: block; }
   .buscar--interior .search--buscar--interior {
     width: 5%;
     border: 0px none;
@@ -1557,8 +1550,7 @@ h1 {
     padding: 0.4em;
     margin-left: -5px;
     height: 33px;
-    position: relative;
-    top: 6px; }
+    display: block; }
 
 #cotizar {
   font-size: 0.8em;
@@ -1566,6 +1558,9 @@ h1 {
   margin: 0px 0px; }
   #cotizar p.cotizaciones {
     padding: 0 10px; }
+    #cotizar p.cotizaciones a {
+      color: #000;
+      text-decoration: none; }
 
 span.numero--items {
   width: 50%;
@@ -1613,6 +1608,11 @@ section.margen-top {
   color: #E65524;
   font-size: 0.8em;
   overflow: hidden; }
+  .filtro form li button, .buscar_precio form li button {
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 0; }
 
 .filtro {
   width: auto; }
@@ -1658,11 +1658,13 @@ select.orden {
     padding: 0px; }
   .filtro li {
     display: inline-block;
-    padding: 0 12px;
+    padding: 0 8px;
     border-right: 1px solid #E65524; }
     .filtro li:last-child {
       margin-right: 0;
       border-right: 0; }
+  .filtro form {
+    padding: 0; }
   .filtro a {
     color: #E65524;
     text-decoration: none; }
@@ -1749,27 +1751,30 @@ select.orden {
     width: 100%;
     padding: 8px;
     background: #E65524;
-    margin-top: 8px; }
+    margin-top: 8px;
+    overflow: hidden; }
     .box--productos .caja--precio--detalle ul {
       margin: 0;
       padding: 0; }
     .box--productos .caja--precio--detalle li {
       display: inline-block;
       border-right: 1px solid #fff;
-      padding-right: 20%; }
+      padding-right: 10%; }
       .box--productos .caja--precio--detalle li:last-child {
         padding-right: 0;
         border-right: none; }
       .box--productos .caja--precio--detalle li p.precio--detail {
         color: #fff; }
-    .box--productos .caja--precio--detalle a.precio--detail-ver {
+    .box--productos .caja--precio--detalle form {
+      float: right; }
+    .box--productos .caja--precio--detalle button {
       color: #fff;
-      margin-left: 18px;
-      text-decoration: none;
+      border: none;
+      background: transparent;
       font-weight: bold;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
-      .box--productos .caja--precio--detalle a.precio--detail-ver:hover {
+      .box--productos .caja--precio--detalle button:hover {
         text-decoration: underline; }
 
 .full--ficha {
@@ -1888,7 +1893,7 @@ select.orden {
     width: 50%;
     height: auto;
     float: left;
-    border-right: 1px solid #E65524;
+    border-left: 1px solid #E65524;
     padding: 0px 10px; }
     .full--ficha-datos .caracteristicas--producto:last-child {
       border-right: none; }
@@ -1897,6 +1902,8 @@ select.orden {
       font-size: 0.8em; }
   .full--ficha-datos .bor {
     padding-left: 30px !important; }
+  .full--ficha-datos .border-none {
+    border-left: 0; }
   .full--ficha-datos p.resena {
     color: #53534A;
     font-size: 0.85em; }
@@ -1911,7 +1918,7 @@ select.orden {
     color: #E65524;
     margin-top: 0px;
     margin-bottom: 5px; }
-  .full--ficha-datos .btn--cotizar--p {
+  .full--ficha-datos button {
     padding: 10px 90px;
     background: #E65524;
     color: #fff;
@@ -1919,8 +1926,9 @@ select.orden {
     text-align: center;
     font-size: 0.8em;
     text-decoration: none;
-    float: left; }
-    .full--ficha-datos .btn--cotizar--p:hover {
+    float: left;
+    border: none; }
+    .full--ficha-datos button:hover {
       background: #53534A; }
   .full--ficha-datos p.caracteristicas--titulo {
     color: #53534A;
