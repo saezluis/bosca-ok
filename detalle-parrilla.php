@@ -1,3 +1,17 @@
+<?php
+// Start the session
+session_start();
+
+// if counter is not set, set to zero
+if(!isset($_SESSION['counter'])) {
+    $_SESSION['counter'] = 0;
+}
+
+// if button is pressed, increment counter
+if(isset($_POST['cotizar_prod'])) {
+    ++$_SESSION['counter'];
+}	
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -13,9 +27,50 @@
     <script src="owl-carousel/owl.carousel.min.js"></script>
     <script src="sass/tema/js/jquery.isotope.js"></script>
     <script src="sass/tema/js/jquery.elevatezoom.js"></script>
+	
+	<script type="text/javascript">
+
+	function mensajeCotizar(){
+	  
+		alert( "El producto fue agregado con exito a la cotización" );
+		
+	}
+
+  </script>
+	
   </head>
   <body>
 	<?php
+	
+	@$_SESSION["var"] = @$_SESSION["var"] + 1;
+	$itemID = $_SESSION["var"];
+		
+	
+	/*
+	if(@$_REQUEST['cotizar_prod']!=''){
+		$can_coti = $can_coti + 1;
+		echo "Entro al contador";
+		echo "<br>";
+	}
+	*/
+	//echo "esto lleva itemID: ".$itemID; - PARA CONTROL -
+	
+	//Creo el arreglo de variables de sesion
+	if (!isset($_SESSION['items'])) {
+		$_SESSION['items'] = array();
+	}
+	
+	//Agrego items cada vez que la pagina refresca y solo recibe SKU cuando el usuario presiona cotizar
+	$_SESSION['items'][$itemID] = array('Detalle' => @$_REQUEST['cotizar_prod']);
+	
+	//Esto me trae la cantidad de valores en el arreglo
+	$cantidad = count($_SESSION['items']);
+	
+	//Envio el total de valores del arreglo por variables de sesion
+	$_SESSION['tope'] = $cantidad;
+	
+	//Aqui comieza el resto del programa	
+	
 	
 	if(isset($_REQUEST['detalle_prod'])){
 		$detalle_producto = $_REQUEST['detalle_prod'];
@@ -44,7 +99,7 @@
 		$material = $reg['material'];	
 		$precio = $reg['precio'];
 		$modelo = $reg['modelo'];
-		$foto = $reg['foto'];
+		$foto = $reg['foto_producto'];
 		//$dimension = $reg['dimensiones'];	
 		//$diametro = $reg['diametro_canon'];	
 		//$garantia = $reg['garantia'];	
@@ -114,7 +169,7 @@
       </div>
       <div class="caja movil-50 tablet-30 web-20">
         <div id="cotizar">
-          <p class="cotizaciones">Cotizaciones <span class="numero--items">15 </span>ítems</p>
+          <p class="cotizaciones"> <a href="cotizacion.php"> Cotizaciones </a> <span class="numero--items"> <?php echo $_SESSION['counter']; ?> </span>ítems</p>
         </div>
       </div>
     </section>
@@ -154,7 +209,17 @@
             <p class="resena"><?php echo @$ventaja_comparativa; ?></p>
             <div class="box-in">
               <p class="total--precio">Precio</p>
-              <p class="total--cash">$ <?php echo number_format($precio,0, '.', '.'); ?></p><a href="cotizacion.html" class="btn--cotizar--p">cotizar</a>
+              <p class="total--cash">$ <?php echo number_format($precio,0, '.', '.'); ?></p>
+			  
+			  <form method="post">
+			 <?php 
+				echo "<button type=\"submit\" onclick=\"return(mensajeCotizar())\" name=\"cotizar_prod\" value=\"$sku\">cotizar</button>";
+				echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$sku\">";
+			  ?>			  
+			 </form>
+			  <!--
+			  <a href="cotizacion.html" class="btn--cotizar--p">cotizar</a>
+			  -->
             </div>
           </div>
 		  

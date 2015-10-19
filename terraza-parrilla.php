@@ -1,3 +1,17 @@
+<?php
+// Start the session
+session_start();
+
+// if counter is not set, set to zero
+if(!isset($_SESSION['counter'])) {
+    $_SESSION['counter'] = 0;
+}
+
+// if button is pressed, increment counter
+if(isset($_POST['cotizar_prod'])) {
+    ++$_SESSION['counter'];
+}    
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,6 +25,16 @@
   <script src="sass/tema/js/scripts.js"></script>
   <script src="owl-carousel/owl.carousel.min.js"></script>
   <script src="sass/tema/js/jquery.isotope.js"></script>
+  
+  <script type="text/javascript">
+
+	function mensajeCotizar(){
+	  
+		alert( "El producto fue agregado con exito a la cotización" );
+		
+	}
+
+  </script>
   
   <script type="text/javascript">
   <!--
@@ -233,7 +257,7 @@
     </div>
     <div class="caja movil-50 tablet-30 web-20">
       <div id="cotizar">
-        <p class="cotizaciones">Cotizaciones <span class="numero--items">15 </span>ítems</p>
+        <p class="cotizaciones"><a href="cotizacion.php"> Cotizaciones </a> <span class="numero--items"> <?php echo $_SESSION['counter']; ?> </span>ítems</p>
       </div>
     </div>
   </section>
@@ -313,7 +337,7 @@
        
        echo "<div class=\"imagen--productos electrico\">";
        echo "<div class=\"logo--marca--float\"><img src=\"img2/".$reg['logo_up_left']."\"></div>";
-       echo "<div class=\"foto--producto\"><img src=\"img-pt/".$reg['foto']."\"></div>";
+       echo "<div class=\"foto--producto\"><img src=\"img-pt/".$reg['foto_producto']."\"></div>";
        echo "<div class=\"tipo--producto\">".$reg['nombre']."</div>";
 	   if($variable=='valor3'){
 			echo "<div class=\"modelo--producto\"><font size=\"1\">SKU: ".$reg['sku']."</font></div>";
@@ -336,7 +360,7 @@
 			echo "<li><button type=\"submit\" formaction=\"detalle-parrilla.php\">ver detalle</button></li>";
 		}
 		if($variable=='valor3'){
-			echo "<li><button type=\"submit\" formaction=\"cotizar.php\">Cotizar</button></li>";
+			echo "<li><button type=\"submit\" onclick=\"return(mensajeCotizar())\" formaction=\"cotizar.php\">Cotizar</button></li>";
 		}
 		
 	   echo "</form>";

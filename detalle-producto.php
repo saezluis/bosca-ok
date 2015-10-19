@@ -1,6 +1,16 @@
 <?php
 // Start the session
 session_start();
+
+// if counter is not set, set to zero
+if(!isset($_SESSION['counter'])) {
+    $_SESSION['counter'] = 0;
+}
+
+// if button is pressed, increment counter
+if(isset($_POST['cotizar_prod'])) {
+    ++$_SESSION['counter'];
+}    
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,7 +26,18 @@ session_start();
     <script src="sass/tema/js/scripts.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
     <script src="sass/tema/js/jquery.isotope.js"></script>
-    <script src="sass/tema/js/jquery.elevatezoom.js"></script>
+    <script src="sass/tema/js/jquery.elevatezoom.js"></script>			
+		
+	<script type="text/javascript">
+
+	function mensajeCotizar(){
+	  
+		alert( "El producto fue agregado con exito a la cotización" );
+		
+	}
+
+	</script>	
+	
   </head>
   <body>
 	<?php			
@@ -24,7 +45,15 @@ session_start();
 	//Contador de variables cada vez que la pagina refresca para construir el arreglo
 	@$_SESSION["var"] = @$_SESSION["var"] + 1;
 	$itemID = $_SESSION["var"];
+		
 	
+	/*
+	if(@$_REQUEST['cotizar_prod']!=''){
+		$can_coti = $can_coti + 1;
+		echo "Entro al contador";
+		echo "<br>";
+	}
+	*/
 	//echo "esto lleva itemID: ".$itemID; - PARA CONTROL -
 	
 	//Creo el arreglo de variables de sesion
@@ -131,7 +160,8 @@ session_start();
       </div>
       <div class="caja movil-50 tablet-30 web-20">
         <div id="cotizar">
-          <p class="cotizaciones"> <a href="cotizacion.php"> Cotizaciones </a><span class="numero--items">15 </span>ítems</p>
+		   <!--  -->	
+          <p class="cotizaciones"> <a href="cotizacion.php"> Cotizaciones </a> <span class="numero--items"> <?php echo $_SESSION['counter']; ?> </span> ítems</p>
         </div>
       </div>
     </section>
@@ -164,7 +194,7 @@ session_start();
 			 -->			 
 			 <form method="post">
 			 <?php 
-				echo "<button type=\"submit\" name=\"cotizar_prod\" value=\"$sku\">cotizar</button>";
+				echo "<button type=\"submit\" onclick=\"return(mensajeCotizar())\" name=\"cotizar_prod\" value=\"$sku\">cotizar</button>";
 				echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$sku\">";
 			  ?>			  
 			 </form> 

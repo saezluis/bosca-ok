@@ -1,3 +1,17 @@
+<?php
+// Start the session
+session_start();
+
+// if counter is not set, set to zero
+if(!isset($_SESSION['counter'])) {
+    $_SESSION['counter'] = 0;
+}
+
+// if button is pressed, increment counter
+if(isset($_POST['cotizar_prod'])) {
+    ++$_SESSION['counter'];
+}    
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -118,7 +132,7 @@ function validarmail(){
     </div>
     <div class="caja movil-50 tablet-30 web-20">
       <div id="cotizar">
-        <p class="cotizaciones">Cotizaciones <span class="numero--items">15 </span>ítems</p>
+        <p class="cotizaciones"><a href="cotizacion.php"> Cotizaciones </a> <span class="numero--items"> <?php echo $_SESSION['counter']; ?> </span>ítems</p>
       </div>
     </div>
   </section>
@@ -206,6 +220,6 @@ function validarmail(){
         </div>
       </div>
     </div>
-  </footer>
+  </footer>  
 </body>
 </html>
