@@ -20,31 +20,68 @@ session_start();
   
   <?php
     
-	$tope = $_SESSION['tope'];
+	$tope = @$_SESSION['tope'];
 	
-	$cotizar_esto = array();
+	$cotizar_esto = array();	
 	$k = 0;	
     for ($i = 0 ; $i <= $tope ; $i ++) {		
 		if(empty($_SESSION['items'][$i]['Detalle'])){
 			$nada = 0;
 		}else{			
-			echo "Este SKU lleva producto".$_SESSION['items'][$i]['Detalle'];
-			echo "<br>";
-			$cotizar_esto[$k] = array('productoCotizar' => $_SESSION['items'][$i]['Detalle']);
-			$k = $k + 1;
+			//echo "Este SKU lleva producto ".$_SESSION['items'][$i]['Detalle'];
+			//echo "<br>";
+			$pro = $_SESSION['items'][$i]['Detalle'];
+			//$cotizar_esto[] = array('productoCotizar' => $pro);
+			$cotizar_esto[] = $pro;
+			//$k = $k + 1;
 			$tamano_cotizar = count($cotizar_esto);
 		}			
 	}
+	
+	/*	
+	foreach ($cotizar_esto as $value) {
+    echo gettype($value), "\n";
+	}		
+	*/
+	
+	$newArray = array_count_values($cotizar_esto);
+	
+	$Arreglo_productos = array();
+	$Arreglo_cantidades = array();
+
+	foreach ($newArray as $key => $value) {
+        //echo "$key - <strong>$value</strong> <br />"; 
+		
+		$Arreglo_productos[] =  $key;
+		$Arreglo_cantidades[] = $value;
+		
+		//echo "Cargo en teoria";
+	}
+	
+	$tamano_nombres = count($Arreglo_productos);
+
+	/*
+	echo "<br>";
+	echo "Tamano del array sin repetidos: ".$tamano_nombres;
+	echo "<br>";
+	echo "<br>";
+	
+	
+	for ($i = 0 ; $i < $tamano_nombres ; $i ++) {		
+		echo "Nombre: ".$Arreglo_productos[$i]." Ocurrencias: ".$Arreglo_cantidades[$i];
+		echo "<br>";
+	}
+		
 	
 	echo "<br>";
 	echo "tamaño del cotizar: ".$tamano_cotizar;
 	echo "<br>";
 	
-	for ($i= 0; $i <= $tamano_cotizar; $i++){
-		echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i]['productoCotizar'];
+	for ($i= 0; $i < $tamano_cotizar; $i++){
+		echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i];
 	}
+	*/
 	
-	//echo 
 	
 	
 	
@@ -100,7 +137,7 @@ session_start();
         <div class="cotizacion">
           <div class="side--left">
             <h3 class="titulo--cotizacion">Cotización</h3>
-            <p class="sub--item">Nº ítems</p>
+            <p class="sub--item">Nº ítems <?php echo @$tamano_cotizar; ?></p>
             <div class="cotizacion--B">
 			
 			  <!-- Aqui se construyen las cotizaciones -->	
@@ -109,12 +146,17 @@ session_start();
 				
 				$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
 				$acentos = $conexion->query("SET NAMES 'utf8'");
-	
+				$total = 0;
+				//Voy a realizar aqui cambios
 				
-				for ($i= 0; $i <= $tamano_cotizar; $i++){
+				for ($i= 0; $i < $tamano_nombres; $i++){
 					
 					//echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i]['productoCotizar'];
-					$detalle_producto = $cotizar_esto[$i]['productoCotizar'];
+					$detalle_producto = $Arreglo_productos[$i];
+					$cantidad_productos = $Arreglo_cantidades[$i];
+					
+					//Con esta funcion elimino valores duplicados del array
+					//(array_unique($a));
 					
 					$registro=mysqli_query($conexion,"select * from producto where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
 	
@@ -124,7 +166,10 @@ session_start();
 						$ventaja_comparativa = $reg['ventaja_comparativa'];	
 						
 						$precio = $reg['precio'];	
-						echo "Precio: ".$precio;
+						//echo "Precio: ".$precio;
+						
+						$nombre = $reg['nombre'];	
+						$modelo = $reg['modelo'];	
 						
 						$potencia = $reg['potencia'];	
 						$area = $reg['rango_calefaccion'];	
@@ -132,6 +177,19 @@ session_start();
 						$diametro = $reg['diametro_canon'];	
 						$garantia = $reg['garantia'];	
 						$sku = $reg['sku'];	
+						
+						echo "<div class=\"items--cotizacion\">";
+							echo "<div class=\"bar--cotizacion\"><img height=\"134px\" width=\"120px\" src=\"img2/".$foto."\" class=\"box--borders\"></div>";
+								echo "<div class=\"data--cotizacion\">";
+									echo "<p class=\"nombre--item\">".$nombre."</p>";
+									echo "<p class=\"nombre--modelo\">".$modelo."</p>";
+									echo "<p class=\"cantidad\">".$cantidad_productos." Item</p>";
+									echo "<p class=\"cantidad\">Precio unitario: $".number_format($precio,0, '.', '.')."</p>";
+								echo "</div>";
+						echo "</div>";
+						
+						$total = $total + ($precio * $cantidad_productos);
+						
 					}
 				}
 				
@@ -141,6 +199,7 @@ session_start();
 			  
 			  ?>
 			  
+			 <!--
 			  
               <div class="items--cotizacion">
                 <div class="bar--cotizacion"><img src="img/item--1.jpg" class="box--borders"></div>
@@ -169,7 +228,9 @@ session_start();
                 </div>
               </div>
 			  
-              <div class="calculo--total">$ 1.000.000</div>
+			  -->
+              
+			  <div class="calculo--total">Total: $ <?php echo number_format($total,0, '.', '.'); ?></div>
             </div>
           </div>
           <div class="side--right">
