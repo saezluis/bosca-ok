@@ -1,0 +1,253 @@
+doctype html
+html(lang="es")
+	head
+		title Productos / Bosca
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width,initial-scale=1,maximun-scale=1")
+		link(rel="stylesheet", href="css/style.css")
+		link(rel="stylesheet", href="css/hint.css")
+		//- Owl Carousel Assets
+		link(rel="stylesheet", href="owl-carousel/owl.carousel.css")
+		link(rel="stylesheet", href="owl-carousel/owl.theme.css")
+		//- Prettify
+		//- script(src="owl-carousel/prettify.css")
+
+		script(src="http://code.jquery.com/jquery-1.11.2.min.js")
+		script(src="sass/tema/js/scripts.js")
+		script(src="owl-carousel/owl.carousel.min.js")
+		//-sort elements
+		script(src="sass/tema/js/jquery.isotope.js")
+		//- zoom images		
+		script(src="sass/tema/js/jquery.elevatezoom.js")
+
+	body
+
+
+		.collapsible
+			button 
+			form.desple
+				#servicio--cliente
+					p Servicio al cliente 800 200 567
+				h1.dudas
+					|¿Tienes dudas sobre algunos de nuestros productos?
+				input(type="text" name="" value="" placeholder="Ingresa nombre")
+				input(type="mail" name="" value="" placeholder="ingresa tu mail")
+				input(type="text" name="" value="" placeholder="Asunto")
+				textarea(type="text-area" name="" value="" )
+				a.send(href="#") Enviar
+		a.btn-compromiso(href="#") Compromiso verde
+			img(src="img/compromiso-verde.jpg", alt="")
+
+
+		header#header
+			.grupo
+				.caja.web-30.no-padding
+					h1
+						a.logo_m(href="index.html") ir al inicio
+				.caja.web-70
+					#flags
+						ul
+							li
+								a.spanish(href="#")
+									img(src="img/chile.gif")
+							li
+								a.english(href="#")
+									img(src="img/uk.gif")
+					#mostrar-menu Menú
+					ul.menu
+						li.menu__item: a.menu__link(href="index.html").activ Productos
+						li.menu__item: a.menu__link(href="nosotros.html") Nosotros
+						li.menu__item: a.menu__link(href="encuentranos.html") Encuéntranos
+						li.menu__item: a.menu__link(href="registra-tu-bosca.html") Garantiza tu Bosca
+						li.menu__item: a.menu__link(href="servicio-tecnico.html") Servicio técnico
+						li.menu__item: a.menu__link(href="preguntas-frecuentes.html") Preguntas frecuentes
+						li.menu__item: a.menu__link(href="contacto.html") Contacto
+		//- section.grupo
+		//- 	.caja.no-padding
+		//- 		.banner
+		//- 			#owl-demo.owlcarousel.owl-theme
+		//- 				.item
+		//- 					img(src="img/bg_banner.jpg")
+		//- 				.item
+		//- 					img(src="img/bg_banner.jpg")
+		//- 				.item
+		//- 					img(src="img/bg_banner.jpg")
+		//- 				.item
+		//- 					img(src="img/bg_banner.jpg")		
+		section.grupo
+			.caja
+				#logos_juntos
+					img(src="img/logos-juntos.png")
+		section.grupo
+			.caja.movil-50.tablet-70.web-80
+				.buscar
+					input(type="search" placeholder="buscar")
+					button.search--buscar buscar
+			.caja.movil-50.tablet-30.web-20
+				#cotizar
+					p.cotizaciones
+						|Cotizaciones 
+						span.numero--items 15 
+						|ítems
+		section.grupo.margen-top
+			.caja.movil-40
+				.full--ficha
+					.foto--producto-big
+						img(src="img/img-full.jpg" id="zoom_01" data-zoom-image="img/large/big.png")
+						.mini--sec
+							img(src="img/small-sellolimit360.gif", alt="")
+					#demo-container
+	
+				.icon-pretaciones
+					input#spoiler1(type='checkbox')
+					label(for='spoiler1') Ver sello SEC
+					.spoiler 
+						img(src="img/sello-limit360.gif", alt="")
+				//- 	p.seleccione (selecciona icono) 
+				//- 	ul
+				//- 		li
+				//- 			a.hint--bottom(href="#" data-hint="Carga de leña superior")
+				//- 				img(src="img/icon-carga-lena-superior.png")
+				//- 		li
+				//- 			a.hint--bottom(href="#" data-hint="Calefacción 60 a 190 m2")
+				//- 				img(src="img/icon-calefaccion.png")
+				//- 		li
+				//- 			a.hint--bottom(href="#" data-hint="Autonomía 8.5 a 15.5 hrs x 12 k")
+				//- 				img(src="img/icon-autonomia.png")
+				//- 		li
+				//- 			a.hint--bottom(href="#" data-hint="Consumo 4.815 promedio kg/h leña")
+				//- 				img(src="img/icon-consumo.png")																									
+
+			.caja.movil-60
+				.full--ficha-datos
+					.logo-marca
+						img(src="img/mini-bosca.png")
+					.caracteristicas--producto
+						img(src="img/ecoflame360.png")
+						p.sku SKU: 10110159
+						p.resena Única con tecnología de llama invertida aumentando la eficiencia y llevando al mínimo las emisiones.
+						.box-in
+							p.total--precio Precio
+							p.total--cash $ 99.000
+							a.btn--cotizar--p(href="cotizacion.html") cotizar
+					.caracteristicas--producto.bor
+						p.caracteristicas--titulo características		
+						.caract--datos
+							ul
+								li
+									p.carga Carga:  
+											span.datos--d Tipo Superior
+								li
+									p.potencia Potencia:  
+											span.datos--d 11.2 kw = 9.630 Kcal/h
+								li
+									p.calefa Á. Calefacción: 
+											span.datos--d 60 - 190 m2
+								li
+									p.dimension Dimensión: 
+											span.datos--d Alto 84,2 cms / ancho 46.3 cms. profundidd: 50 cms / peso: 93.4 kgs.											
+								li
+									p.diametro Diámetro de cañon: 
+											span.datos--d 6 pulgadas
+								li
+									p.garantia Garantía:  
+											span.datos--d 1 año 
+											a.pdf--condiciones(href="#") (ver condiciones)
+						a.descarga--fichas(href="#") Descargar ficha técnica en pdf																																			
+						a.descarga--fichas(href="#") Descargar manual de uso en pdf	
+					//-.prod--relacionados
+				.relacionados
+					h5 productos relacionados
+					#owl-demo2.owlcarousel
+						.item
+							img.lazyOwl(data-src="img/p-relacionado1.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado2.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado1.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado2.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado1.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado2.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado1.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado2.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado1.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado2.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado1.jpg")
+						.item
+							img.lazyOwl(data-src="img/p-relacionado2.jpg")																						
+
+	
+
+		#sep
+
+
+
+
+																		
+
+
+													
+
+
+
+						
+
+
+
+
+
+						
+		footer#footer
+			.grupo
+				.caja.movil-50
+					form.contact_form(action="#")
+						ul
+							li
+								label.label Recibe nuestras ofertas y promociones 
+								input.format_input(type="text" name="" value="" placeholder="Ingresa nombre y apellido")
+							li
+								input.format_input(type="text" name="" value="" placeholder="Ingresa mail")
+							li
+								button.enviarMail(type="submit") Suscríbete
+				.caja.movil-50.auxT
+					p.servicioCliente
+						|Servicio al cliente 
+						a.telF(href="tel:+56 800200657") 800 200 657
+					p.direccion
+						|Av. Américo Vespucio 2077, Huechuraba, Santiago.
+					.sociales
+						//- a.intra(href="#") Intranet
+						a.fb(href="#")
+							img(src="img/fb-mini.jpg")
+						//- a.yt(href="#") Youtube
+
+
+script.
+	$("#zoom_01").elevateZoom({zoomWindowPosition: "demo-container", zoomWindowHeight: 500, zoomWindowWidth:630, borderSize: 0, easing:true, cursor:"crosshair"});
+script(language='JavaScript').
+	function muestra_oculta(id){
+	if (document.getElementById){
+	var el = document.getElementById(id);
+	el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+	}
+	}
+	window.onload = function(){
+	muestra_oculta('contenido_a_mostrar');
+	}
+
+
+
+
+
+
+					
+
+

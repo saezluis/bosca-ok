@@ -1,0 +1,103 @@
+#mostrar-menu{
+	background: $gris_corporativo;
+	color:#fff;
+	line-height: 2;
+	padding-left: 1em;
+	cursor: pointer;
+	@include mostrar-menu($color-corporativo,1em);
+
+	@include desde (web){
+		display: none;
+	}
+
+}
+
+.menu{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	display: none;
+
+	@include desde(tablet){
+		display: none;
+	}
+
+	@include desde (web){
+		display: table;
+		float: right;
+		margin-top: 15px;
+	}
+
+	&__item{
+
+		@include desde(web){
+			float: left;
+		}
+
+	}
+
+	&__link{
+		color:#fff;
+		line-height: 2;
+		padding-left:1em;
+		text-decoration: none;
+		@include desde(web){
+			font-size: 0.8em;
+			padding: 9px;
+			margin-right:2px; 
+		}
+		&:hover{
+			color: $color-corporativo;
+			@include desde(web){
+				background: $color_corporativo;
+				color: $blanco;
+				-webkit-transition: all 400ms ease-in-out;
+				-moz-transition: all 400ms ease-in-out;
+				-ms-transition: all 400ms ease-in-out;
+				-o-transition: all 400ms ease-in-out;
+				transition: all 400ms ease-in-out;
+			}
+		}
+	}
+}
+
+@include desde(web){
+	.activ{
+		background: $color_corporativo;
+		color: $blanco;
+	}
+}
+
+
+
+#flags{
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+	margin-bottom: 6px;
+	ul{
+		margin: 0;
+		padding:0;
+		float: right;
+	}
+	li{
+		float: left;
+		list-style-type: none;
+		margin-right: 10px;
+		line-height: 0;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	a{
+		width: auto;
+		height: auto;
+		display: block;
+		background:rgba(255,255,255,0.1);
+		padding:1px;
+	}
+}
+
+
+
+

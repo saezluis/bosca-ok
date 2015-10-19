@@ -1,0 +1,65 @@
+#footer{
+	border-top: 1px solid #E65524;
+	background: $color-negro;
+	padding-bottom:10px;
+	p.servicioCliente,.direccion{
+		text-align: center;
+		font-size: 0.7em;
+		color: $blanco;
+		a.telF{
+			color:$blanco;
+		}
+		@include desde(tablet){
+			font-size: 0.9em;
+		}
+		@include desde(web){
+			font-size: 0.9em;
+		}
+
+	}
+	.sociales{
+		width: 100%;
+		height: auto;
+		text-align: center;
+		font-size: 0.7em;
+		overflow: hidden;
+		a.fb{
+			margin-right:0px;
+			color:$blanco;
+		}
+		a.yt{
+ 			color:$blanco;
+		}
+		a.intra{
+			text-align: center;
+			width: 100%;
+			color: #fff;
+			border-right:10px;
+  			display: block;
+  			margin-bottom: 10px;
+  			@include desde (movil){
+  				text-align: right;
+  				font-size: 1em;
+  			}
+		}
+	}
+
+}
+
+//auxiliares
+@include desde(movil){
+	.auxT{
+		margin-top: 55px !important;
+	}
+	#footer p.servicioCliente{
+		text-align: right;
+	}
+	#footer .direccion{
+		text-align: right;
+	}
+
+	#footer .sociales{
+		text-align: right;
+	}
+
+}

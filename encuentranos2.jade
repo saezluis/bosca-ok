@@ -1,0 +1,330 @@
+doctype html
+html(lang='es')
+	head
+		title Productos / Bosca
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width,initial-scale=1,maximun-scale=1')
+		link(rel='stylesheet', href='css/style.css')
+		link(rel='stylesheet', href='owl-carousel/owl.carousel.css')
+		link(rel='stylesheet', href='owl-carousel/owl.theme.css')
+		script(src='http://code.jquery.com/jquery-1.11.2.min.js')
+		script(src='sass/tema/js/scripts.js')
+		script(src='owl-carousel/owl.carousel.min.js')
+	body
+		.collapsible
+			button  
+			form.desple
+				#servicio--cliente
+					p Servicio al cliente 800 200 567
+				h1.dudas ¿Tienes dudas sobre algunos de nuestros productos?
+				input(type='text', name='', value='', placeholder='Ingresa nombre')
+				input(type='mail', name='', value='', placeholder='ingresa tu mail')
+				input(type='text', name='', value='', placeholder='Asunto')
+				textarea(type='text-area', name='', value='')
+				a.send(href='#') Enviar
+		header#header
+			.grupo
+				.caja.web-30.no-padding
+					h1
+						a.logo_m(href='index.html') ir al inicio
+				.caja.web-70
+					#flags
+						ul
+							li
+								a.spanish(href='#')
+									img(src='img/chile.gif')
+							li
+								a.english(href='#')
+									img(src='img/uk.gif')
+					#mostrar-menu Menú
+					ul.menu
+						li.menu__item
+							a.menu__link(href='index.html')  Productos
+						li.menu__item
+							a.menu__link(href='nosotros.html') Nosotros
+						li.menu__item
+							a.menu__link.activ(href='encuentranos.html') Encuéntranos
+						li.menu__item
+							a.menu__link(href='registra-tu-bosca.html') Regístra tu Bosca
+						li.menu__item
+							a.menu__link(href='servicio-tecnico.html') Servicio técnico
+						li.menu__item
+							a.menu__link(href='preguntas-frecuentes.html') Preguntas frecuentes
+						li.menu__item
+							a.menu__link(href='contacto.html') Contacto
+		section.grupo
+			.caja
+				#logos_juntos
+					img(src='img/logos-juntos.png')
+		section.grupo.margen-top
+			#todo
+				.caja.movil-30
+					.side--we
+						h2 Encuentranos
+						p Encuentra tu tienda Bosca más cercana y visitanos en los siguientes horarios.
+				.caja.movil-70
+					.side-ellos
+						ul.tabs
+							li
+								input#tab1(type='radio', checked='', name='tabs')
+								label(for='tab1') V Región
+								#tab-content1.tab-content
+									h3 Viña del Mar
+									.maps
+										iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.6004785678447!2d-71.54987429999998!3d-33.01430709999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689dde7e8651a8b%3A0x354ff995ba997777!2sLibertad%2C+Vi%C3%B1a+del+Mar%2C+Regi%C3%B3n+de+Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1435301453016', width='275', height='300', frameborder='0', style='border:0', allowfullscreen='')
+									.data-direcciones
+										p.jefe--tienda Jefe de Tienda
+										p.nombre--jefe--tienda Jazmín Valencia
+										.telefonos
+											ul
+												p Teléfonos
+												li.color-gris (032) 2686026
+												li.color-gris (032) 2686118
+												li.color-gris (032) 2686031
+										p.horarios
+											span.atencion Horario de atención
+											br
+											|                               Lunes a viernes de 9:30 a 19:00 hrs Sábados de 10:00 a 14:00 hrs.
+										p.horarios
+											span.atencion Dirección
+											br
+											|                               Av. Libertad 1040, Esquina 11 1/2 Norte.
+									form.form--encuentranos(action='encuentranos_submit', method='get', accept-charset='utf-8')
+										h2 Contáctanos
+										.lado--a
+											p.label Nombre y apellido
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Mail
+											input.is--not(type='text', name='', value='', placeholder='')
+										.lado--b
+											p.label Teléfono
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Motivo
+											input.is--not(type='text', name='', value='', placeholder='')
+										textarea.text-area(name='')
+										a.enviar--encuentranos(href='#') Enviar
+									// Your content goes here
+							li
+								input#tab2(type='radio', name='tabs')
+								label(for='tab2') RM
+								#tab-content2.tab-content
+									h3 Casa Matriz / Huechuraba
+									.maps
+										iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13328.784548046824!2d-70.6881358!3d-33.3659451!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e1d98caaae546e!2sIngenieria+de+Combustion+Bosca+Chile!5e0!3m2!1ses!2scl!4v1435303675223', width='275', height='300', frameborder='0', style='border:0', allowfullscreen='')
+									.data-direcciones
+										p.jefe--tienda Jefe de Tienda
+										p.nombre--jefe--tienda Demetrio Larraín
+										.telefonos
+											ul
+												p Teléfonos
+												li.color-gris (02) 2328 8538
+										.telefonos
+											ul
+												p Fax Gerencia
+												li.color-gris (02) 2624 1891
+										.telefonos
+											ul
+												p Fax Servicio Técnico
+												li.color-gris (02) 2624 1891
+										p.horarios
+											span.atencion Horario de atención
+											br
+											|                               Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.
+										p.horarios
+											span.atencion Dirección
+											br
+											|                               Av. Américo Vespucio 2077, Huechuraba
+									form.form--encuentranos(action='encuentranos_submit', method='get', accept-charset='utf-8')
+										h2 Contáctanos
+										.lado--a
+											p.label Nombre y apellido
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Mail
+											input.is--not(type='text', name='', value='', placeholder='')
+										.lado--b
+											p.label Teléfono
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Motivo
+											input.is--not(type='text', name='', value='', placeholder='')
+										textarea.text-area(name='')
+										a.enviar--encuentranos(href='#') Enviar
+									// Your content goes here
+							li
+								input#tab3(type='radio', name='tabs')
+								label(for='tab3') VI Región
+								#tab-content3.tab-content
+									h3 Rancagua
+									.maps
+										iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.9904005130415!2d-70.7355058!3d-34.172163100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966343417059ba1b%3A0x536cc6b37a2e5595!2sRam%C3%B3n+Freire+%26+O'carrol%2C+Rancagua%2C+VI+Regi%C3%B3n!5e0!3m2!1ses!2scl!4v1435304001620", width='275', height='300', frameborder='0', style='border:0', allowfullscreen='')
+									.data-direcciones
+										p.jefe--tienda Jefe de Tienda
+										p.nombre--jefe--tienda José Antonio Elortegui
+										.telefonos
+											ul
+												p Teléfonos
+												li.color-gris (9) 68326735
+												li.color-gris (072)-2426768
+										p.horarios
+											span.atencion Horario de atención
+											br
+											|                               Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.
+										p.horarios
+											span.atencion Dirección
+											br
+											|                               O’Carrol 11 Esq. Freire . Local 5, Rancagua.
+									form.form--encuentranos(action='encuentranos_submit', method='get', accept-charset='utf-8')
+										h2 Contáctanos
+										.lado--a
+											p.label Nombre y apellido
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Mail
+											input.is--not(type='text', name='', value='', placeholder='')
+										.lado--b
+											p.label Teléfono
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Motivo
+											input.is--not(type='text', name='', value='', placeholder='')
+										textarea.text-area(name='')
+										a.enviar--encuentranos(href='#') Enviar
+									// Your content goes here
+							li
+								input#tab4(type='radio', name='tabs')
+								label(for='tab4') VIII Región
+								#tab-content4.tab-content
+									h3 Concepción
+									.maps
+										iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.3943143666074!2d-73.05677039999999!3d-36.833031399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b5d93b15c4eb%3A0xed9084f5e5667feb!2zQXJ0dXJvIFByYXQgMjAyLCBDb25jZXBjacOzbiwgUmVnacOzbiBkZWwgQsOtbyBCw61v!5e0!3m2!1ses!2scl!4v1435304316493', width='275', height='300', frameborder='0', style='border:0', allowfullscreen='')
+									.data-direcciones
+										p.jefe--tienda Jefe de Tienda
+										p.nombre--jefe--tienda Clara Gajardo
+										.telefonos
+											ul
+												p Teléfonos
+												li.color-gris (041) 2235006
+												li.color-gris (041) 2245687
+										.telefonos
+											ul
+												p Fax
+												li.color-gris (041) 2219892
+										p.horarios
+											span.atencion Horario de atención
+											br
+											|                               Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.
+										p.horarios
+											span.atencion Dirección
+											br
+											|                               Arturo Prat 202, Concepción.
+									form.form--encuentranos(action='encuentranos_submit', method='get', accept-charset='utf-8')
+										h2 Contáctanos
+										.lado--a
+											p.label Nombre y apellido
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Mail
+											input.is--not(type='text', name='', value='', placeholder='')
+										.lado--b
+											p.label Teléfono
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Motivo
+											input.is--not(type='text', name='', value='', placeholder='')
+										textarea.text-area(name='')
+										a.enviar--encuentranos(href='#') Enviar
+									// Your content goes here
+							li
+								input#tab5(type='radio', name='tabs')
+								label(for='tab5') IX Región
+								#tab-content5.tab-content
+									h3 Temuco
+									.maps
+										iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2765087388266!2d-72.6123319!3d-38.7344166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f67b1260a5%3A0xf2cf98dabe226391!2sAlemania+715%2C+Temuco%2C+IX+Regi%C3%B3n!5e0!3m2!1ses!2scl!4v1435304608155', width='275', height='300', frameborder='0', style='border:0', allowfullscreen='')
+									.data-direcciones
+										p.jefe--tienda Jefe de Tienda
+										p.nombre--jefe--tienda Sergio Sáez
+										.telefonos
+											ul
+												p Teléfonos
+												li.color-gris (045) 263906
+										p.horarios
+											span.atencion Horario de atención
+											br
+											|                               Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.
+										p.horarios
+											span.atencion Dirección
+											br
+											|                               Av. Alemania 0715, Temuco.
+									form.form--encuentranos(action='encuentranos_submit', method='get', accept-charset='utf-8')
+										h2 Contáctanos
+										.lado--a
+											p.label Nombre y apellido
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Mail
+											input.is--not(type='text', name='', value='', placeholder='')
+										.lado--b
+											p.label Teléfono
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Motivo
+											input.is--not(type='text', name='', value='', placeholder='')
+										textarea.text-area(name='')
+										a.enviar--encuentranos(href='#') Enviar
+									// Your content goes here
+							li
+								input#tab6(type='radio', name='tabs')
+								label(for='tab6') X Región
+								#tab-content6.tab-content
+									h3 Puerto Montt
+									.maps
+										iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2765087388266!2d-72.6123319!3d-38.7344166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f67b1260a5%3A0xf2cf98dabe226391!2sAlemania+715%2C+Temuco%2C+IX+Regi%C3%B3n!5e0!3m2!1ses!2scl!4v1435304608155', width='275', height='300', frameborder='0', style='border:0', allowfullscreen='')
+									.data-direcciones
+										p.jefe--tienda Jefe de Tienda
+										p.nombre--jefe--tienda Mauricio Hinojosa
+										.telefonos
+											ul
+												p Teléfonos
+												li.color-gris (065) 313214
+										p.horarios
+											span.atencion Horario de atención
+											br
+											|                               Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.
+										p.horarios
+											span.atencion Dirección
+											br
+											|                               Caletera Presidente Ibáñez 328, Local A, esquina Circunvalación, Puerto Montt.
+									form.form--encuentranos(action='encuentranos_submit', method='get', accept-charset='utf-8')
+										h2 Contáctanos
+										.lado--a
+											p.label Nombre y apellido
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Mail
+											input.is--not(type='text', name='', value='', placeholder='')
+										.lado--b
+											p.label Teléfono
+											input.is--not(type='text', name='', value='', placeholder='')
+											p.label Motivo
+											input.is--not(type='text', name='', value='', placeholder='')
+										textarea.text-area(name='')
+										a.enviar--encuentranos(href='#') Enviar
+									// Your content goes here
+		footer#footer
+			.grupo
+				.caja.movil-50
+					form.contact_form(action='#')
+						ul
+							li
+								label.label Suscríbete:
+								input.format_input(type='text', name='', value='', placeholder='Ingresa nombre y apellido')
+							li
+								input.format_input(type='text', name='', value='', placeholder='Ingresa teléfono')
+							li
+								input.format_input(type='text', name='', value='', placeholder='Ingresa celular')
+							li
+								input.format_input(type='text', name='', value='', placeholder='Ingresa mail')
+							li
+								button.enviarMail(type='submit') Suscríbete ahora
+				.caja.movil-50.auxT
+					p.servicioCliente
+						| Servicio al cliente 
+						a.telF(href='tel:+56 800200657') 800 200 657
+					p.direccion Av. Américo Vespucio 2077, Huechuraba, Santiago.
+					.sociales
+						a.intra(href='#') Intranet
+						a.fb(href='#')
+							img(src='img/fb-mini.jpg')

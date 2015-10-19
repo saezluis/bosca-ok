@@ -1,0 +1,279 @@
+doctype html
+html(lang="es")
+	head
+		title Productos / Bosca
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width,initial-scale=1,maximun-scale=1")
+		link(rel="stylesheet", href="css/style.css")
+		//- Owl Carousel Assets
+		link(rel="stylesheet", href="owl-carousel/owl.carousel.css")
+		link(rel="stylesheet", href="owl-carousel/owl.theme.css")
+		//- Prettify
+		//- script(src="owl-carousel/prettify.css")
+
+		script(src="http://code.jquery.com/jquery-1.11.2.min.js")
+		script(src="sass/tema/js/scripts.js")
+		script(src="owl-carousel/owl.carousel.min.js")
+		//-linea de tiempo
+		script(src="sass/tema/js/jquery.timelinr-0.9.54.js")		
+	body
+
+		.collapsible
+			button 
+			form.desple
+				#servicio--cliente
+					p Servicio al cliente 800 200 567
+				h1.dudas
+					|¿Tienes dudas sobre algunos de nuestros productos?
+				input(type="text" name="" value="" placeholder="Ingresa nombre")
+				input(type="mail" name="" value="" placeholder="ingresa tu mail")
+				input(type="text" name="" value="" placeholder="Asunto")
+				textarea(type="text-area" name="" value="" )
+				a.send(href="#") Enviar
+
+
+		header#header
+			.grupo
+				.caja.web-30.no-padding
+					h1
+						a.logo_m(href="index.html") ir al inicio
+				.caja.web-70
+					#flags
+						ul
+							li
+								a.spanish(href="#")
+									img(src="img/chile.gif")
+							li
+								a.english(href="#")
+									img(src="img/uk.gif")
+					#mostrar-menu Menú
+					ul.menu
+						li.menu__item: a.menu__link(href="index.html") Productos
+						li.menu__item: a.menu__link(href="nosotros.html") Nosotros
+						li.menu__item: a.menu__link(href="encuentranos.html") Encuéntranos
+						li.menu__item: a.menu__link(href="registra-tu-bosca.html").activ Garantiza tu Bosca
+						li.menu__item: a.menu__link(href="servicio-tecnico.html") Servicio técnico
+						li.menu__item: a.menu__link(href="preguntas-frecuentes.html") Preguntas frecuentes
+						li.menu__item: a.menu__link(href="contacto.html") Contacto
+		//- section.grupo
+		//- 	.caja.no-padding
+		//- 		.banner
+		//- 			#owl-demo.owlcarousel.owl-theme
+		//- 				.item
+		//- 					img(src="img/bg_banner.jpg")
+		//- 				.item
+		//- 					img(src="img/bg_banner.jpg")
+		//- 				.item
+		//- 					img(src="img/bg_banner.jpg")
+		//- 				.item
+		//- 					img(src="img/bg_banner.jpg")		
+		section.grupo
+			.caja
+				#logos_juntos
+					img(src="img/logos-juntos.png")
+		//- section.grupo
+		//- 	.caja.movil-50.tablet-70.web-80
+		//- 		.buscar
+		//- 			input(type="search" placeholder="buscar")
+		//- 			button.search--buscar buscar
+		//- 	.caja.movil-50.tablet-30.web-20
+		//- 		#cotizar
+		//- 			p.cotizaciones
+		//- 				|Cotizaciones 
+		//- 				span.numero--items 15 
+		//- 				|ítems
+		section.grupo
+			.caja.movil-100
+				.alert
+					p Al registrar tu Bosca, completando el formulario, estarás extendiendo la garantia de tu producto.
+					p *Para que tu experiencia Bosca sea aun mejor, registra tus productos y obtener 1 año<br/>  de garantía, de lo contrario, sólo se extenderá por 90 días
+		section.grupo.margen-top
+			#todo
+				.caja.movil-30
+					.side--we
+						h2 Garantiza tu bosca
+				.caja.movil-70
+						.side-ellos
+							form.registra
+								label Nombre 
+								input(type="text")
+								label Apellido
+								input(type="text")
+								label Modelo del producto
+								input(type="text")
+								label Número de serie del producto
+								input(type="text")
+								label Número de boleta o factura
+								input(type="text")
+								label Lugar de compra
+								input(type="text")
+								label Nombre del instalador
+								select.region
+									option(value="") seleccionar
+									option(value="") Nombre 1
+									option(value="") Nombre 2
+									option(value="") Nombre 3
+									option(value="") Nombre 4
+									option(value="") Nombre 5
+									option(value="") Nombre 6
+									option(value="") Nombre 7
+									option(value="") Nombre 8
+									option(value="") Nombre 9
+									option(value="") Nombre 10
+									option(value="") Nombre 11
+									option(value="") Nombre 12
+									option(value="") Nombre 13
+								//- input(type="text")
+								//- label Rut del instalador
+								//- input(type="text")
+								label Ciudad
+								input.ciudad(type="text")
+								label Región
+								select.region
+									option(value="") seleccionar
+									option(value="") I Región
+									option(value="") II Región
+									option(value="") III Región
+									option(value="") VI Región
+									option(value="") V Región
+									option(value="") VI Región
+									option(value="") VII Región
+									option(value="") VIII Región
+									option(value="") IX Región
+									option(value="") X Región
+									option(value="") XI Región
+									option(value="") XII Región
+									option(value="") XIII Región
+								label Dirección de la instalación
+								input(type="text")
+								.caja--tel
+									label.telefono--tel Teléfono de contacto 
+									label.f--instalacion Fecha de instalación
+									input.input--cel(type="text")
+									.fechas--registro
+
+										select.dia
+											option(value="") 1
+											option(value="") 2
+											option(value="") 3
+											option(value="") 4
+											option(value="") 5
+											option(value="") 6
+											option(value="") 7
+											option(value="") 8
+											option(value="") 9
+											option(value="") 10
+											option(value="") 11
+											option(value="") 12
+											option(value="") 13
+											option(value="") 14
+											option(value="") 15
+											option(value="") 16
+											option(value="") 17
+											option(value="") 18
+											option(value="") 19
+											option(value="") 20
+											option(value="") 31
+										select.mes
+											option(value="") Enero
+											option(value="") Febrero
+											option(value="") Marzo
+											option(value="") Abril
+											option(value="") Mayo
+											option(value="") Junio
+											option(value="") julio
+											option(value="") Agosto
+											option(value="") Septiembre
+											option(value="") Octubre
+											option(value="") Noviembre
+											option(value="") Diciembre
+										select.ano
+											option(value="") 2000
+											option(value="") 2001
+											option(value="") 2002
+											option(value="") 2003
+											option(value="") 2004
+											option(value="") 2005
+											option(value="") 2006
+											option(value="") 2007
+											option(value="") 2008
+											option(value="") 2009
+											option(value="") 2010
+											option(value="") 2011
+											option(value="") 2012
+											option(value="") 2013
+											option(value="") 2014
+											option(value="") 2015
+											option(value="") 2016
+											option(value="") 2017
+											option(value="") 2018
+											option(value="") 2019
+											option(value="") 2020
+											option(value="") 2021
+											option(value="") 2022
+											option(value="") 2023
+											option(value="") 2024
+											option(value="") 2025
+											option(value="") 2026
+											option(value="") 2027
+											option(value="") 2028
+											option(value="") 2029
+											option(value="") 2030
+									.adjuntar
+										//-p.adj--archivo Adjuntar foto instalación
+										.upload
+											p Subir foto de producto
+											input(type="file")
+									//- .calificar
+									//- 	p.opcoue ¿Cómo calificaría la instalacion?
+									//- 	p  
+									//- 		input(type="checkbox")
+									//- 		|excelente
+									//- 	p  
+									//- 		input(type="checkbox")
+									//- 		|bueno
+									//- 	p  
+									//- 		input(type="checkbox")
+									//- 		|regular
+									//- 	p  
+									//- 		input(type="checkbox")
+									//- 		|malo
+									//- label Agregue comentario sobre la calificación
+									//- textarea
+									a.registrar(href="#") Registar producto
+		
+		footer#footer
+			.grupo
+				.caja.movil-50
+					form.contact_form(action="#")
+						ul
+							li
+								label.label Recibe nuestras ofertas y promociones 
+								input.format_input(type="text" name="" value="" placeholder="Ingresa nombre y apellido")
+							li
+								input.format_input(type="text" name="" value="" placeholder="Ingresa mail")
+							li
+								button.enviarMail(type="submit") Suscríbete
+				.caja.movil-50.auxT
+					p.servicioCliente
+						|Servicio al cliente 
+						a.telF(href="tel:+56 800200657") 800 200 657
+					p.direccion
+						|Av. Américo Vespucio 2077, Huechuraba, Santiago.
+					.sociales
+						a.intra(href="#") Intranet
+						a.fb(href="#")
+							img(src="img/fb-mini.jpg")
+						//- a.yt(href="#") Youtube
+
+
+
+
+
+
+
+
+
+					
+
+
