@@ -28,6 +28,9 @@
 	$registros=mysqli_query($conexion,"select * from producto where nombre like '%$keyword%' OR modelo like '%$keyword%'")
 	or die("Problemas en el select:".mysqli_error($conexion));
 	
+	$registrosParrilla=mysqli_query($conexion,"select * from parrilla where nombre like '%$keyword%' OR modelo like '%$keyword%'")
+	or die("Problemas en el select:".mysqli_error($conexion));
+	
 	/*
 	if($reg=mysqli_fetch_array($registros)){
 		$foto = $reg['foto_producto'];	
@@ -123,6 +126,18 @@
 				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
 				echo "<li><a href=\"detalle-producto.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
 			}
+			
+			while($reg=mysqli_fetch_array($registrosParrilla)){
+				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
+				//$compname = $reg['sku'];
+				//$inc = $inc + 1;
+				$var = $reg['sku'];
+				//echo $var;
+				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
+				echo "<li><a href=\"detalle-parrilla.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+			}
+			
+			
 			?>			
 		  </ul>	  
 	  </p>

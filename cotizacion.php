@@ -105,7 +105,7 @@ session_start();
     <header id="header">
       <div class="grupo">
         <div class="caja web-30 no-padding">
-          <h1><a href="index.html" class="logo_m">ir al inicio</a></h1>
+          <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
         </div>
         <div class="caja web-70">
           <div id="flags">
@@ -116,11 +116,11 @@ session_start();
           </div>
           <div id="mostrar-menu">Menú</div>
           <ul class="menu">
-            <li class="menu__item"><a href="index.html" class="menu__link activ">Productos</a></li>
-            <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
-            <li class="menu__item"><a href="encuentranos.html" class="menu__link">Encuéntranos</a></li>
-            <li class="menu__item"><a href="registra-tu-bosca.html" class="menu__link">Garantiza tu Bosca</a></li>
-            <li class="menu__item"><a href="servicio-tecnico.html" class="menu__link">Servicio técnico</a></li>
+            <li class="menu__item"><a href="index.php" class="menu__link activ">Productos</a></li>
+            <li class="menu__item"><a href="nosotros.php" class="menu__link">Nosotros</a></li>
+            <li class="menu__item"><a href="encuentranos.php" class="menu__link">Encuéntranos</a></li>
+            <li class="menu__item"><a href="registra-tu-bosca.php" class="menu__link">Garantiza tu Bosca</a></li>
+            <li class="menu__item"><a href="servicio-tecnico.php" class="menu__link">Servicio técnico</a></li>
             <li class="menu__item"><a href="preguntas-frecuentes.html" class="menu__link">Preguntas frecuentes</a></li>
             <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
           </ul>
