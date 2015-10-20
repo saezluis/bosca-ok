@@ -166,7 +166,7 @@ if(isset($_POST['cotizar_prod'])) {
       </div>
     </section>
     <section class="grupo margen-top">
-      <div class="caja movil-40">
+      <div class="caja movil-40 tablet-40 web-40">
         <div class="full--ficha">
           <div class="foto--producto-big"><img src="img2/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/large/big.png">
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>

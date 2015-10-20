@@ -16,6 +16,7 @@
 	// margin-top: 105px;
 	@include desde (tablet){
 		text-align: right;
+		margin-top: 120px;
 	}
 }
 
@@ -25,10 +26,16 @@
 
 .banner{
 	margin-top:95px;
+	@include desde (tablet){
+		margin-top: 109px;
+	}
 
 }
 	.sticky-banner{
 		margin-top: 0px ;
+		@include desde (tablet){
+			margin-top: 109px;
+		}
 	}
 
 //buscador
@@ -78,14 +85,17 @@
 		border:1px solid $color-corporativo;
 		-webkit-appearance: none;
     	-webkit-border-radius: 0;
-    	padding:8px;
+    	padding:7px;
 		margin-left: 8px;
 		float: left;
 		display: block;
-		// @include desde(web){
-		// 	width: 81%;
-		// 	height: 30px;
-		// }
+		@include desde (tablet){
+			width: 80%;
+		}
+		@include desde(web){
+			width: 81%;
+			// height: 30px;
+		}
 
 	}
 	.search--buscar--interior{
@@ -96,6 +106,9 @@
 	    margin-left: -5px;
 	    height: 33px;
 	    display: block;
+	    @include desde (tablet){
+	    	width: 10%;
+	    }
 	    // position: relative;
 	    // top: 6px;
 		// @include desde(movil){
@@ -157,11 +170,28 @@ section.margen-top{
 	color: $color-corporativo;
 	font-size:0.8em;
 	overflow:hidden;
+	// @include desde (tablet){
+	// 	.cien-tab{
+	// 		width: 100%;
+	// 		border-right:none;
+	// 	}
+	// }
+	// @include desde (web){
+	// 	.cien-tab{
+	// 		display:none;
+	// 	}
+	// }
 	form li button{
 		border: none;
 		background: transparent;
 		text-transform: uppercase;
 		padding:0;
+		@include desde (tablet){
+			font-size: 0.9em;
+		}
+		@include desde (web){
+			font-size: 1em;
+		}
 	}
 }
 
@@ -190,6 +220,15 @@ section.margen-top{
 	   border: 1px solid #e2e2e2;
 	   margin-top: 5px;
 	   padding: 5px;
+		
+		@include desde (tablet){
+			width: 100%;
+		}
+
+		@include desde (web){
+			width: 41.7% !important;
+		}
+
 	}
 
 	@include desde (tablet){
@@ -209,6 +248,8 @@ section.margen-top{
     	margin-left: 7px;
     	margin-top: 5px;
     	margin-bottom: 5px;
+ 		-webkit-appearance: none !important;
+    	-webkit-border-radius: 0px 0px 0px 0px !important;
 	}
 
 .filtro{
@@ -228,6 +269,17 @@ section.margen-top{
 				margin-right: 0;
 				border-right:0;
 			}
+			@include desde (tablet){
+				&:first-child{
+					width: 100%;
+					border-right:none;
+				}
+				margin-bottom: 1em;
+				padding: 0 12px;
+			}
+
+			//para tablet
+
 		}
 
 		form{
@@ -262,6 +314,9 @@ section.margen-top{
 	margin: 10px 7px 0px 7px;
 	float: left;
 	font-size: 0.85em;
+	@include desde (tablet){
+		width: 100%;
+	}
 }
 
 
@@ -281,6 +336,16 @@ section.margen-top{
 	padding:5px;
 	margin-top:5px;
     margin-right: 10px;
+
+	@include desde (tablet){
+		width: 100% !important;
+		margin-right: 0;
+	}
+
+	@include desde (tablet){
+		width: 10%;
+	}
+
 	//margin-right: -36px;
 }
 
@@ -292,6 +357,9 @@ section.margen-top{
 	border:none;
 	margin-left:-5px;
 	color: #fff;
+	@include desde (tablet){
+		height: 33px;
+	}
 }
 
 
@@ -316,6 +384,15 @@ section.margen-top{
 		float: left;
 		margin: 5px;
 		position: relative;
+
+		@include desde (tablet){
+			width: 31.9%;
+		}
+
+		@include desde (web){
+			width: 24%;
+		}
+
 	}
 
 	//logo flotado
@@ -385,6 +462,15 @@ section.margen-top{
 			&:hover{
 				text-decoration: underline;
 			}
+
+			@include desde (tablet){
+				font-size: 0.7em;
+			}
+
+			@include desde (web){
+				font-size: 1em;
+			}
+
 		}
 
 	}
@@ -404,6 +490,14 @@ section.margen-top{
 		height: 310px;
 		position: relative;
 		margin: 0 auto;
+		@include desde (tablet){
+			width: 80%;
+			height: auto;
+		}
+		@include desde (web){
+			width: 327px;
+			height: 310px;
+		}
 		.mini--sec{
 			position: absolute;
 			bottom:0;
@@ -612,6 +706,11 @@ section.margen-top{
 				&:hover{
 					background: $gris-corporativo;
 				}
+
+				@include desde (tablet){
+					padding:8px 60px;
+				}
+
 			}
 
 	p.caracteristicas--titulo{
@@ -1710,8 +1809,15 @@ section.margen-top{
 	height:405px;
 
 	@include desde (tablet){
+		display: none;
+		z-index: 100;
+
+	}
+	@include desde (web){
 		display: block;
-	}	
+		z-index: 100;
+
+	}		
 
 }
 
@@ -1959,6 +2065,12 @@ a.btn-compromiso{
 	background:url(../img/compromiso-verde.jpg);
 	transform:rotate(-90deg);
 	text-indent:-9999px;
+	@include desde (tablet){
+		display: none
+	}
+	@include desde (web){
+		display: block;
+	}
 }
 
 //helpers

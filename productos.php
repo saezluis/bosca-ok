@@ -225,7 +225,7 @@
         <li><button name="opcion" value="valor1" type="submit" formaction="productos.php">Calefactor Eléctrico</button></li>
         <li><button name="opcion" value="valor2" type="submit" formaction="productos.php">Estufas Pellet</button></li>
         <li><button name="opcion" value="valor3" type="submit" formaction="productos.php">Estufas leña</button></li>
-        <li><button name="opcion" value="valor4" type="submit" formaction="productos.php">Calderas</button></li>				
+        <!-- <li><button name="opcion" value="valor4" type="submit" formaction="productos.php">Calderas</button></li> -->				
       </form>
     </ul>
     <!-- Volver esto un form y hacer la busqueda -->

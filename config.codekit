@@ -29,6 +29,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/cocina-calderas.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/cocina-calderas.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/contacto.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -343,6 +352,160 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/img-cc\/calderaDTH-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19832,
+		"inputAbbreviatedPath": "\/img-cc\/calderaDTH-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/calderaDTH-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/calderaDTH.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 101731,
+		"inputAbbreviatedPath": "\/img-cc\/calderaDTH.png",
+		"outputAbbreviatedPath": "\/img-cc\/calderaDTH.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/hergom.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3064,
+		"inputAbbreviatedPath": "\/img-cc\/hergom.png",
+		"outputAbbreviatedPath": "\/img-cc\/hergom.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L05CCE-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20153,
+		"inputAbbreviatedPath": "\/img-cc\/L05CCE-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L05CCE-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L05CCE.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22591,
+		"inputAbbreviatedPath": "\/img-cc\/L05CCE.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L05CCE.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L07CC-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22634,
+		"inputAbbreviatedPath": "\/img-cc\/L07CC-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L07CC-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L07CC.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42287,
+		"inputAbbreviatedPath": "\/img-cc\/L07CC.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L07CC.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L07CCE.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42287,
+		"inputAbbreviatedPath": "\/img-cc\/L07CCE.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L07CCE.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L08CCE-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28885,
+		"inputAbbreviatedPath": "\/img-cc\/L08CCE-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L08CCE-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L08CCE.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 50687,
+		"inputAbbreviatedPath": "\/img-cc\/L08CCE.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L08CCE.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L08CCV-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28916,
+		"inputAbbreviatedPath": "\/img-cc\/L08CCV-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L08CCV-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L08CCV.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 50687,
+		"inputAbbreviatedPath": "\/img-cc\/L08CCV.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L08CCV.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L09CCE-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23636,
+		"inputAbbreviatedPath": "\/img-cc\/L09CCE-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L09CCE-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L09CCE.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23380,
+		"inputAbbreviatedPath": "\/img-cc\/L09CCE.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L09CCE.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/img-pt\/acc-parrilla-b.jpg": {
 		"fileType": 16384,

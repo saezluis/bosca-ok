@@ -1421,13 +1421,25 @@ h6 {
   -o-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
+  @media screen and (min-width: 768px) {
+    .sticky {
+      height: auto; } }
+  @media screen and (min-width: 1025px) {
+    .sticky {
+      height: 60px; } }
   .sticky h1 {
-    margin: 14px 0px; }
+    margin: 16px 0 0 0; }
   .sticky .menu {
     margin-top: 0; }
 
 h1 {
   margin: 30px 0px; }
+  @media screen and (min-width: 768px) {
+    h1 {
+      margin: 22px 0 0 0; } }
+  @media screen and (min-width: 1025px) {
+    h1 {
+      margin: 30px 0px; } }
 
 .logo_m {
   width: 290px;
@@ -1507,16 +1519,23 @@ h1 {
   margin: 100px 0px 10px 0px; }
   @media screen and (min-width: 768px) {
     #logos_juntos {
-      text-align: right; } }
+      text-align: right;
+      margin-top: 120px; } }
 
 .sticky-logos_juntos {
   margin-top: 75px !important; }
 
 .banner {
   margin-top: 95px; }
+  @media screen and (min-width: 768px) {
+    .banner {
+      margin-top: 109px; } }
 
 .sticky-banner {
   margin-top: 0px; }
+  @media screen and (min-width: 768px) {
+    .sticky-banner {
+      margin-top: 109px; } }
 
 .buscar input {
   width: 60%;
@@ -1539,10 +1558,16 @@ h1 {
     border: 1px solid #E65524;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
-    padding: 8px;
+    padding: 7px;
     margin-left: 8px;
     float: left;
     display: block; }
+    @media screen and (min-width: 768px) {
+      .buscar--interior input {
+        width: 80%; } }
+    @media screen and (min-width: 1025px) {
+      .buscar--interior input {
+        width: 81%; } }
   .buscar--interior .search--buscar--interior {
     width: 5%;
     border: 0px none;
@@ -1551,6 +1576,9 @@ h1 {
     margin-left: -5px;
     height: 33px;
     display: block; }
+    @media screen and (min-width: 768px) {
+      .buscar--interior .search--buscar--interior {
+        width: 10%; } }
 
 #cotizar {
   font-size: 0.8em;
@@ -1613,6 +1641,12 @@ section.margen-top {
     background: transparent;
     text-transform: uppercase;
     padding: 0; }
+    @media screen and (min-width: 768px) {
+      .filtro form li button, .buscar_precio form li button {
+        font-size: 0.9em; } }
+    @media screen and (min-width: 1025px) {
+      .filtro form li button, .buscar_precio form li button {
+        font-size: 1em; } }
 
 .filtro {
   width: auto; }
@@ -1634,6 +1668,12 @@ section.margen-top {
     border: 1px solid #e2e2e2;
     margin-top: 5px;
     padding: 5px; }
+    @media screen and (min-width: 768px) {
+      .buscar_precio input[type="text"] {
+        width: 100%; } }
+    @media screen and (min-width: 1025px) {
+      .buscar_precio input[type="text"] {
+        width: 41.7% !important; } }
   @media screen and (min-width: 768px) {
     .buscar_precio {
       display: block; } }
@@ -1648,7 +1688,9 @@ select.orden {
   border: 1px solid #e2e2e2;
   margin-left: 7px;
   margin-top: 5px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  -webkit-appearance: none !important;
+  -webkit-border-radius: 0px 0px 0px 0px !important; }
 
 .filtro {
   width: 100%;
@@ -1663,6 +1705,13 @@ select.orden {
     .filtro li:last-child {
       margin-right: 0;
       border-right: 0; }
+    @media screen and (min-width: 768px) {
+      .filtro li {
+        margin-bottom: 1em;
+        padding: 0 12px; }
+        .filtro li:first-child {
+          width: 100%;
+          border-right: none; } }
   .filtro form {
     padding: 0; }
   .filtro a {
@@ -1684,6 +1733,9 @@ select.orden {
   margin: 10px 7px 0px 7px;
   float: left;
   font-size: 0.85em; }
+  @media screen and (min-width: 768px) {
+    .buscar_precio p.FP {
+      width: 100%; } }
 
 .buscar_button {
   background: #E65524;
@@ -1700,6 +1752,13 @@ select.orden {
   padding: 5px;
   margin-top: 5px;
   margin-right: 10px; }
+  @media screen and (min-width: 768px) {
+    .buscar_button {
+      width: 100% !important;
+      margin-right: 0; } }
+  @media screen and (min-width: 768px) {
+    .buscar_button {
+      width: 10%; } }
 
 .search--buscar {
   background: #E65524;
@@ -1708,6 +1767,9 @@ select.orden {
   border: none;
   margin-left: -5px;
   color: #fff; }
+  @media screen and (min-width: 768px) {
+    .search--buscar {
+      height: 33px; } }
 
 .por_precio {
   width: 100%;
@@ -1725,6 +1787,12 @@ select.orden {
     float: left;
     margin: 5px;
     position: relative; }
+    @media screen and (min-width: 768px) {
+      .box--productos .imagen--productos {
+        width: 31.9%; } }
+    @media screen and (min-width: 1025px) {
+      .box--productos .imagen--productos {
+        width: 24%; } }
   .box--productos .logo--marca--float {
     position: absolute;
     width: 100%;
@@ -1776,6 +1844,12 @@ select.orden {
       -moz-osx-font-smoothing: grayscale; }
       .box--productos .caja--precio--detalle button:hover {
         text-decoration: underline; }
+      @media screen and (min-width: 768px) {
+        .box--productos .caja--precio--detalle button {
+          font-size: 0.7em; } }
+      @media screen and (min-width: 1025px) {
+        .box--productos .caja--precio--detalle button {
+          font-size: 1em; } }
 
 .full--ficha {
   width: 100%;
@@ -1788,6 +1862,14 @@ select.orden {
     height: 310px;
     position: relative;
     margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      .full--ficha .foto--producto-big {
+        width: 80%;
+        height: auto; } }
+    @media screen and (min-width: 1025px) {
+      .full--ficha .foto--producto-big {
+        width: 327px;
+        height: 310px; } }
     .full--ficha .foto--producto-big .mini--sec {
       position: absolute;
       bottom: 0;
@@ -1930,6 +2012,9 @@ select.orden {
     border: none; }
     .full--ficha-datos button:hover {
       background: #53534A; }
+    @media screen and (min-width: 768px) {
+      .full--ficha-datos button {
+        padding: 8px 60px; } }
   .full--ficha-datos p.caracteristicas--titulo {
     color: #53534A;
     font-size: 0.9em;
@@ -2668,7 +2753,12 @@ select.orden {
   height: 405px; }
   @media screen and (min-width: 768px) {
     .collapsible {
-      display: block; } }
+      display: none;
+      z-index: 100; } }
+  @media screen and (min-width: 1025px) {
+    .collapsible {
+      display: block;
+      z-index: 100; } }
 
 .collapsible h1.dudas {
   font-size: 16px;
@@ -2831,6 +2921,12 @@ a.btn-compromiso {
   background: url(../img/compromiso-verde.jpg);
   transform: rotate(-90deg);
   text-indent: -9999px; }
+  @media screen and (min-width: 768px) {
+    a.btn-compromiso {
+      display: none; } }
+  @media screen and (min-width: 1025px) {
+    a.btn-compromiso {
+      display: block; } }
 
 .arriba-20 {
   margin-top: 20px !important; }
