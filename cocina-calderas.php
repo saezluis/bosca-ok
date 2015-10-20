@@ -108,11 +108,13 @@ if(isset($_POST['cotizar_prod'])) {
 	if($variable==''){
 		$registros=mysqli_query($conexion,"select * from cocinas") or die("Problemas en el select:".mysqli_error($conexion));		
 	}
+		
 	
-	if($variable==''){
-		$calderas=mysqli_query($conexion,"select * from calderas") or die("Problemas en el select:".mysqli_error($conexion));		
+	if($variable=='valor1'){
+		$registros=mysqli_query($conexion,"select * from cocinas") 
+		or die("Problemas en el select:".mysqli_error($conexion));	
 	}
-	
+		
 	
 	/*
 	if($variable=='valor0'){
@@ -120,15 +122,12 @@ if(isset($_POST['cotizar_prod'])) {
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
-	if($variable=='valor1'){
-		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calefactor electrico'") 
-		or die("Problemas en el select:".mysqli_error($conexion));	
-	}
-	
 	if($variable=='valor2'){
-		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calefactor a pellet'") 
+		$calderas=mysqli_query($conexion,"select * from calderas") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
+	
+	
 	
 	if($variable=='valor3'){
 		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Estufa a leña'") 
@@ -242,9 +241,9 @@ if(isset($_POST['cotizar_prod'])) {
       <ul>
        <form method="post" action="">
         <li><a >buscar por:</a></li>								
-        <li><button name="opcion" value="valor0" type="submit" formaction="productos.php">Todo</button></li>
-        <li><button name="opcion" value="valor1" type="submit" formaction="productos.php">Cocinas</button></li>
-        <li><button name="opcion" value="valor2" type="submit" formaction="productos.php">Calderas</button></li>               
+        <li><button name="opcion" value="" type="submit" formaction="cocina-calderas.php">Todo</button></li>
+        <li><button name="opcion" value="valor1" type="submit" formaction="cocina-calderas.php">Cocinas</button></li>
+        <li><button name="opcion" value="valor2" type="submit" formaction="cocina-calderas.php">Calderas</button></li>               
       </form>
     </ul>
     <!-- Volver esto un form y hacer la busqueda -->
@@ -293,7 +292,7 @@ if(isset($_POST['cotizar_prod'])) {
 			//Aqui debo buscar de enviar el SKU de cada producto para poder ver el detalle de cada uno
 			//setlocale(LC_MONETARY, 'it_IT');
       
-      while ($reg=mysqli_fetch_array($registros))
+      while (@$reg=mysqli_fetch_array(@$registros))
       {
        
        $detalle = $reg['sku'];
@@ -312,8 +311,9 @@ if(isset($_POST['cotizar_prod'])) {
 						//Esto deberia ir en un Form
        echo "<form method=\"post\" >";
        echo "<input type=\"text\" name=\"detalle_prod\" value=\"$detalle\" hidden=hidden>";
+	   //echo "<input type=\"text\" name=\"envia_cocina\" value=\"cocina\" hidden=hidden>";
 						//echo "<li><a name=\"$detalle\" href=\"detalle-producto.php\" class=\"precio--detail-ver\">ver detalle</a></li>";
-       echo "<li><button type=\"submit\" formaction=\"detalle-producto.php\">ver detalle</button></li>";
+       echo "<li><button type=\"submit\" formaction=\"detalle-cocina.php\">ver detalle</button></li>";
        echo "</form>";
        echo "</ul>";
        echo "</div>";
@@ -322,12 +322,14 @@ if(isset($_POST['cotizar_prod'])) {
      }
      ?>
 	 
+	 <!-- Enviar en un boton hidden en cada uno de los form que manda, si es cocina o caldera -->
+	 
 	 <?php
-      
+      /*
 			//Aqui debo buscar de enviar el SKU de cada producto para poder ver el detalle de cada uno
 			//setlocale(LC_MONETARY, 'it_IT');
       
-      while ($reg=mysqli_fetch_array($calderas))
+      while (@$reg=mysqli_fetch_array(@$calderas))
       {
        
        $detalle = $reg['sku'];
@@ -346,14 +348,16 @@ if(isset($_POST['cotizar_prod'])) {
 						//Esto deberia ir en un Form
        echo "<form method=\"post\" >";
        echo "<input type=\"text\" name=\"detalle_prod\" value=\"$detalle\" hidden=hidden>";
+	   echo "<input type=\"text\" name=\"envia_caldera\" value=\"caldera\" hidden=hidden>";
 						//echo "<li><a name=\"$detalle\" href=\"detalle-producto.php\" class=\"precio--detail-ver\">ver detalle</a></li>";
-       echo "<li><button type=\"submit\" formaction=\"detalle-producto.php\">ver detalle</button></li>";
+       echo "<li><button type=\"submit\" formaction=\"detalle-cocina.php\">ver detalle</button></li>";
        echo "</form>";
        echo "</ul>";
        echo "</div>";
        echo "</div>";
        
      }
+	 */
      ?>
                       
       </div>
