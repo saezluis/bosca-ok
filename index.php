@@ -173,7 +173,7 @@ function validarmail(){
                 </p>
                 <div class="caption">
                   <div class="blur"></div>
-                  <div class="caption-text"><a href="#" class="see">Ver</a></div>
+                  <div class="caption-text"><a href="cocina-calderas.php" class="see">Ver</a></div>
                 </div>
               </li>
             </ul>
