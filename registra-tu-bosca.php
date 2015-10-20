@@ -303,9 +303,10 @@
 					<p>Adjuntar foto de producto</p>	 			
 					<input type="file" name="userfile" onchange="cambioPic()">						
                   </div>
-				  
-				 	<img id="imgsi" src="img2/si.gif">
-					<img id="imgno" src="img2/no.gif">					
+				  <div class="confirmacion">
+				 	    <img id="imgsi" src="img2/si.gif">
+					     <img id="imgno" src="img2/no.gif">
+          </div>					
 				  
                 </div>
 				<button class="registrar" onclick="return(validargarantia())" type="submit">Registar producto</button> 

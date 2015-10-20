@@ -141,7 +141,8 @@
                       <p class="label">Motivo</p>
                       <input type="text" name="" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea><a href="#" class="enviar--encuentranos">Enviar</a>
+                    <textarea name="" class="text-area"></textarea>
+                    <button type="button" class="enviar--encuentranos">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
@@ -192,7 +193,8 @@
                       <p class="label">Motivo</p>
                       <input type="text" name="" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea><a href="#" class="enviar--encuentranos">Enviar</a>
+                    <textarea name="" class="text-area"></textarea>
+                    <button type="button" class="enviar--encuentranos">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
@@ -232,7 +234,8 @@
                       <p class="label">Motivo</p>
                       <input type="text" name="" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea><a href="#" class="enviar--encuentranos">Enviar</a>
+                    <textarea name="" class="text-area"></textarea>
+                    <button type="button" class="enviar--encuentranos">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
@@ -278,7 +281,8 @@
                       <p class="label">Motivo</p>
                       <input type="text" name="" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea><a href="#" class="enviar--encuentranos">Enviar</a>
+                    <textarea name="" class="text-area"></textarea>
+                    <button type="button" class="enviar--encuentranos">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
@@ -317,7 +321,8 @@
                       <p class="label">Motivo</p>
                       <input type="text" name="" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea><a href="#" class="enviar--encuentranos">Enviar</a>
+                    <textarea name="" class="text-area"></textarea>
+                    <button type="button" class="enviar--encuentranos">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
@@ -356,7 +361,8 @@
                       <p class="label">Motivo</p>
                       <input type="text" name="" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea><a href="#" class="enviar--encuentranos">Enviar</a>
+                    <textarea name="" class="text-area"></textarea>
+                    <button type="button" class="enviar--encuentranos">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>

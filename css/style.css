@@ -2370,7 +2370,6 @@ select.orden {
   .tab-content p {
     color: #53534A;
     font-size: 0.7em;
-    padding: 10px 34px 10px 0px;
     margin: 0; }
   .tab-content .logos--certificacion {
     margin-top: 25px; }
@@ -2503,22 +2502,30 @@ select.orden {
       width: 95%;
       margin: 5px 0px;
       border: 1px solid #E65524;
-      background: #f8f8f8; }
+      background: #f8f8f8;
+      padding: 8px;
+      font-size: 0.8em; }
   .form--encuentranos textarea {
     width: 97%;
     border: 1px solid #E65524;
-    height: 150px;
+    height: 130px;
     margin-top: 20px;
     font-size: 0.8em;
-    background: #f8f8f8; }
-  .form--encuentranos a.enviar--encuentranos {
+    background: #f8f8f8;
+    padding: 8px;
+    font-size: 0.8em;
+    margin-bottom: 1em; }
+  .form--encuentranos .enviar--encuentranos {
     width: 97%;
     padding: 8px;
     background: #E65524;
     color: #fff;
     text-align: center;
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    border: none; }
+    .form--encuentranos .enviar--encuentranos:hover {
+      background: #53534A; }
 
 .alert {
   background: #53534A;
@@ -2567,7 +2574,8 @@ select.orden {
     float: left;
     text-align: center;
     padding: 10px;
-    text-decoration: none; }
+    text-decoration: none;
+    border: none; }
     .side-ellos form.registra .registrar:hover {
       background: #53534A; }
   .side-ellos form.registra .caja--tel {
@@ -2583,7 +2591,8 @@ select.orden {
     .side-ellos form.registra .caja--tel .fechas--registro {
       height: 30px;
       float: left;
-      margin-left: 23px; }
+      margin-left: 23px;
+      width: 36%; }
       .side-ellos form.registra .caja--tel .fechas--registro select {
         border: 1px solid #e2e2e2;
         height: 30px;
@@ -2592,7 +2601,8 @@ select.orden {
     float: left;
     width: 100%;
     margin-top: 10px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative; }
     .side-ellos form.registra .adjuntar .upload {
       width: 25%;
       height: auto;
@@ -2617,6 +2627,10 @@ select.orden {
       opacity: 0 !important;
       overflow: hidden !important;
       cursor: pointer; }
+    .side-ellos form.registra .adjuntar .confirmacion {
+      position: absolute;
+      top: 10px;
+      left: 180px; }
   .side-ellos form.registra .calificar {
     width: 100%;
     float: left;
@@ -2647,7 +2661,7 @@ select.orden {
   display: block;
   overflow: hidden;
   position: fixed;
-  top: 40%;
+  top: 137px;
   z-index: 9999;
   left: 20px;
   display: none;
@@ -2811,7 +2825,7 @@ a.btn-compromiso {
   width: 220px;
   height: 50px;
   position: fixed;
-  left: -85px;
+  right: -90px;
   top: 230px;
   display: block;
   background: url(../img/compromiso-verde.jpg);

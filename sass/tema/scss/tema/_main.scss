@@ -1290,7 +1290,7 @@ section.margen-top{
 	p{
 		color: #53534A;
 		font-size: 0.7em;
-		padding:10px 34px 10px 0px;
+		//padding:10px 34px 10px 0px;
 		margin: 0;
 	}
 	.logos--certificacion{
@@ -1455,19 +1455,25 @@ section.margen-top{
 			margin: 5px 0px;
 			border: 1px solid $color-corporativo;
 			background:#f8f8f8;
+			padding: 8px;
+			font-size: 0.8em;
 		}
 	}
 
 	textarea{
 			width: 97%;
 			border: 1px solid $color-corporativo;
-			height: 150px;
+			height: 130px;
 			margin-top: 20px;
 			font-size: 0.8em;
 			background:#f8f8f8;
+			padding: 8px;
+			font-size: 0.8em;
+			margin-bottom:1em;
+
 		}
 
-	a.enviar--encuentranos{
+	.enviar--encuentranos{
 		width: 97%;
 		padding: 8px;
 		background: $color-corporativo;
@@ -1475,6 +1481,10 @@ section.margen-top{
 		text-align: center;
 		display: block;
 		text-decoration: none;
+		border:none;
+		&:hover{
+			background:$gris-corporativo;
+		}
 	}
 
 
@@ -1547,6 +1557,7 @@ section.margen-top{
 			text-align: center;
 			padding: 10px;
 			text-decoration: none;
+			border:none;
 			&:hover{
 				background: $gris-corporativo;
 			}
@@ -1570,11 +1581,13 @@ section.margen-top{
 				height: 30px;
 				float: left;
 				margin-left: 23px;
+				width: 36%;
 				select{
 					border: 1px solid #e2e2e2;
 					height: 30px;
 					background: #fff;
 				}
+
 			}
 	
 
@@ -1585,6 +1598,7 @@ section.margen-top{
 		width: 100%;
 		margin-top: 10px;
 		margin-bottom: 30px;
+		position:relative;
 		// p.adj--archivo{
 		// 	text-align: left;
 		// 	color: $color-corporativo;
@@ -1627,7 +1641,14 @@ section.margen-top{
 		    overflow: hidden !important;
 		    cursor:pointer;
 		}
-	}
+
+		.confirmacion{
+			position: absolute;
+			top: 10px;
+			left: 180px;
+		}
+
+	}//upload
 
 
 
@@ -1682,7 +1703,7 @@ section.margen-top{
 	display: block;
 	overflow: hidden;
 	position: fixed;
-	top:40%;
+	top:137px;
 	z-index: 9999;
 	left:20px;
 	display: none;
@@ -1931,7 +1952,7 @@ a.btn-compromiso{
 	width:220px;
 	height:50px;
 	position: fixed;
-	left:-85px;
+	right:-90px;
 	top:230px;
 	display:block;
 	//background:#86b03c;
