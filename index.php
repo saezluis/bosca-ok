@@ -186,7 +186,7 @@ function validarmail(){
                 <p class="cinta">Ventilación y aire acondicionado</p>
                 <div class="caption">
                   <div class="blur"></div>
-                  <div class="caption-text"><a href="#" class="see">Ver</a></div>
+                  <div class="caption-text"><a href="ventilacion.php" class="see">Ver</a></div>
                 </div>
               </li>
             </ul>
