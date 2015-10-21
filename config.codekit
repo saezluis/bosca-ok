@@ -29,15 +29,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cocina-calderas.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cocina-calderas.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/contacto.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -77,15 +68,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
-		},
-	"\/cotizacion.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cotizacion.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/css\/ed-grid.css": {
 		"fileType": 16,
@@ -371,6 +353,28 @@
 		"initialSize": 101731,
 		"inputAbbreviatedPath": "\/img-cc\/calderaDTH.png",
 		"outputAbbreviatedPath": "\/img-cc\/calderaDTH.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/calderaLAR-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22658,
+		"inputAbbreviatedPath": "\/img-cc\/calderaLAR-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/calderaLAR-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/calderaLAR.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 98861,
+		"inputAbbreviatedPath": "\/img-cc\/calderaLAR.png",
+		"outputAbbreviatedPath": "\/img-cc\/calderaLAR.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
