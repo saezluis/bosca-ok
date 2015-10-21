@@ -122,7 +122,8 @@ if(isset($_POST['cotizar_prod'])) {
 			$capacidad_tolva = $reg['capacidad_tolva'];	
 			$volumen_agua = $reg['volumen_agua'];	
 			
-			
+			$volumen_carga = $reg['volumen_carga'];				
+			$longitud_lena = $reg['longitud_lena'];	
 			//$volumen_carga = $reg['consumo_pellet'];
 		
 		}
@@ -261,17 +262,8 @@ if(isset($_POST['cotizar_prod'])) {
 			 <form method="post">
 			 <?php 
 			 
-				if($tipo_producto=='Cocina Calefactora'){					
 					echo "<button type=\"submit\" onclick=\"return(mensajeCotizar())\" name=\"cotizar_prod\" value=\"$sku\">cotizar</button>";
-					echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$sku\">";
-					echo "<input type=\"text\" hidden=hidden  name=\"envia_cocina\" value=\"cocina\">";
-				}
-				
-				if($tipo_producto=='Caldera'){
-					echo "<button type=\"submit\" onclick=\"return(mensajeCotizar())\" name=\"cotizar_prod\" value=\"$sku\">cotizar</button>";
-					echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$sku\">";
-					echo "<input type=\"text\" hidden=hidden  name=\"envia_caldera\" value=\"caldera\">";
-				}
+					echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$sku\">";									
 				
 			  ?>			  
 			 </form> 
@@ -296,7 +288,7 @@ if(isset($_POST['cotizar_prod'])) {
 								echo "<p class=\"calefa\"><span class=\"datos--d\">".$anexo."</span></p>";
 							echo "</li>";
 							echo "<li>";
-								echo "<p class=\"dimension\">Potencia: <span class=\"datos--d\">".$potencia."</span></p>";
+								echo "<p class=\"dimension\">Potencia: <span class=\"datos--d\">".$potencia." Kcal/h</span></p>";
 							echo "</li>";
 							echo "<li>";
 								echo "<p class=\"diametro\">Material: <span class=\"datos--d\">".$material."</span></p>";
@@ -313,7 +305,7 @@ if(isset($_POST['cotizar_prod'])) {
 			  
 			}
 			
-			if($tipo_producto=='Caldera'){
+			if($anexo=='DTH'){
 		  
 				echo "<div class=\"caracteristicas--producto bor\">";
 					echo "<p class=\"caracteristicas--titulo\">Características</p>";
@@ -323,23 +315,23 @@ if(isset($_POST['cotizar_prod'])) {
 								//<!-- <p class="carga">Carga:  <span class="datos--d">Tipo Superior</span></p> -->
 							//</li>
 							echo "<li>";
-								echo "<p class=\"potencia\">Potencia Calorica:  <span class=\"datos--d\">".$potencia."</span></p>";
+								echo "<p class=\"potencia\">Potencia Calorica:  <span class=\"datos--d\">".$potencia." Kcal/h</span></p>";
 							echo "</li>";
 							
 							echo "<li>";
-								echo "<p class=\"\">Alto: <span class=\"datos--d\">".$alto."</span></p>"; 
+								echo "<p class=\"\">Alto: <span class=\"datos--d\">".$alto." cms</span></p>"; 
 							echo "</li>";
 							
 							echo "<li>";
-								echo "<p class=\"\">Ancho: <span class=\"datos--d\">".$ancho."</span></p>";
+								echo "<p class=\"\">Ancho: <span class=\"datos--d\">".$ancho." cms</span></p>";
 							echo "</li>";
 							
 							echo "<li>";
-								echo "<p class=\"\">Fondo: <span class=\"datos--d\">".$fondo."</span></p>";
+								echo "<p class=\"\">Fondo: <span class=\"datos--d\">".$fondo." cms</span></p>";
 							echo "</li>";
 							
 							echo "<li>";
-								echo "<p class=\"\">Diametro Chimenea: <span class=\"datos--d\">".$diametro_chimenea."</span></p>"; 
+								echo "<p class=\"\">Diametro Chimenea: <span class=\"datos--d\">".$diametro_chimenea." cms</span></p>"; 
 							echo "</li>";
 							
 							echo "<li>";
@@ -347,16 +339,95 @@ if(isset($_POST['cotizar_prod'])) {
 							echo "</li>";
 							
 							echo "<li>";
-								echo "<p class=\"\">Consumo Pellet: <span class=\"datos--d\">".$consumo_pellet."</span></p>";
+								echo "<p class=\"\">Consumo Pellet: <span class=\"datos--d\">".$consumo_pellet." kg/h</span></p>";
 							echo "</li>";
 							
 							echo "<li>";
-								echo "<p class=\"\">Capacidad Tolva: <span class=\"datos--d\">".$capacidad_tolva."</span></p>";
+								echo "<p class=\"\">Capacidad Tolva: <span class=\"datos--d\">".$capacidad_tolva." lts</span></p>";
 							echo "</li>";
 
 							echo "<li>";
-								echo "<p class=\"\">Volumen Agua: <span class=\"datos--d\">".$volumen_agua."</span></p>";
+								echo "<p class=\"\">Volumen Agua: <span class=\"datos--d\">".$volumen_agua." lts</span></p>";
 							echo "</li>";							
+							
+							echo "<li>";
+								echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"></span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
+							echo "</li>";
+							
+						echo "</ul>";
+					echo "</div><a href=\"#\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a><a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>";
+				echo "</div>";
+			  
+			}
+			
+			if($anexo=='LAR'){
+		  
+				echo "<div class=\"caracteristicas--producto bor\">";
+					echo "<p class=\"caracteristicas--titulo\">Características</p>";
+					echo "<div class=\"caract--datos\">";
+						echo "<ul>";
+							//<li>
+								//<!-- <p class="carga">Carga:  <span class="datos--d">Tipo Superior</span></p> -->
+							//</li>
+							echo "<li>";
+								echo "<p class=\"potencia\">Potencia Calorica:  <span class=\"datos--d\">".$potencia."  Kcal/h</span></p>";
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Alto: <span class=\"datos--d\">".$alto." cms</span></p>"; 
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Ancho: <span class=\"datos--d\">".$ancho." cms</span></p>";
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Fondo: <span class=\"datos--d\">".$fondo." cms</span></p>";
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Diametro Chimenea: <span class=\"datos--d\">".$diametro_chimenea." cms</span></p>"; 
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Material: <span class=\"datos--d\">".$material." </span></p>";
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Volumen Carga: <span class=\"datos--d\">".$volumen_carga." dm3</span></p>";
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Volumen Agua: <span class=\"datos--d\">".$volumen_agua." lts</span></p>";												
+							echo "</li>";
+
+							echo "<li>";
+								echo "<p class=\"\">Longitud Leña: <span class=\"datos--d\">".$longitud_lena." cms</span></p>";
+							echo "</li>";							
+							
+							echo "<li>";
+								echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"></span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
+							echo "</li>";
+							
+						echo "</ul>";
+					echo "</div><a href=\"#\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a><a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>";
+				echo "</div>";
+			  
+			}
+			
+			if($potencia==333){
+		  
+				echo "<div class=\"caracteristicas--producto bor\">";
+					echo "<p class=\"caracteristicas--titulo\">Características</p>";
+					echo "<div class=\"caract--datos\">";
+						echo "<ul>";
+							echo "<li>";
+								echo "<p class=\"\"><span class=\"datos--d\">".$consumo_pellet." cms</span></p>";
+							echo "</li>";	
+							
+							echo "<li>";
+								echo "<p class=\"\"><span class=\"datos--d\">".$capacidad_tolva." cms</span></p>";
+							echo "</li>";	
 							
 							echo "<li>";
 								echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"></span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";

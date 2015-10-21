@@ -111,16 +111,51 @@ if(isset($_POST['cotizar_prod'])) {
 		
 	
 	if($variable=='valor1'){
-		$registros=mysqli_query($conexion,"select * from cocinas") 
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Cocina Calefactora'") 
 		or die("Problemas en el select:".mysqli_error($conexion));	
 	}
 		
-	
-	/*
-	if($variable=='valor0'){
-		$registros=mysqli_query($conexion,"select * from producto") 
+	if($variable=='valor2'){
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Cocina a leña'") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
+	
+	if($variable=='valor3'){
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Horno a leña'") 
+		or die("Problemas en el select:".mysqli_error($conexion));		
+	}
+	
+	if($variable=='valor4'){
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Caldera'") 
+		or die("Problemas en el select:".mysqli_error($conexion));		
+	}
+	
+	if($valor_busqueda!=''){
+		$registros=mysqli_query($conexion,"select * from cocinas where nombre like '%$valor_busqueda%' ") 
+		or die("Problemas en el select:".mysqli_error($conexion));		
+		//echo "Valor busqueda ahora lleva algo";
+	}
+	
+	if($campo_select=='value1'){
+		$registros=mysqli_query($conexion,"select * from cocinas ORDER BY precio ASC") 
+		or die("Problemas en el select:".mysqli_error($conexion));		
+		//echo "Valor del select ahora lleva algo";
+	}
+	
+	if($campo_select=='value2'){
+		$registros=mysqli_query($conexion,"select * from cocinas ORDER BY precio DESC") 
+		or die("Problemas en el select:".mysqli_error($conexion));		
+		//echo "Valor del select ahora lleva algo";
+	}
+	
+	if($desde!='' and $hasta!=''){
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE precio BETWEEN $desde AND $hasta") 
+		or die("Problemas en el select:".mysqli_error($conexion));		
+		//echo "Valor del select ahora lleva algo";
+		//SELECT * FROM contacts WHERE contact_id BETWEEN 100 AND 200;
+	}
+	/*
+	
 	
 	if($variable=='valor2'){
 		$calderas=mysqli_query($conexion,"select * from calderas") 
@@ -139,30 +174,13 @@ if(isset($_POST['cotizar_prod'])) {
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
-	if($valor_busqueda!=''){
-		$registros=mysqli_query($conexion,"select * from producto where nombre like '%$valor_busqueda%' ") 
-		or die("Problemas en el select:".mysqli_error($conexion));		
-		//echo "Valor busqueda ahora lleva algo";
-	}
 	
-	if($campo_select=='value1'){
-		$registros=mysqli_query($conexion,"select * from producto ORDER BY precio ASC") 
-		or die("Problemas en el select:".mysqli_error($conexion));		
-		//echo "Valor del select ahora lleva algo";
-	}
 	
-	if($campo_select=='value2'){
-		$registros=mysqli_query($conexion,"select * from producto ORDER BY precio DESC") 
-		or die("Problemas en el select:".mysqli_error($conexion));		
-		//echo "Valor del select ahora lleva algo";
-	}
 	
-	if($desde!='' and $hasta!=''){
-		$registros=mysqli_query($conexion,"select * from producto WHERE precio BETWEEN $desde AND $hasta") 
-		or die("Problemas en el select:".mysqli_error($conexion));		
-		//echo "Valor del select ahora lleva algo";
-		//SELECT * FROM contacts WHERE contact_id BETWEEN 100 AND 200;
-	}
+	
+	
+	
+	
 	
 	*/
 	?>
@@ -242,8 +260,10 @@ if(isset($_POST['cotizar_prod'])) {
        <form method="post" action="">
         <li><a >buscar por:</a></li>								
         <li><button name="opcion" value="" type="submit" formaction="cocina-calderas.php">Todo</button></li>
-        <li><button name="opcion" value="valor1" type="submit" formaction="cocina-calderas.php">Cocinas</button></li>
-        <li><button name="opcion" value="valor2" type="submit" formaction="cocina-calderas.php">Calderas</button></li>               
+        <li><button name="opcion" value="valor1" type="submit" formaction="cocina-calderas.php">Cocinas Calefactoras</button></li>
+        <li><button name="opcion" value="valor2" type="submit" formaction="cocina-calderas.php">Cocinas a Leña</button></li>               
+		<li><button name="opcion" value="valor3" type="submit" formaction="cocina-calderas.php">Horno a Leña</button></li>
+		<li><button name="opcion" value="valor4" type="submit" formaction="cocina-calderas.php">Calderas</button></li>
       </form>
     </ul>
     <!-- Volver esto un form y hacer la busqueda -->
@@ -263,7 +283,7 @@ if(isset($_POST['cotizar_prod'])) {
       <p class="FP">precio</p>
       <input name="desde" value="<?php echo isset($_POST['desde']) ? $_POST['desde'] : '' ?>" type="text" placeholder="desde">
       <input name="hasta" value="<?php echo isset($_POST['hasta']) ? $_POST['hasta'] : '' ?>" type="text" placeholder="hasta">
-      <button type="submit" class="buscar_button" onclick="return(validate())" formaction="productos.php"></button>
+      <button type="submit" class="buscar_button" onclick="return(validate())"></button>
     </form>
     
     <p class="FP">Ordenar</p>
