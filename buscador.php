@@ -31,6 +31,15 @@
 	$registrosParrilla=mysqli_query($conexion,"select * from parrilla where nombre like '%$keyword%' OR modelo like '%$keyword%'")
 	or die("Problemas en el select:".mysqli_error($conexion));
 	
+	$registrosAccParrilla=mysqli_query($conexion,"select * from accparrilla where nombre like '%$keyword%'")
+	or die("Problemas en el select:".mysqli_error($conexion));
+	
+	$registrosCocinas=mysqli_query($conexion,"select * from cocinas where nombre like '%$keyword%'")
+	or die("Problemas en el select:".mysqli_error($conexion));
+	
+	$registrosVentilacion=mysqli_query($conexion,"select * from ventilacion where nombre like '%$keyword%'")
+	or die("Problemas en el select:".mysqli_error($conexion));
+	
 	/*
 	if($reg=mysqli_fetch_array($registros)){
 		$foto = $reg['foto_producto'];	
@@ -137,6 +146,35 @@
 				echo "<li><a href=\"detalle-parrilla.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
 			}
 			
+			while($reg=mysqli_fetch_array($registrosAccParrilla)){
+				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
+				//$compname = $reg['sku'];
+				//$inc = $inc + 1;
+				$var = $reg['sku'];
+				//echo $var;
+				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
+				echo "<li><a href=\"terraza-parrilla.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+			}
+			
+			while($reg=mysqli_fetch_array($registrosCocinas)){
+				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
+				//$compname = $reg['sku'];
+				//$inc = $inc + 1;
+				$var = $reg['sku'];
+				//echo $var;
+				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
+				echo "<li><a href=\"detalle-cocina.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+			}
+			
+			while($reg=mysqli_fetch_array($registrosVentilacion)){
+				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
+				//$compname = $reg['sku'];
+				//$inc = $inc + 1;
+				$var = $reg['sku'];
+				//echo $var;
+				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
+				echo "<li><a href=\"detalle-ventilacion.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+			}
 			
 			?>			
 		  </ul>	  

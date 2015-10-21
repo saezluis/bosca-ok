@@ -105,6 +105,14 @@
         <div class="caja movil-70">
           <div class="side-ellos">
             <ul class="tabs">
+
+				<!-- 
+				
+				
+				V region 
+				
+				
+				-->	
               <li>
                 <input id="tab1" type="radio" checked="" name="tabs">
                 <label for="tab1">V Región</label>
@@ -124,29 +132,80 @@
                         <li class="color-gris">(032) 2686031</li>
                       </ul>
                     </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>                              Lunes a viernes de 9:30 a 19:00 hrs Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>                              Av. Libertad 1040, Esquina 11 1/2 Norte.</p>
+                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs Sábados de 10:00 a 14:00 hrs.</p>
+                    <p class="horarios"><span class="atencion">Dirección</span><br>Av. Libertad 1040, Esquina 11 1/2 Norte.</p>
                   </div>
-                  <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
+				  
+                  <form method="post" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
                     <div class="lado--a">
                       <p class="label">Nombre y apellido</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+						<input type="text" name="nombre_apellido" placeholder="" class="is--not">
                       <p class="label">Mail</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+						<input type="text" name="mail" placeholder="" class="is--not">
                     </div>
                     <div class="lado--b">
                       <p class="label">Teléfono</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+						<input type="text" name="telefono"  placeholder="" class="is--not">
                       <p class="label">Motivo</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+						<input type="text" name="motivo"  placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea>
-                    <button type="button" class="enviar--encuentranos">Enviar</button>
+                    <textarea name="comentario" class="text-area"></textarea>
+                    <button type="submit" class="enviar--encuentranos">Enviar</button>
                   </form>
+				  
+				  <?php
+					
+					//Verificar que no envie email al cargar la pagina de manera inicial
+					
+					$nombre_apellido = $_REQUEST['nombre_apellido'];
+					$mail = $_REQUEST['mail'];
+					$telefono = $_REQUEST['telefono'];
+					$motivo = $_REQUEST['motivo'];
+					$comentario = $_REQUEST['comentario'];
+					
+					//$email = "usuarioX@gmail.com";
+					$to = "V_region@bosca.cl";
+					$subject = "Comentario de usuario pagina web Bosca";
+					$headers = "De: $mail\n";
+					$message = "Un visitante de tu sitio te ha enviado el siguiente email para que atiendas a su comentario.
+					\n Correo electronico: $mail
+					\n Teléfono: $telefono
+					\n Motivo: $motivo
+					\n Comentario: $comentario
+					";
+
+					$user = $mail;
+					$usersubject = "Gracias por sus comentarios";
+					$userheaders = "De: V_region@bosca.cl\n";
+					$usermessage = "Gracias por sus comentarios, su solicitud sera debidamente procesada por nuestro personal de Bosca";
+
+					mail($to,$subject,$message,$headers);
+					mail($user,$usersubject,$usermessage,$userheaders);
+				  
+				  ?>
                   <!-- Your content goes here-->
+				  <!-- 
+				  
+				  
+				  Deberia recoger la info en las variables de sesion y enviarlas por php 
+					
+				  
+				  -->
                 </div>
               </li>
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
               <li>
                 <input id="tab2" type="radio" name="tabs">
                 <label for="tab2">RM</label>
@@ -176,8 +235,8 @@
                         <li class="color-gris">(02) 2624 1891</li>
                       </ul>
                     </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>                              Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>                              Av. Américo Vespucio 2077, Huechuraba</p>
+                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
+                    <p class="horarios"><span class="atencion">Dirección</span><br>Av. Américo Vespucio 2077, Huechuraba</p>
                   </div>
                   <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
@@ -217,8 +276,8 @@
                         <li class="color-gris">(072)-2426768</li>
                       </ul>
                     </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>                              Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>                              O’Carrol 11 Esq. Freire . Local 5, Rancagua.</p>
+                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
+                    <p class="horarios"><span class="atencion">Dirección</span><br>O’Carrol 11 Esq. Freire . Local 5, Rancagua.</p>
                   </div>
                   <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
@@ -264,8 +323,8 @@
                         <li class="color-gris">(041) 2219892</li>
                       </ul>
                     </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>                              Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>                              Arturo Prat 202, Concepción.</p>
+                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
+                    <p class="horarios"><span class="atencion">Dirección</span><br>Arturo Prat 202, Concepción.</p>
                   </div>
                   <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
@@ -304,8 +363,8 @@
                         <li class="color-gris">(045) 263906</li>
                       </ul>
                     </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>                              Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>                              Av. Alemania 0715, Temuco.</p>
+                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
+                    <p class="horarios"><span class="atencion">Dirección</span><br>Av. Alemania 0715, Temuco.</p>
                   </div>
                   <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
@@ -344,10 +403,10 @@
                         <li class="color-gris">(065) 313214</li>
                       </ul>
                     </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>                              Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>                              Caletera Presidente Ibáñez 328, Local A, esquina Circunvalación, Puerto Montt.</p>
+                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
+                    <p class="horarios"><span class="atencion">Dirección</span><br>Caletera Presidente Ibáñez 328, Local A, esquina Circunvalación, Puerto Montt.</p>
                   </div>
-                  <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
+                  <form action="encuentranos_submit" method="post" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
                     <div class="lado--a">
                       <p class="label">Nombre y apellido</p>
@@ -362,7 +421,7 @@
                       <input type="text" name="" value="" placeholder="" class="is--not">
                     </div>
                     <textarea name="" class="text-area"></textarea>
-                    <button type="button" class="enviar--encuentranos">Enviar</button>
+                    <button type="submit" class="enviar--encuentranos">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>

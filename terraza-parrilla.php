@@ -104,6 +104,49 @@ if(isset($_POST['cotizar_prod'])) {
      $desde = @$_REQUEST['desde'];
      $hasta = @$_REQUEST['hasta'];
      
+	 //-------------------------------------------------------------------------------------------
+	 
+	 @$_SESSION["var"] = @$_SESSION["var"] + 1;
+	 $itemID = $_SESSION["var"];
+		
+	//echo "Esto lleva cotizar producto: ".@$_REQUEST['cotizar_prod'];
+	//echo "<br>";
+	/*
+	if(@$_REQUEST['cotizar_prod']!=''){
+		$can_coti = $can_coti + 1;
+		echo "Entro al contador";
+		echo "<br>";
+	}
+	*/
+	//echo "esto lleva itemID: ".$itemID; - PARA CONTROL -
+	
+	//Creo el arreglo de variables de sesion
+	if (!isset($_SESSION['items'])) {
+		$_SESSION['items'] = array();
+	}
+	
+	//Agrego items cada vez que la pagina refresca y solo recibe SKU cuando el usuario presiona cotizar
+	$_SESSION['items'][$itemID] = array('Detalle' => @$_REQUEST['cotizar_prod']);
+	
+	//Esto me trae la cantidad de valores en el arreglo
+	$cantidad = count($_SESSION['items']);
+	
+	//Envio el total de valores del arreglo por variables de sesion
+	$_SESSION['tope'] = $cantidad;
+	
+	//Aqui comieza el resto del programa	
+	
+	
+	if(isset($_REQUEST['detalle_prod'])){
+		$detalle_producto = $_REQUEST['detalle_prod'];
+	}
+	
+	if(isset($_GET['deta'])){
+		$detalle_producto = $_GET['deta'];
+	}
+	 
+	 
+	 //-------------------------------------------------------------------------------------------
 	/*
 	echo "Esto llega del boton: " .$variable;
 	echo "<br>";
@@ -360,7 +403,9 @@ if(isset($_POST['cotizar_prod'])) {
 			echo "<li><button type=\"submit\" formaction=\"detalle-parrilla.php\">ver detalle</button></li>";
 		}
 		if($variable=='valor3'){
-			echo "<li><button type=\"submit\" onclick=\"return(mensajeCotizar())\" formaction=\"cotizar.php\">Cotizar</button></li>";
+			echo "<li><button type=\"submit\" onclick=\"return(mensajeCotizar())\" name=\"cotizar_prod\" value=\"$detalle\">Cotizar</button></li>";
+			echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$detalle\">";
+			echo "<input type=\"text\" hidden=hidden name=\"opcion\" value=\"$variable\"  >";
 		}
 		
 	   echo "</form>";
