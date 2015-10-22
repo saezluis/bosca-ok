@@ -2147,6 +2147,17 @@ section.margen-top{
 				}
 
 			}
+
+			//helper
+			.borde-r-t{
+				@include desde (tablet){
+					border-right: 1px solid #fff;					
+				}
+				@include desde (web){
+					border-right: none;
+				}
+
+			}
 	
 			.yes-border-r{
 				border-right:1px solid #fff;

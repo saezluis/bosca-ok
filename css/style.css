@@ -3145,6 +3145,12 @@ select.orden {
               color: #fff;
               text-decoration: none;
               background: url(../img/icon-link.png) 110px center no-repeat; }
+    @media screen and (min-width: 768px) {
+      .accordion-section-content .use--bosca .borde-r-t {
+        border-right: 1px solid #fff; } }
+    @media screen and (min-width: 1025px) {
+      .accordion-section-content .use--bosca .borde-r-t {
+        border-right: none; } }
     .accordion-section-content .use--bosca .yes-border-r {
       border-right: 1px solid #fff; }
 
