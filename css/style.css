@@ -731,6 +731,120 @@ img {
 
   .grupo .caja.tablet-8-8 {
     width: 100%; } }
+/*tablet-h: A partir de 1024px*/
+@media all and (min-width: 1024px) {
+  /*Tamaños en porcentajes*/
+  .grupo .caja.tablet-h-5 {
+    width: 5%; }
+
+  .grupo .caja.tablet-h-10 {
+    width: 10%; }
+
+  .grupo .caja.tablet-h-15 {
+    width: 15%; }
+
+  .grupo .caja.tablet-h-20 {
+    width: 20%; }
+
+  .grupo .caja.tablet-h-25 {
+    width: 25%; }
+
+  .grupo .caja.tablet-h-30 {
+    width: 30%; }
+
+  .grupo .caja.tablet-h-35 {
+    width: 35%; }
+
+  .grupo .caja.tablet-h-40 {
+    width: 40%; }
+
+  .grupo .caja.tablet-h-45 {
+    width: 45%; }
+
+  .grupo .caja.tablet-h-50 {
+    width: 50%; }
+
+  .grupo .caja.tablet-h-55 {
+    width: 55%; }
+
+  .grupo .caja.tablet-h-60 {
+    width: 60%; }
+
+  .grupo .caja.tablet-h-65 {
+    width: 65%; }
+
+  .grupo .caja.tablet-h-70 {
+    width: 70%; }
+
+  .grupo .caja.tablet-h-75 {
+    width: 75%; }
+
+  .grupo .caja.tablet-h-80 {
+    width: 80%; }
+
+  .grupo .caja.tablet-h-85 {
+    width: 85%; }
+
+  .grupo .caja.tablet-h-90 {
+    width: 90%; }
+
+  .grupo .caja.tablet-h-95 {
+    width: 95%; }
+
+  .grupo .caja.tablet-h-100 {
+    width: 100%; }
+
+  /*Tamaño en fracciones*/
+  .grupo .caja.tablet-h-1-3 {
+    width: 33.3333333333%; }
+
+  .grupo .caja.tablet-h-2-3 {
+    width: 66.6666666667%; }
+
+  .grupo .caja.tablet-h-3-3 {
+    width: 100%; }
+
+  .grupo .caja.tablet-h-1-6 {
+    width: 16.6666666667%; }
+
+  .grupo .caja.tablet-h-2-6 {
+    width: 33.3333333333%; }
+
+  .grupo .caja.tablet-h-3-6 {
+    width: 50%; }
+
+  .grupo .caja.tablet-h-4-6 {
+    width: 66.6666666667%; }
+
+  .grupo .caja.tablet-h-5-6 {
+    width: 83.3333333333%; }
+
+  .grupo .caja.tablet-h-6-6 {
+    width: 100%; }
+
+  .grupo .caja.tablet-h-1-8 {
+    width: 12.5%; }
+
+  .grupo .caja.tablet-h-2-8 {
+    width: 25%; }
+
+  .grupo .caja.tablet-h-3-8 {
+    width: 37.5%; }
+
+  .grupo .caja.tablet-h-4-8 {
+    width: 50%; }
+
+  .grupo .caja.tablet-h-5-8 {
+    width: 62.5%; }
+
+  .grupo .caja.tablet-h-6-8 {
+    width: 75%; }
+
+  .grupo .caja.tablet-h-7-8 {
+    width: 87.5%; }
+
+  .grupo .caja.tablet-h-8-8 {
+    width: 100%; } }
 /*web: A partir de 1025px*/
 @media all and (min-width: 1025px) {
   /*Tamaños en porcentajes*/
@@ -1013,6 +1127,24 @@ img {
     .grupo.tablet-tabla .caja.abajo,
     .grupo.tablet-tabla .caja.bottom {
       vertical-align: bottom; } }
+@media all and (min-width: 1024px) {
+  .grupo.tablet-h-tabla {
+    display: table; }
+    .grupo.tablet-h-tabla > .caja {
+      float: none;
+      display: table-cell; }
+    .grupo.tablet-h-tabla.middle > .caja, .grupo.tablet-h-tabla.medio > .caja,
+    .grupo.tablet-h-tabla .caja.middle,
+    .grupo.tablet-h-tabla .caja.medio {
+      vertical-align: middle; }
+    .grupo.tablet-h-tabla.top > .caja, .grupo.tablet-h-tabla.arriba > .caja,
+    .grupo.tablet-h-tabla .caja.top,
+    .grupo.tablet-h-tabla .caja.arriba {
+      vertical-align: top; }
+    .grupo.tablet-h-tabla.bottom > .caja, .grupo.tablet-h-tabla.abajo > .caja,
+    .grupo.tablet-h-tabla .caja.abajo,
+    .grupo.tablet-h-tabla .caja.bottom {
+      vertical-align: bottom; } }
 @media all and (min-width: 1025px) {
   .grupo.web-tabla {
     display: table; }
@@ -1122,6 +1254,9 @@ body.desarrollo:before {
 @media screen and (min-width: 768px) {
   body.desarrollo:before {
     content: "ED-GRID: Tamaño tablet, a partir de 768px"; } }
+@media screen and (min-width: 1024px) {
+  body.desarrollo:before {
+    content: "ED-GRID: Tamaño tablet-h, a partir de 1024px"; } }
 @media screen and (min-width: 1025px) {
   body.desarrollo:before {
     content: "ED-GRID: Tamaño web, a partir de 1025px"; } }
@@ -1155,6 +1290,12 @@ body.desarrollo:before {
 @media screen and (min-width: 768px) {
   .desde-tablet {
     display: block; } }
+@media screen and (max-width: 1023px) {
+  .desde-tablet-h {
+    display: none; } }
+@media screen and (min-width: 1024px) {
+  .desde-tablet-h {
+    display: block; } }
 @media screen and (max-width: 1024px) {
   .desde-web {
     display: none; } }
@@ -1178,6 +1319,12 @@ body.desarrollo:before {
     display: block; } }
 @media screen and (min-width: 768px) {
   .hasta-tablet {
+    display: none; } }
+@media screen and (max-width: 1023px) {
+  .hasta-tablet-h {
+    display: block; } }
+@media screen and (min-width: 1024px) {
+  .hasta-tablet-h {
     display: none; } }
 @media screen and (max-width: 1024px) {
   .hasta-web {
@@ -2177,10 +2324,21 @@ select.orden {
           margin-left: 15px;
           display: block;
           float: left; }
+          @media screen and (min-width: 768px) {
+            .cotizacion .side--left .cotizacion--B .items--cotizacion .data--cotizacion {
+              width: 40%; } }
           .cotizacion .side--left .cotizacion--B .items--cotizacion .data--cotizacion p.nombre--item {
             color: #E65524;
             text-transform: uppercase;
             margin: 0; }
+            @media screen and (min-width: 768px) {
+              .cotizacion .side--left .cotizacion--B .items--cotizacion .data--cotizacion p.nombre--item {
+                font-size: 0.9em;
+                text-align: left; } }
+            @media screen and (min-width: 1025px) {
+              .cotizacion .side--left .cotizacion--B .items--cotizacion .data--cotizacion p.nombre--item {
+                font-size: 1em;
+                text-align: left; } }
           .cotizacion .side--left .cotizacion--B .items--cotizacion .data--cotizacion p.nombre--modelo {
             color: #53534A;
             text-transform: uppercase;
@@ -2214,7 +2372,8 @@ select.orden {
       .cotizacion .side--right form.cotiza--usuario input[type=text], .cotizacion .side--right form.cotiza--usuario input[type=mail] {
         width: 100%;
         border: 1px solid #E65524;
-        padding: 8px; }
+        padding: 8px;
+        -webkit-appearance: none; }
       .cotizacion .side--right form.cotiza--usuario select {
         width: 18%;
         height: 36px;
@@ -2223,20 +2382,37 @@ select.orden {
         margin-right: 10px;
         background: #fff;
         border-radius: 0;
-        border: 1px solid #E65524; }
+        border: 1px solid #E65524;
+        -webkit-appearance: none; }
       .cotizacion .side--right form.cotiza--usuario input[type="text"].box--tel {
         width: 80%;
         border: 1px solid #E65524;
-        padding: 8px; }
+        padding: 8px;
+        -webkit-appearance: none; }
+        @media screen and (min-width: 768px) {
+          .cotizacion .side--right form.cotiza--usuario input[type="text"].box--tel {
+            width: 79%; } }
+        @media screen and (min-width: 1025px) {
+          .cotizacion .side--right form.cotiza--usuario input[type="text"].box--tel {
+            width: 80%; } }
       .cotizacion .side--right form.cotiza--usuario input[type="text"].calle, .cotizacion .side--right form.cotiza--usuario input[type="text"].numero--dire {
         width: 28%;
         border: 1px solid #E65524;
         padding: 8px; }
+        @media screen and (min-width: 768px) {
+          .cotizacion .side--right form.cotiza--usuario input[type="text"].calle, .cotizacion .side--right form.cotiza--usuario input[type="text"].numero--dire {
+            width: 25%;
+            float: left; } }
+        @media screen and (min-width: 1025px) {
+          .cotizacion .side--right form.cotiza--usuario input[type="text"].calle, .cotizacion .side--right form.cotiza--usuario input[type="text"].numero--dire {
+            width: 28%; } }
       .cotizacion .side--right form.cotiza--usuario input[type="radio"] {
         margin: 0px 5px; }
       .cotizacion .side--right form.cotiza--usuario input[type="text"].calle {
         margin-right: 8px;
         margin-left: 12px; }
+      .cotizacion .side--right form.cotiza--usuario #envio-factura {
+        margin: 20px 0; }
       .cotizacion .side--right form.cotiza--usuario .print--cotizacion {
         width: 100%;
         background: #E65524;
@@ -2401,6 +2577,13 @@ select.orden {
   height: 800px;
   padding: 20px;
   font-family: "Muli", sans-serif; }
+  @media screen and (min-width: 768px) {
+    .tabs {
+      min-height: 840px;
+      padding-bottom: 0; } }
+  @media screen and (min-width: 1025px) {
+    .tabs {
+      height: auto; } }
 
 .tabs input[type=radio] {
   display: none; }
@@ -2425,6 +2608,10 @@ select.orden {
   cursor: pointer;
   position: relative;
   margin-right: 1px; }
+  @media screen and (min-width: 768px) {
+    .tabs label {
+      font-size: 0.8em;
+      padding: 8px 15px; } }
 
 .tabs label:hover {
   background: #E65524; }
@@ -2559,6 +2746,12 @@ select.orden {
     .data-direcciones p.horarios span.atencion {
       color: #E65524;
       width: 100%; }
+    @media screen and (min-width: 768px) {
+      .data-direcciones p.horarios {
+        width: 55%; } }
+    @media screen and (min-width: 1025px) {
+      .data-direcciones p.horarios {
+        width: 90%; } }
 
 [id^=tab]:checked + label {
   background: #E65524;
@@ -2573,6 +2766,12 @@ select.orden {
   height: auto;
   float: left;
   margin-top: 1em; }
+  @media screen and (min-width: 768px) {
+    .form--encuentranos {
+      width: 70%; } }
+  @media screen and (min-width: 1025px) {
+    .form--encuentranos {
+      width: 100%; } }
   .form--encuentranos h2 {
     font-size: 0.8em;
     margin-bottom: 10px; }
@@ -2635,9 +2834,11 @@ select.orden {
   .side-ellos form.registra input {
     width: 60%;
     padding: 5px;
-    border: 1px solid #e2e2e2; }
+    border: 1px solid #e2e2e2;
+    -webkit-appearance: none; }
   .side-ellos form.registra input.ciudad {
-    width: 60% !important; }
+    width: 60% !important;
+    -webkit-appearance: none; }
   .side-ellos form.registra select.region {
     width: 60%;
     height: 30px;
@@ -2651,7 +2852,8 @@ select.orden {
     height: 100px;
     float: left;
     border: 1px solid #e2e2e2;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    -webkit-appearance: none; }
   .side-ellos form.registra .registrar {
     width: 60%;
     background: #E65524;
@@ -2668,16 +2870,36 @@ select.orden {
     overflow: hidden; }
     .side-ellos form.registra .caja--tel .telefono--tel {
       width: 25%; }
+      @media screen and (min-width: 768px) {
+        .side-ellos form.registra .caja--tel .telefono--tel {
+          width: 35%; } }
+      @media screen and (min-width: 1025px) {
+        .side-ellos form.registra .caja--tel .telefono--tel {
+          width: 25%; } }
     .side-ellos form.registra .caja--tel .f--instalacion {
       width: 60%; }
     .side-ellos form.registra .caja--tel input.input--cel {
       float: left;
       width: 21%; }
+      @media screen and (min-width: 768px) {
+        .side-ellos form.registra .caja--tel input.input--cel {
+          width: 30%;
+          padding: 4px; } }
+      @media screen and (min-width: 1025px) {
+        .side-ellos form.registra .caja--tel input.input--cel {
+          width: 21%; } }
     .side-ellos form.registra .caja--tel .fechas--registro {
       height: 30px;
       float: left;
       margin-left: 23px;
       width: 36%; }
+      @media screen and (min-width: 768px) {
+        .side-ellos form.registra .caja--tel .fechas--registro {
+          width: 25%;
+          height: 31px; } }
+      @media screen and (min-width: 1025px) {
+        .side-ellos form.registra .caja--tel .fechas--registro {
+          width: 36%; } }
       .side-ellos form.registra .caja--tel .fechas--registro select {
         border: 1px solid #e2e2e2;
         height: 30px;
@@ -2697,6 +2919,15 @@ select.orden {
       overflow: hidden; }
       .side-ellos form.registra .adjuntar .upload:hover {
         background: #53534A; }
+      @media screen and (min-width: 768px) {
+        .side-ellos form.registra .adjuntar .upload {
+          width: 40%; } }
+      @media screen and (min-width: 1024px) {
+        .side-ellos form.registra .adjuntar .upload {
+          width: 30%; } }
+      @media screen and (min-width: 1025px) {
+        .side-ellos form.registra .adjuntar .upload {
+          width: 25%; } }
       .side-ellos form.registra .adjuntar .upload p {
         position: absolute;
         color: #fff;
@@ -2716,6 +2947,12 @@ select.orden {
       position: absolute;
       top: 10px;
       left: 180px; }
+      @media screen and (min-width: 768px) {
+        .side-ellos form.registra .adjuntar .confirmacion {
+          left: 200px; } }
+      @media screen and (min-width: 1025px) {
+        .side-ellos form.registra .adjuntar .confirmacion {
+          left: 180px; } }
   .side-ellos form.registra .calificar {
     width: 100%;
     float: left;

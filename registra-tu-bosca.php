@@ -288,7 +288,7 @@
               <div class="caja--tel">
                 <label class="telefono--tel">Teléfono de contacto </label>                				
 				<label class="f--instalacion">Fecha de instalación</label>                											
-				<input name="telefono" type="text" class="input--cel">				
+				<input name="telefono" type="number" class="input--cel">				
 				<input name="fecha" type="text" class="fechas--registro" id="datepicker"> 
 								
 				<!-- Trabajar en el adjuntar archivo y guardar el nombre de la imagen BD o colocar nombre 
@@ -302,7 +302,7 @@
 				  <div class="upload">                    
 					<p>Adjuntar foto de producto</p>	 			
 					<input type="file" name="userfile" onchange="cambioPic()">						
-                  </div>
+          </div>
 				  <div class="confirmacion">
 				 	    <img id="imgsi" src="img2/si.gif">
 					     <img id="imgno" src="img2/no.gif">

@@ -960,11 +960,21 @@ section.margen-top{
 						margin-left: 15px;
 						display: block;
 						float: left;
-
+						@include desde (tablet){
+							width: 40%;
+						}
 						p.nombre--item{
 							color: $color-corporativo;
 							text-transform: uppercase;
 							margin: 0;
+							@include desde (tablet){
+								font-size: 0.9em;
+								text-align: left;
+							}
+							@include desde (web){
+								font-size: 1em;
+								text-align:left;
+							}
 						}
 						p.nombre--modelo{
 							color: $gris-corporativo;
@@ -974,7 +984,10 @@ section.margen-top{
 						p.cantidad{
 							color: $color-corporativo;
 						}
+						
+						@include desde (web){
 
+						}
 
 					}
 
@@ -1019,6 +1032,7 @@ section.margen-top{
 				width: 100%;
 				border: 1px solid $color-corporativo;
 				padding: 8px;
+				-webkit-appearance:none;
 			}
 
 			select{
@@ -1030,18 +1044,33 @@ section.margen-top{
 			    background: #fff;
 			    border-radius: 0;
 			    border: 1px solid $color-corporativo;
+			    -webkit-appearance:none;
 			}
 
 			input[type="text"].box--tel{
 				width: 80%;
 				border: 1px solid $color-corporativo;
 				padding: 8px;
+				-webkit-appearance:none;
+				@include desde (tablet){
+					width: 79%;
+				}
+				@include desde (web){
+					width: 80%;
+				}
 			}
 
 			input[type="text"].calle,input[type="text"].numero--dire{
 				width: 28%;
 				border: 1px solid $color-corporativo;
 				padding: 8px;
+				@include desde (tablet){
+					width: 25%;
+					float: left;
+				}
+				@include desde (web){
+					width: 28%;
+				}
 			}
 			
 			input[type="radio"]{
@@ -1053,6 +1082,9 @@ section.margen-top{
 				margin-left: 12px;
 			}
 			
+			#envio-factura{
+				margin: 20px 0;
+			}
 
 			.print--cotizacion{
 				width: 100%;
@@ -1321,6 +1353,15 @@ section.margen-top{
 	height: 800px;
 	padding: 20px;
 	font-family: "Muli", sans-serif;
+	
+	@include desde (tablet){
+		min-height:840px;
+		padding-bottom:0;
+	}
+
+	@include desde (web){
+		height: auto;
+	}
 
 }
 
@@ -1351,6 +1392,11 @@ section.margen-top{
 	cursor: pointer;
 	position: relative;
 	margin-right: 1px;
+	@include desde (tablet){
+		font-size: 0.8em;
+		padding:8px 15px;
+	}
+
 }
 
 .tabs label:hover {
@@ -1512,10 +1558,19 @@ section.margen-top{
 			color: $color-corporativo;
 			width: 100%;
 		}
+
+		@include desde (tablet){
+			width: 55%;
+		}
+		@include desde (web){
+			width: 90%;
+		}
 	}
 	p.direccion{
 
 	}
+
+
 
 }
 
@@ -1536,6 +1591,15 @@ section.margen-top{
 	height: auto;
 	float: left;
 	margin-top: 1em;
+
+	@include desde (tablet){
+		width: 70%;
+	}
+
+	@include desde (web){
+		width: 100%;
+	}
+
 	h2{
 		font-size: 0.8em;
 		margin-bottom: 10px;
@@ -1624,9 +1688,11 @@ section.margen-top{
 			width: 60%;
 			padding: 5px;
 			border: 1px solid #e2e2e2;
+			-webkit-appearance:none;
 		}
 		input.ciudad{
 			width: 60% !important; 
+			-webkit-appearance:none;
 		}
 		select.region{
 			width: 60%;
@@ -1646,6 +1712,7 @@ section.margen-top{
 			float: left;
 			border: 1px solid #e2e2e2;
 			margin-bottom: 15px;
+			-webkit-appearance:none;
 		}
 
 		.registrar{
@@ -1667,6 +1734,12 @@ section.margen-top{
 			overflow: hidden;
 			.telefono--tel{
 				width: 25%;
+				@include desde (tablet){
+					width: 35%;
+				}
+				@include desde (web){
+					width: 25%;
+				}
 			}
 			.f--instalacion{
 				width: 60%;
@@ -1674,6 +1747,13 @@ section.margen-top{
 			input.input--cel{
 				float: left;
 				width: 21%;
+				@include desde (tablet){
+					width: 30%;
+					padding:4px;
+				}
+				@include desde (web){
+					width: 21%;
+				}
 			}
 
 			.fechas--registro{
@@ -1681,6 +1761,13 @@ section.margen-top{
 				float: left;
 				margin-left: 23px;
 				width: 36%;
+				@include desde (tablet){
+					width: 25%;
+					height: 31px;
+				}
+				@include desde (web){
+					width: 36%;
+				}
 				select{
 					border: 1px solid #e2e2e2;
 					height: 30px;
@@ -1716,6 +1803,16 @@ section.margen-top{
  			&:hover{
  				background:$gris-corporativo;
  			}
+ 			@include desde (tablet){
+ 				width: 40%;
+ 			}
+			@include desde (tablet-h){
+				width: 30%;
+			}
+			@include desde (web){
+				width: 25%;
+			}
+
  			p{
  				position:absolute;
  				color: #fff;
@@ -1745,6 +1842,12 @@ section.margen-top{
 			position: absolute;
 			top: 10px;
 			left: 180px;
+			@include desde (tablet){
+				left:200px
+			}
+			@include desde (web){
+				left:180px
+			}
 		}
 
 	}//upload
