@@ -30,6 +30,224 @@
 		  return( true );
 
 		}
+		
+		function validarVRegion(){
+
+		  if( document.Vregion.nombre_apellido.value == "" ){
+			alert( "Por favor ingrese su Nombre y Apellido" );
+			document.Vregion.nombre_apellido.focus() ;
+			return false;
+		  }
+
+		  if( document.Vregion.mail.value == "" ){
+			alert( "Por favor ingrese su email" );
+			document.Vregion.mail.focus() ;
+			return false;
+		  }
+		  
+		  if( document.Vregion.telefono.value == "" ){
+			alert( "Por favor ingrese su telefono" );
+			document.Vregion.telefono.focus() ;
+			return false;
+		  }
+		  
+		  if( document.Vregion.motivo.value == "" ){
+			alert( "Por favor ingrese el motivo" );
+			document.Vregion.motivo.focus() ;
+			return false;
+		  }
+		  
+		  if( document.Vregion.comentario.value == "" ){
+			alert( "Por favor ingrese su comentario" );
+			document.Vregion.comentario.focus() ;
+			return false;
+		  }
+
+		  return( true );
+
+		}
+		
+		function validarRM(){
+
+		  if( document.RM.nombre_apellido.value == "" ){
+			alert( "Por favor ingrese su Nombre y Apellido" );
+			document.RM.nombre_apellido.focus() ;
+			return false;
+		  }
+
+		  if( document.RM.mail.value == "" ){
+			alert( "Por favor ingrese su email" );
+			document.RM.mail.focus() ;
+			return false;
+		  }
+		  
+		  if( document.RM.telefono.value == "" ){
+			alert( "Por favor ingrese su telefono" );
+			document.RM.telefono.focus() ;
+			return false;
+		  }
+		  
+		  if( document.RM.motivo.value == "" ){
+			alert( "Por favor ingrese el motivo" );
+			document.RM.motivo.focus() ;
+			return false;
+		  }
+		  
+		  if( document.RM.comentario.value == "" ){
+			alert( "Por favor ingrese su comentario" );
+			document.RM.comentario.focus() ;
+			return false;
+		  }
+
+		  return( true );
+
+		}
+		
+		
+		function validarVIregion(){
+
+		  if( document.VIregion.nombre_apellido.value == "" ){
+			alert( "Por favor ingrese su Nombre y Apellido" );
+			document.VIregion.nombre_apellido.focus() ;
+			return false;
+		  }
+
+		  if( document.VIregion.mail.value == "" ){
+			alert( "Por favor ingrese su email" );
+			document.VIregion.mail.focus() ;
+			return false;
+		  }
+		  
+		  if( document.VIregion.telefono.value == "" ){
+			alert( "Por favor ingrese su telefono" );
+			document.VIregion.telefono.focus() ;
+			return false;
+		  }
+		  
+		  if( document.VIregion.motivo.value == "" ){
+			alert( "Por favor ingrese el motivo" );
+			document.VIregion.motivo.focus() ;
+			return false;
+		  }
+		  
+		  if( document.VIregion.comentario.value == "" ){
+			alert( "Por favor ingrese su comentario" );
+			document.VIregion.comentario.focus() ;
+			return false;
+		  }
+
+		  return( true );
+
+		}
+		
+		function validarVIIIregion(){
+
+		  if( document.VIIIregion.nombre_apellido.value == "" ){
+			alert( "Por favor ingrese su Nombre y Apellido" );
+			document.VIIIregion.nombre_apellido.focus() ;
+			return false;
+		  }
+
+		  if( document.VIIIregion.mail.value == "" ){
+			alert( "Por favor ingrese su email" );
+			document.VIIIregion.mail.focus() ;
+			return false;
+		  }
+		  
+		  if( document.VIIIregion.telefono.value == "" ){
+			alert( "Por favor ingrese su telefono" );
+			document.VIIIregion.telefono.focus() ;
+			return false;
+		  }
+		  
+		  if( document.VIIIregion.motivo.value == "" ){
+			alert( "Por favor ingrese el motivo" );
+			document.VIIIregion.motivo.focus() ;
+			return false;
+		  }
+		  
+		  if( document.VIIIregion.comentario.value == "" ){
+			alert( "Por favor ingrese su comentario" );
+			document.VIIIregion.comentario.focus() ;
+			return false;
+		  }
+
+		  return( true );
+
+		}
+		
+		function validarIXregion(){
+
+		  if( document.IXregion.nombre_apellido.value == "" ){
+			alert( "Por favor ingrese su Nombre y Apellido" );
+			document.IXregion.nombre_apellido.focus() ;
+			return false;
+		  }
+
+		  if( document.IXregion.mail.value == "" ){
+			alert( "Por favor ingrese su email" );
+			document.IXregion.mail.focus() ;
+			return false;
+		  }
+		  
+		  if( document.IXregion.telefono.value == "" ){
+			alert( "Por favor ingrese su telefono" );
+			document.IXregion.telefono.focus() ;
+			return false;
+		  }
+		  
+		  if( document.IXregion.motivo.value == "" ){
+			alert( "Por favor ingrese el motivo" );
+			document.IXregion.motivo.focus() ;
+			return false;
+		  }
+		  
+		  if( document.IXregion.comentario.value == "" ){
+			alert( "Por favor ingrese su comentario" );
+			document.IXregion.comentario.focus() ;
+			return false;
+		  }
+
+		  return( true );
+
+		}
+		
+		function validarXregion(){
+
+		  if( document.Xregion.nombre_apellido.value == "" ){
+			alert( "Por favor ingrese su Nombre y Apellido" );
+			document.Xregion.nombre_apellido.focus() ;
+			return false;
+		  }
+
+		  if( document.Xregion.mail.value == "" ){
+			alert( "Por favor ingrese su email" );
+			document.Xregion.mail.focus() ;
+			return false;
+		  }
+		  
+		  if( document.Xregion.telefono.value == "" ){
+			alert( "Por favor ingrese su telefono" );
+			document.Xregion.telefono.focus() ;
+			return false;
+		  }
+		  
+		  if( document.Xregion.motivo.value == "" ){
+			alert( "Por favor ingrese el motivo" );
+			document.Xregion.motivo.focus() ;
+			return false;
+		  }
+		  
+		  if( document.Xregion.comentario.value == "" ){
+			alert( "Por favor ingrese su comentario" );
+			document.Xregion.comentario.focus() ;
+			return false;
+		  }
+
+		  return( true );
+
+		}
+		
 
 	</script>
 	
@@ -136,13 +354,13 @@
                     <p class="horarios"><span class="atencion">Dirección</span><br>Av. Libertad 1040, Esquina 11 1/2 Norte.</p>
                   </div>
 				  
-                  <form method="post" accept-charset="utf-8" class="form--encuentranos">
+                  <form method="post" name="Vregion" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
                     <div class="lado--a">
                       <p class="label">Nombre y apellido</p>
 						<input type="text" name="nombre_apellido" placeholder="" class="is--not">
                       <p class="label">Mail</p>
-						<input type="text" name="mail" placeholder="" class="is--not">
+						<input name="mail" type="email" placeholder="" class="is--not">
                     </div>
                     <div class="lado--b">
                       <p class="label">Teléfono</p>
@@ -151,61 +369,26 @@
 						<input type="text" name="motivo"  placeholder="" class="is--not">
                     </div>
                     <textarea name="comentario" class="text-area"></textarea>
-                    <button type="submit" class="enviar--encuentranos">Enviar</button>
+					
+					<input type="text" name="region" value="V Region" hidden=hidden>
+					
+                    <button type="submit" class="enviar--encuentranos" onclick="return(validarVRegion())" formaction="registro-encuentranos.php">Enviar</button>
+					
                   </form>
-				  
-				  <?php
-					
-					//Verificar que no envie email al cargar la pagina de manera inicial
-					
-					$nombre_apellido = $_REQUEST['nombre_apellido'];
-					$mail = $_REQUEST['mail'];
-					$telefono = $_REQUEST['telefono'];
-					$motivo = $_REQUEST['motivo'];
-					$comentario = $_REQUEST['comentario'];
-					
-					//$email = "usuarioX@gmail.com";
-					$to = "V_region@bosca.cl";
-					$subject = "Comentario de usuario pagina web Bosca";
-					$headers = "De: $mail\n";
-					$message = "Un visitante de tu sitio te ha enviado el siguiente email para que atiendas a su comentario.
-					\n Correo electronico: $mail
-					\n Teléfono: $telefono
-					\n Motivo: $motivo
-					\n Comentario: $comentario
-					";
 
-					$user = $mail;
-					$usersubject = "Gracias por sus comentarios";
-					$userheaders = "De: V_region@bosca.cl\n";
-					$usermessage = "Gracias por sus comentarios, su solicitud sera debidamente procesada por nuestro personal de Bosca";
-
-					mail($to,$subject,$message,$headers);
-					mail($user,$usersubject,$usermessage,$userheaders);
-				  
-				  ?>
-                  <!-- Your content goes here-->
-				  <!-- 
-				  
-				  
-				  Deberia recoger la info en las variables de sesion y enviarlas por php 
-					
-				  
-				  -->
                 </div>
               </li>
 			  
 			  
 			  
 			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
+			  <!-- 
+				
+				
+				RM 
+				
+				
+				-->	
               <li>
                 <input id="tab2" type="radio" name="tabs">
                 <label for="tab2">RM</label>
@@ -238,26 +421,42 @@
                     <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
                     <p class="horarios"><span class="atencion">Dirección</span><br>Av. Américo Vespucio 2077, Huechuraba</p>
                   </div>
-                  <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
+				  
+                  <form method="post" name="RM" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
                     <div class="lado--a">
                       <p class="label">Nombre y apellido</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
                       <p class="label">Mail</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="mail" value="" placeholder="" class="is--not">
                     </div>
                     <div class="lado--b">
                       <p class="label">Teléfono</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
                       <p class="label">Motivo</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea>
-                    <button type="button" class="enviar--encuentranos">Enviar</button>
+                    <textarea name="comentario" class="text-area"></textarea>
+					
+					<input type="text" name="region" value="RM" hidden=hidden>
+					
+                    <button type="submit" class="enviar--encuentranos" onclick="return(validarRM())" formaction="registro-encuentranos.php">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
               </li>
+			  
+			  
+			  
+			  
+			  
+			  <!-- 
+				
+				
+				VI region 
+				
+				
+				-->	
               <li>
                 <input id="tab3" type="radio" name="tabs">
                 <label for="tab3">VI Región</label>
@@ -279,26 +478,41 @@
                     <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
                     <p class="horarios"><span class="atencion">Dirección</span><br>O’Carrol 11 Esq. Freire . Local 5, Rancagua.</p>
                   </div>
-                  <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
+				  
+                  <form  method="post" name="VIregion" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
                     <div class="lado--a">
                       <p class="label">Nombre y apellido</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
                       <p class="label">Mail</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="mail" value="" placeholder="" class="is--not">
                     </div>
                     <div class="lado--b">
                       <p class="label">Teléfono</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
                       <p class="label">Motivo</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea>
-                    <button type="button" class="enviar--encuentranos">Enviar</button>
+                    <textarea name="comentario" class="text-area"></textarea>
+					
+                    <input type="text" name="region" value="VI Region" hidden=hidden>
+					
+                    <button type="submit" class="enviar--encuentranos" onclick="return(validarVIregion())" formaction="registro-encuentranos.php">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
               </li>
+			  
+			  
+			  
+			  
+			  <!-- 
+				
+				
+				VIII region 
+				
+				
+				-->	
               <li>
                 <input id="tab4" type="radio" name="tabs">
                 <label for="tab4">VIII Región</label>
@@ -326,26 +540,41 @@
                     <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
                     <p class="horarios"><span class="atencion">Dirección</span><br>Arturo Prat 202, Concepción.</p>
                   </div>
-                  <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
+				  
+                  <form method="post" name="VIIIregion" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
                     <div class="lado--a">
                       <p class="label">Nombre y apellido</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
                       <p class="label">Mail</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="mail" value="" placeholder="" class="is--not">
                     </div>
                     <div class="lado--b">
                       <p class="label">Teléfono</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
                       <p class="label">Motivo</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea>
-                    <button type="button" class="enviar--encuentranos">Enviar</button>
+                    <textarea name="comentario" class="text-area"></textarea>
+					
+					<input type="text" name="region" value="VIII Region" hidden=hidden>
+					
+                    <button type="submit" class="enviar--encuentranos" onclick="return(validarVIIIregion())" formaction="registro-encuentranos.php">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
               </li>
+			  
+			  
+			  
+			  
+			  <!-- 
+				
+				
+				IX region 
+				
+				
+				-->	
               <li>
                 <input id="tab5" type="radio" name="tabs">
                 <label for="tab5">IX Región</label>
@@ -366,26 +595,39 @@
                     <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
                     <p class="horarios"><span class="atencion">Dirección</span><br>Av. Alemania 0715, Temuco.</p>
                   </div>
-                  <form action="encuentranos_submit" method="get" accept-charset="utf-8" class="form--encuentranos">
+                  <form method="post" name="IXregion" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
                     <div class="lado--a">
                       <p class="label">Nombre y apellido</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
                       <p class="label">Mail</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="mail" value="" placeholder="" class="is--not">
                     </div>
                     <div class="lado--b">
                       <p class="label">Teléfono</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
                       <p class="label">Motivo</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea>
-                    <button type="button" class="enviar--encuentranos">Enviar</button>
+                    <textarea name="comentario" class="text-area"></textarea>
+					
+					<input type="text" name="region" value="IX Region" hidden=hidden>
+					
+                    <button type="submit" class="enviar--encuentranos" onclick="return(validarIXregion())" formaction="registro-encuentranos.php">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
               </li>
+			  
+			  
+			  
+			  <!-- 
+				
+				
+				X region 
+				
+				
+				-->	
               <li>
                 <input id="tab6" type="radio" name="tabs">
                 <label for="tab6">X Región</label>
@@ -406,22 +648,26 @@
                     <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
                     <p class="horarios"><span class="atencion">Dirección</span><br>Caletera Presidente Ibáñez 328, Local A, esquina Circunvalación, Puerto Montt.</p>
                   </div>
-                  <form action="encuentranos_submit" method="post" accept-charset="utf-8" class="form--encuentranos">
+				  
+                  <form method="post" name="Xregion" accept-charset="utf-8" class="form--encuentranos">
                     <h2>Contáctanos</h2>
                     <div class="lado--a">
                       <p class="label">Nombre y apellido</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
                       <p class="label">Mail</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="mail" value="" placeholder="" class="is--not">
                     </div>
                     <div class="lado--b">
                       <p class="label">Teléfono</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
                       <p class="label">Motivo</p>
-                      <input type="text" name="" value="" placeholder="" class="is--not">
+                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
                     </div>
-                    <textarea name="" class="text-area"></textarea>
-                    <button type="submit" class="enviar--encuentranos">Enviar</button>
+                    <textarea name="comentario" class="text-area"></textarea>
+					
+                    <input type="text" name="region" value="X Region" hidden=hidden>
+					
+                    <button type="submit" class="enviar--encuentranos" onclick="return(validarXregion())" formaction="registro-encuentranos.php">Enviar</button>
                   </form>
                   <!-- Your content goes here-->
                 </div>
@@ -431,6 +677,7 @@
         </div>
       </div>
     </section>
+		
     <footer id="footer">
       <div class="grupo">
         <div class="caja movil-50">
@@ -456,6 +703,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer>	
+	
   </body>
 </html>

@@ -15,6 +15,46 @@ session_start();
     <script src="sass/tema/js/scripts.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
     <script src="sass/tema/js/jquery.isotope.js"></script>
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+		$("#regiones").change(function() {
+			var val = $(this).val();			
+			if (val == "item1") {
+				$("#provincia").html("<option value='test'>-- --</option>");
+			} else if (val == "Tarapaca") {
+				$("#provincia").html("<option value='Iquique'>Iquique</option><option value='Tamarugal'>Tamarugal</option>");
+			} else if (val == "Antofagasta") {
+				$("#provincia").html("<option value='Antofagasta'>Antofagasta</option><option value='El Loa'>El Loa</option><option value='Tocopilla'>Tocopilla</option>");
+			} else if (val == "Atacama") {
+				$("#provincia").html("<option value='Copiapó'>Copiapó</option><option value='Chañaral'>Chañaral</option><option value='Huasco'>Huasco</option>");
+			} else if (val == "Coquimbo") {
+				$("#provincia").html("<option value='Elqui'>Elqui</option><option value='Choapa'>Choapa</option><option value='Limarí'>Limarí</option>");
+			} else if (val == "Valparaiso") {
+				$("#provincia").html("<option value='Valparaíso'>Valparaíso</option><option value='Isla de Pascua'>Isla de Pascua</option><option value='Los Andes'>Los Andes</option><option value='Petorca'>Petorca</option><option value='Quillota'>Quillota</option><option value='San Antonio'>San Antonio</option><option value='San Felipe de Aconcagua'>San Felipe de Aconcagua</option><option value='Marga Marga'>Marga Marga</option>");
+			} else if (val == "OHiggins") {
+				$("#provincia").html("<option value='Cachapoal'>Cachapoal</option><option value='Cardenal Caro'>Cardenal Caro</option><option value='Colchagua'>Colchagua</option>");
+			} else if (val == "Maule") {
+				$("#provincia").html("<option value='Talca'>Talca</option><option value='Cauquenes'>Cauquenes</option><option value='Curicó'>Curicó</option><option value='Linares'>Linares</option>");
+			} else if (val == "Biobio") {
+				$("#provincia").html("<option value='Concepción'>Concepción</option><option value='Arauco'>Arauco</option><option value='Biobío'>Biobío</option><option value='Ñuble'>Ñuble</option>");
+			} else if (val == "Araucania") {
+				$("#provincia").html("<option value='Cautín'>Cautín</option><option value='Malleco'>Malleco</option>");
+			} else if (val == "LosLagos") {
+				$("#provincia").html("<option value='Llanquihue'>Llanquihue</option><option value='Chiloé'>Chiloé</option><option value='Osorno'>Osorno</option><option value='Palena'>Palena</option>");
+			} else if (val == "Aisen") {
+				$("#provincia").html("<option value='Coihaique'>Coihaique</option><option value='Aisén'>Aisén</option><option value='Capitán Prat'>Capitán Prat</option><option value='General Carrera'>General Carrera</option>");
+			} else if (val == "Antartica") {
+				$("#provincia").html("<option value='Magallanes'>Magallanes</option><option value='Antártica Chilena'>Antártica Chilena</option><option value='Tierra del Fuego'>Tierra del Fuego</option><option value='GÚltima Esperanza'>Última Esperanza</option>");
+			}
+		});
+
+	});
+	</script>
+	
   </head>
   <body>
   
@@ -383,27 +423,37 @@ session_start();
           <div class="side--right">
             <div class="datos--comprador">
               <h3 class="titulo--comprador">Datos Comprador</h3>
-              <form class="cotiza--usuario">
+              <form method="post" action="cotizacion-imprimible.php" class="cotiza--usuario">
                 <label>NOMBRE</label>
-                <input type="text">
+                <input name="nombre" type="text">
                 <label>APELLIDO</label>
-                <input type="text">
+                <input name="apellido" type="text">
                 <label>RUT</label>
-                <input type="text">
+                <input name="rut" type="text">
                 <label>TELÉFONO DE CONTACTO</label>
                 <select name="select">
                   <option value="value1">Celular</option>
                   <option value="value2" selected="">Fijo</option>
                 </select>
-                <input type="text" class="box--tel">
+                <input name="telefono" type="text" class="box--tel">
                 <label>MAIL</label>
-                <input type="text">
+                <input name="email" type="text">
                 <label>DIRECCIÓN DE DESPACHO</label>
-                <select name="select">
-                  <option value="0" selected="selected">Región</option>
-                  <option value="1">Tarapaca</option>
-                  <option value="2">Antofagasta</option>
-                  <option value="3">Atacama</option>
+                <select id="regiones" name="regiones">
+                  <option value="item1" selected="selected">Región</option>
+                  <option value="Tarapaca">Tarapaca</option>
+                  <option value="Antofagasta">Antofagasta</option>
+                  <option value="Atacama">Atacama</option>
+				  <option value="Coquimbo">Coquimbo</option>
+				  <option value="Valparaiso">Valparaíso</option>
+				  <option value="OHiggins">O'Higgins</option>
+				  <option value="Maule">Maule</option>
+				  <option value="Biobio">Bio - Bio</option>
+				  <option value="Araucania">Araucania</option>
+				  <option value="LosLagos">Los Lagos</option>
+				  <option value="Aisen">Aisén</option>
+				  <option value="Antartica">Antartica y Magallanes</option>
+				  <!--
                   <option value="4">Coquimbo</option>
                   <option value="5">Valparaiso</option>
                   <option value="6">O'Higgins</option>
@@ -416,9 +466,10 @@ session_start();
                   <option value="13">Metropolitana</option>
                   <option value="14">Los Rios</option>
                   <option value="15">Arica y Parinacota</option>
+				  -->
                 </select>
-                <select name="select">
-                  <option value="0" selected="selected">Ciudad</option>
+                <select id="provincia" name="provincia">
+                  <option value="">-- --</option>
                 </select>
                 <input type="text" placeholder="Calle" class="calle">
                 <input type="text" placeholder="Número/depto." class="numero--dire">
@@ -461,7 +512,7 @@ session_start();
                   <input type="radio" name="factura">Agregar despacho
                 </div>
                 
-                <button class="print--cotizacion">imprimir cotización</button>
+                <button type="submit" class="print--cotizacion">generar cotización</button>
               </form>
             </div>
           </div>
