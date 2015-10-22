@@ -48,7 +48,50 @@ session_start();
 			} else if (val == "Aisen") {
 				$("#provincia").html("<option value='Coihaique'>Coihaique</option><option value='Aisén'>Aisén</option><option value='Capitán Prat'>Capitán Prat</option><option value='General Carrera'>General Carrera</option>");
 			} else if (val == "Antartica") {
-				$("#provincia").html("<option value='Magallanes'>Magallanes</option><option value='Antártica Chilena'>Antártica Chilena</option><option value='Tierra del Fuego'>Tierra del Fuego</option><option value='GÚltima Esperanza'>Última Esperanza</option>");
+				$("#provincia").html("<option value='Magallanes'>Magallanes</option><option value='Antártica Chilena'>Antártica Chilena</option><option value='Tierra del Fuego'>Tierra del Fuego</option><option value='Última Esperanza'>Última Esperanza</option>");
+			} else if (val == "Metropolitana") {
+				$("#provincia").html("<option value='Santiago'>Santiago</option><option value='Cordillera'>Cordillera</option><option value='Chacabuco'>Chacabuco</option><option value='Maipo'>Maipo</option><option value='Melipilla'>Melipilla</option><option value='Talagante'>Talagante</option>");
+			} else if (val == "LosRios") {
+				$("#provincia").html("<option value='Valdivia'>Valdivia</option><option value='Ranco'>Ranco</option>");
+			} else if (val == "Arica") {
+				$("#provincia").html("<option value='Arica'>Arica</option><option value='Parinacota'>Parinacota</option>");
+			}
+		});
+		
+		$("#regionesBoleta").change(function() {
+			var val = $(this).val();			
+			if (val == "item1") {
+				$("#provinciaBoleta").html("<option value='test'>-- --</option>");
+			} else if (val == "Tarapaca") {
+				$("#provinciaBoleta").html("<option value='Iquique'>Iquique</option><option value='Tamarugal'>Tamarugal</option>");
+			} else if (val == "Antofagasta") {
+				$("#provinciaBoleta").html("<option value='Antofagasta'>Antofagasta</option><option value='El Loa'>El Loa</option><option value='Tocopilla'>Tocopilla</option>");
+			} else if (val == "Atacama") {
+				$("#provinciaBoleta").html("<option value='Copiapó'>Copiapó</option><option value='Chañaral'>Chañaral</option><option value='Huasco'>Huasco</option>");
+			} else if (val == "Coquimbo") {
+				$("#provinciaBoleta").html("<option value='Elqui'>Elqui</option><option value='Choapa'>Choapa</option><option value='Limarí'>Limarí</option>");
+			} else if (val == "Valparaiso") {
+				$("#provinciaBoleta").html("<option value='Valparaíso'>Valparaíso</option><option value='Isla de Pascua'>Isla de Pascua</option><option value='Los Andes'>Los Andes</option><option value='Petorca'>Petorca</option><option value='Quillota'>Quillota</option><option value='San Antonio'>San Antonio</option><option value='San Felipe de Aconcagua'>San Felipe de Aconcagua</option><option value='Marga Marga'>Marga Marga</option>");
+			} else if (val == "OHiggins") {
+				$("#provinciaBoleta").html("<option value='Cachapoal'>Cachapoal</option><option value='Cardenal Caro'>Cardenal Caro</option><option value='Colchagua'>Colchagua</option>");
+			} else if (val == "Maule") {
+				$("#provinciaBoleta").html("<option value='Talca'>Talca</option><option value='Cauquenes'>Cauquenes</option><option value='Curicó'>Curicó</option><option value='Linares'>Linares</option>");
+			} else if (val == "Biobio") {
+				$("#provinciaBoleta").html("<option value='Concepción'>Concepción</option><option value='Arauco'>Arauco</option><option value='Biobío'>Biobío</option><option value='Ñuble'>Ñuble</option>");
+			} else if (val == "Araucania") {
+				$("#provinciaBoleta").html("<option value='Cautín'>Cautín</option><option value='Malleco'>Malleco</option>");
+			} else if (val == "LosLagos") {
+				$("#provinciaBoleta").html("<option value='Llanquihue'>Llanquihue</option><option value='Chiloé'>Chiloé</option><option value='Osorno'>Osorno</option><option value='Palena'>Palena</option>");
+			} else if (val == "Aisen") {
+				$("#provinciaBoleta").html("<option value='Coihaique'>Coihaique</option><option value='Aisén'>Aisén</option><option value='Capitán Prat'>Capitán Prat</option><option value='General Carrera'>General Carrera</option>");
+			} else if (val == "Antartica") {
+				$("#provinciaBoleta").html("<option value='Magallanes'>Magallanes</option><option value='Antártica Chilena'>Antártica Chilena</option><option value='Tierra del Fuego'>Tierra del Fuego</option><option value='Última Esperanza'>Última Esperanza</option>");
+			} else if (val == "Metropolitana") {
+				$("#provinciaBoleta").html("<option value='Santiago'>Santiago</option><option value='Cordillera'>Cordillera</option><option value='Chacabuco'>Chacabuco</option><option value='Maipo'>Maipo</option><option value='Melipilla'>Melipilla</option><option value='Talagante'>Talagante</option>");
+			} else if (val == "LosRios") {
+				$("#provinciaBoleta").html("<option value='Valdivia'>Valdivia</option><option value='Ranco'>Ranco</option>");
+			} else if (val == "Arica") {
+				$("#provinciaBoleta").html("<option value='Arica'>Arica</option><option value='Parinacota'>Parinacota</option>");
 			}
 		});
 
@@ -439,7 +482,7 @@ session_start();
                 <label>MAIL</label>
                 <input name="email" type="text">
                 <label>DIRECCIÓN DE DESPACHO</label>
-                <select id="regiones" name="regiones">
+                <select id="regiones" name="regionesDespacho">
                   <option value="item1" selected="selected">Región</option>
                   <option value="Tarapaca">Tarapaca</option>
                   <option value="Antofagasta">Antofagasta</option>
@@ -453,63 +496,50 @@ session_start();
 				  <option value="LosLagos">Los Lagos</option>
 				  <option value="Aisen">Aisén</option>
 				  <option value="Antartica">Antartica y Magallanes</option>
-				  <!--
-                  <option value="4">Coquimbo</option>
-                  <option value="5">Valparaiso</option>
-                  <option value="6">O'Higgins</option>
-                  <option value="7">Maule</option>
-                  <option value="8">Bio - Bio</option>
-                  <option value="9">Araucania</option>
-                  <option value="10">Los Lagos</option>
-                  <option value="11">Aisen</option>
-                  <option value="12">Magallanes Y Antartica</option>
-                  <option value="13">Metropolitana</option>
-                  <option value="14">Los Rios</option>
-                  <option value="15">Arica y Parinacota</option>
-				  -->
+				  <option value="Metropolitana">Metropolitana</option>
+				  <option value="LosRios">Los Rios</option>
+				  <option value="Arica">Arica y Parinacota</option>				  
                 </select>
-                <select id="provincia" name="provincia">
+                <select id="provincia" name="provinciaDespacho">
                   <option value="">-- --</option>
                 </select>
                 <input type="text" placeholder="Calle" class="calle">
                 <input type="text" placeholder="Número/depto." class="numero--dire">
                 <label>ELIJA </label>
                 <div class="caja base-20 no-padding">
-                  <input type="radio" name="factura">Factura
-                </div>
+                  <input type="radio" name="factura">Factura</div>
                 <div class="caja base-80 no-padding">
-                  <input type="radio" name="boleta">Boleta
-                </div>
+                  <input type="radio" name="factura">Boleta</div>
                 <label>DIRECCIÓN DE ENVÍO DE BOLETA O FACTURA</label>
-                <select name="select">
-                  <option value="0" selected="selected">Región</option>
-                  <option value="1">Tarapaca</option>
-                  <option value="2">Antofagasta</option>
-                  <option value="3">Atacama</option>
-                  <option value="4">Coquimbo</option>
-                  <option value="5">Valparaiso</option>
-                  <option value="6">O'Higgins</option>
-                  <option value="7">Maule</option>
-                  <option value="8">Bio - Bio</option>
-                  <option value="9">Araucania</option>
-                  <option value="10">Los Lagos</option>
-                  <option value="11">Aisen</option>
-                  <option value="12">Magallanes Y Antartica</option>
-                  <option value="13">Metropolitana</option>
-                  <option value="14">Los Rios</option>
-                  <option value="15">Arica y Parinacota</option>
+                <select id="regionesBoleta" name="regionesBoleta">
+                  <option value="item1" selected="selected">Región</option>
+                  <option value="Tarapaca">Tarapaca</option>
+                  <option value="Antofagasta">Antofagasta</option>
+                  <option value="Atacama">Atacama</option>
+				  <option value="Coquimbo">Coquimbo</option>
+				  <option value="Valparaiso">Valparaíso</option>
+				  <option value="OHiggins">O'Higgins</option>
+				  <option value="Maule">Maule</option>
+				  <option value="Biobio">Bio - Bio</option>
+				  <option value="Araucania">Araucania</option>
+				  <option value="LosLagos">Los Lagos</option>
+				  <option value="Aisen">Aisén</option>
+				  <option value="Antartica">Antartica y Magallanes</option>
+				  <option value="Metropolitana">Metropolitana</option>
+				  <option value="LosRios">Los Rios</option>
+				  <option value="Arica">Arica y Parinacota</option>
                 </select>
-                <select name="select">
-                  <option value="0" selected="selected">Ciudad</option>
+                <select id="provinciaBoleta" name="provinciaBoleta">
+                  <option value="">-- --</option>
                 </select>
                 <input type="text" placeholder="Calle" class="calle">
                 <input type="text" placeholder="Número/depto." class="numero--dire">
                 <label>DESEA INSTALACIÓN</label>
                 <div class="caja base-50 no-padding">
-                  <input type="radio" name="factura">Agregar instalación
+                  <input type="checkbox" name="factura">Agregar instalación
                 </div>
                 <div class="caja base-50 no-padding">
-                  <input type="radio" name="factura">Agregar despacho
+                  <input type="checkbox" name="factura">Agregar despacho
                 </div>
                 
                 <button type="submit" class="print--cotizacion">generar cotización</button>

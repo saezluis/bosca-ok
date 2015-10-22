@@ -5,6 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="es">
   <head>
+	<meta charset="utf-8">
     <title>Productos / Bosca</title>
     
   </head>
@@ -17,8 +18,11 @@ session_start();
 		$rut = $_REQUEST['rut'];
 		$telefono = $_REQUEST['telefono'];
 				
-		$region = $_REQUEST['regiones'];
-		$provincia = $_REQUEST['provincia'];
+		$regionDespacho = $_REQUEST['regionesDespacho'];
+		$provinciaDespacho = $_REQUEST['provinciaDespacho'];
+		
+		$regionBoleta = $_REQUEST['regionesBoleta'];
+		$provinciaBoleta = $_REQUEST['provinciaBoleta'];
 	
 		echo "Nombre: ".$nombre."<br>";
 		echo "Apellido: ".$apellido."<br>";
@@ -27,8 +31,12 @@ session_start();
 		echo "Telefono: ".$telefono."<br>";
 		echo "<br>";
 		
-		echo "Region: ".$region."<br>";
-		echo "Provincia: ".$provincia."<br>";
+		echo "Region despacho: ".$regionDespacho."<br>";
+		echo "Provincia despacho: ".$provinciaDespacho."<br>";
+		echo "<br>";
+		
+		echo "Region boleta: ".$regionBoleta."<br>";
+		echo "Provincia boleta: ".$provinciaBoleta."<br>";
 		
 	
 	?>  
