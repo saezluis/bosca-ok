@@ -41,6 +41,6 @@ if($contacto=='servicio_tecnico'){
 		
 	}
 	
-
+echo "Formulario procesado";
 
 ?>

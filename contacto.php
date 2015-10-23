@@ -72,7 +72,7 @@
         </div>
         <div class="caja movil-70">
           <div class="side-ellos">
-            <form class="registra">
+            <form method="post" action="procesar-contacto.php" class="registra">
               <label>Nombre y apellido </label>
               <input name="nombre_apellido" type="text">
               <label>Email</label>
@@ -89,7 +89,8 @@
                 <option value="manager_solartech">Contacto Brand Manager Solartech</option>
                 <option value="manager_hergom">Contacto Brand Manager Hergom</option>
                 <label>Agregue comentario sobre la calificación</label>
-                <textarea name="comentario" class="arriba-20"></textarea><a href="" class="registrar">Enviar</a>
+                <textarea name="comentario" class="arriba-20"></textarea>
+				<button type="submit">Enviar</button>
               </select>
             </form>
           </div>
