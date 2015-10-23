@@ -98,7 +98,7 @@ function validarmail(){
           <li class="menu__item"><a href="encuentranos.php" class="menu__link">Encuéntranos</a></li>
           <li class="menu__item"><a href="registra-tu-bosca.php" class="menu__link">Garantiza tu Bosca</a></li>
           <li class="menu__item"><a href="servicio-tecnico.php" class="menu__link">Servicio técnico</a></li>
-          <li class="menu__item"><a href="preguntas-frecuentes.html" class="menu__link">Preguntas frecuentes</a></li>
+          <li class="menu__item"><a href="preguntas-frecuentes.php" class="menu__link">Preguntas frecuentes</a></li>
           <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
         </ul>
       </div>
