@@ -474,6 +474,41 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="relacionados">
           <h5>productos relacionados</h5>
           <div id="owl-demo2" class="owlcarousel">
+		    <?php
+				
+				if($nombre=='Cocina Calefactora'){
+					$productosRelacionados=mysqli_query($conexion,"select * from cocinas where sku != '$detalle_producto' and nombre = 'Cocina Calefactora'")
+					or die("Problemas en el select:".mysqli_error($conexion));	
+				}
+				
+				if($nombre=='Cocina a leña'){
+					$productosRelacionados=mysqli_query($conexion,"select * from cocinas where sku != '$detalle_producto' and nombre = 'Cocina a leña'")
+					or die("Problemas en el select:".mysqli_error($conexion));	
+				}
+				
+				if($nombre=='Horno a leña'){
+					$productosRelacionados=mysqli_query($conexion,"select * from cocinas where sku != '$detalle_producto' and nombre = 'Horno a leña'")
+					or die("Problemas en el select:".mysqli_error($conexion));	
+				}
+				
+				if($nombre=='Caldera'){
+					$productosRelacionados=mysqli_query($conexion,"select * from cocinas where sku != '$detalle_producto' and nombre = 'Caldera'")
+					or die("Problemas en el select:".mysqli_error($conexion));	
+				}
+								
+				while($proRel=mysqli_fetch_array($productosRelacionados)){
+					$foto = $proRel['foto_producto'];
+					$var = $proRel['sku'];
+					$modelo = $proRel['modelo'];
+					
+					echo "<div class=\"item\"><a href=\"detalle-cocina.php?deta=",urlencode($var)," \"><img data-src=\"img-cc/$foto\" title=\"$modelo\" class=\"lazyOwl\"></a></div>";	
+					
+					
+				}				
+				
+			?>
+				
+			<!--
             <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
             <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
             <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
@@ -486,6 +521,7 @@ if(isset($_POST['cotizar_prod'])) {
             <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
             <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
             <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
+			-->
           </div>
         </div>
       </div>

@@ -81,7 +81,7 @@
           <ul class="menu">
             <li class="menu__item"><a href="index.php" class="menu__link">Productos</a></li>
             <li class="menu__item"><a href="nosotros.php" class="menu__link">Nosotros</a></li>
-            <li class="menu__item"><a href="encuentranos.php" class="menu__link activ">Encuéntranos</a></li>
+            <li class="menu__item"><a href="encuentranos.php" class="menu__link">Encuéntranos</a></li>
             <li class="menu__item"><a href="registra-tu-bosca.php" class="menu__link">Garantiza tu Bosca</a></li>
             <li class="menu__item"><a href="servicio-tecnico.php" class="menu__link">Servicio técnico</a></li>
             <li class="menu__item"><a href="preguntas-frecuentes.php" class="menu__link">Preguntas frecuentes</a></li>

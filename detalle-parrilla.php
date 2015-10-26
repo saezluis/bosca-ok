@@ -137,6 +137,7 @@ if(isset($_POST['cotizar_prod'])) {
 		$atributo_03 = @$reg['atributo_03'];
 		$atributo_04 = @$reg['atributo_04'];
 		$atributo_05 = @$reg['atributo_05'];
+		$atributo_06 = @$reg['atributo_06'];
 		
 		
 		$sku = $reg['sku'];			
@@ -302,6 +303,40 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="relacionados">
           <h5>productos relacionados</h5>
           <div id="owl-demo2" class="owlcarousel">
+			<?php
+				
+				if($atributo_06=='electrica'){
+					$productosRelacionados=mysqli_query($conexion,"select * from parrilla where sku != '$detalle_producto' and atributo_06 = 'electrica'")
+					or die("Problemas en el select:".mysqli_error($conexion));	
+				}
+				
+				if($atributo_06=='gas'){
+					$productosRelacionados=mysqli_query($conexion,"select * from parrilla where sku != '$detalle_producto' and atributo_06 = 'gas'")
+					or die("Problemas en el select:".mysqli_error($conexion));	
+				}
+				
+				if($atributo_06=='carbon'){
+					$productosRelacionados=mysqli_query($conexion,"select * from parrilla where sku != '$detalle_producto' and atributo_06 = 'carbon'")
+					or die("Problemas en el select:".mysqli_error($conexion));	
+				}
+				
+				if($atributo_06=='mueble'){
+					$productosRelacionados=mysqli_query($conexion,"select * from parrilla where sku != '$detalle_producto' and atributo_06 = 'mueble'")
+					or die("Problemas en el select:".mysqli_error($conexion));	
+				}
+								
+				while($proRel=mysqli_fetch_array($productosRelacionados)){
+					$foto = $proRel['foto_producto'];
+					$var = $proRel['sku'];
+					$modelo = $proRel['modelo'];
+					
+					echo "<div class=\"item\"><a href=\"detalle-parrilla.php?deta=",urlencode($var)," \"><img data-src=\"img-pt/$foto\" title=\"$modelo\" class=\"lazyOwl\"></a></div>";	
+					
+					
+				}				
+				
+			?>
+			<!--
             <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
             <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
             <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
@@ -314,6 +349,7 @@ if(isset($_POST['cotizar_prod'])) {
             <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
             <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
             <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
+			-->
           </div>
         </div>
       </div>
