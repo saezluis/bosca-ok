@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Cotización / Bosca</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="sass/tema/js/scripts.js"></script>
+    <script src="owl-carousel/owl.carousel.min.js"></script>
+    <style>
+      @media print{
+      	#print ul li{
+      		font-size:10px;
+      	}
+      	#print h1{
+      		font-size:20px;
+      
+      	}
+      	#print-items-terms p{
+      		padding-left:4em;
+      		font-size:1em;
+      	}
+      	#print-items-terms form#imprimir{
+      		display:none;
+      	}	
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grupo">
+      <div id="logo-print"><img src="img/logo-print.png"></div>
+    </div>
+    <div id="print" class="grupo">
+      <div class="caja base-50">
+        <h1>Cotización			</h1>
+      </div>
+      <div class="caja base-25">
+        <ul class="first">
+          <li>Sr./a: <span>Osvaldo Alfaro C.</span></li>
+          <li>RUT: <span>15.085.654-9</span></li>
+        </ul>
+      </div>
+      <div class="caja base-25 no-padding">
+        <ul class="second">
+          <li>Tel/cel:<span>09 5920318</span></li>
+          <li>Mail:<span>osovaldo@hotmail.com</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="grupo no-padding">
+      <div id="print-data">
+        <div class="caja base-30">
+          <h2>Número de cotización</h2>
+          <p>000000000000 </p>
+        </div>
+        <div class="caja base-30">
+          <h2>Fecha</h2>
+          <p>31/10/2015</p>
+        </div>
+        <div class="caja base-60"></div>
+      </div>
+    </div>
+    <div class="grupo no-padding">
+      <div id="print-items-cajas">
+        <div class="caja base-40">
+          <h3>ítem</h3>
+        </div>
+        <div class="caja base-20">
+          <h3 class="centrarh3">Cantidad</h3>
+        </div>
+        <div class="caja base-20">
+          <h3 class="centrarh3">SKU</h3>
+        </div>
+        <div class="caja base-20">
+          <h3 class="centrarh3">Precio</h3>
+        </div>
+      </div>
+      <div id="print-items-cajas-prod">
+        <div class="caja base-40">
+          <p>Estufa eco negra</p>
+        </div>
+        <div class="caja base-20">
+          <p class="centrarItems">10</p>
+        </div>
+        <div class="caja base-20">
+          <p class="centrarItems">0000000000</p>
+        </div>
+        <div class="caja base-20">
+          <p class="centrarItems">$<span>2.567.713</span></p>
+        </div>
+      </div>
+      <div id="print-items-cajas-prod-total">
+        <div class="caja base-40"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20 no-padding">
+          <p class="B">TOTAL</p>
+        </div>
+      </div>
+      <div id="print-items-cajas-prod-total">
+        <div class="caja base-40"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20 no-padding">
+          <p>$ <span> <strong>2.567.713</strong></span></p>
+        </div>
+      </div>
+      <div id="print-items-cajas-prod-total">
+        <div class="caja base-40"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20 no-padding">
+          <p class="B">IVA</p>
+        </div>
+      </div>
+      <div id="print-items-cajas-prod-total">
+        <div class="caja base-40"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20 no-padding">
+          <p>19%</p>
+        </div>
+      </div>
+      <div id="print-items-cond">
+        <div class="caja base-40"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20 no-padding">
+          <p>Valor total</p>
+        </div>
+      </div>
+      <div id="print-items-terms">
+        <div class="caja base-30"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-20"></div>
+        <div class="caja base-30 no-padding">
+          <p>$<span> <b>2.567.713</b></span></p>
+          <form id="imprimir">
+            <button type="button">Imprimir</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

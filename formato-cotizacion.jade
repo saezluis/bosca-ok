@@ -1,0 +1,144 @@
+doctype html
+html(lang='es')
+	head
+		title Cotización / Bosca
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width,initial-scale=1,maximun-scale=1')
+		link(rel='stylesheet', href='css/style.css')
+		link(rel='stylesheet', href='owl-carousel/owl.carousel.css')
+		link(rel='stylesheet', href='owl-carousel/owl.theme.css')
+		script(src='http://code.jquery.com/jquery-1.11.2.min.js')
+		script(src='sass/tema/js/scripts.js')
+		script(src='owl-carousel/owl.carousel.min.js')
+		style.
+			@media print{
+				#print ul li{
+					font-size:10px;
+				}
+				#print h1{
+					font-size:20px;
+
+				}
+				#print-items-terms p{
+					padding-left:4em;
+					font-size:1em;
+				}
+				#print-items-terms form#imprimir{
+					display:none;
+				}	
+			}
+	body
+		.grupo
+			#logo-print
+				img(src="img/logo-print.png")
+		#print.grupo
+			.caja.base-50
+				h1 Cotización			
+			.caja.base-25
+				ul.first
+					li Sr./a: 
+						span Osvaldo Alfaro C.
+					li RUT: 
+						span 15.085.654-9
+
+			.caja.base-25.no-padding
+				ul.second
+					li Tel/cel:
+						span 09 5920318
+					li Mail:
+						span osovaldo@hotmail.com
+		.grupo.no-padding
+			#print-data
+				.caja.base-30
+					h2 Número de cotización
+					p 000000000000 
+				.caja.base-30
+					h2 Fecha
+					p 31/10/2015
+				.caja.base-60
+		.grupo.no-padding
+			#print-items-cajas
+				.caja.base-40
+					h3 ítem
+				.caja.base-20
+					h3.centrarh3 Cantidad
+				.caja.base-20
+					h3.centrarh3 SKU
+				.caja.base-20
+					h3.centrarh3 Precio
+			#print-items-cajas-prod
+				.caja.base-40
+					p Estufa eco negra
+				.caja.base-20
+					p.centrarItems 10
+				.caja.base-20
+					p.centrarItems 0000000000
+				.caja.base-20
+					p.centrarItems $
+						span 2.567.713
+
+
+
+			#print-items-cajas-prod-total
+				.caja.base-40
+
+				.caja.base-20
+
+				.caja.base-20
+
+				.caja.base-20.no-padding
+					p.B TOTAL
+			#print-items-cajas-prod-total
+				.caja.base-40
+
+				.caja.base-20
+
+				.caja.base-20
+
+				.caja.base-20.no-padding
+					p $ 
+						span 
+							strong 2.567.713
+			#print-items-cajas-prod-total
+				.caja.base-40
+
+				.caja.base-20
+
+				.caja.base-20
+
+				.caja.base-20.no-padding
+					p.B IVA
+			#print-items-cajas-prod-total
+				.caja.base-40
+
+				.caja.base-20
+
+				.caja.base-20
+
+				.caja.base-20.no-padding
+					p 19%
+			#print-items-cond
+				.caja.base-40
+				.caja.base-20
+
+				.caja.base-20
+
+				.caja.base-20.no-padding
+					p Valor total
+			#print-items-terms
+				.caja.base-30
+				.caja.base-20
+
+				.caja.base-20
+
+				.caja.base-30.no-padding
+					p $
+						span 
+							b 2.567.713
+					form#imprimir
+						button(type="button") Imprimir
+
+
+
+
+

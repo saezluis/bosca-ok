@@ -3249,3 +3249,112 @@ a.btn-compromiso {
 
 .arriba-20 {
   margin-top: 20px !important; }
+
+#logo-print {
+  text-align: center;
+  margin: 2em 0; }
+
+#print {
+  width: 100%;
+  border-top: 1px solid #53534a;
+  border-bottom: 1px solid #53534a; }
+  #print h1 {
+    color: #53534a;
+    margin: 15px 0; }
+  #print ul.first, #print ul.second {
+    margin: 9px 0 0 0;
+    padding: 0;
+    list-style: none; }
+    #print ul.first li, #print ul.second li {
+      color: #53534a; }
+  #print ul.first {
+    border-right: 1px solid #53534a; }
+
+#print-data {
+  margin-top: 2em; }
+  #print-data h2 {
+    font-size: 1em;
+    margin: 0;
+    color: #53534a;
+    text-decoration: underline; }
+  #print-data p {
+    color: #53534a; }
+
+#print-items-cajas {
+  border-bottom: 1px solid #53534a;
+  width: 100%;
+  height: 100%;
+  display: inline-block; }
+  #print-items-cajas h3 {
+    font-size: 1em;
+    color: #53534a; }
+  #print-items-cajas .centrarh3 {
+    text-align: center;
+    color: #53534a; }
+  #print-items-cajas p {
+    color: #53534a; }
+
+#print-items-cajas-prod {
+  border-bottom: 1px solid #53534a;
+  width: 100%;
+  height: 100%;
+  display: inline-block; }
+  #print-items-cajas-prod h3 {
+    font-size: 1em;
+    color: #53534a; }
+  #print-items-cajas-prod p {
+    color: #53534a; }
+  #print-items-cajas-prod p.centrarItems {
+    text-align: center;
+    color: #53534a; }
+
+#print-items-cajas-prod-total {
+  margin-top: 1em;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: inline-block; }
+  #print-items-cajas-prod-total p {
+    text-align: center;
+    color: #53534a; }
+
+#print-items-cond {
+  border-bottom: 1px solid #53534a;
+  width: 100%;
+  height: 100%;
+  display: inline-block; }
+  #print-items-cond h2 {
+    font-size: 1em;
+    margin: 0 0 0 0;
+    color: #53534a; }
+  #print-items-cond .centrarh3 {
+    text-align: center;
+    color: #53534a; }
+  #print-items-cond p {
+    color: #53534a;
+    text-align: center; }
+
+#print-items-terms {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding-bottom: 3em; }
+  #print-items-terms p.terms {
+    text-align: left;
+    font-size: 0.9em; }
+  #print-items-terms p {
+    text-align: center;
+    font-size: 2em;
+    padding-left: 3em; }
+  #print-items-terms form#imprimir {
+    text-align: center; }
+    #print-items-terms form#imprimir button[type="button"] {
+      border: none;
+      padding: 8px 25px;
+      background: #E65524;
+      color: #fff; }
+      #print-items-terms form#imprimir button[type="button"]:hover {
+        background: #53534A; }
+
+.B {
+  border-bottom: 1px solid #53534a; }

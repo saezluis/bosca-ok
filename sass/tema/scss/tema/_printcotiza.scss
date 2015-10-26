@@ -1,0 +1,146 @@
+#logo-print{
+	text-align:center;
+	margin:2em 0;
+}
+
+#print{
+	width:100%;
+	border-top:1px solid #53534a;
+	border-bottom:1px solid #53534a;
+	h1{
+		color: #53534a;
+		margin:15px 0;
+	}
+
+	ul.first,ul.second{
+		margin: 9px 0 0 0;
+		padding:0;
+		list-style: none;
+
+		li{
+			color: #53534a;
+		}
+	}
+	ul.first{
+		border-right: 1px solid #53534a;
+	}
+}
+
+#print-data{
+	margin-top:2em;
+	h2{
+		font-size: 1em;
+		margin: 0;
+		color:#53534a;
+		text-decoration: underline;
+
+	}
+	p{
+		color:#53534a;
+	}
+}
+
+
+
+#print-items-cajas{
+	border-bottom:1px solid #53534a;
+	width:100%;
+	height:100%;
+	display:inline-block;
+	h3{
+		font-size: 1em;
+		color:#53534a;
+	}
+	.centrarh3{
+		text-align:center;
+		color:#53534a;
+	}
+	p{
+		color:#53534a;
+	}
+}
+
+#print-items-cajas-prod{
+	border-bottom:1px solid #53534a;
+	width:100%;
+	height:100%;
+	display:inline-block;
+	h3{
+		font-size: 1em;
+		color:#53534a;
+	}
+	p{
+		color:#53534a;
+	}
+	p.centrarItems{
+		text-align: center;
+		color:#53534a;
+	}
+}
+
+#print-items-cajas-prod-total{
+	margin-top:1em;
+	font-weight: bold;
+	width:100%;
+	height:100%;
+	display:inline-block;
+	p{
+		text-align: center;
+		color:#53534a;
+		//border-bottom: 1px solid #53534a;
+	}
+}
+
+#print-items-cond{
+	border-bottom:1px solid #53534a;
+	width:100%;
+	height:100%;
+	display:inline-block;
+	h2{
+		font-size: 1em;
+		margin: 0 0 0 0;
+		color:#53534a;
+	}
+	.centrarh3{
+		text-align:center;
+		color:#53534a;
+	}
+	p{
+		color:#53534a;
+		text-align: center;
+	}
+
+}
+#print-items-terms{
+
+	width:100%;
+	height:100%;
+	display:inline-block;
+    padding-bottom: 3em;
+	p.terms{
+		text-align: left;
+		font-size: 0.9em;
+	}
+	p{
+		text-align: center;
+		font-size: 2em;
+		padding-left: 3em;
+	}
+
+	form#imprimir{
+		text-align: center;
+		button[type="button"]{
+			border: none;
+			padding: 8px 25px;
+			background: $color-corporativo;
+			color: #fff;
+			&:hover{
+				background: $gris-corporativo;
+			}
+		}
+	}
+}
+
+.B{
+	border-bottom: 1px solid #53534a;
+}
