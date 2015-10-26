@@ -106,7 +106,7 @@ if(isset($_POST['cotizar_prod'])) {
 	//echo "Esto trae como SKU: " .$detalle_producto; 
 	//$compname = 
 	
-	
+	//$conexion=mysqli_connect("localhost","pmdigita_admin","Prodigy12","pmdigita_bosca") or die("Problemas con la conexión");
 	$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	
@@ -130,6 +130,8 @@ if(isset($_POST['cotizar_prod'])) {
 		$diametro = $reg['diametro_canon'];	
 		$garantia = $reg['garantia'];	
 		$sku = $reg['sku'];	
+		$nombre = $reg['nombre'];	
+		$modelo = $reg['modelo'];	
 		
 	}
 
@@ -212,7 +214,16 @@ if(isset($_POST['cotizar_prod'])) {
       <div class="caja movil-60">
         <div class="full--ficha-datos">
           <div class="logo-marca"><img src="img/mini-bosca.png"></div>
-          <div class="caracteristicas--producto border-none"><img src="img/ecoflame360.png">
+          <div class="caracteristicas--producto border-none">
+		  <?php 
+			$cond = 0;
+		    if($cond == -1){
+				echo "<img src=\"img/ecoflame360.png\">";
+			}else{
+				echo "<p><h2>$modelo</h2></p>";
+				echo "<p><h5><b>$nombre</b></h5></p>";
+			}			
+		  ?>		  
             <p class="sku">SKU: <?php echo $sku; ?></p>
             <p class="resena"><?php echo $ventaja_comparativa; ?></p>
             <div class="box-in">

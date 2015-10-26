@@ -52,6 +52,8 @@
             return false;
          }
 		 
+		 alert( "Gracias por sus comentarios, la información fue enviada correctamente" );
+		 
 		return( true );
       } 
 	
@@ -71,8 +73,8 @@
 			alert( "Por favor ingrese su email" );
 			document.mailing.email.focus() ;
 			return false;
-		  }
-
+		  }		  
+		  
 		  return( true );
 
 		}
@@ -85,6 +87,7 @@
   
 	<?php
 	
+	//$conexion=mysqli_connect("localhost","pmdigita_admin","Prodigy12","pmdigita_bosca") or die("Problemas con la conexión");
 	$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	

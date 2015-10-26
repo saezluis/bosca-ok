@@ -39,6 +39,7 @@
   
 	<?php
 	
+	//$conexion=mysqli_connect("localhost","pmdigita_admin","Prodigy12","pmdigita_bosca") or die("Problemas con la conexión");
 	$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	
