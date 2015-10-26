@@ -185,6 +185,7 @@
         <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
       </form>
     </div>
+	<a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
     <header id="header">
       <div class="grupo">
         <div class="caja web-30 no-padding">
