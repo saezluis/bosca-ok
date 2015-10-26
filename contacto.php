@@ -11,8 +11,93 @@
     <script src="sass/tema/js/scripts.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
     <script src="sass/tema/js/jquery.timelinr-0.9.54.js">		</script>
+	
+	<script type="text/javascript">
+	
+	function validarContacto()
+      {
+		
+         if( document.formContacto.nombre_apellido.value == "" )
+         {
+            alert( "Por favor ingrese su Nombre y Apellido" );
+            document.formContacto.nombre_apellido.focus() ;
+            return false;
+         }
+		 
+		 if( document.formContacto.email.value == "" )
+         {
+            alert( "Por favor ingrese su Email" );
+            document.formContacto.email.focus() ;
+            return false;
+         }
+		 
+		 if( document.formContacto.telefono.value == "" )
+         {
+            alert( "Por favor ingrese su Telefono" );
+            document.formContacto.telefono.focus() ;
+            return false;
+         }
+		 
+		 if( document.formContacto.contacto.value == "-1" )
+         {
+            alert( "Por favor seleccione area de contacto" );
+            document.formContacto.contacto.focus() ;
+            return false;
+         }
+		 
+		  if( document.formContacto.comentario.value == "" )
+         {
+            alert( "Por favor ingrese su Comentario" );
+            document.formContacto.comentario.focus() ;
+            return false;
+         }
+		 
+		return( true );
+      } 
+	
+	</script>
+	
+	<script type="text/javascript">
+
+		function validarmail(){
+
+		  if( document.mailing.nombres.value == "" ){
+			alert( "Por favor ingrese su Nombre y Apellido" );
+			document.mailing.nombres.focus() ;
+			return false;
+		  }
+
+		  if( document.mailing.email.value == "" ){
+			alert( "Por favor ingrese su email" );
+			document.mailing.email.focus() ;
+			return false;
+		  }
+
+		  return( true );
+
+		}
+
+	</script>
+	
+	
   </head>
   <body>
+  
+	<?php
+	
+	$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
+	$acentos = $conexion->query("SET NAMES 'utf8'");
+	
+	if(isset($_REQUEST['nombres']) and isset($_REQUEST['email'])){
+		//echo "Puedo insertar datos";
+		echo "<script>alert('Gracias por suscribirse a la lista de correos Bosca');</script>";
+		mysqli_query($conexion,"insert into mailing(nombre,email) values ('$_REQUEST[nombres]','$_REQUEST[email]')") 
+		or die("Problemas con el insert de los servicios");
+	}	
+	
+	
+	?>
+  
     <div class="collapsible">
       <button> </button>
       <form class="desple">
@@ -29,7 +114,7 @@
     <header id="header">
       <div class="grupo">
         <div class="caja web-30 no-padding">
-          <h1><a href="index.html" class="logo_m">ir al inicio</a></h1>
+          <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
         </div>
         <div class="caja web-70">
           <div id="flags">
@@ -40,13 +125,13 @@
           </div>
           <div id="mostrar-menu">Menú</div>
           <ul class="menu">
-            <li class="menu__item"><a href="index.html" class="menu__link">Productos</a></li>
-            <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
-            <li class="menu__item"><a href="encuentranos.html" class="menu__link">Encuéntranos</a></li>
-            <li class="menu__item"><a href="registra-tu-bosca.html" class="menu__link">Garantiza tu Bosca</a></li>
-            <li class="menu__item"><a href="servicio-tecnico.html" class="menu__link">Servicio técnico</a></li>
-            <li class="menu__item"><a href="preguntas-frecuentes.html" class="menu__link">Preguntas frecuentes</a></li>
-            <li class="menu__item"><a href="contacto.html" class="menu__link activ">Contacto</a></li>
+            <li class="menu__item"><a href="index.php" class="menu__link">Productos</a></li>
+            <li class="menu__item"><a href="nosotros.php" class="menu__link">Nosotros</a></li>
+            <li class="menu__item"><a href="encuentranos.php" class="menu__link">Encuéntranos</a></li>
+            <li class="menu__item"><a href="registra-tu-bosca.php" class="menu__link">Garantiza tu Bosca</a></li>
+            <li class="menu__item"><a href="servicio-tecnico.php" class="menu__link">Servicio técnico</a></li>
+            <li class="menu__item"><a href="preguntas-frecuentes.php" class="menu__link">Preguntas frecuentes</a></li>
+            <li class="menu__item"><a href="contacto.php" class="menu__link activ">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -72,16 +157,16 @@
         </div>
         <div class="caja movil-70">
           <div class="side-ellos">
-            <form method="post" action="procesar-contacto.php" class="registra">
+            <form method="post" name="formContacto" action="procesar-contacto.php" class="registra">
               <label>Nombre y apellido </label>
               <input name="nombre_apellido" type="text">
               <label>Email</label>
-              <input name="email" type="text">
+              <input name="email" type="email">
               <label>Teléfono</label>
               <input name="telefono" type="text">
               <label>Seleccione contacto directo</label>
               <select name="contacto" class="region">
-                <option value="">Seleccionar área</option>
+                <option value="-1">Seleccionar área</option>
                 <option value="servicio_tecnico">Contacto servicio técnico </option>
                 <option value="exportaciones_importaciones">Exportaciones / Importaciones</option>
                 <option value="jefe_de_tienda">Contacto jefe de Tiendas</option>
@@ -90,7 +175,8 @@
                 <option value="manager_hergom">Contacto Brand Manager Hergom</option>
                 <label>Agregue comentario sobre la calificación</label>
                 <textarea name="comentario" class="arriba-20"></textarea>
-				<button type="submit">Enviar</button>
+				<button class="registrar" onclick="return(validarContacto())" type="submit">Enviar</button>
+				
               </select>
             </form>
           </div>
@@ -100,17 +186,17 @@
     <footer id="footer">
       <div class="grupo">
         <div class="caja movil-50">
-          <form action="#" class="contact_form">
+          <form name="mailing" method="post" class="contact_form">
             <ul>
               <li>
                 <label class="label">Recibe nuestras ofertas y promociones </label>
-                <input type="text" name="" value="" placeholder="Ingresa nombre y apellido" class="format_input">
+                <input type="text" name="nombres" value="" placeholder="Ingresa nombre y apellido" class="format_input">
               </li>
               <li>
-                <input type="text" name="" value="" placeholder="Ingresa mail" class="format_input">
+                <input type="text" name="email" value="" placeholder="Ingresa mail" class="format_input">
               </li>
               <li>
-                <button type="submit" class="enviarMail">Suscríbete</button>
+                <button type="submit" onclick="return(validarmail())" class="enviarMail">Suscríbete</button>
               </li>
             </ul>
           </form>

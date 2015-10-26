@@ -37,6 +37,28 @@ if(isset($_POST['cotizar_prod'])) {
 	}
 
   </script>
+  
+  <script type="text/javascript">
+
+		function validarmail(){
+
+		  if( document.mailing.nombres.value == "" ){
+			alert( "Por favor ingrese su Nombre y Apellido" );
+			document.mailing.nombres.focus() ;
+			return false;
+		  }
+
+		  if( document.mailing.email.value == "" ){
+			alert( "Por favor ingrese su email" );
+			document.mailing.email.focus() ;
+			return false;
+		  }
+
+		  return( true );
+
+		}
+
+	</script>
 	
   </head>
   <body>
@@ -85,6 +107,13 @@ if(isset($_POST['cotizar_prod'])) {
 	
 	$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
+	
+	if(isset($_REQUEST['nombres']) and isset($_REQUEST['email'])){
+		//echo "Puedo insertar datos";
+		echo "<script>alert('Gracias por suscribirse a la lista de correos Bosca');</script>";
+		mysqli_query($conexion,"insert into mailing(nombre,email) values ('$_REQUEST[nombres]','$_REQUEST[email]')") 
+		or die("Problemas con el insert de los servicios");
+	}
 	
 	$registros=mysqli_query($conexion,"select * from parrilla where sku = '$detalle_producto'")
 	or die("Problemas en el select:".mysqli_error($conexion));
@@ -147,8 +176,8 @@ if(isset($_POST['cotizar_prod'])) {
             <li class="menu__item"><a href="encuentranos.php" class="menu__link">Encuéntranos</a></li>
             <li class="menu__item"><a href="registra-tu-bosca.php" class="menu__link">Garantiza tu Bosca</a></li>
             <li class="menu__item"><a href="servicio-tecnico.php" class="menu__link">Servicio técnico</a></li>
-            <li class="menu__item"><a href="preguntas-frecuentes.html" class="menu__link">Preguntas frecuentes</a></li>
-            <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
+            <li class="menu__item"><a href="preguntas-frecuentes.php" class="menu__link">Preguntas frecuentes</a></li>
+            <li class="menu__item"><a href="contacto.php" class="menu__link">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -292,19 +321,22 @@ if(isset($_POST['cotizar_prod'])) {
     <footer id="footer">
       <div class="grupo">
         <div class="caja movil-50">
-          <form action="#" class="contact_form">
+          <form name="mailing" method="post" class="contact_form">
             <ul>
               <li>
                 <label class="label">Recibe nuestras ofertas y promociones </label>
-                <input type="text" name="" value="" placeholder="Ingresa nombre y apellido" class="format_input">
+                <input type="text" name="nombres" value="" placeholder="Ingresa nombre y apellido" class="format_input">
               </li>
               <li>
-                <input type="text" name="" value="" placeholder="Ingresa mail" class="format_input">
+                <input type="text" name="email" value="" placeholder="Ingresa mail" class="format_input">
               </li>
               <li>
-                <button type="submit" class="enviarMail">Suscríbete</button>
+                <button type="submit" onclick="return(validarmail())" class="enviarMail">Suscríbete</button>
               </li>
             </ul>
+			<?php
+				echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$sku\">";
+			?>
           </form>
         </div>
         <div class="caja movil-50 auxT">
