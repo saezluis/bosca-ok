@@ -1308,6 +1308,34 @@ section.margen-top{
 			}
 		}
 	}
+	@include desde (tablet){
+		ul li.font-t{
+		font-size: 0.85em;
+		}
+		p.certificacion-amb{
+			padding-right:15%;
+			//background:red;
+		}
+
+	}
+
+	@include desde (tablet-h){
+		ul li.font-t{
+			font-size: 1em;
+		}
+		p.certificacion-amb{
+			padding-right:0;
+			width: 92% !important;
+		}	
+	}
+
+	@include desde (web){
+		ul li.font-t{
+			font-size: 1em;
+		}
+
+	}
+
 } 
 
 #quehay{
@@ -1405,6 +1433,10 @@ section.margen-top{
 		font-size: 0.8em;
 		padding:8px 15px;
 	}
+	@include desde (tablet-h){
+		font-size: 0.85em;
+		//padding:8px 15px;
+	}
 
 }
 
@@ -1452,7 +1484,15 @@ section.margen-top{
 		.logo--item{
 			margin: 20px 0;
 		}
-		@include cuadricula(logo--item,2);
+		@include desde (tablet){
+			@include cuadricula(logo--item,2,25);			
+		}
+		@include desde (tablet-h){
+			@include cuadricula(logo--item,2);			
+		}
+		@include desde (web){
+			@include cuadricula(logo--item,2);			
+		}
 	}
 
 
@@ -1464,6 +1504,15 @@ section.margen-top{
 		//margin:0px auto;
 		margin: 20px 0; 
 		width: 93%;
+		@include desde (tablet){
+			width: 76%;
+		}
+		@include desde (tablet-h){
+			width: 100%;
+		}
+		@include desde (web){
+			width: 93%;
+		}
 			td{
 				font-size:14px;
 				padding:10px 5px;

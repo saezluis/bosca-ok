@@ -2548,6 +2548,20 @@ select.orden {
 
 .side-ellos .tabs .tab-content p.certificacion-amb {
   width: 89%; }
+@media screen and (min-width: 768px) {
+  .side-ellos ul li.font-t {
+    font-size: 0.85em; }
+  .side-ellos p.certificacion-amb {
+    padding-right: 15%; } }
+@media screen and (min-width: 1024px) {
+  .side-ellos ul li.font-t {
+    font-size: 1em; }
+  .side-ellos p.certificacion-amb {
+    padding-right: 0;
+    width: 92% !important; } }
+@media screen and (min-width: 1025px) {
+  .side-ellos ul li.font-t {
+    font-size: 1em; } }
 
 #quehay {
   width: 100%;
@@ -2615,6 +2629,9 @@ select.orden {
     .tabs label {
       font-size: 0.8em;
       padding: 8px 15px; } }
+  @media screen and (min-width: 1024px) {
+    .tabs label {
+      font-size: 0.85em; } }
 
 .tabs label:hover {
   background: #E65524; }
@@ -2650,27 +2667,71 @@ select.orden {
     margin-top: 25px; }
     .tab-content .logos--certificacion .logo--item {
       margin: 20px 0; }
-    .tab-content .logos--certificacion:before, .tab-content .logos--certificacion:after {
-      clear: both;
-      content: " ";
-      display: table;
-      width: 100%; }
-    .tab-content .logos--certificacion > logo--item, .tab-content .logos--certificacion > .logo--item {
-      float: left;
-      width: 49%;
-      margin-right: 2%;
-      margin-bottom: 2%;
-      vertical-align: top; }
-      .tab-content .logos--certificacion > logo--item:nth-child(2n), .tab-content .logos--certificacion > .logo--item:nth-child(2n) {
-        margin-right: 0;
-        clear: right; }
-      .tab-content .logos--certificacion > logo--item:nth-child(2n+1), .tab-content .logos--certificacion > .logo--item:nth-child(2n+1) {
-        clear: left; }
+    @media screen and (min-width: 768px) {
+      .tab-content .logos--certificacion:before, .tab-content .logos--certificacion:after {
+        clear: both;
+        content: " ";
+        display: table;
+        width: 100%; }
+      .tab-content .logos--certificacion > logo--item, .tab-content .logos--certificacion > .logo--item {
+        float: left;
+        width: 37.5%;
+        margin-right: 25;
+        margin-bottom: 25;
+        vertical-align: top; }
+        .tab-content .logos--certificacion > logo--item:nth-child(2n), .tab-content .logos--certificacion > .logo--item:nth-child(2n) {
+          margin-right: 0;
+          clear: right; }
+        .tab-content .logos--certificacion > logo--item:nth-child(2n+1), .tab-content .logos--certificacion > .logo--item:nth-child(2n+1) {
+          clear: left; } }
+    @media screen and (min-width: 1024px) {
+      .tab-content .logos--certificacion:before, .tab-content .logos--certificacion:after {
+        clear: both;
+        content: " ";
+        display: table;
+        width: 100%; }
+      .tab-content .logos--certificacion > logo--item, .tab-content .logos--certificacion > .logo--item {
+        float: left;
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        vertical-align: top; }
+        .tab-content .logos--certificacion > logo--item:nth-child(2n), .tab-content .logos--certificacion > .logo--item:nth-child(2n) {
+          margin-right: 0;
+          clear: right; }
+        .tab-content .logos--certificacion > logo--item:nth-child(2n+1), .tab-content .logos--certificacion > .logo--item:nth-child(2n+1) {
+          clear: left; } }
+    @media screen and (min-width: 1025px) {
+      .tab-content .logos--certificacion:before, .tab-content .logos--certificacion:after {
+        clear: both;
+        content: " ";
+        display: table;
+        width: 100%; }
+      .tab-content .logos--certificacion > logo--item, .tab-content .logos--certificacion > .logo--item {
+        float: left;
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        vertical-align: top; }
+        .tab-content .logos--certificacion > logo--item:nth-child(2n), .tab-content .logos--certificacion > .logo--item:nth-child(2n) {
+          margin-right: 0;
+          clear: right; }
+        .tab-content .logos--certificacion > logo--item:nth-child(2n+1), .tab-content .logos--certificacion > .logo--item:nth-child(2n+1) {
+          clear: left; } }
   .tab-content .tg {
     border-collapse: collapse;
     border-spacing: 0;
     margin: 20px 0;
     width: 93%; }
+    @media screen and (min-width: 768px) {
+      .tab-content .tg {
+        width: 76%; } }
+    @media screen and (min-width: 1024px) {
+      .tab-content .tg {
+        width: 100%; } }
+    @media screen and (min-width: 1025px) {
+      .tab-content .tg {
+        width: 93%; } }
     .tab-content .tg td {
       font-size: 14px;
       padding: 10px 5px;
