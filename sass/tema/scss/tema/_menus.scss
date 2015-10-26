@@ -61,10 +61,14 @@
 	}
 }
 
+
 @include desde(web){
 	.activ{
 		background: $color_corporativo;
 		color: $blanco;
+	}
+	.solo-movil{
+		display: none;
 	}
 }
 

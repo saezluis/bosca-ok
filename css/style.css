@@ -1526,7 +1526,10 @@ h6 {
 @media screen and (min-width: 1025px) {
   .activ {
     background: #E65524;
-    color: #fff; } }
+    color: #fff; }
+
+  .solo-movil {
+    display: none; } }
 #flags {
   width: 100%;
   height: auto;
