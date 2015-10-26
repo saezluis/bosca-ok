@@ -2198,6 +2198,15 @@ section.margen-top{
 					    		color: #fff;
 					    		text-decoration: none;
 					    		background:url(../img/icon-link.png) 110px center no-repeat;
+					    		@include desde (tablet){
+					    			background:url(../img/icon-link.png) 170px center no-repeat;
+					    		}
+					    		@include desde (tablet-h){
+					    			background:url(../img/icon-link.png) 250px center no-repeat;
+					    		}
+					    		@include desde (web){
+					    			background:url(../img/icon-link.png) 110px center no-repeat;
+					    		}
 					    	}
 				    	}
 			    	}

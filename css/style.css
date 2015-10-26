@@ -3209,6 +3209,15 @@ select.orden {
               color: #fff;
               text-decoration: none;
               background: url(../img/icon-link.png) 110px center no-repeat; }
+              @media screen and (min-width: 768px) {
+                .accordion-section-content .use--bosca .col--use--bosca .lista--links ul li a {
+                  background: url(../img/icon-link.png) 170px center no-repeat; } }
+              @media screen and (min-width: 1024px) {
+                .accordion-section-content .use--bosca .col--use--bosca .lista--links ul li a {
+                  background: url(../img/icon-link.png) 250px center no-repeat; } }
+              @media screen and (min-width: 1025px) {
+                .accordion-section-content .use--bosca .col--use--bosca .lista--links ul li a {
+                  background: url(../img/icon-link.png) 110px center no-repeat; } }
     @media screen and (min-width: 768px) {
       .accordion-section-content .use--bosca .borde-r-t {
         border-right: 1px solid #fff; } }
