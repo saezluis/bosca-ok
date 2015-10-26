@@ -29,6 +29,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/cocina-calderas.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/cocina-calderas.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/contacto.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -96,6 +105,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/detalle-cocina.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/detalle-cocina.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/detalle-parrilla.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -130,6 +148,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/detalle-producto.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/detalle-ventilacion.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/detalle-ventilacion.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -335,6 +362,182 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img-ac\/AC9000-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18570,
+		"inputAbbreviatedPath": "\/img-ac\/AC9000-b.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/AC9000-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/AC9000.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 41502,
+		"inputAbbreviatedPath": "\/img-ac\/AC9000.png",
+		"outputAbbreviatedPath": "\/img-ac\/AC9000.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/Enfriador-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21392,
+		"inputAbbreviatedPath": "\/img-ac\/Enfriador-b.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/Enfriador-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/Enfriador.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30032,
+		"inputAbbreviatedPath": "\/img-ac\/Enfriador.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/Enfriador.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/KitVentana-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24115,
+		"inputAbbreviatedPath": "\/img-ac\/KitVentana-b.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/KitVentana-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/KitVentana.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27343,
+		"inputAbbreviatedPath": "\/img-ac\/KitVentana.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/KitVentana.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/Piso8-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31856,
+		"inputAbbreviatedPath": "\/img-ac\/Piso8-b.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/Piso8-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/Piso8.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23510,
+		"inputAbbreviatedPath": "\/img-ac\/Piso8.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/Piso8.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/VentiladorIndustrial-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 41744,
+		"inputAbbreviatedPath": "\/img-ac\/VentiladorIndustrial-b.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/VentiladorIndustrial-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/VentiladorIndustrial.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 63532,
+		"inputAbbreviatedPath": "\/img-ac\/VentiladorIndustrial.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/VentiladorIndustrial.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/VentiladorPedestal-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12778,
+		"inputAbbreviatedPath": "\/img-ac\/VentiladorPedestal-b.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/VentiladorPedestal-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/VentiladorPedestal.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25245,
+		"inputAbbreviatedPath": "\/img-ac\/VentiladorPedestal.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/VentiladorPedestal.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/VentiladorPiso-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 41058,
+		"inputAbbreviatedPath": "\/img-ac\/VentiladorPiso-b.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/VentiladorPiso-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/VentiladorPiso.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37498,
+		"inputAbbreviatedPath": "\/img-ac\/VentiladorPiso.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/VentiladorPiso.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/VentiladorSobre-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40302,
+		"inputAbbreviatedPath": "\/img-ac\/VentiladorSobre-b.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/VentiladorSobre-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-ac\/VentiladorSobre.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13401,
+		"inputAbbreviatedPath": "\/img-ac\/VentiladorSobre.jpg",
+		"outputAbbreviatedPath": "\/img-ac\/VentiladorSobre.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img-cc\/calderaDTH-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -379,6 +582,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img-cc\/DEVAII75-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27132,
+		"inputAbbreviatedPath": "\/img-cc\/DEVAII75-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/DEVAII75-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/DEVAII75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11373,
+		"inputAbbreviatedPath": "\/img-cc\/DEVAII75.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/DEVAII75.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img-cc\/hergom.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -386,6 +611,28 @@
 		"initialSize": 3064,
 		"inputAbbreviatedPath": "\/img-cc\/hergom.png",
 		"outputAbbreviatedPath": "\/img-cc\/hergom.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/HornoArce-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23913,
+		"inputAbbreviatedPath": "\/img-cc\/HornoArce-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/HornoArce-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/HornoArce.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24225,
+		"inputAbbreviatedPath": "\/img-cc\/HornoArce.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/HornoArce.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -441,6 +688,28 @@
 		"initialSize": 42287,
 		"inputAbbreviatedPath": "\/img-cc\/L07CCE.jpg",
 		"outputAbbreviatedPath": "\/img-cc\/L07CCE.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L07CH-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23470,
+		"inputAbbreviatedPath": "\/img-cc\/L07CH-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L07CH-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/L07CH.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42440,
+		"inputAbbreviatedPath": "\/img-cc\/L07CH.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/L07CH.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -507,6 +776,28 @@
 		"initialSize": 23380,
 		"inputAbbreviatedPath": "\/img-cc\/L09CCE.jpg",
 		"outputAbbreviatedPath": "\/img-cc\/L09CCE.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/TB6H-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24786,
+		"inputAbbreviatedPath": "\/img-cc\/TB6H-b.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/TB6H-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img-cc\/TB6H.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36458,
+		"inputAbbreviatedPath": "\/img-cc\/TB6H.jpg",
+		"outputAbbreviatedPath": "\/img-cc\/TB6H.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3503,6 +3794,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/registro-encuentranos.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/registro-encuentranos.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sass\/tema\/css\/estilos.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -3991,6 +4291,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/terraza-parrilla.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/ventilacion.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ventilacion.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
