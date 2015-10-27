@@ -3352,7 +3352,8 @@ a.btn-compromiso {
       border: none;
       padding: 8px 25px;
       background: #E65524;
-      color: #fff; }
+      color: #fff;
+      margin-left: 7em; }
       #print-items-terms form#imprimir button[type="button"]:hover {
         background: #53534A; }
 
