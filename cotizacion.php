@@ -234,7 +234,14 @@ session_start();
 				$total = 0;
 				//Voy a realizar aqui cambios
 				
-				for ($i= 0; $i < $tamano_nombres; $i++){
+				//Arreglo que va enviar los items a formato-cotizacion
+				$_SESSION['calefa'] = array();
+				$_SESSION['parri'] = array();
+				$_SESSION['coci'] = array();
+				
+				
+				
+				for ($i = 0; $i < $tamano_nombres; $i++){
 					
 					//echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i]['productoCotizar'];
 					$detalle_producto = $Arreglo_productos[$i];
@@ -275,16 +282,19 @@ session_start();
 						
 						$total = $total + ($precio * $cantidad_productos);
 						
+						//Meto valores al array
+						$_SESSION['calefa'][$i] = array('nombre' => $nombre,'modelo' => $modelo,'cantidad' => $cantidad_productos,'precio' => $precio,'sku' => $sku);
+						
 					}
 				}
 				
 				//Aqui agrego los cambios para llegar a la informacion de Parrilla
 				
-				for ($i= 0; $i < $tamano_nombres; $i++){
+				for ($k = 0; $k < $tamano_nombres; $k++){
 					
 					//echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i]['productoCotizar'];
-					$detalle_producto = $Arreglo_productos[$i];
-					$cantidad_productos = $Arreglo_cantidades[$i];
+					$detalle_producto = $Arreglo_productos[$k];
+					$cantidad_productos = $Arreglo_cantidades[$k];
 					
 					//Con esta funcion elimino valores duplicados del array
 					//(array_unique($a));
@@ -321,15 +331,17 @@ session_start();
 						
 						$total = $total + ($precio * $cantidad_productos);
 						
+						$_SESSION['parri'][$k] = array('nombre' => $nombre,'modelo' => $modelo,'cantidad' => $cantidad_productos,'precio' => $precio,'sku' => $sku);
+						
 					}
 				}
 				
 				
-				for ($i= 0; $i < $tamano_nombres; $i++){
+				for ($h= 0; $h < $tamano_nombres; $h++){
 					
 					//echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i]['productoCotizar'];
-					$detalle_producto = $Arreglo_productos[$i];
-					$cantidad_productos = $Arreglo_cantidades[$i];
+					$detalle_producto = $Arreglo_productos[$h];
+					$cantidad_productos = $Arreglo_cantidades[$h];
 					
 					//Con esta funcion elimino valores duplicados del array
 					//(array_unique($a));
@@ -365,6 +377,8 @@ session_start();
 						echo "</div>";
 						
 						$total = $total + ($precio * $cantidad_productos);
+						
+						$_SESSION['coci'][$h] = array('nombre' => $nombre,'modelo' => $modelo,'cantidad' => $cantidad_productos,'precio' => $precio,'sku' => $sku);
 						
 					}
 				}
@@ -468,7 +482,7 @@ session_start();
           <div class="side--right">
             <div class="datos--comprador">
               <h3 class="titulo--comprador">Datos Comprador</h3>
-              <form method="post" action="cotizacion-imprimible.php" class="cotiza--usuario">
+              <form method="post" action="formato-cotizacion.php" class="cotiza--usuario">
                 <label>NOMBRE</label>
                 <input name="nombre" type="text">
                 <label>APELLIDO</label>
@@ -505,13 +519,13 @@ session_start();
                 <select id="provincia" name="provinciaDespacho">
                   <option value="">-- --</option>
                 </select>
-                <input type="text" placeholder="Calle" class="calle">
-                <input type="text" placeholder="Número/depto." class="numero--dire">
+                <input type="text" name="calleDespacho" placeholder="Calle" class="calle">
+                <input type="text" name="nroDptoDespacho" placeholder="Número/depto." class="numero--dire">
                 <label>ELIJA </label>
                 <div class="caja base-20 no-padding">
-                  <input type="radio" name="factura">Factura</div>
+                  <input type="radio" name="factura" value="factura">Factura</div>
                 <div class="caja base-80 no-padding">
-                  <input type="radio" name="factura">Boleta</div>
+                  <input type="radio" name="factura" value="boleta">Boleta</div>
                 <label>DIRECCIÓN DE ENVÍO DE BOLETA O FACTURA</label>
                 <select id="regionesBoleta" name="regionesBoleta">
                   <option value="item1" selected="selected">Región</option>
@@ -534,14 +548,14 @@ session_start();
                 <select id="provinciaBoleta" name="provinciaBoleta">
                   <option value="">-- --</option>
                 </select>
-                <input type="text" placeholder="Calle" class="calle">
-                <input type="text" placeholder="Número/depto." class="numero--dire">
+                <input type="text" name="calleBoleta" placeholder="Calle" class="calle">
+                <input type="text" name="nroDptoBoleta" placeholder="Número/depto." class="numero--dire">
                 <label>DESEA INSTALACIÓN</label>
                 <div class="caja base-50 no-padding">
-                  <input type="checkbox" name="factura">Agregar instalación
+                  <input type="checkbox" name="instalacion">Agregar instalación
                 </div>
                 <div class="caja base-50 no-padding">
-                  <input type="checkbox" name="factura">Agregar despacho
+                  <input type="checkbox" name="despacho">Agregar despacho
                 </div>
                 
                 <button type="submit" class="print--cotizacion">generar cotización</button>
