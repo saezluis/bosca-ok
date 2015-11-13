@@ -109,11 +109,9 @@ function validarmail(){
   <section class="grupo">
     <div class="caja no-padding">
       <div class="banner">
-        <div id="owl-demo" class="owlcarousel owl-theme">
-          <div class="item"><img src="img/bg_banner.jpg"></div>
-          <div class="item"><img src="img/bg_banner.jpg"></div>
-          <div class="item"><img src="img/bg_banner.jpg"></div>
-          <div class="item"><img src="img/bg_banner.jpg"></div>
+        <div id="owl-demo" class="owlcarousel owl-theme">          
+          <div class="item"><img src="img/banner-navidad.jpg"></div>      
+          <div class="item"><img src="img/bg_banner.jpg"></div>    
         </div>
       </div>
     </div>

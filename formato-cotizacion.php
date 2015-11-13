@@ -36,6 +36,7 @@ session_start();
   <body>
 	<?php
 	
+	/*
 	$nro_calefas = count($_SESSION['calefa']);
 	echo "Nro de calefas: ".$nro_calefas;
 	echo "<br>";
@@ -47,6 +48,12 @@ session_start();
 	$nro_coci = count($_SESSION['coci']);
 	echo "Nro de coci: ".$nro_coci;
 	echo "<br>";
+	
+	$nro_venti = count($_SESSION['venti']);
+	echo "Nro de venti: ".$nro_venti;
+	echo "<br>";
+	*/
+	
 	//Con eso los imprimo	
 	
 	/*
@@ -106,7 +113,7 @@ session_start();
 	
 	?>
     <div class="grupo">
-      <div id="logo-print"><img src="img/logo-print.png"></div>
+      <div id="logo-print"><a href="index.php"><img src="img/logo-print.png"></a></div>
     </div>
     <div id="print" class="grupo">
       <div class="caja base-50">
@@ -130,12 +137,16 @@ session_start();
         <div class="caja base-30">
 		<!-- Hago el insert y luego saco el ultimo id_corizacion -->
           <h2>Número de cotización</h2>
-          <p>000000000000 </p>
+          <p>000000000000</p>
         </div>
         <div class="caja base-30">
 		  <!-- agarro la fecha del sistema en php, esa misma fecha la deberia de guardar en BD-->
           <h2>Fecha</h2>
-          <p>31/10/2015</p>
+		  <?php
+			$date = date('d-m-Y');
+			echo "<p>$date</p>";
+		  ?>
+          
         </div>
         <div class="caja base-60"></div>
       </div>
@@ -164,131 +175,126 @@ session_start();
 		// -- Calefacciones -- Calefacciones -- Calefacciones -- Calefacciones -- Calefacciones -- Calefacciones
    	  
 		$new_calefa = array();		
+		$new_calefa = $_SESSION['calefa'];
 		
-		for ($t = 0 ; $t <= $nro_calefas ; $t ++) {		
-			if(empty($_SESSION['calefa'][$t])){
-				$nada = 0;
-			}else{			
-				//echo "Este SKU lleva producto ".$_SESSION['items'][$i]['Detalle'];
-				//echo "<br>";				
-				//$cotizar_esto[] = array('productoCotizar' => $pro);
-				$new_calefa[] = $_SESSION['calefa'][$t];
-				//$k = $k + 1;
-				$tamano_calefa = count($new_calefa);
-			}			
+		foreach ($new_calefa as $calefa) {	
+				echo "<div id=\"print-items-cajas-prod\">";
+					echo "<div class=\"caja base-40\">";
+						echo "<p>".$calefa['nombre']." ".$calefa['modelo']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$calefa['cantidad']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$calefa['sku']."</p>";
+					echo "</div>";
+						echo "<div class=\"caja base-20\">";	
+						$subTotalCalefa = $calefa['cantidad'] * $calefa['precio'];
+						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalCalefa,0,",",".")."</span></p>";
+					echo "</div>";
+					echo "</div>";						
 		}
-	  
-		for($i = 0; $i < @$tamano_calefa; $i++){					
-		  
-		  $nombre_calefa = $new_calefa[$i]['nombre'];
-		  $modelo_calefa = $new_calefa[$i]['modelo'];
-		  $cantidad_calefa = $new_calefa[$i]['cantidad'];
-		  $sku_calefa = $new_calefa[$i]['sku'];
-		  $precio_TotUni_calefa = $new_calefa[$i]['precio'];
-		  $precio_Tot_calefa = $cantidad_calefa * $precio_TotUni_calefa;
-		  
-		  echo "<div id=\"print-items-cajas-prod\">";
-			echo "<div class=\"caja base-40\">";
-			  echo "<p>".$nombre_calefa." ".$modelo_calefa."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">".$cantidad_calefa."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">".$sku_calefa."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">$<span>".$precio_Tot_calefa."</span></p>";
-			echo "</div>";
-		  echo "</div>";	
-	  }
-	  	 
+				
 		//-- Parrillas --  Parrillas -- Parrillas -- Parrillas -- Parrillas -- Parrillas -- Parrillas -- 
 		
-		$new_parri = array();		
+		$new_parri = array();				
+		$new_parri = $_SESSION['parri'];
 		
-		for ($j = 0 ; $j <= $nro_parri ; $j ++) {		
-			if(empty($_SESSION['parri'][$j])){
-				$nada = 0;
-			}else{			
-				//echo "Este SKU lleva producto ".$_SESSION['items'][$i]['Detalle'];
-				//echo "<br>";				
-				//$cotizar_esto[] = array('productoCotizar' => $pro);
-				$new_parri[] = $_SESSION['parri'][$j];
-				//$k = $k + 1;
-				$tamano_parri = count($new_parri);
-			}			
+		//echo "<br>";
+		
+		foreach ($new_parri as $parri) {
+				echo "<div id=\"print-items-cajas-prod\">";
+					echo "<div class=\"caja base-40\">";
+						echo "<p>".$parri['nombre']." ".$parri['modelo']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$parri['cantidad']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$parri['sku']."</p>";
+					echo "</div>";
+						echo "<div class=\"caja base-20\">";	
+						$subTotalParri = $parri['cantidad'] * $parri['precio'];
+						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalParri,0,",",".")."</span></p>";	
+					echo "</div>";
+					echo "</div>";	
 		}
 		
-		for($k = 0; $k < @$tamano_parri; $k++){					
-		  
-		  $nombre_parri = $new_parri[$k]['nombre'];
-		  $modelo_parri = $new_parri[$k]['modelo'];
-		  $cantidad_parri = $new_parri[$k]['cantidad'];
-		  $sku_parri = $new_parri[$k]['sku'];
-		  $precio_TotUni_parri = $new_parri[$k]['precio'];
-		  $precio_Tot_parri = $cantidad_parri * $precio_TotUni_parri;
-		  
-		  echo "<div id=\"print-items-cajas-prod\">";
-			echo "<div class=\"caja base-40\">";
-			  echo "<p>".$nombre_parri." ".$modelo_parri."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">".$cantidad_parri."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">".$sku_parri."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">$<span>".$precio_Tot_parri."</span></p>";
-			echo "</div>";
-		  echo "</div>";
-	  
-		}
 		
 		//-- Cocinas -- Cocinas -- Cocinas -- Cocinas -- Cocinas -- Cocinas -- Cocinas -- Cocinas --
 		
-		$new_coci = array();
+		$new_coci = array();		
+		$new_coci = $_SESSION['coci'];
 		
-		for ($w = 0 ; $w < $nro_coci ; $w ++) {				
-			if(empty($_SESSION['coci'][$w])){
-				$nada = 0;
-			}else{			
-				//echo "Este SKU lleva producto ".$_SESSION['items'][$i]['Detalle'];
-				//echo "<br>";				
-				//$cotizar_esto[] = array('productoCotizar' => $pro);
-				$new_coci[] = $_SESSION['coci'][$w];
-				//$k = $k + 1;
-				$tamano_coci = count($new_coci);
-			}			
+		//echo "<br>";
+		
+		foreach ($new_coci as $coci) {
+				echo "<div id=\"print-items-cajas-prod\">";
+					echo "<div class=\"caja base-40\">";
+						echo "<p>".$coci['nombre']." ".$coci['modelo']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$coci['cantidad']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$coci['sku']."</p>";
+					echo "</div>";
+						echo "<div class=\"caja base-20\">";	
+						$subTotalCoci = $coci['cantidad'] * $coci['precio'];
+						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalCoci,0,",",".")."</span></p>";	
+					echo "</div>";
+					echo "</div>";	
 		}
 		
-		for($h = 0; $h < @$tamano_coci; $h++){		
+		$new_venti = array();
+		$new_venti = $_SESSION['venti'];
 		
-		  $nombre_coci = $new_coci[$h]['nombre'];
-		  $modelo_coci = $new_coci[$h]['modelo'];
-		  $cantidad_coci = $new_coci[$h]['cantidad'];
-		  $sku_coci = $new_coci[$h]['sku'];
-		  $precio_TotUni_coci = $new_coci[$h]['precio'];
-		  $precio_Tot_coci = $cantidad_coci * $precio_TotUni_coci;
-		  
-		  echo "<div id=\"print-items-cajas-prod\">";
-			echo "<div class=\"caja base-40\">";
-			  echo "<p>".$nombre_coci." ".$modelo_coci."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">".$cantidad_coci."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">".$sku_coci."</p>";
-			echo "</div>";
-			echo "<div class=\"caja base-20\">";
-			  echo "<p class=\"centrarItems\">$<span>".$precio_Tot_coci."</span></p>";
-			echo "</div>";
-		  echo "</div>";
-	  
+		//echo "<br>";
+		
+		foreach ($new_venti as $venti) {
+				echo "<div id=\"print-items-cajas-prod\">";
+					echo "<div class=\"caja base-40\">";
+						echo "<p>".$venti['nombre']." ".$venti['modelo']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$venti['cantidad']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$venti['sku']."</p>";
+					echo "</div>";
+						echo "<div class=\"caja base-20\">";	
+						$subTotalVenti = $venti['cantidad'] * $venti['precio'];
+						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalVenti,0,",",".")."</span></p>";	
+					echo "</div>";
+					echo "</div>";	
 		}
 		
+		$new_accParri = array();
+		$new_accParri = $_SESSION['accParri'];
+		
+		//echo "<br>";
+		
+		foreach ($new_accParri as $accParri) {
+				echo "<div id=\"print-items-cajas-prod\">";
+					echo "<div class=\"caja base-40\">";
+						echo "<p>".$accParri['nombre']." ".$accParri['modelo']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$accParri['cantidad']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$accParri['sku']."</p>";
+					echo "</div>";
+						echo "<div class=\"caja base-20\">";	
+						$subTotalaccParri = $accParri['cantidad'] * $accParri['precio'];
+						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalaccParri,0,",",".")."</span></p>";	
+					echo "</div>";
+					echo "</div>";	
+		}
+		
+		
+	  $totalCotizacion = @$subTotalCalefa + @$subTotalParri + @$subTotalCoci + @$subTotalVenti + @$subTotalaccParri;
+	  $totalFinal = (($totalCotizacion * 1.19) / 100) + $totalCotizacion;
 	  
 	  ?>
 	  	 
@@ -306,7 +312,7 @@ session_start();
         <div class="caja base-20"></div>
         <div class="caja base-20"></div>
         <div class="caja base-20 no-padding">
-          <p>$ <span> <strong>2.567.713</strong></span></p>
+          <p>$ <span> <strong><?php echo number_format($totalCotizacion,0,",","."); ?></strong></span></p>
         </div>
       </div>
       <div id="print-items-cajas-prod-total">
@@ -338,9 +344,9 @@ session_start();
         <div class="caja base-20"></div>
         <div class="caja base-20"></div>
         <div class="caja base-30 no-padding">
-          <p>$<span> <b>2.567.713</b></span></p>
+          <p>$<span> <b><?php echo number_format($totalFinal,0,",","."); ?></b></span></p>
           <form id="imprimir">
-            <button type="button">Imprimir</button>
+            <button type="button" onclick="window.print();">Imprimir</button>
           </form>
         </div>
       </div>

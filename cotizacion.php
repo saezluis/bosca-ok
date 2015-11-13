@@ -238,6 +238,8 @@ session_start();
 				$_SESSION['calefa'] = array();
 				$_SESSION['parri'] = array();
 				$_SESSION['coci'] = array();
+				$_SESSION['venti'] = array();
+				$_SESSION['accParri'] = array();
 				
 				
 				
@@ -250,9 +252,9 @@ session_start();
 					//Con esta funcion elimino valores duplicados del array
 					//(array_unique($a));
 					
-					$registro=mysqli_query($conexion,"select * from producto where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
+					$registroProducto=mysqli_query($conexion,"select * from producto where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
 	
-					if($reg=mysqli_fetch_array($registro)){
+					if($reg=mysqli_fetch_array($registroProducto)){
 					
 						$foto = $reg['foto_producto'];	
 						$ventaja_comparativa = $reg['ventaja_comparativa'];	
@@ -299,9 +301,9 @@ session_start();
 					//Con esta funcion elimino valores duplicados del array
 					//(array_unique($a));
 					
-					$registro=mysqli_query($conexion,"select * from parrilla where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
+					$registroParri=mysqli_query($conexion,"select * from parrilla where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
 	
-					if($reg=mysqli_fetch_array($registro)){
+					if($reg=mysqli_fetch_array($registroParri)){
 					
 						$foto = $reg['foto_producto'];	
 						//$ventaja_comparativa = $reg['ventaja_comparativa'];	
@@ -346,9 +348,9 @@ session_start();
 					//Con esta funcion elimino valores duplicados del array
 					//(array_unique($a));
 					
-					$registro=mysqli_query($conexion,"select * from cocinas where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
+					$registroCoci=mysqli_query($conexion,"select * from cocinas where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
 	
-					if($reg=mysqli_fetch_array($registro)){
+					if($reg=mysqli_fetch_array($registroCoci)){
 					
 						$foto = $reg['foto_producto'];	
 						//$ventaja_comparativa = $reg['ventaja_comparativa'];	
@@ -384,18 +386,18 @@ session_start();
 				}
 				
 				
-				for ($i= 0; $i < $tamano_nombres; $i++){
+				for ($j= 0; $j < $tamano_nombres; $j++){
 					
 					//echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i]['productoCotizar'];
-					$detalle_producto = $Arreglo_productos[$i];
-					$cantidad_productos = $Arreglo_cantidades[$i];
+					$detalle_producto = $Arreglo_productos[$j];
+					$cantidad_productos = $Arreglo_cantidades[$j];
 					
 					//Con esta funcion elimino valores duplicados del array
 					//(array_unique($a));
 					
-					$registro=mysqli_query($conexion,"select * from ventilacion where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
+					$registroVenti=mysqli_query($conexion,"select * from ventilacion where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
 	
-					if($reg=mysqli_fetch_array($registro)){
+					if($reg=mysqli_fetch_array($registroVenti)){
 					
 						$foto = $reg['foto_producto'];	
 						//$ventaja_comparativa = $reg['ventaja_comparativa'];	
@@ -425,21 +427,23 @@ session_start();
 						
 						$total = $total + ($precio * $cantidad_productos);
 						
+						$_SESSION['venti'][$j] = array('nombre' => $nombre,'modelo' => $modelo,'cantidad' => $cantidad_productos,'precio' => $precio,'sku' => $sku);
+						
 					}
 				}
 				
-				for ($i= 0; $i < $tamano_nombres; $i++){
+				for ($w= 0; $w < $tamano_nombres; $w++){
 					
 					//echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i]['productoCotizar'];
-					$detalle_producto = $Arreglo_productos[$i];
-					$cantidad_productos = $Arreglo_cantidades[$i];
+					$detalle_producto = $Arreglo_productos[$w];
+					$cantidad_productos = $Arreglo_cantidades[$w];
 					
 					//Con esta funcion elimino valores duplicados del array
 					//(array_unique($a));
 					
-					$registro=mysqli_query($conexion,"select * from accparrilla where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
+					$registroAcc=mysqli_query($conexion,"select * from accparrilla where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
 	
-					if($reg=mysqli_fetch_array($registro)){
+					if($reg=mysqli_fetch_array($registroAcc)){
 					
 						$foto = $reg['foto_producto'];	
 						//$ventaja_comparativa = $reg['ventaja_comparativa'];	
@@ -468,6 +472,8 @@ session_start();
 						echo "</div>";
 						
 						$total = $total + ($precio * $cantidad_productos);
+						
+						$_SESSION['accParri'][$w] = array('nombre' => $nombre,'modelo' => $modelo,'cantidad' => $cantidad_productos,'precio' => $precio,'sku' => $sku);
 						
 					}
 				}

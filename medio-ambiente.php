@@ -64,7 +64,7 @@
         <input type="text" name="" value="" placeholder="Asunto">
         <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
       </form>
-    </div><a href="#" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
+    </div><a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
     <header id="header">
       <div class="grupo">
         <div class="caja web-30 no-padding">
@@ -100,7 +100,8 @@
         <div class="caja movil-30">
           <div class="side--we">
             <h2>Medio Ambiente</h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ipsa ratione debitis magni, animi nemo expedita. Praesentium distinctio cumque, similique et. Laboriosam iure porro ipsum facere itaque. Reprehenderit, neque facere.</p>
+			<br>
+            <p> Nuestra preocupación por la naturaleza no se detiene. Te invitamos a leer nuestro compromiso verde con nuestro planeta y su futuro.</p>
           </div>
         </div>
         <div class="caja movil-70">

@@ -123,7 +123,8 @@
         <div class="caja movil-30">
           <div class="side--we">
             <h2>Servicio Técnico</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Vestibulum non dignissim ex at vulputate arcu. Nam iaculis tincidunt  neque sed tincidunt. Phasellus lobortis nunc vitae justo suscipit, et tempor sapien  tristique. Suspendisse porttitor eros eu nibh dapibus gravida.</p>
+			<br>
+            <p>Conoce nuestro equipo técnico distribuido a lo largo de todo Chile, todos ellos, cuentan con las certificaciones correspondientes para entregarte un servicio de calidad.</p>
           </div>
         </div>
         <div class="caja movil-70">
