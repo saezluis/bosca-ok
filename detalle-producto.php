@@ -342,7 +342,7 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="caja movil-50 auxT">
           <p class="servicioCliente">Servicio al cliente <a href="tel:+56 800200657" class="telF">800 200 657</a></p>
           <p class="direccion">Av. Américo Vespucio 2077, Huechuraba, Santiago.</p>
-          <div class="sociales"><a href="#" class="fb"><img src="img/fb-mini.jpg"></a>
+          <div class="sociales"><a href="https://www.facebook.com/boscachile" class="fb" target="_blank"><img src="img/fb-mini.jpg"></a>
             
           </div>
         </div>
