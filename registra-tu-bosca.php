@@ -275,7 +275,7 @@
                 <option value="">I Región</option>
                 <option value="">II Región</option>
                 <option value="">III Región</option>
-                <option value="">VI Región</option>
+                <option value="">IV Región</option>
                 <option value="">V Región</option>
                 <option value="">VI Región</option>
                 <option value="">VII Región</option>

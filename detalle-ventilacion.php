@@ -210,7 +210,7 @@ if(isset($_POST['cotizar_prod'])) {
     <section class="grupo margen-top">
       <div class="caja movil-40">
         <div class="full--ficha">
-          <div class="foto--producto-big"><img src="img-ac/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/large/png">
+          <div class="foto--producto-big"><img src="img-ac/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/large/big.png">
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
           </div>
           <div id="demo-container"></div>

@@ -67,6 +67,7 @@
 	$registros_regionvi=mysqli_query($conexion,"select * from servicio where region = 'VI region'") or die("Problemas en el select:".mysqli_error($conexion));	
 	$registros_regionvii=mysqli_query($conexion,"select * from servicio where region = 'VII region'") or die("Problemas en el select:".mysqli_error($conexion));	
 	$registros_regionviii=mysqli_query($conexion,"select * from servicio where region = 'VIII region'") or die("Problemas en el select:".mysqli_error($conexion));	
+	$registros_regionix=mysqli_query($conexion,"select * from servicio where region = 'IX region'") or die("Problemas en el select:".mysqli_error($conexion));	
 	$registros_regionx=mysqli_query($conexion,"select * from servicio where region = 'X region'") or die("Problemas en el select:".mysqli_error($conexion));	
 	$registros_regionmetro=mysqli_query($conexion,"select * from servicio where region = 'region metropolitana'") or die("Problemas en el select:".mysqli_error($conexion));	
 	$registros_regionbosca=mysqli_query($conexion,"select * from servicio where region = 'bosca'") or die("Problemas en el select:".mysqli_error($conexion));	
@@ -153,7 +154,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-2" class="accordion-section-title">VI Región</a></div>
+              <div class="accordion-section"><a href="#accordion-2" class="accordion-section-title">IV Región</a></div>
               <div id="accordion-2" class="accordion-section-content">
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -191,7 +192,7 @@
 							echo "<li>Dirección:<span>".$regv['direccion'].".</span></li>";
 						  echo "</ul>";
 						echo "</div>";
-						//echo "<br>";
+						echo "<hr>";
 					}
 				?>							
               </div>
@@ -215,7 +216,7 @@
 							echo "<li>Dirección:<span>".$regvi['direccion'].".</span></li>";
 						  echo "</ul>";
 						echo "</div>";
-						//echo "<br>";
+						echo "<hr>";
 					}
 				?>
 				
@@ -240,7 +241,7 @@
 							echo "<li>Dirección:<span>".$regvii['direccion'].".</span></li>";
 						  echo "</ul>";
 						echo "</div>";
-						//echo "<br>";
+						echo "<hr>";
 					}
 				?>
 				
@@ -265,7 +266,32 @@
 							echo "<li>Dirección:<span>".$regviii['direccion'].".</span></li>";
 						  echo "</ul>";
 						echo "</div>";
-						//echo "<br>";
+						echo "<hr>";
+					}
+				?>
+				
+              </div>
+            </div>
+			
+			<div class="accordion">
+              <div class="accordion-section"><a href="#accordion-7" class="accordion-section-title">IX Región</a></div>
+              <div id="accordion-7" class="accordion-section-content">
+                
+				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
+				<?php
+					while ($regix=mysqli_fetch_array($registros_regionix))
+					{
+						echo "<div class=\"all--tec\">";
+						  echo "<div class=\"foto--tecnico\"><img src=\"img-tecnicos/".$regix['foto']."\"></div>";
+						  echo "<ul>";
+							echo "<li>Nombre:<span>".$regix['nombre'].".</span></li>";
+							echo "<li>Mail:<span>".$regix['mail']."</span></li>";
+							echo "<li>Rut:<span>".$regix['rut']."</span></li>";
+							echo "<li>Teléfono:<span>".$regix['telefono']."</span></li>";
+							echo "<li>Dirección:<span>".$regix['direccion'].".</span></li>";
+						  echo "</ul>";
+						echo "</div>";
+						echo "<hr>";
 					}
 				?>
 				
@@ -273,8 +299,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-7" class="accordion-section-title">X Región</a></div>
-              <div id="accordion-7" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-8" class="accordion-section-title">X Región</a></div>
+              <div id="accordion-8" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -290,7 +316,7 @@
 							echo "<li>Dirección:<span>".$regx['direccion'].".</span></li>";
 						  echo "</ul>";
 						echo "</div>";
-						//echo "<br>";
+						echo "<hr>";
 					}
 				?>
 				
@@ -298,7 +324,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-8" class="accordion-section-title">Región Metropolitana </a></div>
+              <div class="accordion-section"><a href="#accordion-9" class="accordion-section-title">Región Metropolitana </a></div>
               <div id="accordion-8" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
@@ -315,7 +341,7 @@
 							echo "<li>Dirección:<span>".$regmetro['direccion'].".</span></li>";
 						  echo "</ul>";
 						echo "</div>";
-						//echo "<br>";
+						echo "<hr>";
 					}
 				?>
 				
@@ -323,7 +349,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-9" class="accordion-section-title">Servicio Técnico Bosca</a></div>
+              <div class="accordion-section"><a href="#accordion-10" class="accordion-section-title">Servicio Técnico Bosca</a></div>
               <div id="accordion-9" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
@@ -340,7 +366,7 @@
 							echo "<li>Cargo:<span>".$regbosca['direccion'].".</span></li>";
 						  echo "</ul>";
 						echo "</div>";
-						//echo "<br>";
+						echo "<hr>";
 					}
 				?>
                 

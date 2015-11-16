@@ -382,7 +382,17 @@ if(isset($_POST['cotizar_prod'])) {
        
        echo "<div class=\"imagen--productos electrico\">";
        echo "<div class=\"logo--marca--float\"><img src=\"img2/".$reg['logo_up_left']."\"></div>";
-       echo "<div class=\"foto--producto\"><img src=\"img-pt/".$reg['foto_producto']."\"></div>";
+	   
+	   if($variable!='valor3'){
+			$inicio_a = " <a href=\"detalle-parrilla.php?deta=".urlencode($detalle)." \"> ";
+			$cerrar_a = " </a> ";
+	   }else{
+		   $inicio_a = "";
+		   $cerrar_a = "";
+	   }
+	   echo "<div class=\"foto--producto\"> $inicio_a <img src=\"img-pt/".$reg['foto_producto']."\"> $cerrar_a </div>";
+	   
+	   
        echo "<div class=\"tipo--producto\">".$reg['nombre']."</div>";
 	   if($variable=='valor3'){
 			echo "<div class=\"modelo--producto\"><font size=\"1\">SKU: ".$reg['sku']."</font></div>";

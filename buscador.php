@@ -1,3 +1,12 @@
+<?php
+// Start the session
+session_start();
+
+// if counter is not set, set to zero
+if(!isset($_SESSION['counter'])) {
+    $_SESSION['counter'] = 0;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -114,10 +123,10 @@
         </div>
       </div>
       <div class="caja movil-50 tablet-30 web-20">
-        <div id="cotizar">
-          <p class="cotizaciones">Cotizaciones <span class="numero--items">15 </span>ítems</p>
-        </div>
+      <div id="cotizar">
+        <p class="cotizaciones"><a href="cotizacion.php"> Cotizaciones </a> <span class="numero--items"> <?php echo $_SESSION['counter']; ?> </span>ítems</p>
       </div>
+    </div>
     </section>
 	
     <section class="grupo margen-top">
@@ -125,7 +134,7 @@
       <div class="caja movil-40">
 	  <p>
 	  <h4>Resultados:</h4>
-		  <ul>
+		  <ul class="">
 			<?php
 			//$inc = 1;
 			while($reg=mysqli_fetch_array($registros)){
@@ -136,6 +145,8 @@
 				//echo $var;
 				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
 				echo "<li><a href=\"detalle-producto.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+				
+				echo "<div> <a href=\"detalle-producto.php?deta=",urlencode($var)," \"> <img height=\"120\" width=\"120\" src=\"img2/".$reg['foto_producto']." \"> </a> </div>";
 			}
 			
 			while($reg=mysqli_fetch_array($registrosParrilla)){
@@ -146,8 +157,11 @@
 				//echo $var;
 				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
 				echo "<li><a href=\"detalle-parrilla.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+				
+				echo "<div> <a href=\"detalle-parrilla.php?deta=",urlencode($var)," \"> <img height=\"120\" width=\"120\" src=\"img-pt/".$reg['foto_producto']." \"> </a> </div>";
 			}
 			
+			/*
 			while($reg=mysqli_fetch_array($registrosAccParrilla)){
 				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
 				//$compname = $reg['sku'];
@@ -156,7 +170,10 @@
 				//echo $var;
 				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
 				echo "<li><a href=\"terraza-parrilla.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+				
+				echo "<div> <img height=\"120\" width=\"120\" src=\"img-pt/".$reg['foto_producto']." \"> </div>";
 			}
+			*/
 			
 			while($reg=mysqli_fetch_array($registrosCocinas)){
 				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
@@ -166,6 +183,8 @@
 				//echo $var;
 				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
 				echo "<li><a href=\"detalle-cocina.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+				
+				echo "<div> <a href=\"detalle-cocina.php?deta=",urlencode($var)," \"> <img height=\"120\" width=\"120\" src=\"img-cc/".$reg['foto_producto']." \"> </a> </div>";
 			}
 			
 			while($reg=mysqli_fetch_array($registrosVentilacion)){
@@ -176,6 +195,8 @@
 				//echo $var;
 				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
 				echo "<li><a href=\"detalle-ventilacion.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
+				
+				echo "<div> <a href=\"detalle-ventilacion.php?deta=",urlencode($var)," \"> <img height=\"120\" width=\"120\" src=\"img-ac/".$reg['foto_producto']." \"> </a> </div>";
 			}
 			
 			?>			

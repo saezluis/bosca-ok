@@ -321,7 +321,7 @@ if(isset($_POST['cotizar_prod'])) {
        
        echo "<div class=\"imagen--productos electrico\">";
        echo "<div class=\"logo--marca--float\"><img src=\"img2/".$reg['logo_up_left']."\"></div>";
-       echo "<div class=\"foto--producto\"><img src=\"img-ac/".$reg['foto_producto']."\"></div>";
+       echo "<div class=\"foto--producto\"> <a href=\"detalle-ventilacion.php?deta=",urlencode($detalle)," \"> <img src=\"img-ac/".$reg['foto_producto']."\"> </a> </div>";
        echo "<div class=\"tipo--producto\">".$reg['nombre']."</div>";
        echo "<div class=\"modelo--producto\">".$reg['modelo']."</div>";
        echo "<div class=\"caja--precio--detalle\">";
