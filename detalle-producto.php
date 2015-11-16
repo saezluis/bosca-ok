@@ -105,9 +105,9 @@ if(isset($_POST['cotizar_prod'])) {
 	}
 	//echo "Esto trae como SKU: " .$detalle_producto; 
 	//$compname = 
-	
-	//$conexion=mysqli_connect("localhost","pmdigita_admin","Prodigy12","pmdigita_bosca") or die("Problemas con la conexión");
-	$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
+	include_once 'config.php';
+		
+	$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	
 	if(isset($_REQUEST['nombres']) and isset($_REQUEST['email'])){
@@ -179,7 +179,9 @@ if(isset($_POST['cotizar_prod'])) {
     </header>
     <section class="grupo">
       <div class="caja">
-        <div id="logos_juntos"><img src="img/logos-juntos.png"></div>
+        <div id="logos_juntos">
+			<img src="img/logos-juntos.png">
+		</div>
       </div>
     </section>
     <section class="grupo">

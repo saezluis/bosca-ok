@@ -6,8 +6,9 @@ $telefono = $_REQUEST['telefono'];
 $contacto = $_REQUEST['contacto'];
 $comentario = $_REQUEST['comentario'];
 	
-
-$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
+include_once 'config.php';
+		
+$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 $acentos = $conexion->query("SET NAMES 'utf8'");
 
 

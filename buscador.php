@@ -31,8 +31,9 @@ if(!isset($_SESSION['counter'])) {
 	
 	$keyword = $_REQUEST['palabra_clave'];
 	
-	//$conexion=mysqli_connect("localhost","pmdigita_admin","Prodigy12","pmdigita_bosca") or die("Problemas con la conexión");
-	$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
+	include_once 'config.php';
+		
+	 $conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	
 	$registros=mysqli_query($conexion,"select * from producto where nombre like '%$keyword%' OR modelo like '%$keyword%'")
