@@ -258,7 +258,7 @@ if(isset($_POST['cotizar_prod'])) {
                   <p class="calefa">Á. Calefacción: <span class="datos--d"><?php echo $area; ?></span></p>
                 </li>
                 <li>
-                  <p class="dimension">Dimensión: <span class="datos--d"><?php echo $dimension; ?>											</span></p>
+                  <p class="dimension">Dimensión: <span class="datos--d"><?php echo $dimension; ?>		</span></p>
                 </li>
                 <li>
                   <p class="diametro">Diámetro de cañon: <span class="datos--d"><?php echo $diametro; ?></span></p>
@@ -267,7 +267,7 @@ if(isset($_POST['cotizar_prod'])) {
                   <p class="garantia">Garantía:  <span class="datos--d"><?php echo $garantia; ?></span><a href="#" class="pdf--condiciones">(ver condiciones)</a></p>
                 </li>
               </ul>
-            </div><a href="#" class="descarga--fichas">Descargar ficha técnica en pdf																																			</a><a href="#" class="descarga--fichas">Descargar manual de uso en pdf	</a>
+            </div><a href="#" class="descarga--fichas">Descargar ficha técnica en pdf		</a><a href="#" class="descarga--fichas">Descargar manual de uso en pdf	</a>
           </div>
         </div>
         <div class="relacionados">

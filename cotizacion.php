@@ -9,15 +9,35 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
     <link rel="stylesheet" href="css/style.css">
+	<!--
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+	<script src="owl-carousel/owl.carousel.min.js"></script>
+	-->
+	
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	
+	
+	
+	<!--
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="sass/tema/js/scripts.js"></script>
-    <script src="owl-carousel/owl.carousel.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	-->
+	
+	
+	
+    <script src="sass/tema/js/scripts.js"></script>   
     <script src="sass/tema/js/jquery.isotope.js"></script>
-	
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
+	
 	<script type="text/javascript">
 	$(document).ready(function() {
 
@@ -98,6 +118,65 @@ session_start();
 	});
 	</script>
 	
+<meta name = "viewport" content = "user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes" />	
+	
+<link href="css/style-flex.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+
+<script type="text/javascript">
+
+$(window).load(function() {
+    $("#flexiselDemo1").flexisel();
+    $("#flexiselDemo2").flexisel({
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:480,
+                visibleItems: 1
+            }, 
+            landscape: { 
+                changePoint:640,
+                visibleItems: 2
+            },
+            tablet: { 
+                changePoint:768,
+                visibleItems: 3
+            }
+        }
+    });
+
+    $("#flexiselDemo3").flexisel({
+        visibleItems: 5,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:480,
+                visibleItems: 1
+            }, 
+            landscape: { 
+                changePoint:640,
+                visibleItems: 2
+            },
+            tablet: { 
+                changePoint:768,
+                visibleItems: 3
+            }
+        }
+    });
+
+    $("#flexiselDemo4").flexisel({
+        clone:false
+    });
+    
+});
+</script>
+	
   </head>
   <body>
   
@@ -169,7 +248,7 @@ session_start();
 	
 	
 	//Aqui se destruyen todas la variables de sesion	
-	session_unset(); 
+	//session_unset(); 
 	
   ?>
     <div class="collapsible">
@@ -570,23 +649,24 @@ session_start();
           </div>
         </div>
         <div class="relacionados">
-          <h5>productos relacionados</h5>
-          <div id="owl-demo2" class="owlcarousel">
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-          </div>
+          <h5>Productos destacados</h5>
+		  
+					
+			<ul id="flexiselDemo1"> 
+				<li><img src="img/calefactor_1.jpg" /></li>
+				<li><img src="img/calefactor_2.jpg" /></li>    
+				<li><img src="img/calefactor_3.jpg" /></li>     
+				<li><img src="img/calefactor_4.jpg" /></li> 
+				<li><img src="img/calefactor_5.jpg" /></li>                                                          
+			</ul>
+			
+			
         </div>
       </div>
+	  
+	  
+	  
+	  
     </section>
     <div id="sep"></div>
     <footer id="footer">
@@ -610,15 +690,9 @@ session_start();
         <div class="caja movil-50 auxT">
           <p class="servicioCliente">Servicio al cliente <a href="tel:+56 800200657" class="telF">800 200 657</a></p>
           <p class="direccion">Av. Américo Vespucio 2077, Huechuraba, Santiago.</p>
-          <div class="sociales"><a href="#" class="fb"><img src="img/fb-mini.jpg"></a>
+          <div class="sociales"><a href="https://www.facebook.com/boscachile" class="fb" target="_blank"><img src="img/fb-mini.jpg"></a>
             
-            
-            
-            
-            
-            
-            
-            
+   
           </div>
         </div>
       </div>

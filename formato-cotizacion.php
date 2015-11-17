@@ -351,5 +351,10 @@ session_start();
         </div>
       </div>
     </div>
+	<?php
+	
+	session_unset(); 
+	
+	?>
   </body>
 </html>
