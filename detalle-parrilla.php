@@ -187,7 +187,17 @@ if(isset($_POST['cotizar_prod'])) {
     </header>
     <section class="grupo">
       <div class="caja">
-        <div id="logos_juntos"><img src="img/logos-juntos.png"></div>
+        <div id="logos_juntos">
+	        <div class="breadcrumbs">
+	          <ul>
+	            <li class="nop">Estás en:</li>
+	            <li><a href="#">Productos<span> / </span></a></li>
+	            <li><a href="#">Calefacción<span> / </span></a></li>
+	            <li><a href="#">Eco 350<span> / </span></a></li>
+	          </ul>
+	        </div>
+        	<img src="img/logos-juntos.png">
+        </div>
       </div>
     </section>
     <section class="grupo">

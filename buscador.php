@@ -132,77 +132,40 @@ if(!isset($_SESSION['counter'])) {
 	
     <section class="grupo margen-top">
 		
-      <div class="caja movil-40">
-	  <p>
-	  <h4>Resultados:</h4>
-		  <ul class="">
-			<?php
-			//$inc = 1;
-			while($reg=mysqli_fetch_array($registros)){
-				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
-				//$compname = $reg['sku'];
-				//$inc = $inc + 1;
-				$var = $reg['sku'];
-				//echo $var;
-				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
-				echo "<li><a href=\"detalle-producto.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
-				
-				echo "<div> <a href=\"detalle-producto.php?deta=",urlencode($var)," \"> <img height=\"120\" width=\"120\" src=\"img2/".$reg['foto_producto']." \"> </a> </div>";
-			}
-			
-			while($reg=mysqli_fetch_array($registrosParrilla)){
-				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
-				//$compname = $reg['sku'];
-				//$inc = $inc + 1;
-				$var = $reg['sku'];
-				//echo $var;
-				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
-				echo "<li><a href=\"detalle-parrilla.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
-				
-				echo "<div> <a href=\"detalle-parrilla.php?deta=",urlencode($var)," \"> <img height=\"120\" width=\"120\" src=\"img-pt/".$reg['foto_producto']." \"> </a> </div>";
-			}
-			
-			/*
-			while($reg=mysqli_fetch_array($registrosAccParrilla)){
-				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
-				//$compname = $reg['sku'];
-				//$inc = $inc + 1;
-				$var = $reg['sku'];
-				//echo $var;
-				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
-				echo "<li><a href=\"terraza-parrilla.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
-				
-				echo "<div> <img height=\"120\" width=\"120\" src=\"img-pt/".$reg['foto_producto']." \"> </div>";
-			}
-			*/
-			
-			while($reg=mysqli_fetch_array($registrosCocinas)){
-				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
-				//$compname = $reg['sku'];
-				//$inc = $inc + 1;
-				$var = $reg['sku'];
-				//echo $var;
-				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
-				echo "<li><a href=\"detalle-cocina.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
-				
-				echo "<div> <a href=\"detalle-cocina.php?deta=",urlencode($var)," \"> <img height=\"120\" width=\"120\" src=\"img-cc/".$reg['foto_producto']." \"> </a> </div>";
-			}
-			
-			while($reg=mysqli_fetch_array($registrosVentilacion)){
-				//echo "<a href=view_exp.php?compna=",$compname,">$compname</a>";
-				//$compname = $reg['sku'];
-				//$inc = $inc + 1;
-				$var = $reg['sku'];
-				//echo $var;
-				//echo "<a href=view_exp.php?compna=",urlencode($compname),">$compname</a>";
-				echo "<li><a href=\"detalle-ventilacion.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a></li>";
-				
-				echo "<div> <a href=\"detalle-ventilacion.php?deta=",urlencode($var)," \"> <img height=\"120\" width=\"120\" src=\"img-ac/".$reg['foto_producto']." \"> </a> </div>";
-			}
-			
-			?>			
-		  </ul>	  
-	  </p>
+    <div class="caja movil-100">
+      <h4>Hemos encontrado:</h4>
+        <div id="find">
+          <ul>
+            <li>
+              <img src="img-pt/electrica-portatil-b.jpg" alt="">
+              <a href="#">Parrilla Eléctrica Portátil</a>
+            </li>
+            <li>
+              <img src="img-pt/electrica-portatil-b.jpg" alt="">
+              <a href="#">Parrilla Eléctrica Portátil</a>
+            </li>
+            <li>
+              <img src="img-pt/electrica-portatil-b.jpg" alt="">
+              <a href="#">Parrilla Eléctrica Portátil</a>
+            </li>
+            <li>
+              <img src="img-pt/electrica-portatil-b.jpg" alt="">
+              <a href="#">Parrilla Eléctrica Portátil</a>
+            </li>
+            <li>
+              <img src="img-pt/electrica-portatil-b.jpg" alt="">
+              <a href="#">Parrilla Eléctrica Portátil</a>
+            </li>
+            <li>
+              <img src="img-pt/electrica-portatil-b.jpg" alt="">
+              <a href="#">Parrilla Eléctrica Portátil</a>
+            </li>
+            <li>
+              <img src="img-pt/electrica-portatil-b.jpg" alt="">
+              <a href="#">Parrilla Eléctrica Portátil</a>
+            </li>
+          </ul>
+        </div><!--find-->
 	    <!--
         <div class="full--ficha">
           <div class="foto--producto-big"><img src="img2/" id="zoom_01" data-zoom-image="img/large/big.png">

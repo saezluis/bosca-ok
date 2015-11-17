@@ -44,7 +44,7 @@
 		@include desde(web){
 			font-size: 0.8em;
 			padding: 9px;
-			margin-right:2px; 
+			margin-right:auto; 
 		}
 		&:hover{
 			color: $color-corporativo;

@@ -18,6 +18,33 @@
 		text-align: right;
 		margin-top: 120px;
 	}
+
+	//breadcrumbs
+	.breadcrumbs{
+		float: left;
+		margin-top:4px;
+		ul{
+			margin:0;
+			padding:0;
+			list-style: none;
+			li{
+				display: inline-block;
+				a{
+					color: $color-corporativo;
+					text-decoration: none;
+					font-size: 0.8em;
+					&:hover{
+						color: $gris-corporativo;
+					}
+				}
+			}
+		}
+		//help
+		.nop{
+			color: $gris-corporativo;
+			font-size: 0.8em;
+		}
+	}
 }
 
 .sticky-logos_juntos{
@@ -2245,6 +2272,7 @@ a.btn-compromiso{
 	//background:#86b03c;
 	background:url(../img/compromiso-verde.jpg);
 	transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
 	text-indent:-9999px;
 	@include desde (tablet){
 		display: none
@@ -2261,3 +2289,36 @@ a.btn-compromiso{
 	}
 
 
+//buscador
+
+section{
+	h4{
+		color:$gris-corporativo;
+		font-size: 1.5em;
+	}
+	#find{
+		width: 100%;
+		height: 100%;
+		ul{
+			margin:0;
+			padding:0;
+			list-style: none;
+			li{
+				display: inline-block;
+				width: 16%;
+				margin-right:2%;
+				&:last-child{
+					margin-right: 0;
+				}
+				a{
+					font-size:0.8em;
+					text-align: center;
+					color:$color-corporativo;
+					text-decoration: none;
+					margin: 1em 0;
+					float: left;
+				} 
+			}
+		}
+	}
+}

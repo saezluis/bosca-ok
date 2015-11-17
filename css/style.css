@@ -1510,7 +1510,7 @@ h6 {
       .menu__link {
         font-size: 0.8em;
         padding: 9px;
-        margin-right: 2px; } }
+        margin-right: auto; } }
     .menu__link:hover {
       color: #E65524; }
       @media screen and (min-width: 1025px) {
@@ -1671,6 +1671,24 @@ h1 {
     #logos_juntos {
       text-align: right;
       margin-top: 120px; } }
+  #logos_juntos .breadcrumbs {
+    float: left;
+    margin-top: 4px; }
+    #logos_juntos .breadcrumbs ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      #logos_juntos .breadcrumbs ul li {
+        display: inline-block; }
+        #logos_juntos .breadcrumbs ul li a {
+          color: #E65524;
+          text-decoration: none;
+          font-size: 0.8em; }
+          #logos_juntos .breadcrumbs ul li a:hover {
+            color: #53534A; }
+    #logos_juntos .breadcrumbs .nop {
+      color: #53534A;
+      font-size: 0.8em; }
 
 .sticky-logos_juntos {
   margin-top: 75px !important; }
@@ -3239,6 +3257,7 @@ a.btn-compromiso {
   display: block;
   background: url(../img/compromiso-verde.jpg);
   transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
   text-indent: -9999px; }
   @media screen and (min-width: 768px) {
     a.btn-compromiso {
@@ -3249,6 +3268,30 @@ a.btn-compromiso {
 
 .arriba-20 {
   margin-top: 20px !important; }
+
+section h4 {
+  color: #53534A;
+  font-size: 1.5em; }
+section #find {
+  width: 100%;
+  height: 100%; }
+  section #find ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    section #find ul li {
+      display: inline-block;
+      width: 16%;
+      margin-right: 2%; }
+      section #find ul li:last-child {
+        margin-right: 0; }
+      section #find ul li a {
+        font-size: 0.8em;
+        text-align: center;
+        color: #E65524;
+        text-decoration: none;
+        margin: 1em 0;
+        float: left; }
 
 #logo-print {
   text-align: center;
