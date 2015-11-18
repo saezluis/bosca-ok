@@ -270,12 +270,12 @@ $(window).load(function() {
           <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
         </div>
         <div class="caja web-70">
-          <div id="flags">
-            <ul>
-              <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
-              <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
-            </ul>
-          </div>
+          <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
+          <ul  style="display:none;">
+            <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
+            <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
+          </ul>
+        </div>
           <div id="mostrar-menu">Menú</div>
           <ul class="menu">
             <li class="menu__item"><a href="index.php" class="menu__link activ">Productos</a></li>
@@ -307,8 +307,9 @@ $(window).load(function() {
 			  
 			  <?php
 				
-				//$conexion=mysqli_connect("localhost","pmdigita_admin","Prodigy12","pmdigita_bosca") or die("Problemas con la conexión");
-				$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
+				include_once 'config.php';
+		
+				$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 				$acentos = $conexion->query("SET NAMES 'utf8'");
 				$total = 0;
 				//Voy a realizar aqui cambios

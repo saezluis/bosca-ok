@@ -87,8 +87,8 @@ function validarmail(){
         <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
       </div>
       <div class="caja web-70">
-        <div id="flags">
-          <ul>
+        <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
+          <ul  style="display:none;">
             <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
             <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
           </ul>
@@ -183,7 +183,7 @@ function validarmail(){
         <div class="imagen--item">
           <div class="container-a4">
             <ul class="caption-style-4">
-              <li><img src="img/ventilacion.png">
+              <li><img src="img/ventilacion.jpg">
                 <p class="cinta">Ventilación y aire acondicionado</p>
                 <div class="caption">
                   <div class="blur"></div>

@@ -219,12 +219,12 @@ if(isset($_POST['cotizar_prod'])) {
           <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
         </div>
         <div class="caja web-70">
-          <div id="flags">
-            <ul>
-              <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
-              <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
-            </ul>
-          </div>
+          <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
+          <ul  style="display:none;">
+            <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
+            <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
+          </ul>
+        </div>
           <div id="mostrar-menu">Menú</div>
           <ul class="menu">
             <li class="menu__item"><a href="index.php" class="menu__link activ">Productos</a></li>
@@ -245,9 +245,11 @@ if(isset($_POST['cotizar_prod'])) {
 	        <div class="breadcrumbs">
 	          <ul>
 	            <li class="nop">Estás en:</li>
-	            <li><a href="#">Productos<span> / </span></a></li>
-	            <li><a href="#">Calefacción<span> / </span></a></li>
-	            <li><a href="#">Eco 350<span> / </span></a></li>
+	            <li><a href="index.php">Productos<span> / </span></a></li>
+	            <li><a href="cocina-calderas.php">Cocina y Calderas<span> / </span></a></li>           
+				<?php
+					echo "<li><a href=\"#\">$modelo<span> / </span></a></li>";
+				?>
 	          </ul>
 	        </div>
         	<img src="img/logos-juntos.png">
@@ -273,7 +275,7 @@ if(isset($_POST['cotizar_prod'])) {
     <section class="grupo margen-top">
       <div class="caja movil-40">
         <div class="full--ficha">
-          <div class="foto--producto-big"><img src="img-cc/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/large/big.png">
+          <div class="foto--producto-big"><img src="img-cc/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/large/big.pngg">
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
           </div>
           <div id="demo-container"></div>

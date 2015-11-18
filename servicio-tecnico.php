@@ -93,12 +93,12 @@
           <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
         </div>
         <div class="caja web-70">
-          <div id="flags">
-            <ul>
-              <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
-              <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
-            </ul>
-          </div>
+          <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
+          <ul  style="display:none;">
+            <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
+            <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
+          </ul>
+        </div>
           <div id="mostrar-menu">Menú</div>
           <ul class="menu">
             <li class="menu__item"><a href="index.php" class="menu__link">Productos</a></li>
@@ -129,10 +129,36 @@
         </div>
         <div class="caja movil-70">
           <div class="side-ellos">
-		  
+			
+			<div class="accordion">
+              <div class="accordion-section"><a href="#accordion-1" class="accordion-section-title">Servicio Técnico Bosca</a></div>
+              <div id="accordion-1" class="accordion-section-content">
+                
+				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
+				<?php
+					while ($regbosca=mysqli_fetch_array($registros_regionbosca))
+					{
+						echo "<div class=\"all--tec\">";
+						  echo "<div class=\"foto--tecnico\"><img src=\"img-tecnicos/".$regbosca['foto']."\"></div>";
+						  echo "<ul>";
+							echo "<li>Nombre:<span>".$regbosca['nombre'].".</span></li>";
+							//echo "<li>Mail:<span>".$regmetro['mail']."</span></li>";
+							echo "<li>Rut:<span>".$regbosca['rut']."</span></li>";
+							//echo "<li>Teléfono:<span>".$regmetro['telefono']."</span></li>";
+							echo "<li>Cargo:<span>".$regbosca['direccion'].".</span></li>";
+						  echo "</ul>";
+						echo "</div>";
+						echo "<hr>";
+					}
+				?>
+                
+				
+              </div>
+            </div>
+			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-1" class="accordion-section-title">III Región</a></div>
-              <div id="accordion-1" class="accordion-section-content">	
+              <div class="accordion-section"><a href="#accordion-2" class="accordion-section-title">III Región</a></div>
+              <div id="accordion-2" class="accordion-section-content">	
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
 					while ($regiii=mysqli_fetch_array($registros_regioniii))
@@ -153,8 +179,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-2" class="accordion-section-title">IV Región</a></div>
-              <div id="accordion-2" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-3" class="accordion-section-title">IV Región</a></div>
+              <div id="accordion-3" class="accordion-section-content">
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
 					while ($regiv=mysqli_fetch_array($registros_regioniv))
@@ -175,8 +201,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-3" class="accordion-section-title">V Región</a></div>
-              <div id="accordion-3" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-4" class="accordion-section-title">V Región</a></div>
+              <div id="accordion-4" class="accordion-section-content">
                 <!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
 					while ($regv=mysqli_fetch_array($registros_regionv))
@@ -198,8 +224,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-4" class="accordion-section-title">VI Región</a></div>
-              <div id="accordion-4" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-5" class="accordion-section-title">VI Región</a></div>
+              <div id="accordion-5" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -223,8 +249,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-5" class="accordion-section-title">VII Región</a></div>
-              <div id="accordion-5" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-6" class="accordion-section-title">VII Región</a></div>
+              <div id="accordion-6" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -248,8 +274,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-6" class="accordion-section-title">VIII Región</a></div>
-              <div id="accordion-6" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-7" class="accordion-section-title">VIII Región</a></div>
+              <div id="accordion-7" class="accordion-section-content">
 			  
                 <!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -273,8 +299,8 @@
             </div>
 			
 			<div class="accordion">
-              <div class="accordion-section"><a href="#accordion-7" class="accordion-section-title">IX Región</a></div>
-              <div id="accordion-7" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-8" class="accordion-section-title">IX Región</a></div>
+              <div id="accordion-8" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -298,8 +324,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-8" class="accordion-section-title">X Región</a></div>
-              <div id="accordion-8" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-9" class="accordion-section-title">X Región</a></div>
+              <div id="accordion-9" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -323,8 +349,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-9" class="accordion-section-title">Región Metropolitana </a></div>
-              <div id="accordion-9" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-10" class="accordion-section-title">Región Metropolitana </a></div>
+              <div id="accordion-10" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -347,31 +373,7 @@
               </div>
             </div>
 			
-            <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-10" class="accordion-section-title">Servicio Técnico Bosca</a></div>
-              <div id="accordion-10" class="accordion-section-content">
-                
-				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
-				<?php
-					while ($regbosca=mysqli_fetch_array($registros_regionbosca))
-					{
-						echo "<div class=\"all--tec\">";
-						  echo "<div class=\"foto--tecnico\"><img src=\"img-tecnicos/".$regbosca['foto']."\"></div>";
-						  echo "<ul>";
-							echo "<li>Nombre:<span>".$regbosca['nombre'].".</span></li>";
-							//echo "<li>Mail:<span>".$regmetro['mail']."</span></li>";
-							echo "<li>Rut:<span>".$regbosca['rut']."</span></li>";
-							//echo "<li>Teléfono:<span>".$regmetro['telefono']."</span></li>";
-							echo "<li>Cargo:<span>".$regbosca['direccion'].".</span></li>";
-						  echo "</ul>";
-						echo "</div>";
-						echo "<hr>";
-					}
-				?>
-                
-				
-              </div>
-            </div>
+            
 			
           </div>
         </div>

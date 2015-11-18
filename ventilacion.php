@@ -219,8 +219,8 @@ if(isset($_POST['cotizar_prod'])) {
         <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
       </div>
       <div class="caja web-70">
-        <div id="flags">
-          <ul>
+        <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
+          <ul  style="display:none;">
             <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
             <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
           </ul>
@@ -245,9 +245,8 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="breadcrumbs">
           <ul>
             <li class="nop">Estás en:</li>
-            <li><a href="#">Productos<span> / </span></a></li>
-            <li><a href="#">Ventilación y Aire Acondicionado<span> / </span></a></li>
-            <li><a href="#">Aire Acondicionado 9.000 BTU<span> / </span></a></li>
+            <li><a href="index.php">Productos<span> / </span></a></li>
+            <li><a href="#">Ventilación y Aire Acondicionado<span> / </span></a></li>            
           </ul>
         </div>
         <img src="img/logos-juntos.png">

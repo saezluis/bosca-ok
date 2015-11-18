@@ -121,12 +121,12 @@
           <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
         </div>
         <div class="caja web-70">
-          <div id="flags">
-            <ul>
-              <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
-              <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
-            </ul>
-          </div>
+          <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
+          <ul  style="display:none;">
+            <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
+            <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
+          </ul>
+        </div>
           <div id="mostrar-menu">Menú</div>
           <ul class="menu">
             <li class="menu__item"><a href="index.php" class="menu__link">Productos</a></li>

@@ -6,6 +6,11 @@ session_start();
 if(!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 0;
 }
+
+// if button is pressed, increment counter
+if(isset($_POST['cotizar_prod'])) {
+    ++$_SESSION['counter'];
+}  
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -22,6 +27,29 @@ if(!isset($_SESSION['counter'])) {
     <script src="owl-carousel/owl.carousel.min.js"></script>
     <script src="sass/tema/js/jquery.isotope.js"></script>
     <script src="sass/tema/js/jquery.elevatezoom.js"></script>
+	
+	<script type="text/javascript">
+
+	function validarmail(){
+
+	  if( document.mailing.nombres.value == "" ){
+		alert( "Por favor ingrese su Nombre y Apellido" );
+		document.mailing.nombres.focus() ;
+		return false;
+	  }
+
+	  if( document.mailing.email.value == "" ){
+		alert( "Por favor ingrese su email" );
+		document.mailing.email.focus() ;
+		return false;
+	  }
+
+	  return( true );
+
+	}
+
+</script>	
+	
   </head>
   <body>
 	<?php
@@ -87,12 +115,12 @@ if(!isset($_SESSION['counter'])) {
           <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
         </div>
         <div class="caja web-70">
-          <div id="flags">
-            <ul>
-              <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
-              <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
-            </ul>
-          </div>
+          <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
+          <ul  style="display:none;">
+            <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
+            <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
+          </ul>
+        </div>
           <div id="mostrar-menu">Menú</div>
           <ul class="menu">
             <li class="menu__item"><a href="index.php" class="menu__link activ">Productos</a></li>
@@ -136,145 +164,82 @@ if(!isset($_SESSION['counter'])) {
       <h4>Hemos encontrado:</h4>
         <div id="find">
           <ul>
-            <li>
-              <img src="img-pt/electrica-portatil-b.jpg" alt="">
-              <a href="#">Parrilla Eléctrica Portátil</a>
-            </li>
-            <li>
-              <img src="img-pt/electrica-portatil-b.jpg" alt="">
-              <a href="#">Parrilla Eléctrica Portátil</a>
-            </li>
-            <li>
-              <img src="img-pt/electrica-portatil-b.jpg" alt="">
-              <a href="#">Parrilla Eléctrica Portátil</a>
-            </li>
-            <li>
-              <img src="img-pt/electrica-portatil-b.jpg" alt="">
-              <a href="#">Parrilla Eléctrica Portátil</a>
-            </li>
-            <li>
-              <img src="img-pt/electrica-portatil-b.jpg" alt="">
-              <a href="#">Parrilla Eléctrica Portátil</a>
-            </li>
-            <li>
-              <img src="img-pt/electrica-portatil-b.jpg" alt="">
-              <a href="#">Parrilla Eléctrica Portátil</a>
-            </li>
-            <li>
-              <img src="img-pt/electrica-portatil-b.jpg" alt="">
-              <a href="#">Parrilla Eléctrica Portátil</a>
-            </li>
-          </ul>
-        </div><!--find-->
-	    <!--
-        <div class="full--ficha">
-          <div class="foto--producto-big"><img src="img2/" id="zoom_01" data-zoom-image="img/large/big.png">
-            <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
-          </div>
-          <div id="demo-container"></div>
-        </div>
-        <div class="icon-pretaciones">
+		  
 			
-          <input id="spoiler1" type="checkbox">
-          <label for="spoiler1">Ver sello SEC</label>
-          <div class="spoiler"> <img src="img/sello-limit360.gif" alt=""></div>
-		 
+			<?php			
+				while($reg=mysqli_fetch_array($registros)){					
+					$var = $reg['sku'];					
+					echo "<li>";
+					echo "<a href=\"detalle-producto.php?deta=",urlencode($var)," \"> <img src=\"img2/".$reg['foto_producto']." \"></a> ";
+					echo "<a href=\"detalle-producto.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a>";					
+					echo "</li>";
+					
+				}
+				
+				while($reg=mysqli_fetch_array($registrosParrilla)){				
+					$var = $reg['sku'];				
+					echo "<li>";
+					echo "<a href=\"detalle-parrilla.php?deta=",urlencode($var)," \"> <img src=\"img-pt/".$reg['foto_producto']." \"></a>";
+					echo "<a href=\"detalle-parrilla.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a>";									
+					echo "</li>";
+				}
+				
+				while($reg=mysqli_fetch_array($registrosCocinas)){				
+					$var = $reg['sku'];				
+					echo "<li>";
+					echo "<a href=\"detalle-cocina.php?deta=",urlencode($var)," \"> <img src=\"img-cc/".$reg['foto_producto']." \"></a>";
+					echo "<a href=\"detalle-cocina.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a>";									
+					echo "</li>";
+				}
+				
+				while($reg=mysqli_fetch_array($registrosVentilacion)){				
+					$var = $reg['sku'];	
+					echo "<li>";
+					echo "<a href=\"detalle-ventilacion.php?deta=",urlencode($var)," \"> <img src=\"img-ac/".$reg['foto_producto']." \"></a>";
+					echo "<a href=\"detalle-ventilacion.php?deta=",urlencode($var)," \">".$reg['nombre']." ".$reg['modelo']."</a>";									
+					echo "</li>";
+			}
+				
+			?>
+			
+            
+   
+          </ul>
         </div>
-		 -->
       </div>
 	  
 	  
-      <div class="caja movil-60">
-		<!--
-        <div class="full--ficha-datos">
-          <div class="logo-marca"><img src="img/mini-bosca.png"></div>
-          <div class="caracteristicas--producto"><img src="img/ecoflame360.png">
-            <p class="sku">SKU: </p>
-            <p class="resena"></p>
-            <div class="box-in">
-              <p class="total--precio">Precio</p>
-              <p class="total--cash">$ </p><a href="cotizacion.html" class="btn--cotizar--p">cotizar</a>
-            </div>
-          </div>
-          <div class="caracteristicas--producto bor">
-            <p class="caracteristicas--titulo">características		</p>
-            <div class="caract--datos">
-              <ul>
-                <li>
-                  <p class="carga">Carga:  <span class="datos--d">Tipo Superior</span></p>
-                </li>
-                <li>
-                  <p class="potencia">Potencia:  <span class="datos--d"></span></p>
-                </li>
-                <li>
-                  <p class="calefa">Á. Calefacción: <span class="datos--d"></span></p>
-                </li>
-                <li>
-                  <p class="dimension">Dimensión: <span class="datos--d">											</span></p>
-                </li>
-                <li>
-                  <p class="diametro">Diámetro de cañon: <span class="datos--d"></span></p>
-                </li>
-                <li>
-                  <p class="garantia">Garantía:  <span class="datos--d"></span><a href="#" class="pdf--condiciones">(ver condiciones)</a></p>
-                </li>
-              </ul>
-            </div><a href="#" class="descarga--fichas">Descargar ficha técnica en pdf																																			</a><a href="#" class="descarga--fichas">Descargar manual de uso en pdf	</a>
-          </div>
-        </div>
-        <div class="relacionados">
-          <h5></h5>
-		  
-          <div id="owl-demo2" class="owlcarousel">
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado1.jpg" class="lazyOwl"></div>
-            <div class="item"><img data-src="img/p-relacionado2.jpg" class="lazyOwl"></div>
-          </div>
-		  
-        </div>
-		-->
-		
+      <div class="caja movil-60">				
       </div>
-	  
-	  
+
     </section>
 	
     <div id="sep"></div>
     <footer id="footer">
       <div class="grupo">
-        <div class="caja movil-50">
-          <form action="#" class="contact_form">
-            <ul>
-              <li>
-                <label class="label">Recibe nuestras ofertas y promociones </label>
-                <input type="text" name="" value="" placeholder="Ingresa nombre y apellido" class="format_input">
-              </li>
-              <li>
-                <input type="text" name="" value="" placeholder="Ingresa mail" class="format_input">
-              </li>
-              <li>
-                <button type="submit" class="enviarMail">Suscríbete</button>
-              </li>
-            </ul>
-          </form>
-        </div>
-        <div class="caja movil-50 auxT">
-          <p class="servicioCliente">Servicio al cliente <a href="tel:+56 800200657" class="telF">800 200 657</a></p>
-          <p class="direccion">Av. Américo Vespucio 2077, Huechuraba, Santiago.</p>
-          <div class="sociales"><a href="https://www.facebook.com/boscachile" class="fb" target="_blank"><img src="img/fb-mini.jpg"></a>
-            
-          </div>
+      <div class="caja movil-50">
+        <form name="mailing" method="post" class="contact_form">
+          <ul>
+            <li>
+              <label class="label">Recibe nuestras ofertas y promociones </label>
+              <input type="text" name="nombres" value="" placeholder="Ingresa nombre y apellido" class="format_input">
+            </li>
+            <li>
+              <input type="email" name="email" value="" placeholder="Ingresa mail" class="format_input">
+            </li>
+            <li>
+              <button type="submit" onclick="return(validarmail())" class="enviarMail">Suscríbete ahora</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="caja movil-50 auxT">
+        <p class="servicioCliente">Servicio al cliente <a href="tel:+56 800200657" class="telF">800 200 657</a></p>
+        <p class="direccion">Av. Américo Vespucio 2077, Huechuraba, Santiago.</p>
+        <div class="sociales"><a href="https://www.facebook.com/boscachile" class="fb" target="_blank"><img src="img/fb-mini.jpg"></a>
         </div>
       </div>
+    </div>
     </footer>
   </body>
 </html>

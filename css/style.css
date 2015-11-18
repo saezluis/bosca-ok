@@ -2277,6 +2277,7 @@ select.orden {
   cursor: pointer;
   position: absolute;
   opacity: 0;
+  z-index:200;
   -webkit-transition: all 0.45s ease-in-out;
   -moz-transition: all 0.45s ease-in-out;
   -o-transition: all 0.45s ease-in-out;
@@ -2292,9 +2293,9 @@ select.orden {
   text-transform: uppercase;
   font-size: 24px; }
 .imagen--item .caption-style-4 .caption-text {
-  z-index: 10;
+  /*z-index: 10;*/
   color: #fff;
-  position: absolute;
+  /*position: absolute;*/
   width: 100%;
   height: 100%;
   text-align: center;
@@ -2306,7 +2307,7 @@ select.orden {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  background: url(../img/ver.png) top center no-repeat;
+  background: url(../img/ver.png) center center no-repeat;
   text-indent: -99999px; }
 
 .cotizacion {

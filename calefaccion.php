@@ -194,8 +194,8 @@ if(isset($_POST['cotizar_prod'])) {
         <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
       </div>
       <div class="caja web-70">
-        <div id="flags">
-          <ul>
+        <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
+          <ul  style="display:none;">
             <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
             <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
           </ul>
@@ -220,9 +220,8 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="breadcrumbs">
           <ul>
             <li class="nop">Estás en:</li>
-            <li><a href="#">Productos<span> / </span></a></li>
-            <li><a href="#">Calefacción<span> / </span></a></li>
-            <li><a href="#">Eco 350<span> / </span></a></li>
+            <li><a href="index.php">Productos<span> / </span></a></li>
+            <li><a href="#">Calefacción<span> / </span></a></li>            
           </ul>
         </div>
         <img src="img/logos-juntos.png">
@@ -245,10 +244,10 @@ if(isset($_POST['cotizar_prod'])) {
       <ul>
        <form method="post" action="">
         <li>buscar por:</li>								
-        <li><button name="opcion" value="valor0" type="submit" formaction="productos.php">Todo</button></li>
-        <li><button name="opcion" value="valor1" type="submit" formaction="productos.php">Calefactor Eléctrico</button></li>
-        <li><button name="opcion" value="valor2" type="submit" formaction="productos.php">Estufas Pellet</button></li>
-        <li><button name="opcion" value="valor3" type="submit" formaction="productos.php">Estufas leña</button></li>
+        <li><button name="opcion" value="valor0" type="submit" formaction="calefaccion.php">Todo</button></li>
+        <li><button name="opcion" value="valor1" type="submit" formaction="calefaccion.php">Calefactor Eléctrico</button></li>
+        <li><button name="opcion" value="valor2" type="submit" formaction="calefaccion.php">Estufas Pellet</button></li>
+        <li><button name="opcion" value="valor3" type="submit" formaction="calefaccion.php">Estufas leña</button></li>
         <!-- <li><button name="opcion" value="valor4" type="submit" formaction="productos.php">Calderas</button></li> -->				
       </form>
     </ul>
