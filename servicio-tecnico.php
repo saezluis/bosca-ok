@@ -124,7 +124,7 @@
           <div class="side--we">
             <h2>Servicio Técnico</h2>
 			<br>
-            <p>Conoce nuestro equipo técnico distribuido a lo largo de todo Chile, todos ellos, cuentan con las certificaciones correspondientes para entregarte un servicio de calidad.</p>
+            <p>Contamos con un equipo técnico especializado, distribuido a lo largo de todo Chile, con el que garantizamos un servicio de calidad y solución a todos los problemas que se presenten en tu Bosca.</p>
           </div>
         </div>
         <div class="caja movil-70">
@@ -157,7 +157,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-2" class="accordion-section-title">III Región</a></div>
+              <div class="accordion-section"><a href="#accordion-2" class="accordion-section-title">Servicio Técnico III Región</a></div>
               <div id="accordion-2" class="accordion-section-content">	
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -179,7 +179,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-3" class="accordion-section-title">IV Región</a></div>
+              <div class="accordion-section"><a href="#accordion-3" class="accordion-section-title">Servicio Técnico IV Región</a></div>
               <div id="accordion-3" class="accordion-section-content">
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -201,7 +201,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-4" class="accordion-section-title">V Región</a></div>
+              <div class="accordion-section"><a href="#accordion-4" class="accordion-section-title">Servicio Técnico V Región</a></div>
               <div id="accordion-4" class="accordion-section-content">
                 <!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -224,7 +224,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-5" class="accordion-section-title">VI Región</a></div>
+              <div class="accordion-section"><a href="#accordion-5" class="accordion-section-title">Servicio Técnico VI Región</a></div>
               <div id="accordion-5" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
@@ -249,7 +249,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-6" class="accordion-section-title">VII Región</a></div>
+              <div class="accordion-section"><a href="#accordion-6" class="accordion-section-title">Servicio Técnico VII Región</a></div>
               <div id="accordion-6" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
@@ -274,7 +274,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-7" class="accordion-section-title">VIII Región</a></div>
+              <div class="accordion-section"><a href="#accordion-7" class="accordion-section-title">Servicio Técnico VIII Región</a></div>
               <div id="accordion-7" class="accordion-section-content">
 			  
                 <!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
@@ -299,7 +299,7 @@
             </div>
 			
 			<div class="accordion">
-              <div class="accordion-section"><a href="#accordion-8" class="accordion-section-title">IX Región</a></div>
+              <div class="accordion-section"><a href="#accordion-8" class="accordion-section-title">Servicio Técnico IX Región</a></div>
               <div id="accordion-8" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
@@ -324,7 +324,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-9" class="accordion-section-title">X Región</a></div>
+              <div class="accordion-section"><a href="#accordion-9" class="accordion-section-title">Servicio Técnico X Región</a></div>
               <div id="accordion-9" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
@@ -349,7 +349,7 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-10" class="accordion-section-title">Región Metropolitana </a></div>
+              <div class="accordion-section"><a href="#accordion-10" class="accordion-section-title">Servicio Técnico Región Metropolitana </a></div>
               <div id="accordion-10" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	

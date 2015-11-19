@@ -82,6 +82,22 @@ session_start();
 	$instalacion = @$_REQUEST['instalacion'];
 	$despacho = @$_REQUEST['despacho'];
 	
+	$regionesDespacho = $_REQUEST['regionesDespacho'];
+	$provinciaDespacho = $_REQUEST['provinciaDespacho'];
+	$calleDespacho = $_REQUEST['calleDespacho'];
+	$nroDptoDespacho = $_REQUEST['nroDptoDespacho'];
+	
+	$regionesFactura = $_REQUEST['regionesFactura'];
+	$provinciaFactura = $_REQUEST['provinciaFactura'];
+	$calleFactura = $_REQUEST['calleFactura'];
+	$nroDptoFactura = $_REQUEST['nroDptoFactura'];
+	
+	$nombre_factura = $_REQUEST['nombre_factura'];      //Razon social
+	$rut_factura = $_REQUEST['rut_factura'];
+	$telefono_factura = $_REQUEST['telefono_factura'];
+	$giro_factura = $_REQUEST['giro_factura'];			//Giro del negocio
+	
+	
 	if($instalacion=='on'){
 		$desea_instalacion = 'si';
 	}else{
@@ -110,7 +126,11 @@ session_start();
 									'$desea_despacho',
 									'')") 	
 		or die("Problemas con el insert del contacto");
+		
+		$last_id = mysqli_insert_id($conexion);
 	
+	//tipo_cotizacion me trae si es boleta o factura y alli contruyo la que corresponde
+	//si viene factura deberia hacer un insert diferente
 	
 	?>
     <div class="grupo">
@@ -118,27 +138,57 @@ session_start();
     </div>
     <div id="print" class="grupo">
       <div class="caja base-50">
-        <h1>Cotización			</h1>
+        <h1>Cotización</h1>
       </div>
-      <div class="caja base-25">
-        <ul class="first">
-          <li>Sr./a: <span><?php echo $nombre." ".$apellido; ?></span></li>
-          <li>RUT: <span><?php echo $rut; ?></span></li>
-        </ul>
-      </div>
-      <div class="caja base-25 no-padding">
-        <ul class="second">
-          <li>Tel/cel:<span><?php echo $telefono; ?></span></li>
-          <li>Mail:<span><?php echo $email; ?></span></li>
-        </ul>
-      </div>
+	  <?php
+		  if($tipo_cotizacion=='boleta'){						
+			echo "<div class=\"caja base-25\">";
+			echo "<ul class=\"first\">";
+			  echo "<li>Sr./a: <span> $nombre $apellido </span></li>";
+			  echo "<li>RUT: <span> $rut </span></li>";
+			  echo "<li>Region: <span> $regionesDespacho </span></li>";
+			  echo "<li>Calle: <span> $calleDespacho </span></li>";
+			echo "</ul>";
+		  echo "</div>";
+		  echo "<div class=\"caja base-25 no-padding\">";
+			echo "<ul class=\"second\">";
+			  echo "<li>Tel/cel:<span> $telefono </span></li>";
+			  echo "<li>Mail:<span> $email </span></li>";
+			  echo "<li>Provincia: <span> $provinciaDespacho </span></li>";
+			  echo "<li>Nro/Dpto: <span> $nroDptoDespacho </span></li>";
+			echo "</ul>";
+		  echo "</div>";  
+		  }
+		  
+		  if($tipo_cotizacion=='factura'){			
+			echo "<div class=\"caja base-25\">";
+			echo "<ul class=\"first\">";
+			  echo "<li>Sr./a: <span> $nombre $apellido </span></li>";
+			  echo "<li>Razon Social: <span> $nombre_factura </span></li>";
+			  echo "<li>RUT: <span> $rut_factura </span></li>";
+			  echo "<li>Giro del negocio:<span> $giro_factura </span></li>";			  
+			echo "</ul>";
+		  echo "</div>";
+		  echo "<div class=\"caja base-25 no-padding\">";
+			echo "<ul class=\"second\">";
+			  echo "<li>Tel/cel:<span> $telefono_factura </span></li>";			  
+			  echo "<li>Provincia: <span> $provinciaFactura </span></li>";	
+			  echo "<li>Calle: <span> $calleFactura </span> Nro/Dpto: <span> $nroDptoFactura </span></li>";
+			  echo "<li>Region: <span> $regionesFactura </span></li>";
+			echo "</ul>";
+		  echo "</div>";    
+		  }
+		  
+	  ?>
     </div>
     <div class="grupo no-padding">
       <div id="print-data">
         <div class="caja base-30">
 		<!-- Hago el insert y luego saco el ultimo id_corizacion -->
           <h2>Número de cotización</h2>
-          <p>000000000000</p>
+		  <?php
+          echo "<p>$last_id</p>";
+		  ?>
         </div>
         <div class="caja base-30">
 		  <!-- agarro la fecha del sistema en php, esa misma fecha la deberia de guardar en BD-->
@@ -295,7 +345,8 @@ session_start();
 		
 		
 	  $totalCotizacion = @$subTotalCalefa + @$subTotalParri + @$subTotalCoci + @$subTotalVenti + @$subTotalaccParri;
-	  $totalFinal = (($totalCotizacion * 1.19) / 100) + $totalCotizacion;
+	  $totalFinalMasIva = (($totalCotizacion * 1.19) / 100) + $totalCotizacion;
+	  
 	  
 	  ?>
 	  	 
@@ -321,7 +372,13 @@ session_start();
         <div class="caja base-20"></div>
         <div class="caja base-20"></div>
         <div class="caja base-20 no-padding">
-          <p class="B">IVA</p>
+		<?php
+			if($tipo_cotizacion=='factura'){
+				echo "<p class=\"B\">IVA</p>";
+			}else{
+				echo "<p></p>";
+			}			
+		?>  
         </div>
       </div>
       <div id="print-items-cajas-prod-total">
@@ -329,7 +386,14 @@ session_start();
         <div class="caja base-20"></div>
         <div class="caja base-20"></div>
         <div class="caja base-20 no-padding">
-          <p>19%</p>
+          <?php
+			if($tipo_cotizacion=='factura'){
+				echo "<p>19%</p>";
+			}else{
+				echo "<p></p>";
+			}	
+			
+		  ?>
         </div>
       </div>
       <div id="print-items-cond">
@@ -345,7 +409,13 @@ session_start();
         <div class="caja base-20"></div>
         <div class="caja base-20"></div>
         <div class="caja base-30 no-padding">
-          <p>$<span> <b><?php echo number_format($totalFinal,0,",","."); ?></b></span></p>
+          <p>$<span> <b><?php 
+			if($tipo_cotizacion=='factura'){
+				echo number_format($totalFinalMasIva,0,",","."); 
+			}else{
+				echo number_format($totalCotizacion,0,",","."); 
+			}
+		  ?></b></span></p>
           <form id="imprimir">
             <button type="button" onclick="window.print();">Imprimir</button>
           </form>

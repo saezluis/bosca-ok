@@ -39,8 +39,41 @@ session_start();
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
 	
 	<script type="text/javascript">
+	
+	function FillBilling(f) {
+			
+			//Variables que traen el elemento desde el select
+			//var s1=document.getElementById('regiones');
+			//var s2=document.getElementById('regionesFactura');
+			
+			//var s3=document.getElementById('provincia');
+			//var s4=document.getElementById('provinciaFactura');
+			
+			
+			
+			if(f.billingtoo.checked == true) {
+				f.nombre_factura.value = f.nombre.value;
+				f.rut_factura.value = f.rut.value;
+				f.telefono_factura.value = f.telefono.value;
+				f.calleFactura.value = f.calleDespacho.value;
+				f.nroDptoFactura.value = f.nroDptoDespacho.value;
+				//s2.value = s1.value; //aqui hago igual el select de 
+				//s4.value = s3.value;
+				//f.billingcity.value = f.shippingcity.value;
+			}else{
+				f.nombre_factura.value = "";
+				f.rut_factura.value = "";
+				f.telefono_factura.value = "";
+				f.calleFactura.value = "";
+				f.nroDptoFactura.value = "";
+				//s2.value = "item1";
+				//s4.value = "";
+			}
+		
+		}
+	
 	$(document).ready(function() {
-
+		
 		$("#regiones").change(function() {
 			var val = $(this).val();			
 			if (val == "item1") {
@@ -114,9 +147,69 @@ session_start();
 				$("#provinciaBoleta").html("<option value='Arica'>Arica</option><option value='Parinacota'>Parinacota</option>");
 			}
 		});
+		
+		$("#regionesFactura").change(function() {
+			var val = $(this).val();			
+			if (val == "item1") {
+				$("#provinciaFactura").html("<option value='test'>-- --</option>");
+			} else if (val == "Tarapaca") {
+				$("#provinciaFactura").html("<option value='Iquique'>Iquique</option><option value='Tamarugal'>Tamarugal</option>");
+			} else if (val == "Antofagasta") {
+				$("#provinciaFactura").html("<option value='Antofagasta'>Antofagasta</option><option value='El Loa'>El Loa</option><option value='Tocopilla'>Tocopilla</option>");
+			} else if (val == "Atacama") {
+				$("#provinciaFactura").html("<option value='Copiapó'>Copiapó</option><option value='Chañaral'>Chañaral</option><option value='Huasco'>Huasco</option>");
+			} else if (val == "Coquimbo") {
+				$("#provinciaFactura").html("<option value='Elqui'>Elqui</option><option value='Choapa'>Choapa</option><option value='Limarí'>Limarí</option>");
+			} else if (val == "Valparaiso") {
+				$("#provinciaFactura").html("<option value='Valparaíso'>Valparaíso</option><option value='Isla de Pascua'>Isla de Pascua</option><option value='Los Andes'>Los Andes</option><option value='Petorca'>Petorca</option><option value='Quillota'>Quillota</option><option value='San Antonio'>San Antonio</option><option value='San Felipe de Aconcagua'>San Felipe de Aconcagua</option><option value='Marga Marga'>Marga Marga</option>");
+			} else if (val == "OHiggins") {
+				$("#provinciaFactura").html("<option value='Cachapoal'>Cachapoal</option><option value='Cardenal Caro'>Cardenal Caro</option><option value='Colchagua'>Colchagua</option>");
+			} else if (val == "Maule") {
+				$("#provinciaFactura").html("<option value='Talca'>Talca</option><option value='Cauquenes'>Cauquenes</option><option value='Curicó'>Curicó</option><option value='Linares'>Linares</option>");
+			} else if (val == "Biobio") {
+				$("#provinciaFactura").html("<option value='Concepción'>Concepción</option><option value='Arauco'>Arauco</option><option value='Biobío'>Biobío</option><option value='Ñuble'>Ñuble</option>");
+			} else if (val == "Araucania") {
+				$("#provinciaFactura").html("<option value='Cautín'>Cautín</option><option value='Malleco'>Malleco</option>");
+			} else if (val == "LosLagos") {
+				$("#provinciaFactura").html("<option value='Llanquihue'>Llanquihue</option><option value='Chiloé'>Chiloé</option><option value='Osorno'>Osorno</option><option value='Palena'>Palena</option>");
+			} else if (val == "Aisen") {
+				$("#provinciaFactura").html("<option value='Coihaique'>Coihaique</option><option value='Aisén'>Aisén</option><option value='Capitán Prat'>Capitán Prat</option><option value='General Carrera'>General Carrera</option>");
+			} else if (val == "Antartica") {
+				$("#provinciaFactura").html("<option value='Magallanes'>Magallanes</option><option value='Antártica Chilena'>Antártica Chilena</option><option value='Tierra del Fuego'>Tierra del Fuego</option><option value='Última Esperanza'>Última Esperanza</option>");
+			} else if (val == "Metropolitana") {
+				$("#provinciaFactura").html("<option value='Santiago'>Santiago</option><option value='Cordillera'>Cordillera</option><option value='Chacabuco'>Chacabuco</option><option value='Maipo'>Maipo</option><option value='Melipilla'>Melipilla</option><option value='Talagante'>Talagante</option>");
+			} else if (val == "LosRios") {
+				$("#provinciaFactura").html("<option value='Valdivia'>Valdivia</option><option value='Ranco'>Ranco</option>");
+			} else if (val == "Arica") {
+				$("#provinciaFactura").html("<option value='Arica'>Arica</option><option value='Parinacota'>Parinacota</option>");
+			}
+		});
+		
+		$("#facturin").hide();
 
 	});
+	
+	function mostrarFactura(){
+		
+		$("#facturin").toggle();
+		
+	}
+	
+	function ocultarFactura(){
+		
+		$("#facturin").hide();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 	</script>
+	
+	
 	
 <meta name = "viewport" content = "user-scalable=no, width=device-width">
 <meta name="apple-mobile-web-app-capable" content="yes" />	
@@ -569,20 +662,26 @@ $(window).load(function() {
             <div class="datos--comprador">
               <h3 class="titulo--comprador">Datos Comprador</h3>
               <form method="post" action="formato-cotizacion.php" class="cotiza--usuario">
+			  
                 <label>NOMBRE</label>
                 <input name="nombre" type="text">
+				
                 <label>APELLIDO</label>
                 <input name="apellido" type="text">
+				
                 <label>RUT</label>
                 <input name="rut" type="text">
+				
                 <label>TELÉFONO DE CONTACTO</label>
                 <select name="select">
                   <option value="value1">Celular</option>
                   <option value="value2" selected="">Fijo</option>
                 </select>
                 <input name="telefono" type="text" class="box--tel">
+				
                 <label>MAIL</label>
                 <input name="email" type="text">
+				
                 <label>DIRECCIÓN DE DESPACHO</label>
                 <select id="regiones" name="regionesDespacho">
                   <option value="item1" selected="selected">Región</option>
@@ -607,11 +706,69 @@ $(window).load(function() {
                 </select>
                 <input type="text" name="calleDespacho" placeholder="Calle" class="calle">
                 <input type="text" name="nroDptoDespacho" placeholder="Número/depto." class="numero--dire">
+				
                 <label>ELIJA </label>
                 <div class="caja base-20 no-padding">
-                  <input type="radio" name="factura" value="factura">Factura</div>
+					<input type="radio" name="factura" value="boleta" onclick="ocultarFactura();">Boleta</div>                  
                 <div class="caja base-80 no-padding">
-                  <input type="radio" name="factura" value="boleta">Boleta</div>
+					<input type="radio" name="factura" value="factura" onclick="mostrarFactura();">Factura</div>
+				
+				<!-- Datos factura, esto lo debo ocualtar y mostrar de acuerdo al radio Factura -->
+				<div id="facturin" class="caja base-100 no-padding">
+					
+					<h3 class="titulo--comprador">Datos Factura:</h3>
+					
+					<input type="checkbox" name="billingtoo" onclick="FillBilling(this.form)">					
+					<em>Seleccione esta casilla si los "datos comprador" son iguales a los "datos factura"</em>
+					
+					<label>NOMBRE O RAZON SOCIAL</label>
+					<input name="nombre_factura" type="text">
+					
+					<label>RUT</label>
+					<input name="rut_factura" type="text">
+					
+					<label>DIRECCIÓN</label>
+					<select id="regionesFactura" name="regionesFactura">
+						<option value="item1" selected="selected">Región</option>
+						<option value="Tarapaca">Tarapaca</option>
+						<option value="Antofagasta">Antofagasta</option>
+						<option value="Atacama">Atacama</option>
+						<option value="Coquimbo">Coquimbo</option>
+						<option value="Valparaiso">Valparaíso</option>
+						<option value="OHiggins">O'Higgins</option>
+						<option value="Maule">Maule</option>
+						<option value="Biobio">Bio - Bio</option>
+						<option value="Araucania">Araucania</option>
+						<option value="LosLagos">Los Lagos</option>
+						<option value="Aisen">Aisén</option>
+						<option value="Antartica">Antartica y Magallanes</option>
+						<option value="Metropolitana">Metropolitana</option>
+						<option value="LosRios">Los Rios</option>
+						<option value="Arica">Arica y Parinacota</option>				  
+					</select>
+					<select id="provinciaFactura" name="provinciaFactura">
+						<option value="">-- --</option>
+					</select>
+					<input type="text" name="calleFactura" placeholder="Calle" class="calle">
+					<input type="text" name="nroDptoFactura" placeholder="Número/depto." class="numero--dire">
+					
+					<label>TELÉFONO DE CONTACTO</label>
+					<select name="select">
+						<option value="value1">Celular</option>
+						<option value="value2" selected="">Fijo</option>
+					</select>
+					<input name="telefono_factura" type="text" class="box--tel">
+					
+					<label>GIRO DEL NEGOCIO</label>
+					<input name="giro_factura" type="text">
+				
+				</div>
+				<!-- Datos factura, esto lo debo ocualtar y mostrar de acuerdo al radio Factura -->
+				
+				<div class="caja base-100 no-padding">
+					<h4></h4>
+				</div>
+				
                 <label>DIRECCIÓN DE ENVÍO DE BOLETA O FACTURA</label>
                 <select id="regionesBoleta" name="regionesBoleta">
                   <option value="item1" selected="selected">Región</option>
@@ -636,6 +793,7 @@ $(window).load(function() {
                 </select>
                 <input type="text" name="calleBoleta" placeholder="Calle" class="calle">
                 <input type="text" name="nroDptoBoleta" placeholder="Número/depto." class="numero--dire">
+				
                 <label>DESEA INSTALACIÓN</label>
                 <div class="caja base-50 no-padding">
                   <input type="checkbox" name="instalacion">Agregar instalación
