@@ -1,0 +1,31 @@
+
+Tabla producto:
+
+nombre
+logo_up_left
+logo_detalle
+mini_descripcion
+precio
+foto_producto
+foto_zoom
+modelo
+fabricacion
+combustion
+panel_programable
+conexion_electrica
+capacidad_carga
+potencia
+rango_calefaccion
+color
+vidrio_autolimpiante
+cenicero
+vermiculita_refractaria
+templador
+ventaja_comparativa
+dimensiones
+diametro_canon
+garantia
+sku
+
+que muestre la foto antigua
+y si la quiere cambiar lo puede hacer alli mismo
