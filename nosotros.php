@@ -129,31 +129,32 @@
                 <li><a href="#2015">2015	</a></li>
               </ul>
               <ul id="issues">
-                <li id="1985"><img src="img/timeline/bosca.jpg">
+                <li id="1985"><div><img src="img/timeline/bosca-mini.jpg"></div>
                   <p>Se funda Bosca con la sociedad de Chilenos y neozelandeses. Los calefactores fueron importados en su totalidad desde Nueva Zelanda.</p>
                 </li>
-                <li id="1986"><img src="img/timeline/solartech.jpg">
+
+                <li id="1986"><div><img src="img/timeline/solartech-mini.jpg"></div>
                   <p>Marca de Toldos que se posiciona bajo el alero de Bosca. Con productos de fabricación nacional que abastecen necesidades de primavera / verano a sus clientes.</p>
                 </li>
-                <li id="1988"><img src="img/timeline/traspaso.jpg">
+                <li id="1988"><div><img src="img/timeline/traspaso-mini.jpg"></div>
                   <p>Traspaso de la totalidad de la marca a la familia Ossandon. Los calefactores pasan a ser fabricados en Chile.Traduciendo como beneficio al consumidor,los precios más competitivos de la industria	</p>
                 </li>
-                <li id="1994"><img src="img/timeline/multitiendas.jpg">
+                <li id="1994"><div><img src="img/timeline/multitiendas-mini.jpg"></div>
                   <p>Expanción de la marca a mercados mayoristas.</p>
                 </li>
-                <li id="1998"><img src="img/timeline/hergome.jpg">
+                <li id="1998"><div><img src="img/timeline/hergome-mini.jpg"></div>
                   <p>Alianza con Hergom (España), siendo Bosca la única marca representante en Chile.</p>
                 </li>
-                <li id="1999"><img src="img/timeline/mundo.jpg">
+                <li id="1999"><div><img src="img/timeline/mundo-mini.jpg"></div>
                   <p>Los productos comienzan a ser exportados a más de 10 países en el mundo.</p>
                 </li>
-                <li id="2006"><img src="img/timeline/bosca_industrial.jpg">
+                <li id="2006"><div><img src="img/timeline/bosca_industrial-mini.jpg"></div>
                   <p>Bosca introduce a Chile el concepto de calefacción a pellet, siendo los primeros en fabricar un calefactor a pellet en el país.</p>
                 </li>
-                <li id="2014"><img src="img/timeline/bosca_climastar.jpg">
+                <li id="2014"><div><img src="img/timeline/bosca_climastar-mini.jpg"></div>
                   <p>Se expande nuestra planta de producción, incorporando nuevas tecnologías al proceso de fabricación. Paralelo se consolida una nueva área de servicios Industriales de Bosca.</p>
                 </li>
-                <li id="2015"><img src="img/timeline/bosca_climastar.jpg">
+                <li id="2015"><div><img src="img/timeline/bosca_climastar-mini.jpg"></div>
                   <p>Bosca lanza Eco Flame 360, calefactor con tecnología de llama invertida. Al mismo tiempo se lanza la Eco Pellet 360. A mediados del presente año, Bosca obtiene la representación exclusiva de Climastar en Chile.</p>
                 </li>
               </ul>

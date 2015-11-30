@@ -38,6 +38,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/codigo-anterior.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/codigo-anterior.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/config.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/config.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/contacto.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -96,6 +114,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
+	"\/cotizacion.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/cotizacion.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/ed-grid.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -110,6 +137,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/hint.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/style-flex.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/style-flex.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/style.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -239,145 +284,407 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/fotos-productos\/1444839278MANOS.jpg.jpg": {
+	"\/formato-cotizacion.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/formato-cotizacion.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/foto-bosca\/adda-10-big.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2.84023e+06,
-		"inputAbbreviatedPath": "\/fotos-productos\/1444839278MANOS.jpg.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/1444839278MANOS.jpg.jpg",
+		"initialSize": 273734,
+		"inputAbbreviatedPath": "\/foto-bosca\/adda-10-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/adda-10-big.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/5.jpg": {
+	"\/foto-bosca\/adda-10-full.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 280676,
-		"inputAbbreviatedPath": "\/fotos-productos\/5.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/5.jpg",
+		"initialSize": 35114,
+		"inputAbbreviatedPath": "\/foto-bosca\/adda-10-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/adda-10-full.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/airport vip montaje.jpg.jpg": {
+	"\/foto-bosca\/adda-18-hidro-big.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 529151,
-		"inputAbbreviatedPath": "\/fotos-productos\/airport vip montaje.jpg.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/airport vip montaje.jpg.jpg",
+		"initialSize": 207496,
+		"inputAbbreviatedPath": "\/foto-bosca\/adda-18-hidro-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/adda-18-hidro-big.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/blokers.jpg": {
+	"\/foto-bosca\/adda-18-hidro-full.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 558290,
-		"inputAbbreviatedPath": "\/fotos-productos\/blokers.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/blokers.jpg",
+		"initialSize": 28777,
+		"inputAbbreviatedPath": "\/foto-bosca\/adda-18-hidro-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/adda-18-hidro-full.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/cajas de copa.jpg.jpg": {
+	"\/foto-bosca\/black-silver-40e-big.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 783782,
-		"inputAbbreviatedPath": "\/fotos-productos\/cajas de copa.jpg.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/cajas de copa.jpg.jpg",
+		"initialSize": 160800,
+		"inputAbbreviatedPath": "\/foto-bosca\/black-silver-40e-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/black-silver-40e-big.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/concep01.jpg": {
+	"\/foto-bosca\/black-silver-40e-full.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2.33776e+06,
-		"inputAbbreviatedPath": "\/fotos-productos\/concep01.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/concep01.jpg",
+		"initialSize": 24806,
+		"inputAbbreviatedPath": "\/foto-bosca\/black-silver-40e-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/black-silver-40e-full.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/cosmetiquero.jpg": {
+	"\/foto-bosca\/eco-350-big.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 339232,
-		"inputAbbreviatedPath": "\/fotos-productos\/cosmetiquero.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/cosmetiquero.jpg",
+		"initialSize": 351339,
+		"inputAbbreviatedPath": "\/foto-bosca\/eco-350-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/eco-350-big.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/MANOS.jpg": {
+	"\/foto-bosca\/eco-350-full.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2.84023e+06,
-		"inputAbbreviatedPath": "\/fotos-productos\/MANOS.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/MANOS.jpg",
+		"initialSize": 34891,
+		"inputAbbreviatedPath": "\/foto-bosca\/eco-350-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/eco-350-full.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/posavaso.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 697251,
-		"inputAbbreviatedPath": "\/fotos-productos\/posavaso.png",
-		"outputAbbreviatedPath": "\/fotos-productos\/posavaso.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/fotos-productos\/post 01.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 792744,
-		"inputAbbreviatedPath": "\/fotos-productos\/post 01.png",
-		"outputAbbreviatedPath": "\/fotos-productos\/post 01.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/fotos-productos\/promotora2.jpg": {
+	"\/foto-bosca\/eco-360-big.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 275548,
-		"inputAbbreviatedPath": "\/fotos-productos\/promotora2.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/promotora2.jpg",
+		"initialSize": 351339,
+		"inputAbbreviatedPath": "\/foto-bosca\/eco-360-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/eco-360-big.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/promotora2.jpg.jpg": {
+	"\/foto-bosca\/eco-360-full.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 275548,
-		"inputAbbreviatedPath": "\/fotos-productos\/promotora2.jpg.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/promotora2.jpg.jpg",
+		"initialSize": 34891,
+		"inputAbbreviatedPath": "\/foto-bosca\/eco-360-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/eco-360-full.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/fotos-productos\/Santiago.jpg.jpg": {
+	"\/foto-bosca\/eco-flame-360-big.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.21593e+06,
-		"inputAbbreviatedPath": "\/fotos-productos\/Santiago.jpg.jpg",
-		"outputAbbreviatedPath": "\/fotos-productos\/Santiago.jpg.jpg",
+		"initialSize": 284531,
+		"inputAbbreviatedPath": "\/foto-bosca\/eco-flame-360-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/eco-flame-360-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/eco-flame-360-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30690,
+		"inputAbbreviatedPath": "\/foto-bosca\/eco-flame-360-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/eco-flame-360-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/eco-pellet-360-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 310507,
+		"inputAbbreviatedPath": "\/foto-bosca\/eco-pellet-360-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/eco-pellet-360-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/eco-pellet-360-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34520,
+		"inputAbbreviatedPath": "\/foto-bosca\/eco-pellet-360-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/eco-pellet-360-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/limit-350-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 303956,
+		"inputAbbreviatedPath": "\/foto-bosca\/limit-350-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/limit-350-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/limit-350-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31969,
+		"inputAbbreviatedPath": "\/foto-bosca\/limit-350-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/limit-350-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/limit-360-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 303956,
+		"inputAbbreviatedPath": "\/foto-bosca\/limit-360-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/limit-360-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/limit-360-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31969,
+		"inputAbbreviatedPath": "\/foto-bosca\/limit-360-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/limit-360-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/muebles-de-terrazaset-corfu-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 141758,
+		"inputAbbreviatedPath": "\/foto-bosca\/muebles-de-terrazaset-corfu-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/muebles-de-terrazaset-corfu-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/muebles-de-terrazaset-corfu-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28666,
+		"inputAbbreviatedPath": "\/foto-bosca\/muebles-de-terrazaset-corfu-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/muebles-de-terrazaset-corfu-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/multibosca-350-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 295780,
+		"inputAbbreviatedPath": "\/foto-bosca\/multibosca-350-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/multibosca-350-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/multibosca-350-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32212,
+		"inputAbbreviatedPath": "\/foto-bosca\/multibosca-350-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/multibosca-350-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-big-silver-3rd-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 146945,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-big-silver-3rd-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-big-silver-3rd-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-big-silver-3rd-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25767,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-big-silver-3rd-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-big-silver-3rd-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-electrica-portatil-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 216091,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-electrica-portatil-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-electrica-portatil-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-electrica-portatil-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33577,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-electrica-portatil-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-electrica-portatil-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-fair-silver-50r-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 199758,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-fair-silver-50r-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-fair-silver-50r-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-fair-silver-50r-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30425,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-fair-silver-50r-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-fair-silver-50r-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-inox-silver-40en-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 174704,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-inox-silver-40en-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-inox-silver-40en-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-inox-silver-40en-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28414,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-inox-silver-40en-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-inox-silver-40en-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-little-silver-20-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 184219,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-little-silver-20-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-little-silver-20-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-little-silver-20-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27707,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-little-silver-20-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-little-silver-20-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-plancha-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 120834,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-plancha-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-plancha-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/parrilla-plancha-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22136,
+		"inputAbbreviatedPath": "\/foto-bosca\/parrilla-plancha-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/parrilla-plancha-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/x8-basic-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 160149,
+		"inputAbbreviatedPath": "\/foto-bosca\/x8-basic-big.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/x8-basic-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/foto-bosca\/x8-basic-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28485,
+		"inputAbbreviatedPath": "\/foto-bosca\/x8-basic-full.jpg",
+		"outputAbbreviatedPath": "\/foto-bosca\/x8-basic-full.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -390,6 +697,28 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/images\/button-next.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 589,
+		"inputAbbreviatedPath": "\/images\/button-next.png",
+		"outputAbbreviatedPath": "\/images\/button-next.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/button-previous.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 603,
+		"inputAbbreviatedPath": "\/images\/button-previous.png",
+		"outputAbbreviatedPath": "\/images\/button-previous.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/img-ac\/AC9000-b.jpg": {
 		"fileType": 16384,
@@ -1326,6 +1655,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img-tecnicos\/adrian-salazar.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9466,
+		"inputAbbreviatedPath": "\/img-tecnicos\/adrian-salazar.jpg",
+		"outputAbbreviatedPath": "\/img-tecnicos\/adrian-salazar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img-tecnicos\/avelino-farias-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1333,17 +1673,6 @@
 		"initialSize": 4377,
 		"inputAbbreviatedPath": "\/img-tecnicos\/avelino-farias-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/avelino-farias-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/avelino-farias.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12267,
-		"inputAbbreviatedPath": "\/img-tecnicos\/avelino-farias.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/avelino-farias.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1359,17 +1688,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/christian-manzo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5238,
-		"inputAbbreviatedPath": "\/img-tecnicos\/christian-manzo.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/christian-manzo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/claudio-cordero-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1377,17 +1695,6 @@
 		"initialSize": 3721,
 		"inputAbbreviatedPath": "\/img-tecnicos\/claudio-cordero-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/claudio-cordero-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/claudio-cordero.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9046,
-		"inputAbbreviatedPath": "\/img-tecnicos\/claudio-cordero.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/claudio-cordero.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1403,17 +1710,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/daniel-diaz.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6685,
-		"inputAbbreviatedPath": "\/img-tecnicos\/daniel-diaz.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/daniel-diaz.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/felipe-maino-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1421,17 +1717,6 @@
 		"initialSize": 3638,
 		"inputAbbreviatedPath": "\/img-tecnicos\/felipe-maino-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/felipe-maino-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/felipe-maino.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 8966,
-		"inputAbbreviatedPath": "\/img-tecnicos\/felipe-maino.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/felipe-maino.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1447,35 +1732,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/francisco-palma.jpg": {
+	"\/img-tecnicos\/gabriel-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 10925,
-		"inputAbbreviatedPath": "\/img-tecnicos\/francisco-palma.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/francisco-palma.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/gabriel-l-b.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4454,
-		"inputAbbreviatedPath": "\/img-tecnicos\/gabriel-l-b.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/gabriel-l-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/gabriel-l.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12038,
-		"inputAbbreviatedPath": "\/img-tecnicos\/gabriel-l.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/gabriel-l.jpg",
+		"initialSize": 17247,
+		"inputAbbreviatedPath": "\/img-tecnicos\/gabriel-b.jpg",
+		"outputAbbreviatedPath": "\/img-tecnicos\/gabriel-b.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1491,17 +1754,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/german-san.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 10262,
-		"inputAbbreviatedPath": "\/img-tecnicos\/german-san.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/german-san.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/guillermo-abarca-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1509,17 +1761,6 @@
 		"initialSize": 6580,
 		"inputAbbreviatedPath": "\/img-tecnicos\/guillermo-abarca-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/guillermo-abarca-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/guillermo-abarca.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 17289,
-		"inputAbbreviatedPath": "\/img-tecnicos\/guillermo-abarca.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/guillermo-abarca.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1535,13 +1776,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/hector-lara.jpg": {
+	"\/img-tecnicos\/jernardo-bernardo.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 7480,
-		"inputAbbreviatedPath": "\/img-tecnicos\/hector-lara.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/hector-lara.jpg",
+		"initialSize": 8804,
+		"inputAbbreviatedPath": "\/img-tecnicos\/jernardo-bernardo.jpg",
+		"outputAbbreviatedPath": "\/img-tecnicos\/jernardo-bernardo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1557,17 +1798,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/jorge-letelier.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 11898,
-		"inputAbbreviatedPath": "\/img-tecnicos\/jorge-letelier.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/jorge-letelier.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/juan-cordoba-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1575,17 +1805,6 @@
 		"initialSize": 3334,
 		"inputAbbreviatedPath": "\/img-tecnicos\/juan-cordoba-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/juan-cordoba-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/juan-cordoba.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5264,
-		"inputAbbreviatedPath": "\/img-tecnicos\/juan-cordoba.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/juan-cordoba.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1601,17 +1820,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/juan-donoso.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9115,
-		"inputAbbreviatedPath": "\/img-tecnicos\/juan-donoso.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/juan-donoso.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/juan-hector-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1619,17 +1827,6 @@
 		"initialSize": 4659,
 		"inputAbbreviatedPath": "\/img-tecnicos\/juan-hector-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/juan-hector-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/juan-hector.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 11313,
-		"inputAbbreviatedPath": "\/img-tecnicos\/juan-hector.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/juan-hector.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1645,17 +1842,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/luis-alderete.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 11039,
-		"inputAbbreviatedPath": "\/img-tecnicos\/luis-alderete.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/luis-alderete.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/luis-cordoba-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1663,17 +1849,6 @@
 		"initialSize": 3352,
 		"inputAbbreviatedPath": "\/img-tecnicos\/luis-cordoba-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/luis-cordoba-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/luis-cordoba.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9127,
-		"inputAbbreviatedPath": "\/img-tecnicos\/luis-cordoba.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/luis-cordoba.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1689,17 +1864,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/luis-pena.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6077,
-		"inputAbbreviatedPath": "\/img-tecnicos\/luis-pena.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/luis-pena.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/manuel-salazar-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1707,17 +1871,6 @@
 		"initialSize": 4325,
 		"inputAbbreviatedPath": "\/img-tecnicos\/manuel-salazar-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/manuel-salazar-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/manuel-salazar.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 11294,
-		"inputAbbreviatedPath": "\/img-tecnicos\/manuel-salazar.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/manuel-salazar.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1733,28 +1886,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/mario-velasquez.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 11137,
-		"inputAbbreviatedPath": "\/img-tecnicos\/mario-velasquez.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/mario-velasquez.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/michael.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6873,
-		"inputAbbreviatedPath": "\/img-tecnicos\/michael.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/michael.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/miguel-santos-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1762,28 +1893,6 @@
 		"initialSize": 4094,
 		"inputAbbreviatedPath": "\/img-tecnicos\/miguel-santos-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/miguel-santos-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/miguel-santos.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6208,
-		"inputAbbreviatedPath": "\/img-tecnicos\/miguel-santos.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/miguel-santos.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/monkey.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4108,
-		"inputAbbreviatedPath": "\/img-tecnicos\/monkey.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/monkey.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1799,17 +1908,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/nestor-contreras.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5219,
-		"inputAbbreviatedPath": "\/img-tecnicos\/nestor-contreras.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/nestor-contreras.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/pedro-labra-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1817,17 +1915,6 @@
 		"initialSize": 3933,
 		"inputAbbreviatedPath": "\/img-tecnicos\/pedro-labra-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/pedro-labra-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/pedro-labra.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 10058,
-		"inputAbbreviatedPath": "\/img-tecnicos\/pedro-labra.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/pedro-labra.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1843,17 +1930,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/rafael-sandoval.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6206,
-		"inputAbbreviatedPath": "\/img-tecnicos\/rafael-sandoval.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/rafael-sandoval.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/raul-villar-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1861,17 +1937,6 @@
 		"initialSize": 3964,
 		"inputAbbreviatedPath": "\/img-tecnicos\/raul-villar-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/raul-villar-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/raul-villar.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 10412,
-		"inputAbbreviatedPath": "\/img-tecnicos\/raul-villar.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/raul-villar.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1887,17 +1952,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/raul-vivar.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6214,
-		"inputAbbreviatedPath": "\/img-tecnicos\/raul-vivar.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/raul-vivar.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/sergio-flores-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1905,17 +1959,6 @@
 		"initialSize": 3849,
 		"inputAbbreviatedPath": "\/img-tecnicos\/sergio-flores-b.jpg",
 		"outputAbbreviatedPath": "\/img-tecnicos\/sergio-flores-b.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-tecnicos\/sergio-flores.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 8410,
-		"inputAbbreviatedPath": "\/img-tecnicos\/sergio-flores.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/sergio-flores.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1931,17 +1974,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/sergio-fuentes.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9910,
-		"inputAbbreviatedPath": "\/img-tecnicos\/sergio-fuentes.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/sergio-fuentes.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-tecnicos\/victor-h-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1953,13 +1985,68 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-tecnicos\/victor-h.jpg": {
+	"\/img\/adda-10-b.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 11185,
-		"inputAbbreviatedPath": "\/img-tecnicos\/victor-h.jpg",
-		"outputAbbreviatedPath": "\/img-tecnicos\/victor-h.jpg",
+		"initialSize": 35114,
+		"inputAbbreviatedPath": "\/img\/adda-10-b.jpg",
+		"outputAbbreviatedPath": "\/img\/adda-10-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/adda-10-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 273734,
+		"inputAbbreviatedPath": "\/img\/adda-10-big.jpg",
+		"outputAbbreviatedPath": "\/img\/adda-10-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/adda-18-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28777,
+		"inputAbbreviatedPath": "\/img\/adda-18-b.jpg",
+		"outputAbbreviatedPath": "\/img\/adda-18-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/adda-18-hidro-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 207496,
+		"inputAbbreviatedPath": "\/img\/adda-18-hidro-big.jpg",
+		"outputAbbreviatedPath": "\/img\/adda-18-hidro-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/adda-22-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19632,
+		"inputAbbreviatedPath": "\/img\/adda-22-b.jpg",
+		"outputAbbreviatedPath": "\/img\/adda-22-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/arrow-down.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 347,
+		"inputAbbreviatedPath": "\/img\/arrow-down.png",
+		"outputAbbreviatedPath": "\/img\/arrow-down.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1986,6 +2073,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/banner-navidad.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122406,
+		"inputAbbreviatedPath": "\/img\/banner-navidad.jpg",
+		"outputAbbreviatedPath": "\/img\/banner-navidad.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/banner01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39359,
+		"inputAbbreviatedPath": "\/img\/banner01.jpg",
+		"outputAbbreviatedPath": "\/img\/banner01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/banner02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 41984,
+		"inputAbbreviatedPath": "\/img\/banner02.jpg",
+		"outputAbbreviatedPath": "\/img\/banner02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/banner03.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 63184,
+		"inputAbbreviatedPath": "\/img\/banner03.jpg",
+		"outputAbbreviatedPath": "\/img\/banner03.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/bg_banner.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1993,6 +2124,39 @@
 		"initialSize": 47405,
 		"inputAbbreviatedPath": "\/img\/bg_banner.jpg",
 		"outputAbbreviatedPath": "\/img\/bg_banner.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/big-silver-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25767,
+		"inputAbbreviatedPath": "\/img\/big-silver-b.jpg",
+		"outputAbbreviatedPath": "\/img\/big-silver-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/black-silver-40e-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 160800,
+		"inputAbbreviatedPath": "\/img\/black-silver-40e-big.jpg",
+		"outputAbbreviatedPath": "\/img\/black-silver-40e-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/black-silver-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24806,
+		"inputAbbreviatedPath": "\/img\/black-silver-b.jpg",
+		"outputAbbreviatedPath": "\/img\/black-silver-b.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2026,6 +2190,17 @@
 		"initialSize": 5142,
 		"inputAbbreviatedPath": "\/img\/btn_contactanos.jpg",
 		"outputAbbreviatedPath": "\/img\/btn_contactanos.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/calefa.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 146425,
+		"inputAbbreviatedPath": "\/img\/calefa.jpg",
+		"outputAbbreviatedPath": "\/img\/calefa.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2371,6 +2546,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/chimenea-pellet-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25804,
+		"inputAbbreviatedPath": "\/img\/chimenea-pellet-b.jpg",
+		"outputAbbreviatedPath": "\/img\/chimenea-pellet-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/climastar.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2459,6 +2645,127 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/eco-350-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 351339,
+		"inputAbbreviatedPath": "\/img\/eco-350-big.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-350-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-350.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34891,
+		"inputAbbreviatedPath": "\/img\/eco-350.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-350.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-360-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 351339,
+		"inputAbbreviatedPath": "\/img\/eco-360-big.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-360-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-360.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34891,
+		"inputAbbreviatedPath": "\/img\/eco-360.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-360.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-flame-360-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30690,
+		"inputAbbreviatedPath": "\/img\/eco-flame-360-b.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-flame-360-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-flame-360-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 284531,
+		"inputAbbreviatedPath": "\/img\/eco-flame-360-big.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-flame-360-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-flame-360-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30690,
+		"inputAbbreviatedPath": "\/img\/eco-flame-360-full.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-flame-360-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-madera-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24223,
+		"inputAbbreviatedPath": "\/img\/eco-madera-b.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-madera-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-negro-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21170,
+		"inputAbbreviatedPath": "\/img\/eco-negro-b.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-negro-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-pellet-360-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34520,
+		"inputAbbreviatedPath": "\/img\/eco-pellet-360-b.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-pellet-360-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/eco-pellet-360-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 310507,
+		"inputAbbreviatedPath": "\/img\/eco-pellet-360-big.jpg",
+		"outputAbbreviatedPath": "\/img\/eco-pellet-360-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/ecoflame360.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2470,6 +2777,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/electrica-portatil-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33577,
+		"inputAbbreviatedPath": "\/img\/electrica-portatil-b.jpg",
+		"outputAbbreviatedPath": "\/img\/electrica-portatil-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/electrico-360-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19884,
+		"inputAbbreviatedPath": "\/img\/electrico-360-b.jpg",
+		"outputAbbreviatedPath": "\/img\/electrico-360-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/enviroment-agency.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2477,6 +2806,17 @@
 		"initialSize": 10074,
 		"inputAbbreviatedPath": "\/img\/enviroment-agency.jpg",
 		"outputAbbreviatedPath": "\/img\/enviroment-agency.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/fair-silver-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30425,
+		"inputAbbreviatedPath": "\/img\/fair-silver-b.jpg",
+		"outputAbbreviatedPath": "\/img\/fair-silver-b.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2613,6 +2953,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/inox-silver-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28414,
+		"inputAbbreviatedPath": "\/img\/inox-silver-b.jpg",
+		"outputAbbreviatedPath": "\/img\/inox-silver-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/iron-bft-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22136,
+		"inputAbbreviatedPath": "\/img\/iron-bft-b.jpg",
+		"outputAbbreviatedPath": "\/img\/iron-bft-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/item--1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2631,6 +2993,61 @@
 		"initialSize": 1.24064e+06,
 		"inputAbbreviatedPath": "\/img\/large\/big.png",
 		"outputAbbreviatedPath": "\/img\/large\/big.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/limit-350-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31969,
+		"inputAbbreviatedPath": "\/img\/limit-350-b.jpg",
+		"outputAbbreviatedPath": "\/img\/limit-350-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/limit-350-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 303956,
+		"inputAbbreviatedPath": "\/img\/limit-350-big.jpg",
+		"outputAbbreviatedPath": "\/img\/limit-350-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/limit-360-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31969,
+		"inputAbbreviatedPath": "\/img\/limit-360-b.jpg",
+		"outputAbbreviatedPath": "\/img\/limit-360-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/limit-360-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 303956,
+		"inputAbbreviatedPath": "\/img\/limit-360-big.jpg",
+		"outputAbbreviatedPath": "\/img\/limit-360-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/little-silver-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27707,
+		"inputAbbreviatedPath": "\/img\/little-silver-b.jpg",
+		"outputAbbreviatedPath": "\/img\/little-silver-b.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2756,6 +3173,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/muebles-de-terrazaset-corfu-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 141758,
+		"inputAbbreviatedPath": "\/img\/muebles-de-terrazaset-corfu-big.jpg",
+		"outputAbbreviatedPath": "\/img\/muebles-de-terrazaset-corfu-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/multibosca-350-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32212,
+		"inputAbbreviatedPath": "\/img\/multibosca-350-b.jpg",
+		"outputAbbreviatedPath": "\/img\/multibosca-350-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/multibosca-350-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 295780,
+		"inputAbbreviatedPath": "\/img\/multibosca-350-big.jpg",
+		"outputAbbreviatedPath": "\/img\/multibosca-350-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/p-relacionado1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2774,6 +3224,105 @@
 		"initialSize": 3664,
 		"inputAbbreviatedPath": "\/img\/p-relacionado2.jpg",
 		"outputAbbreviatedPath": "\/img\/p-relacionado2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/parrilla-big-silver-3rd-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 146945,
+		"inputAbbreviatedPath": "\/img\/parrilla-big-silver-3rd-big.jpg",
+		"outputAbbreviatedPath": "\/img\/parrilla-big-silver-3rd-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/parrilla-carbon-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29855,
+		"inputAbbreviatedPath": "\/img\/parrilla-carbon-b.jpg",
+		"outputAbbreviatedPath": "\/img\/parrilla-carbon-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/parrilla-electrica-portatil-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 216091,
+		"inputAbbreviatedPath": "\/img\/parrilla-electrica-portatil-big.jpg",
+		"outputAbbreviatedPath": "\/img\/parrilla-electrica-portatil-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/parrilla-fair-silver-50r-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 199758,
+		"inputAbbreviatedPath": "\/img\/parrilla-fair-silver-50r-big.jpg",
+		"outputAbbreviatedPath": "\/img\/parrilla-fair-silver-50r-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/parrilla-inox-silver-40en-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 174704,
+		"inputAbbreviatedPath": "\/img\/parrilla-inox-silver-40en-big.jpg",
+		"outputAbbreviatedPath": "\/img\/parrilla-inox-silver-40en-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/parrilla-little-silver-20-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 184219,
+		"inputAbbreviatedPath": "\/img\/parrilla-little-silver-20-big.jpg",
+		"outputAbbreviatedPath": "\/img\/parrilla-little-silver-20-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/parrilla-little-silver-20-full.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27707,
+		"inputAbbreviatedPath": "\/img\/parrilla-little-silver-20-full.jpg",
+		"outputAbbreviatedPath": "\/img\/parrilla-little-silver-20-full.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/parrilla-plancha-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 120834,
+		"inputAbbreviatedPath": "\/img\/parrilla-plancha-big.jpg",
+		"outputAbbreviatedPath": "\/img\/parrilla-plancha-big.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/pellet-de-pasillo-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19248,
+		"inputAbbreviatedPath": "\/img\/pellet-de-pasillo-b.jpg",
+		"outputAbbreviatedPath": "\/img\/pellet-de-pasillo-b.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2807,6 +3356,28 @@
 		"initialSize": 3364,
 		"inputAbbreviatedPath": "\/img\/sello-certificacion.png",
 		"outputAbbreviatedPath": "\/img\/sello-certificacion.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/set-corfu-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28666,
+		"inputAbbreviatedPath": "\/img\/set-corfu-b.jpg",
+		"outputAbbreviatedPath": "\/img\/set-corfu-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/set-riviera-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17248,
+		"inputAbbreviatedPath": "\/img\/set-riviera-b.jpg",
+		"outputAbbreviatedPath": "\/img\/set-riviera-b.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2888,6 +3459,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/timeline\/bosca-mini.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16044,
+		"inputAbbreviatedPath": "\/img\/timeline\/bosca-mini.jpg",
+		"outputAbbreviatedPath": "\/img\/timeline\/bosca-mini.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/timeline\/bosca.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2899,6 +3481,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/timeline\/bosca_climastar-mini.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7623,
+		"inputAbbreviatedPath": "\/img\/timeline\/bosca_climastar-mini.jpg",
+		"outputAbbreviatedPath": "\/img\/timeline\/bosca_climastar-mini.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/timeline\/bosca_climastar.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2906,6 +3499,17 @@
 		"initialSize": 22910,
 		"inputAbbreviatedPath": "\/img\/timeline\/bosca_climastar.jpg",
 		"outputAbbreviatedPath": "\/img\/timeline\/bosca_climastar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/timeline\/bosca_industrial-mini.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3585,
+		"inputAbbreviatedPath": "\/img\/timeline\/bosca_industrial-mini.jpg",
+		"outputAbbreviatedPath": "\/img\/timeline\/bosca_industrial-mini.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2987,6 +3591,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/timeline\/hergome-mini.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10843,
+		"inputAbbreviatedPath": "\/img\/timeline\/hergome-mini.jpg",
+		"outputAbbreviatedPath": "\/img\/timeline\/hergome-mini.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/timeline\/hergome.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3031,6 +3646,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/timeline\/multitiendas-mini.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13791,
+		"inputAbbreviatedPath": "\/img\/timeline\/multitiendas-mini.jpg",
+		"outputAbbreviatedPath": "\/img\/timeline\/multitiendas-mini.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/timeline\/multitiendas.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3038,6 +3664,17 @@
 		"initialSize": 24846,
 		"inputAbbreviatedPath": "\/img\/timeline\/multitiendas.jpg",
 		"outputAbbreviatedPath": "\/img\/timeline\/multitiendas.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/timeline\/mundo-mini.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8344,
+		"inputAbbreviatedPath": "\/img\/timeline\/mundo-mini.jpg",
+		"outputAbbreviatedPath": "\/img\/timeline\/mundo-mini.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3108,6 +3745,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/timeline\/solartech-mini.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12062,
+		"inputAbbreviatedPath": "\/img\/timeline\/solartech-mini.jpg",
+		"outputAbbreviatedPath": "\/img\/timeline\/solartech-mini.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/timeline\/solartech.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3115,6 +3763,17 @@
 		"initialSize": 19216,
 		"inputAbbreviatedPath": "\/img\/timeline\/solartech.jpg",
 		"outputAbbreviatedPath": "\/img\/timeline\/solartech.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/timeline\/traspaso-mini.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8338,
+		"inputAbbreviatedPath": "\/img\/timeline\/traspaso-mini.jpg",
+		"outputAbbreviatedPath": "\/img\/timeline\/traspaso-mini.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3130,13 +3789,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/ventilacion.png": {
+	"\/img\/ventilacion-.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 247152,
-		"inputAbbreviatedPath": "\/img\/ventilacion.png",
-		"outputAbbreviatedPath": "\/img\/ventilacion.png",
+		"inputAbbreviatedPath": "\/img\/ventilacion-.png",
+		"outputAbbreviatedPath": "\/img\/ventilacion-.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/ventilacion.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47423,
+		"inputAbbreviatedPath": "\/img\/ventilacion.jpg",
+		"outputAbbreviatedPath": "\/img\/ventilacion.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3148,6 +3818,28 @@
 		"initialSize": 405,
 		"inputAbbreviatedPath": "\/img\/ver.png",
 		"outputAbbreviatedPath": "\/img\/ver.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/x8-basic-b.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28485,
+		"inputAbbreviatedPath": "\/img\/x8-basic-b.jpg",
+		"outputAbbreviatedPath": "\/img\/x8-basic-b.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/x8-basic-big.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 160149,
+		"inputAbbreviatedPath": "\/img\/x8-basic-big.jpg",
+		"outputAbbreviatedPath": "\/img\/x8-basic-big.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3588,6 +4280,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/jquery.flexisel.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jquery.flexisel.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.flexisel-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/jQueryTab.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jQueryTab.js",
+		"outputAbbreviatedPath": "\/js\/min\/jQueryTab-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/medio-ambiente.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -3706,32 +4420,32 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/owl.carousel.2.0.0-beta.2.4\/assets\/owl.carousel.css": {
+	"\/owl.carousel-\/assets\/owl.carousel.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/owl.carousel.2.0.0-beta.2.4\/assets\/owl.carousel.css",
+		"inputAbbreviatedPath": "\/owl.carousel-\/assets\/owl.carousel.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/owl.carousel.2.0.0-beta.2.4\/owl.carousel.js": {
+	"\/owl.carousel-\/owl.carousel.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/owl.carousel.2.0.0-beta.2.4\/owl.carousel.js",
-		"outputAbbreviatedPath": "\/owl.carousel.2.0.0-beta.2.4\/min\/owl.carousel-min.js",
+		"inputAbbreviatedPath": "\/owl.carousel-\/owl.carousel.js",
+		"outputAbbreviatedPath": "\/owl.carousel-\/min\/owl.carousel-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/owl.carousel.2.0.0-beta.2.4\/owl.carousel.min.js": {
+	"\/owl.carousel-\/owl.carousel.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/owl.carousel.2.0.0-beta.2.4\/owl.carousel.min.js",
-		"outputAbbreviatedPath": "\/owl.carousel.2.0.0-beta.2.4\/min\/owl.carousel.min-min.js",
+		"inputAbbreviatedPath": "\/owl.carousel-\/owl.carousel.min.js",
+		"outputAbbreviatedPath": "\/owl.carousel-\/min\/owl.carousel.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -4296,6 +5010,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/tema\/scss\/tema\/_imagenes.scss",
 		"outputAbbreviatedPath": "\/sass\/tema\/scss\/css\/_imagenes.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/tema\/scss\/tema\/_main.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/tema\/scss\/tema\/_main.scss",
+		"outputAbbreviatedPath": "\/sass\/tema\/scss\/css\/_main.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

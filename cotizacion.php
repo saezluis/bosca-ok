@@ -446,7 +446,7 @@ $(window).load(function() {
 						$sku = $reg['sku'];	
 						
 						echo "<div class=\"items--cotizacion\">";
-							echo "<div class=\"bar--cotizacion\"><img height=\"134px\" width=\"120px\" src=\"img2/".$foto."\" class=\"box--borders\"></div>";
+							echo "<div class=\"bar--cotizacion\"><img src=\"img2/".$foto."\" class=\"box--borders\"></div>";
 								echo "<div class=\"data--cotizacion\">";
 									echo "<p class=\"nombre--item\">".$nombre."</p>";
 									echo "<p class=\"nombre--modelo\">".$modelo."</p>";
@@ -683,7 +683,7 @@ $(window).load(function() {
                 <input name="email" type="text">
 				
                 <label>DIRECCIÓN DE DESPACHO</label>
-                <select id="regiones" name="regionesDespacho">
+                <select id="regiones" name="regionesDespacho" class="regiones">
                   <option value="item1" selected="selected">Región</option>
                   <option value="Tarapaca">Tarapaca</option>
                   <option value="Antofagasta">Antofagasta</option>
@@ -701,16 +701,16 @@ $(window).load(function() {
 				  <option value="LosRios">Los Rios</option>
 				  <option value="Arica">Arica y Parinacota</option>				  
                 </select>
-                <select id="provincia" name="provinciaDespacho">
+                <select id="provincia" name="provinciaDespacho" class="provincias">
                   <option value="">-- --</option>
                 </select>
                 <input type="text" name="calleDespacho" placeholder="Calle" class="calle">
                 <input type="text" name="nroDptoDespacho" placeholder="Número/depto." class="numero--dire">
 				
                 <label>ELIJA </label>
-                <div class="caja base-20 no-padding">
+                <div class="caja base-50 no-padding">
 					<input type="radio" name="factura" value="boleta" onclick="ocultarFactura();">Boleta</div>                  
-                <div class="caja base-80 no-padding">
+                <div class="caja base-50 no-padding">
 					<input type="radio" name="factura" value="factura" onclick="mostrarFactura();">Factura</div>
 				
 				<!-- Datos factura, esto lo debo ocualtar y mostrar de acuerdo al radio Factura -->
@@ -728,7 +728,7 @@ $(window).load(function() {
 					<input name="rut_factura" type="text">
 					
 					<label>DIRECCIÓN</label>
-					<select id="regionesFactura" name="regionesFactura">
+					<select id="regionesFactura" name="regionesFactura" >
 						<option value="item1" selected="selected">Región</option>
 						<option value="Tarapaca">Tarapaca</option>
 						<option value="Antofagasta">Antofagasta</option>
@@ -746,7 +746,7 @@ $(window).load(function() {
 						<option value="LosRios">Los Rios</option>
 						<option value="Arica">Arica y Parinacota</option>				  
 					</select>
-					<select id="provinciaFactura" name="provinciaFactura">
+					<select id="provinciaFactura" name="provinciaFactura" >
 						<option value="">-- --</option>
 					</select>
 					<input type="text" name="calleFactura" placeholder="Calle" class="calle">
@@ -770,7 +770,7 @@ $(window).load(function() {
 				</div>
 				
                 <label>DIRECCIÓN DE ENVÍO DE BOLETA O FACTURA</label>
-                <select id="regionesBoleta" name="regionesBoleta">
+                <select id="regionesBoleta" name="regionesBoleta" class="regionesBoleta">
                   <option value="item1" selected="selected">Región</option>
                   <option value="Tarapaca">Tarapaca</option>
                   <option value="Antofagasta">Antofagasta</option>
@@ -788,18 +788,18 @@ $(window).load(function() {
 				  <option value="LosRios">Los Rios</option>
 				  <option value="Arica">Arica y Parinacota</option>
                 </select>
-                <select id="provinciaBoleta" name="provinciaBoleta">
+                <select id="provinciaBoleta" name="provinciaBoleta" class="provinciaBoleta">
                   <option value="">-- --</option>
                 </select>
-                <input type="text" name="calleBoleta" placeholder="Calle" class="calle">
-                <input type="text" name="nroDptoBoleta" placeholder="Número/depto." class="numero--dire">
+                <input type="text" name="calleBoleta" placeholder="Calle" class="envio-calle">
+                <input type="text" name="nroDptoBoleta" placeholder="Número/depto." class="envio-calle">
 				
                 <label>DESEA INSTALACIÓN</label>
                 <div class="caja base-50 no-padding">
-                  <input type="checkbox" name="instalacion">Agregar instalación
+                  <input type="checkbox" name="instalacion"> Agregar instalación
                 </div>
                 <div class="caja base-50 no-padding">
-                  <input type="checkbox" name="despacho">Agregar despacho
+                  <input type="checkbox" name="despacho"> Agregar despacho
                 </div>
                 
                 <button type="submit" class="print--cotizacion">generar cotización</button>

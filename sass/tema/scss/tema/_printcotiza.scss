@@ -13,7 +13,7 @@
 	}
 
 	ul.first,ul.second{
-		margin: 9px 0 0 0;
+		margin: 10px 0;
 		padding:0;
 		list-style: none;
 
@@ -22,7 +22,15 @@
 		}
 	}
 	ul.first{
+		@include desde (tablet){
 		border-right: 1px solid #53534a;
+		}
+	}
+	ul.second{
+		margin-left:15px;
+		@include desde (tablet){
+			margin-left:50px;
+		}
 	}
 }
 

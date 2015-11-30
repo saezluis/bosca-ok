@@ -1,9 +1,11 @@
 #header{
 	background: $color-negro;
+	height:auto;
 	//border-bottom: 2px solid $color-corporativo;
 	width:100%;
 	z-index:1000;
 	position: fixed;
+	padding: 1em 0;
     // set animation
 		-webkit-transition:all 0.25s ease-in-out;
 		-moz-transition:all 0.25s ease-in-out;
@@ -12,13 +14,16 @@
 		transition:all 0.25s ease-in-out;
 }
 
+
+
 .sticky{
-	height:60px;
+	height:auto;
 			-webkit-transition:all 0.25s ease-in-out;
 		-moz-transition:all 0.25s ease-in-out;
 		-o-transition:all 0.25s ease-in-out;
 		-ms-transition:all 0.25s ease-in-out;
 		transition:all 0.25s ease-in-out;
+
 		@include desde (tablet){
 			height: auto;
 		}
@@ -35,13 +40,20 @@
 }
 
 h1{
-	margin:30px 0px;
+	// margin:30px 0px;
+	// @include desde (tablet){
+	// 	margin:22px 0 0 0;
+	// }
+	// @include desde (web){
+	// 	margin:30px 0px;
+	// }
 	@include desde (tablet){
-		margin:22px 0 0 0;
+		margin:0.2em 0 0.5em 0;
 	}
 	@include desde (web){
-		margin:30px 0px;
+		margin: 2px 0 0 0;
 	}
+
 }
 .logo_m{
 	//width: 184px;

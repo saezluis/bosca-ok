@@ -12,7 +12,7 @@
 
 #logos_juntos{
 	text-align:center;
-	margin:100px 0px 10px 0px;
+	margin:150px 0px 10px 0px;
 	// margin-top: 105px;
 	@include desde (tablet){
 		text-align: right;
@@ -52,9 +52,12 @@
 }
 
 .banner{
-	margin-top:95px;
+	margin-top: 142px;
 	@include desde (tablet){
 		margin-top: 109px;
+	}
+	@include desde (web){
+		margin-top:95px;
 	}
 
 }
@@ -68,12 +71,14 @@
 //buscador
 .buscar{
 	input{
-		width: 60%;
+		width: 77%;
 		border:1px solid $color-corporativo;
 		-webkit-appearance: none;
     	-webkit-border-radius: 0;
     	padding:5px;
-
+		@include desde(tablet){
+			width: 60%;
+		}
 		@include desde(web){
 			width: 81%;
 			height: 30px;
@@ -108,16 +113,17 @@
 	overflow: hidden;
 	margin-bottom: 10px;
 	input{
-		width: 90%;
+		width: 95%;
 		border:1px solid $color-corporativo;
 		-webkit-appearance: none;
     	-webkit-border-radius: 0;
     	padding:7px;
-		margin-left: 8px;
+		//margin-left: 8px;
 		float: left;
 		display: block;
 		@include desde (tablet){
 			width: 80%;
+			margin-left: 8px;
 		}
 		@include desde(web){
 			width: 81%;
@@ -126,15 +132,19 @@
 
 	}
 	.search--buscar--interior{
-	    width: 5%;
+	    width: 100%;
 	    border: 0px none;
 	    background: #E65524 url("../img/search.png") no-repeat scroll center center;
 	    padding: 0.4em;
-	    margin-left: -5px;
+	    //margin-left: -5px;
 	    height: 33px;
-	    display: block;
+	    
+	    margin-top:10px; 
 	    @include desde (tablet){
 	    	width: 10%;
+	    	margin-left: -5px;
+	    	margin-top:0;
+	    	display: block; 
 	    }
 	    // position: relative;
 	    // top: 6px;
@@ -151,7 +161,13 @@
 #cotizar{
 	font-size: 0.8em;
 	text-align: right;
-	margin:0px 0px;
+	margin:20px 0px 0px 0px;
+	@include desde (tablet){
+		margin:0px 0px;
+	}
+	@include desde (web){
+		margin:0px 0px;
+	}
 	p.cotizaciones{
 		padding: 0 10px;
 		a{
@@ -181,7 +197,140 @@ section.margen-top{
 }
 
 .imagenes{
-	@include cuadricula(imagen--item,2);
+	width:100%;
+	height:auto;
+	// .imagen--item{
+	// 	float: left;
+	// 	margin: 0 auto;
+	// }
+
+	// @include desde (base){
+	// 	@include cuadricula(imagen--item,1);
+	// }
+	// @include desde (tablet){
+	// 	@include cuadricula(imagen--item,2);		
+	// }
+	// // @include desde (tablet-h){
+	// // 	@include cuadricula(imagen--item,2);		
+	// // }
+	// @include desde (web){
+	// 	@include cuadricula(imagen--item,2);		
+	// }
+	.imagen---item{
+		// width: 50%;
+		// float: left;
+		// margin-right: 1em;
+		margin-bottom: 1.5em;
+		overflow:hidden; 
+		.cinta{
+			padding: 8px;
+			color: #fff;
+			text-align: left;
+			font-size: 0.9em;
+			z-index: 100;
+			background: rgba(0, 0, 0, 0.6);
+			top: 0;
+			position: absolute;
+			width: 100%;
+
+
+		}
+
+		.caption-style-4{
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			//overflow: hidden;
+		}
+
+		.caption-style-4 li{
+			float: left;
+			padding: 0px;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.caption{
+			width: 100%;
+			height: 100%;
+		}
+
+
+		.caption-style-4 li:hover .caption{
+			opacity: 1;
+		}
+
+		.caption-style-4 li:hover img{
+			opacity: 1;
+			transform: scale(1.15,1.15);
+			-webkit-transform:scale(1.15,1.15);
+			-moz-transform:scale(1.15,1.15);
+			-ms-transform:scale(1.15,1.15);
+			-o-transform:scale(1.15,1.15);
+		}
+
+
+
+		.caption-style-4 img{
+			margin: 0px;
+			padding: 0px;
+			float: left;
+			z-index: 4;
+		}
+
+
+		.caption-style-4 .caption{
+			cursor: pointer;
+			position: absolute;
+			opacity: 0;
+			-webkit-transition:all 0.45s ease-in-out;
+			-moz-transition:all 0.45s ease-in-out;
+			-o-transition:all 0.45s ease-in-out;
+			-ms-transition:all 0.45s ease-in-out;
+			transition:all 0.45s ease-in-out;
+			z-index: 500;
+		}
+
+		.caption-style-4 img{
+			-webkit-transition:all 0.25s ease-in-out;
+			-moz-transition:all 0.25s ease-in-out;
+			-o-transition:all 0.25s ease-in-out;
+			-ms-transition:all 0.25s ease-in-out;
+			transition:all 0.25s ease-in-out;
+		}
+		// .caption-style-4 .blur{
+		// 	background-color: rgba(230,85,36,0.3);
+		// 	height: 100%;
+		// 	width: 100%;
+		// 	z-index: 5;
+		// 	position: absolute;
+		// }
+
+		.caption-style-4 .caption-text h1{
+			text-transform: uppercase;
+			font-size: 24px;
+		}
+		.caption-style-4 .caption-text{
+			// z-index: 10;
+			color: #fff;
+			// position: absolute;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			top:45%;
+			z-index: 999;
+		}
+		a.see{
+			color: #fff;
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+			background: url(../img/ver.png) center center no-repeat;
+			text-indent: -99999px;
+		}
+	}
+
 }
 
 
@@ -276,7 +425,12 @@ section.margen-top{
     	margin-top: 5px;
     	margin-bottom: 5px;
  		-webkit-appearance: none !important;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
     	-webkit-border-radius: 0px 0px 0px 0px !important;
+    	padding-left: 1em;
+    	background:url(../img/arrow-down.png) right center no-repeat;
 	}
 
 .filtro{
@@ -291,12 +445,19 @@ section.margen-top{
 			display: inline-block;
 			//padding: 0 12px;
 			padding: 0 8px;
-			border-right: 1px solid $color-corporativo;
+			//border-right: 1px solid $color-corporativo;
+			width: 100%;
+			padding:1em 0;
+			border-bottom:1px solid $color-corporativo;
 			&:last-child{
 				margin-right: 0;
 				border-right:0;
 			}
 			@include desde (tablet){
+				width: auto;
+				margin: none;
+				border-right: 1px solid $color-corporativo;
+				border-bottom:none;
 				&:first-child{
 					width: 100%;
 					border-right:none;
@@ -379,12 +540,16 @@ section.margen-top{
 .search--buscar{
 	background: $color-corporativo;
 	//background-image: url(../img/search.png) topno-repeat;
-	height:42px;
+	//height:42px;
+	height:32px;
 	width:auto;
 	border:none;
 	margin-left:-5px;
 	color: #fff;
 	@include desde (tablet){
+		height: 32px;
+	}
+	@include desde (web){
 		height: 42px;
 	}
 }
@@ -404,7 +569,7 @@ section.margen-top{
 	padding-bottom: 50px;
 
 	.imagen--productos{
-		width: 24%;
+		width: 100%;
 		height: auto;
 		background: #fff;
 		padding: 10px;
@@ -512,18 +677,56 @@ section.margen-top{
 	background:#fff;
 	padding: 10px;
 	
+	.foto--producto-movil{
+		width: 327px;
+		height: 310px;
+		position: relative;
+		margin: 0 auto;
+		display: block;
+		@include desde (base){
+			display: block;
+		}
+		@include desde (tablet){
+			width: 80%;
+			height: auto;
+			display: block;
+		}
+		@include desde (web){
+			width: 327px;
+			height: 310px;
+			display: none;
+		}
+		.mini--sec{
+			position: absolute;
+			bottom:0;
+			@include desde (base){
+				right: 20px;
+			}
+			@include desde (tablet){
+				right: 0;
+			}
+		}
+	}
+
+
 	.foto--producto-big{
 		width: 327px;
 		height: 310px;
 		position: relative;
 		margin: 0 auto;
+		display: none;
+		@include desde (base){
+			display: none;
+		}
 		@include desde (tablet){
 			width: 80%;
 			height: auto;
+			display: none;
 		}
 		@include desde (web){
 			width: 327px;
 			height: 310px;
+			display: block;
 		}
 		.mini--sec{
 			position: absolute;
@@ -582,7 +785,17 @@ section.margen-top{
 	background:#fff;
 	padding:10px;
 	margin-top:8px;
+	margin-bottom:8px;
 	position: relative;
+	border-bottom:1px solid $color-corporativo;
+	cursor:pointer;
+	&:hover{
+		border-bottom:1px solid $color-corporativo;
+	}
+	@include desde (tablet){
+		border-bottom:0;
+		border-bottom:none; 
+	}
 
 	/* Ocultar botón radio */
 	input[id^="spoiler"]{
@@ -597,6 +810,7 @@ section.margen-top{
 	text-align: center;
 	cursor: pointer;
 	color: $color-corporativo;
+
 	}
 	/* Estilo botón cuando su INPUT está seleccionado */
 	input[id^="spoiler"]:checked + label {
@@ -667,11 +881,19 @@ section.margen-top{
 	}
 
 	.caracteristicas--producto{
-		width: 50%;
 		height: auto;
 		float: left;
-		border-left:1px solid $color-corporativo;
+		margin-top: 30px;
 		padding: 0px 10px;
+
+		@include desde (base){
+			width: 100%;
+		}
+		@include desde (tablet){
+			width: 50%;
+			border-left:1px solid $color-corporativo;
+			margin-top:0; 
+		}
 		&:last-child{
 			border-right: none;
 		}
@@ -679,11 +901,21 @@ section.margen-top{
 			color: $color-corporativo;
 			font-size: 0.8em;
 		}
+		h3.mocina-modelo{
+			font-size:0.9em;
+			font-weight: bold;
+		}
+		h2,h5,h3,h4{
+			margin:0;
+		}
 
 	}
 
 	.bor{
-		padding-left:30px !important;
+		padding:0 10px;
+		@include desde (tablet){
+			padding: 0 0 0 15px;
+		}
 	}
 	.border-none{
 		border-left:0;	}
@@ -814,125 +1046,7 @@ section.margen-top{
 
 
 
-.imagen--item{
-	
-	.cinta{
-		padding: 8px;
-		color: #fff;
-		text-align: left;
-		font-size: 0.9em;
-		z-index: 100;
-		background: rgba(0, 0, 0, 0.6);
-		top: 0;
-		position: absolute;
-		width: 100%;
 
-		img.mini{
-			display: none;
-			@include desde (web){
-				width: 15%;
-				float: right;
-				transition: none !important;
-				transform: none !important;
-				display: block;
-			}
-		}
-
-	}
-
-	.caption-style-4{
-		list-style-type: none;
-		margin: 0px;
-		padding: 0px;
-		
-	}
-
-	.caption-style-4 li{
-		float: left;
-		padding: 0px;
-		position: relative;
-		overflow: hidden;
-	}
-	
-	.caption{
-		width: 100%;
-		height: 100%;
-	}
-
-
-	.caption-style-4 li:hover .caption{
-		opacity: 1;
-	}
-
-	.caption-style-4 li:hover img{
-		opacity: 1;
-		transform: scale(1.15,1.15);
-		-webkit-transform:scale(1.15,1.15);
-		-moz-transform:scale(1.15,1.15);
-		-ms-transform:scale(1.15,1.15);
-		-o-transform:scale(1.15,1.15);
-	}
-
-
-
-	.caption-style-4 img{
-		margin: 0px;
-		padding: 0px;
-		float: left;
-		z-index: 4;
-	}
-
-
-	.caption-style-4 .caption{
-		cursor: pointer;
-		position: absolute;
-		opacity: 0;
-		-webkit-transition:all 0.45s ease-in-out;
-		-moz-transition:all 0.45s ease-in-out;
-		-o-transition:all 0.45s ease-in-out;
-		-ms-transition:all 0.45s ease-in-out;
-		transition:all 0.45s ease-in-out;
-	}
-
-	.caption-style-4 img{
-		-webkit-transition:all 0.25s ease-in-out;
-		-moz-transition:all 0.25s ease-in-out;
-		-o-transition:all 0.25s ease-in-out;
-		-ms-transition:all 0.25s ease-in-out;
-		transition:all 0.25s ease-in-out;
-	}
-	// .caption-style-4 .blur{
-	// 	background-color: rgba(230,85,36,0.3);
-	// 	height: 100%;
-	// 	width: 100%;
-	// 	z-index: 5;
-	// 	position: absolute;
-	// }
-
-	.caption-style-4 .caption-text h1{
-		text-transform: uppercase;
-		font-size: 24px;
-	}
-	.caption-style-4 .caption-text{
-		z-index: 10;
-		color: #fff;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		top:45%;
-		z-index: 999;
-	}
-	a.see{
-		color: #fff;
-		display: block;
-		width: 100%;
-		height: 100%;
-		text-decoration: none;
-		background: url(../img/ver.png) top center no-repeat;
-		text-indent: -99999px;
-	}
-}
 
 //Cotizacion
 
@@ -948,8 +1062,10 @@ section.margen-top{
 	}
 
 	.side--left{
-		width: 40%;
-
+		width: 100%;
+		@include desde (tablet){
+			width: 40%;
+		}
 		h3.titulo--cotizacion{
 			font-size: 1.6em;
 			color: $color-corporativo;
@@ -965,7 +1081,10 @@ section.margen-top{
 
 
 		.cotizacion--B{
-			border-right: 1px solid $color-corporativo;
+			@include desde (tablet){
+			border-right: 1px solid $color-corporativo;	
+			}
+			//border-right: 1px solid $color-corporativo;
 
 			.items--cotizacion{
 				width: 100%;
@@ -980,15 +1099,21 @@ section.margen-top{
 					.box--borders{
 						border: 1px solid $color-corporativo;
 						float: left;
+						@include desde (tablet){
+							width: 120px;
+							height: 134px;
+						}
 					}
 
 				}
 					.data--cotizacion{
-						margin-left: 15px;
 						display: block;
 						float: left;
+						margin-top:20px; 
 						@include desde (tablet){
 							width: 40%;
+							margin-top: 0;
+							margin-left: 15px;
 						}
 						p.nombre--item{
 							color: $color-corporativo;
@@ -1022,12 +1147,15 @@ section.margen-top{
 		}
 
 	.calculo--total{
-		width: 90%;
+		width: 100%;
 		text-align: center;
 		background: $gris-corporativo;
 		color:#fff;
 		padding: 10px 0;
 		border-top: 1px solid $color-corporativo;
+		@include desde (tablet){
+			width: 90%;
+		}
 	}
 
 	}
@@ -1036,15 +1164,24 @@ section.margen-top{
 //side rigth
 
 	.side--right{
-		width:60%;
+		width:100%;
+		@include desde (tablet){
+			width:60%;
+		}
 		.datos--comprador{
-			padding:30px;
+			padding:10px;
+			@include desde (tablet){
+				padding:30px;
+			}
 		}
 		h3.titulo--comprador{
 			color: $gris-corporativo;
 			text-transform: uppercase;
 			font-size: 0.8em;
-			margin-top: 55px;
+			margin-top: 25px;
+			@include desde (tablet){
+				margin-top: 55px;
+			}
 		}
 		form.cotiza--usuario{
 			width: 100%;
@@ -1063,7 +1200,7 @@ section.margen-top{
 			}
 
 			select{
-			    width: 18%;
+			    width: 100%;
 			    height: 36px;
 			    border: none;
 			    float: left;
@@ -1072,10 +1209,38 @@ section.margen-top{
 			    border-radius: 0;
 			    border: 1px solid $color-corporativo;
 			    -webkit-appearance:none;
+			    -moz-appearance:none;
+			    appearance:none;
+			     background: url(../img/arrow-down.png) right center no-repeat;
+			     padding-left: 0.5em;
+			     font-size: 0.85em;
+			     margin-bottom: 10px;
+			     @include desde (tablet){
+			     	//width: 18%;
+			     }
+			}
+			select.regionesBoleta{
+				width: 100%;
+				margin: 0 0 10px 0px;
+			}
+			select.provincias{
+				width: 100%;
+				margin: 0 0 10px 0;
 			}
 
+			select.provinciaBoleta{
+				width: 100%;
+				margin: 0 0 10px 0;
+			}
+
+			select.provinciaFactura{
+				width: 100%;
+				margin: 0 0 10px 0;
+			}
+
+
 			input[type="text"].box--tel{
-				width: 80%;
+				width: 100%;
 				border: 1px solid $color-corporativo;
 				padding: 8px;
 				-webkit-appearance:none;
@@ -1088,7 +1253,7 @@ section.margen-top{
 			}
 
 			input[type="text"].calle,input[type="text"].numero--dire{
-				width: 28%;
+				//width: 28%;
 				border: 1px solid $color-corporativo;
 				padding: 8px;
 				@include desde (tablet){
@@ -1104,9 +1269,16 @@ section.margen-top{
 				margin: 0px 5px;
 			}
 
-			input[type="text"].calle{
+			input[type="text"].calle, input[type="text"].numero--dire{
+				width: 100%;
 				margin-right: 8px;
-				margin-left: 12px;
+				margin-bottom: 10px;
+				//margin-left: 12px;
+			}
+
+			.envio-calle{
+				width: 100%;
+				margin-bottom: 10px;
 			}
 			
 			#envio-factura{
@@ -1166,7 +1338,12 @@ section.margen-top{
 }
 
 	.border-rigth{
-		border-right: 1px solid $color-corporativo !important;
+		@include desde (base){
+			border-right:none;
+		}
+		@include desde (tablet){
+			border-right: 1px solid $color-corporativo !important;
+		}
 	}
 
 .side-ellos{
@@ -1224,7 +1401,10 @@ section.margen-top{
 				width: 800px;
 				height: 200px;
 				overflow: hidden;
-				padding: 15px 15px;
+				padding: 15px 0px;
+				@include desde (web){
+					padding: 15px 15px;
+				}
 			}	
 
 				#issues ul{
@@ -1274,10 +1454,32 @@ section.margen-top{
 						margin-right: 70px;
 						font-weight: normal;
 						line-height: 22px;
-						width: 80%;
-						margin-top: 30px;
+						width: 35%;
+						//margin-top: 30px;
 						color: $gris-corporativo;
 						//text-shadow: #000 1px 1px 2px;
+						@include desde (tablet){
+							width: 57%;
+						}
+						@include desde (web){
+							width: 80%;
+						}
+					}
+					#issues li div{
+						display: none;
+						@include desde (tablet){
+							width: 20%;
+							height: 100%;
+							float: left;
+							margin-right: 15px;
+							display: block;
+						}
+						@include desde (web){
+							width: none;
+							height: none;
+							float: left;
+							margin-right: 15px;
+						}
 					}
 		
 		// #grad_left,
@@ -1301,13 +1503,19 @@ section.margen-top{
 				position: absolute;
 				top: 0;
 				font-size: 70px;
-				top: 240px;
+				top: 250px;
 				width: 35px;
 				height: 25px;
 				background-position: 0 0;
 				background-repeat: no-repeat;
 				text-indent: -9999px;
 				overflow: hidden;
+				@include desde (tablet){
+					top: 280px;
+				}
+				@include desde (web){
+					top: 240px;
+				}
 			}
 			#next:hover,
 			#prev:hover {
@@ -1328,40 +1536,148 @@ section.margen-top{
 }
 
 .side-ellos{
-	.tabs{
-		.tab-content{
-			p.certificacion-amb{
-				width: 89%;
+
+	.tabs-7{
+		width: 100%;
+		height: auto;
+		ul.tabsMedio{
+			list-style: none;
+			margin:0;
+			padding: 0;
+		}
+		p.certificacion-amb{
+			color: #53534A;
+			font-size: 0.85em;
+			margin: 0;
+		}
+
+		.logos--certificacion{
+			width: 100%;
+			margin-top: 25px;
+			.logo--item{
+				text-align: center;
+				margin: 20px 0;
+			}
+			@include desde (tablet){
+				@include cuadricula(logo--item,2);			
+			}
+			@include desde (tablet-h){
+				@include cuadricula(logo--item,2);			
+			}
+			@include desde (web){
+				@include cuadricula(logo--item,2);			
 			}
 		}
-	}
-	@include desde (tablet){
-		ul li.font-t{
-		font-size: 0.85em;
-		}
-		p.certificacion-amb{
-			padding-right:15%;
-			//background:red;
-		}
+
+		//TABLA++
+
+			.tg {
+				border-collapse:collapse;
+				border-spacing:0;
+				//margin:0px auto;
+				margin: 20px 0; 
+				width: 93%;
+				@include desde (tablet){
+					width: 76%;
+				}
+				@include desde (tablet-h){
+					width: 100%;
+				}
+				@include desde (web){
+					width: 93%;
+				}
+					td{
+						font-size:14px;
+						padding:10px 5px;
+						border-style:solid;
+						border-width:1px;
+						overflow:hidden;
+						word-break:normal;
+					}
+					th{
+						font-size:14px;
+						font-weight:normal;
+						padding:10px 5px;
+						border-style:solid;
+						border-width:1px;
+						border-color: $gris-corporativo;
+						overflow:hidden;
+						word-break:normal;
+						width: 52%;
+						text-align: center;
+						background: #85B03C;
+						color: #fff;
+					}
+					.tg-s6z2{
+						text-align:center;
+					}
+					.tg-031e{
+						text-align:center;
+					}
+			}
+			a.lena{
+				color: $color-corporativo;
+				text-decoration: none;
+				&:hover{
+					color: $gris-corporativo;
+				}	
+			}
+
+			//fin tabla
+
+			a.lenito{
+				color: $color-corporativo;
+				font-size: 0.9rem;
+				text-decoration: none;
+				padding: 20px 20px 20px 0px;
+				background: transparent url("../img/download.png") no-repeat scroll right center;
+				&:hover{
+					text-decoration: underline;
+					color:$gris-corporativo;
+				}
+			}
+
 
 	}
 
-	@include desde (tablet-h){
-		ul li.font-t{
-			font-size: 1em;
-		}
-		p.certificacion-amb{
-			padding-right:0;
-			width: 92% !important;
-		}	
-	}
 
-	@include desde (web){
-		ul li.font-t{
-			font-size: 1em;
-		}
 
-	}
+
+
+	// .tabs{
+	// 	.tab-content{
+	// 		p.certificacion-amb{
+	// 			width: 89%;
+	// 		}
+	// 	}
+	// }
+	// @include desde (tablet){
+	// 	ul li.font-t{
+	// 	font-size: 0.85em;
+	// 	}
+	// 	p.certificacion-amb{
+	// 		padding-right:15%;
+	// 		//background:red;
+	// 	}
+
+	// }
+
+	// @include desde (tablet-h){
+	// 	ul li.font-t{
+	// 		font-size: 1em;
+	// 	}
+	// 	p.certificacion-amb{
+	// 		padding-right:0;
+	// 		width: 92% !important;
+	// 	}	
+	// }
+
+	// @include desde (web){
+	// 	ul li.font-t{
+	// 		font-size: 1em;
+	// 	}
+
+	// }
 
 } 
 
@@ -1371,10 +1687,18 @@ section.margen-top{
 	overflow: hidden;
 
 	.filas{
-		width: 20%;
+		width: 100%;
 		float: left;
 		margin-top: 20px;
 		margin-right: 38px;
+		@include desde (tablet){
+			width: 50%;
+			height: 220px;
+			margin-right:0; 
+		}
+		@include desde (web){
+			width: 20%;
+		}
 		&:last-child{
 			margin-right: 0;
 		}
@@ -1414,17 +1738,17 @@ section.margen-top{
 	width: 100%;
 	float: left;
 	background: #fff;
-	height: 800px;
+	height: 1220px;
 	padding: 20px;
 	font-family: "Muli", sans-serif;
 	
 	@include desde (tablet){
-		min-height:840px;
+		height:1000px;
 		padding-bottom:0;
 	}
 
 	@include desde (web){
-		height: auto;
+		height: 850px;
 	}
 
 }
@@ -1434,13 +1758,19 @@ section.margen-top{
 }
 	  
 .tabs {
-    width: 650px;
+    //width: 650px;
     float: none;
     list-style: none;
     position: relative;
     padding: 0;
     font-family: "Muli", sans-serif !important;
     //margin: 75px auto;
+    @include desde (base){
+    	width: 360px;
+    }
+    @include desde (tablet){
+    	width: 650px;
+    }
 }
 	  
 .tabs li{
@@ -1451,11 +1781,12 @@ section.margen-top{
 	display: block;
 	padding: 10px 20px;
 	color: #FFFFFF;
-	font-size: 0.8em;
+	font-size: 0.7em;
 	background: $gris-corporativo;
 	cursor: pointer;
 	position: relative;
 	margin-right: 1px;
+	margin-bottom: 0.1em;
 	@include desde (tablet){
 		font-size: 0.8em;
 		padding:8px 15px;
@@ -1482,6 +1813,8 @@ section.margen-top{
 	position: absolute;
 	box-sizing: border-box;
 	background-color:#ffffff;
+	margin-top: 50px;
+
 	h3{
 		color: $color-corporativo;
 		margin: 0px 0px 10px 0px;
@@ -1506,89 +1839,7 @@ section.margen-top{
 		//padding:10px 34px 10px 0px;
 		margin: 0;
 	}
-	.logos--certificacion{
-		margin-top: 25px;
-		.logo--item{
-			margin: 20px 0;
-		}
-		@include desde (tablet){
-			@include cuadricula(logo--item,2,25);			
-		}
-		@include desde (tablet-h){
-			@include cuadricula(logo--item,2);			
-		}
-		@include desde (web){
-			@include cuadricula(logo--item,2);			
-		}
-	}
 
-
-	//TABLA++
-
-	.tg {
-		border-collapse:collapse;
-		border-spacing:0;
-		//margin:0px auto;
-		margin: 20px 0; 
-		width: 93%;
-		@include desde (tablet){
-			width: 76%;
-		}
-		@include desde (tablet-h){
-			width: 100%;
-		}
-		@include desde (web){
-			width: 93%;
-		}
-			td{
-				font-size:14px;
-				padding:10px 5px;
-				border-style:solid;
-				border-width:1px;
-				overflow:hidden;
-				word-break:normal;
-			}
-			th{
-				font-size:14px;
-				font-weight:normal;
-				padding:10px 5px;
-				border-style:solid;
-				border-width:1px;
-				border-color: $gris-corporativo;
-				overflow:hidden;
-				word-break:normal;
-				width: 52%;
-				text-align: center;
-				background: #85B03C;
-				color: #fff;
-			}
-			.tg-s6z2{
-				text-align:center;
-			}
-			.tg-031e{
-				text-align:center;
-			}
-	}
-	a.lena{
-		color: $color-corporativo;
-		text-decoration: none;
-		&:hover{
-			color: $gris-corporativo;
-		}	
-	}
-
-	//fin tabla
-	a.lenito{
-		color: $color-corporativo;
-		font-size: 0.9rem;
-		text-decoration: none;
-		padding: 20px 20px 20px 0px;
-		background: transparent url("../img/download.png") no-repeat scroll right center;
-		&:hover{
-			text-decoration: underline;
-			color:$gris-corporativo;
-		}
-	}
 
 }
        
@@ -1770,17 +2021,20 @@ section.margen-top{
 			font-size: 0.9em;
 		}
 		input{
-			width: 60%;
+			width: 100%;
 			padding: 5px;
 			border: 1px solid #e2e2e2;
 			-webkit-appearance:none;
+			@include desde (web){
+				width: 60%;
+			}
 		}
 		input.ciudad{
 			width: 60% !important; 
 			-webkit-appearance:none;
 		}
 		select.region{
-			width: 60%;
+			width: 100%;
 			height: 30px;
 			//padding: 10px;
 			border: none;
@@ -1788,20 +2042,28 @@ section.margen-top{
 			background: #fff;
 			border-radius: 0;
 			border: 1px solid #e2e2e2;
-			//-webkit-appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			background:url(../img/arrow-down.png) right center no-repeat;
+			@include desde (web){
+				width: 60%;
+			}
 		}
 
 		textarea{
-			width: 60%;
+			width: 100%;
 			height: 100px;
 			float: left;
 			border: 1px solid #e2e2e2;
 			margin-bottom: 15px;
 			-webkit-appearance:none;
+			@include desde (web){
+				width: 60%;
+			}
 		}
 
 		.registrar{
-			width: 60%;
+			width: 100%;
 			background: $color-corporativo;
 			color: #fff;
 			float: left;
@@ -1811,6 +2073,9 @@ section.margen-top{
 			border:none;
 			&:hover{
 				background: $gris-corporativo;
+			}
+			@include desde (web){
+				width: 60%;
 			}
 		}
 
@@ -2121,6 +2386,9 @@ section.margen-top{
     -webkit-box-sizing:border-box; 
     -moz-box-sizing:border-box; 
     box-sizing:border-box;
+    hr{
+    	border: 1px solid #fff; height: 1px;
+    }
 }
  
 .accordion {
@@ -2169,21 +2437,35 @@ section.margen-top{
     	overflow: hidden;
     }
     .foto--tecnico{
-    	float: left;
+    	float: none;
+    	text-align: center;
+    	@include desde (tablet){
+    		float: left;
+    		text-align:left;
+    	}
     }
     ul{
+    	width: 100%;
     	float: left;
     	margin:0;
     	padding:0;
+    	@include desde (tablet){
+    		width: auto;
+    	}
     }
     li{
     	list-style-type: none;
-    	margin-left: 20px;
+    	
     	color: #fff;
     	font-size: 0.75em;
     	margin-bottom: 10px;
+    	text-align: left;
     	span{
     		margin-left: 10px;
+    	}
+    	@include desde (tablet){
+    		margin-left: 20px;
+    		text-align:left;
     	}
     }
 
@@ -2195,6 +2477,10 @@ section.margen-top{
 				// border-right: 1px solid #fff;
 				border-left: 1px solid #fff;
 				border-bottom: 1px solid #fff;
+				border-right: 1px solid #fff;
+				@include desde (tablet){
+					border-right:none;
+				}
     			width: 100%;
     			font-size: 0.85em;
 				h1{
@@ -2224,7 +2510,7 @@ section.margen-top{
 					    		font-size: 1.1em;
 					    		color: #fff;
 					    		text-decoration: none;
-					    		background:url(../img/icon-link.png) 110px center no-repeat;
+					    		background:url(../img/icon-link.png) 200px center no-repeat;
 					    		@include desde (tablet){
 					    			background:url(../img/icon-link.png) 170px center no-repeat;
 					    		}
@@ -2268,7 +2554,7 @@ a.btn-compromiso{
 	position: fixed;
 	right:-90px;
 	top:230px;
-	display:block;
+	display:none;
 	//background:#86b03c;
 	background:url(../img/compromiso-verde.jpg);
 	transform:rotate(-90deg);

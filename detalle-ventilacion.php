@@ -221,8 +221,13 @@ if(isset($_POST['cotizar_prod'])) {
       </div>
     </section>
     <section class="grupo margen-top">
-      <div class="caja movil-40">
+      <div class="caja movil-40 tablet-40 web-40">
         <div class="full--ficha">
+        <!--para movil-->
+          <div class="foto--producto-movil"><img src="img-ac/<?php echo $foto; ?>">
+            <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+          </div>
+        <!--fin para movil-->
           <div class="foto--producto-big"><img src="img-ac/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/large/big.pngg">
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
           </div>
@@ -238,9 +243,11 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="full--ficha-datos">
           <div class="logo-marca"><img src="img/mini-bosca.png"></div>
           <div class="caracteristicas--producto border-none">
+            <h2><?php echo $nombre  ?></h2>
+            <h3 class="mocina-modelo">Modelo: <b><?php echo $modelo  ?></b></h3>
             <p class="sku">SKU: <?php echo $sku; ?></p>
-            <p class=""><h3><?php echo $nombre  ?></h3></p>
-			<p class="resena"><h4>Modelo: <?php echo $modelo  ?></h4></p>
+
+			
             <div class="box-in">
               <p class="total--precio">Precio</p>
               <p class="total--cash">$ <?php echo number_format($precio,0, '.', '.'); ?></p>			 

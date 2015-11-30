@@ -25,7 +25,8 @@
 	@include desde (web){
 		display: table;
 		float: right;
-		margin-top: 15px;
+		//margin-top: 15px;
+		margin-top: 5px;
 	}
 
 	&__item{
@@ -79,6 +80,10 @@
 	height: auto;
 	overflow:hidden;
 	margin-bottom: 6px;
+	display: none;
+	@include desde (base){
+		display: none;
+	}
 	ul{
 		margin: 0;
 		padding:0;

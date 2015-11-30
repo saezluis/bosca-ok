@@ -118,7 +118,7 @@
 			  
               <div id="accordion-1" class="accordion-section-content">
                 <div class="use--bosca">
-                  <div class="caja base-25 tablet-50 web-25 no-padding">
+                  <div class="caja base-100 tablet-50 web-25 no-padding">
                     <div class="col--use--bosca">
                       <h1>Calefactores eléctricos</h1>
                       <div class="lista--links">
@@ -141,7 +141,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="caja base-25 tablet-50 web-25 no-padding">
+                  <div class="caja base-100 tablet-50 web-25 no-padding">
                     <div class="col--use--bosca borde-r-t">
                       <h1>Estufas pellet</h1>
                       <div class="lista--links">
@@ -165,7 +165,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="caja base-25 tablet-50 web-25 no-padding">
+                  <div class="caja base-100 tablet-50 web-25 no-padding">
                     <div class="col--use--bosca">
                       <h1>Estufas leña</h1>
                       <div class="lista--links">
@@ -187,7 +187,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="caja base-25 tablet-50 web-25 no-padding">
+                  <div class="caja base-100 tablet-50 web-25 no-padding">
                     <div class="col--use--bosca yes-border-r">
                       <h1>Calderas</h1>
                       <div class="lista--links">

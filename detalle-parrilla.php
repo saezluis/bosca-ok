@@ -219,8 +219,13 @@ if(isset($_POST['cotizar_prod'])) {
       </div>
     </section>
     <section class="grupo margen-top">
-      <div class="caja movil-40">
+      <div class="caja movil-40 tablet-40 web-40">
         <div class="full--ficha">
+        <!--para movil-->
+          <div class="foto--producto-movil"><img src="img/<?php echo $foto; ?>">
+            <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+          </div>
+        <!--fin para movil-->
           <div class="foto--producto-big"><img src="img/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/<?php echo $foto_zoom; ?>">
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
           </div>
@@ -246,8 +251,8 @@ if(isset($_POST['cotizar_prod'])) {
 		    if($cond == -1){
 				echo "<img src=\"img/ecoflame360.png\">";
 			}else{
-				echo "<p><h2>$modelo</h2></p>";
-				echo "<p><h5><b>$nombre</b></h5></p>";
+				echo "<h2>$modelo</h2>";
+				echo "<h5><b>$nombre</b></h5>";
 			}			
 		  ?>
             <p class="sku">SKU: <?php echo $sku; ?></p>

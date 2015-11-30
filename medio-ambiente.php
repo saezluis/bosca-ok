@@ -10,6 +10,8 @@
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="sass/tema/js/scripts.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="js/tab-res/jQueryTab.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="js/tab-res/animation.css" type="text/css" media="screen" />
 	
 	<script type="text/javascript">
 
@@ -107,7 +109,7 @@
         </div>
         <div class="caja movil-70">
           <div class="side-ellos">
-            <ul class="tabs">
+<!--             <ul class="tabs">
               <li class="font-t">
                 <input id="tab1" type="radio" checked="" name="tabs">
                 <label for="tab1">Certificaciones ambientales</label>
@@ -129,7 +131,7 @@
                     <div class="logo--item"><img src="img/enviroment-agency.jpg" alt=""></div>
                     <div class="logo--item"><img src="img/ce.jpg" alt=""></div>
                   </div>
-                  <!-- Your content goes here-->
+                 
                 </div>
               </li>
               <li class="font-t">
@@ -137,7 +139,7 @@
                 <label for="tab2">Nuevas Campañas</label>
                 <div id="tab-content2" class="tab-content">
                   <h3 class="font-lena">Falta contenido</h3>
-                  <!-- Your content goes here-->
+                  
                 </div>
               </li>
               <li class="font-t">
@@ -168,10 +170,72 @@
                   </table><a href="pdf/manual-lenito.pdf" target="_blank" class="lenito">Descarga el uso adecuado de la leña</a>
                   <h3 class="Tcamara">Tecnología en cámara </h3>
                   <p>Falta contenido</p>
-                  <!-- Your content goes here-->
+                 
                 </div>
               </li>
-            </ul>
+            </ul> -->
+            <div class="tabs-7">
+              <ul class="tabsMedio">
+                    <li><a href="#tab25">Certificaciones ambientales</a></li>
+                    <li><a href="#tab26">Nuevas Campañas</a></li>
+                    <li><a href="#tab27">Combatiendo la contaminación</a></li>
+                </ul>
+              <section class="tab_content_wrapper">
+                    <article class="tab_content" id="tab25">
+                      <p class="certificacion-amb">
+                        Con 30 años de experiencias Bosca Chile se destaca por ser un referente en
+                        el mercado por sus productos de alta calidad, innovación y tecnología.
+                        Desde un comienzo preocupada por el impacto ambiental destaca por ser la
+                        primera empresa Latinoamericana en certificar sus productos ante la EPA
+                        (USA) y en obtener la homologación CE(Comunidad Europea) . <br/><br/>Nuestros
+                        productos de calefacción a leña cuentan con certificaciones que cumplen
+                        con altos estándares de exigencia que miden emisión de partículas y
+                        gaseosas, seguridad y rendimiento, tanto en Chile como en el resto del
+                        mundo.
+                      </p>
+                      <div class="logos--certificacion">
+                        <div class="logo--item"><img src="img/standard-new-zealand.jpg" alt=""></div>
+                        <div class="logo--item"><img src="img/sec.jpg" alt=""></div>
+                        <div class="logo--item"><img src="img/enviroment-agency.jpg" alt=""></div>
+                        <div class="logo--item"><img src="img/ce.jpg" alt=""></div>
+                      </div>
+                    </article>
+                    <article class="tab_content" id="tab26">
+                      <h3 class="font-lena">Falta contenido</h3>
+                    </article>
+                    <article class="tab_content" id="tab27">
+                      <p class="certificacion-amb">Al hablar de  leña como combustible hay que tener en consideración tres aspectos fundamentales: la humedad de la madera,  la tecnología de la cámara de combustión y costumbre de los usuarios.</p>
+                      <h3 class="font-lena">Leña seca </h3>
+                      <p class="certificacion-amb"> El uso de leña seca incide positivamente en la reducción de la contaminación, específicamente, en la generación de material particulado. Estudios han demostrado que el proceso de combustión se ve optimizado (aumentando el calor y dismuyendo los contaminantes) cuando la madera contiene un 25% o menos de humedad. Por lo tanto, existe mayor eficiencia y menor contaminación al disminuir el nivel de agua existente en la leña.</p>
+                      <p class="certificacion-amb">Es necesario, tomar en consideración que la leña como energía renovable tiene un efecto neutro sobre el balance de CO2 en la atmósfera , sin contribuir al efecto invernadero,  si es obtenida a partir de bosques que son manejados de manera sustentable.</p>
+                      <table class="tg">
+                        <tr>
+                          <th class="tg-s6z2">Humedad </th>
+                          <th class="tg-031e">kcal/kg</th>
+                        </tr>
+                      <tr>
+                          <td class="tg-031e">Madera verde</td>
+                          <td class="tg-031e">1800-2500</td>
+                      </tr>
+                      <tr>
+                          <td class="tg-031e">Secada naturalmente</td>
+                          <td class="tg-031e">3400-3800</td>
+                      </tr>
+                      <tr>
+                          <td class="tg-031e">Secada artificialmente</td>
+                          <td class="tg-031e">4100-4500</td>
+                      </tr>
+                      </table><a href="pdf/manual-lenito.pdf" target="_blank" class="lenito">Descarga el uso adecuado de la leña</a>
+                      <h3 class="Tcamara">Tecnología en cámara </h3>
+                      <p>Falta contenido</p>
+                      <!-- Your content goes here-->
+                    </article>
+                    <article class="tab_content" id="tab28">
+                        <p>Contact erat pugnabant diffundi pondere temperiemque. Sole liquidas emicuit mundo pro secant. <a href="#tab1">Contact</a> aer nuper habentem tum in. Secant origine inposuit diverso zonae nubes nulli mundum sectamque.</p>
+                        <p>Contact animalibus circumfluus ignea fert. Undas instabilis coercuit porrexerat. Uno legebantur plagae coeptis. Tanta opifex margine locis omnia obsistitur dispositam sublime erant. Fixo ubi mutatas tuba.</p>
+                    </article>
+                </section>
+            </div>
           </div>
         </div>
       </div>
@@ -203,5 +267,16 @@
         </div>
       </div>
     </footer>
+    <script src="js/tab-res/jQueryTab.js"></script>
+    <script type="text/javascript">
+    
+      $('.tabs-7').jQueryTab({
+          initialTab:1,
+          tabInTransition: 'fadeIn',
+          tabOutTransition: 'fadeOut',
+          cookieName: 'active-tab-7'  
+      });
+     
+    </script>
   </body>
 </html>

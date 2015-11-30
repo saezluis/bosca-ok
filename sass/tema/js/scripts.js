@@ -141,20 +141,21 @@ $(document).ready(function() {
 
 //Styky menu
 
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){  
-    $('header').addClass("sticky");
-    $('.banner').addClass("sticky-banner");
-    $('#logos_juntos').addClass("sticky-logos_juntos");
-  }
-  else{
-    $('header').removeClass("sticky");
-    $('.banner').removeClass("sticky-banner");
-    $('#logos_juntos').removeClass("sticky-logos_juntos");
-  }
-});
+// $(window).scroll(function() {
+// if ($(this).scrollTop() > 1){  
+//     $('header').addClass("sticky");
+//     $('.banner').addClass("sticky-banner");
+//     $('#logos_juntos').addClass("sticky-logos_juntos");
+//   }
+//   else{
+//     $('header').removeClass("sticky");
+//     $('.banner').removeClass("sticky-banner");
+//     $('#logos_juntos').removeClass("sticky-logos_juntos");
+//   }
+// });
 
 
   
 // jQuery
+
 

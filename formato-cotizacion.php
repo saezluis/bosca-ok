@@ -137,12 +137,12 @@ session_start();
       <div id="logo-print"><a href="index.php"><img src="img/logo-print.png"></a></div>
     </div>
     <div id="print" class="grupo">
-      <div class="caja base-50">
+      <div class="caja base-100	">
         <h1>Cotización</h1>
       </div>
 	  <?php
 		  if($tipo_cotizacion=='boleta'){						
-			echo "<div class=\"caja base-25\">";
+			echo "<div class=\"caja base-100 web-25\">";
 			echo "<ul class=\"first\">";
 			  echo "<li>Sr./a: <span> $nombre $apellido </span></li>";
 			  echo "<li>RUT: <span> $rut </span></li>";
@@ -150,7 +150,7 @@ session_start();
 			  echo "<li>Calle: <span> $calleDespacho </span></li>";
 			echo "</ul>";
 		  echo "</div>";
-		  echo "<div class=\"caja base-25 no-padding\">";
+		  echo "<div class=\"caja base-100 web-75 no-padding\">";
 			echo "<ul class=\"second\">";
 			  echo "<li>Tel/cel:<span> $telefono </span></li>";
 			  echo "<li>Mail:<span> $email </span></li>";
@@ -183,14 +183,14 @@ session_start();
     </div>
     <div class="grupo no-padding">
       <div id="print-data">
-        <div class="caja base-30">
+        <div class="caja base-50">
 		<!-- Hago el insert y luego saco el ultimo id_corizacion -->
           <h2>Número de cotización</h2>
 		  <?php
           echo "<p>$last_id</p>";
 		  ?>
         </div>
-        <div class="caja base-30">
+        <div class="caja base-50">
 		  <!-- agarro la fecha del sistema en php, esa misma fecha la deberia de guardar en BD-->
           <h2>Fecha</h2>
 		  <?php
@@ -205,7 +205,7 @@ session_start();
     <div class="grupo no-padding">
 	
       <div id="print-items-cajas">
-        <div class="caja base-40">
+        <div class="caja base-20">
           <h3>ítem</h3>
         </div>
         <div class="caja base-20">

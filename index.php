@@ -16,9 +16,8 @@ if(isset($_POST['cotizar_prod'])) {
 <html lang="es">
 <head>
   <title>Productos / Bosca</title>
-    <!--
-	<meta charset="utf-8">
--->
+
+<meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
 <link rel="stylesheet" href="css/style.css">
@@ -87,8 +86,8 @@ function validarmail(){
         <h1><a href="index.php" class="logo_m">ir al inicio</a></h1>
       </div>
       <div class="caja web-70">
-        <div id="flags" style="margin-bottom:15px;"><!--quitar esto para mostrar banderas de idioma-->
-          <ul  style="display:none;">
+        <div id="flags"><!--quitar esto para mostrar banderas de idioma-->
+          <ul>
             <li><a href="#" class="spanish"><img src="img/chile.gif"></a></li>
             <li><a href="#" class="english"><img src="img/uk.gif"></a></li>
           </ul>
@@ -138,9 +137,9 @@ function validarmail(){
     </div>
   </section>
   <section class="grupo margen-top">
-    <div class="caja">
+    <div class="caja base-100 movil-50 tablet-50 web-50">
       <div class="imagenes">
-        <div class="imagen--item">
+        <div class="imagen---item">
           <div class="container-a4">
             <ul class="caption-style-4">
               <li><img src="img/calefaccion.png">
@@ -153,7 +152,11 @@ function validarmail(){
             </ul>
           </div>
         </div>
-        <div class="imagen--item">
+      </div>
+    </div>
+    <div class="caja base-100 movil-50 tablet-50 web-50">
+      <div class="imagenes">
+        <div class="imagen---item">
           <div class="container-a4">
             <ul class="caption-style-4">
               <li><img src="img/terrazas.png">
@@ -166,12 +169,15 @@ function validarmail(){
             </ul>
           </div>
         </div>
-        <div class="imagen--item">
+      </div>
+    </div>
+    <div class="caja base-100 movil-50 tablet-50 web-50">
+      <div class="imagenes">
+        <div class="imagen---item">
           <div class="container-a4">
             <ul class="caption-style-4">
               <li><img src="img/cocina.png">
-                <p class="cinta">Cocina y calderas
-                </p>
+                <p class="cinta">Cocina y calderas</p>
                 <div class="caption">
                   <div class="blur"></div>
                   <div class="caption-text"><a href="cocina-calderas.php" class="see">Ver</a></div>
@@ -180,7 +186,11 @@ function validarmail(){
             </ul>
           </div>
         </div>
-        <div class="imagen--item">
+      </div>
+    </div>
+    <div class="caja base-100 movil-50 tablet-50 web-50">
+      <div class="imagenes">
+        <div class="imagen---item">
           <div class="container-a4">
             <ul class="caption-style-4">
               <li><img src="img/ventilacion.jpg">
