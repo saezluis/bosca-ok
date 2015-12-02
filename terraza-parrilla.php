@@ -86,8 +86,22 @@ if(isset($_POST['cotizar_prod'])) {
 		  return( true );
 
 		}
-
+		
+		function comentario(){
+			alert('Su comentario fue recibido satisfactoriamente. Lo contactaremos a la brevedad.');
+		}
+		
 		</script>
+		
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-70935704-1', 'auto');
+		ga('send', 'pageview');
+	</script>	
       
     </head>
     <body>
@@ -99,7 +113,15 @@ if(isset($_POST['cotizar_prod'])) {
 	 $conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
      $acentos = $conexion->query("SET NAMES 'utf8'");				
      
+	
+	 
      $variable = @$_REQUEST['opcion'];
+	 /*
+	  if(@$_GET['deta']!=''){
+		 $variable = @$_GET['deta'];
+	 }
+	 */
+	 
      $valor_busqueda = @$_REQUEST['valor_busqueda'];
      $campo_select = @$_REQUEST['select'];
      $desde = @$_REQUEST['desde'];
@@ -179,7 +201,7 @@ if(isset($_POST['cotizar_prod'])) {
 	}
 	
 	if($variable=='valor3'){
-		$registros=mysqli_query($conexion,"select * from accparrilla") 
+		$registros=mysqli_query($conexion,"select * from accparrilla ORDER BY precio ASC") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 		
@@ -251,15 +273,16 @@ if(isset($_POST['cotizar_prod'])) {
   
   <div class="collapsible">
     <button> </button>
-    <form class="desple">
+    <form class="desple" method="post" action="procesar-contactanos.php">
       <div id="servicio--cliente">
         <p>Servicio al cliente 800 200 567</p>
       </div>
       <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
-      <input type="text" name="" value="" placeholder="Ingresa nombre">
-      <input type="mail" name="" value="" placeholder="ingresa tu mail">
-      <input type="text" name="" value="" placeholder="Asunto">
-      <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
+      <input type="text" name="nombre" placeholder="Ingresa nombre" >
+      <input type="mail" name="email" placeholder="ingresa tu mail" >
+      <input type="text" name="asunto" placeholder="Asunto" >
+      <textarea type="text-area" name="comentario" ></textarea>
+	  <a href="#" class="send" onclick="comentario(); $(this).closest('form').submit();">Enviar</a>
     </form>
   </div><a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
   <header id="header">
@@ -436,7 +459,7 @@ if(isset($_POST['cotizar_prod'])) {
 		
 		
 		<?php
-		
+			/*
 		if ($variable=='' OR $variable=='valor0'){					
 			echo "<div class=\"imagen--productos electrico\">";
 				echo "<div class=\"logo--marca--float\"><img src=\"img/mini-bosca.png\"></div>";
@@ -454,7 +477,8 @@ if(isset($_POST['cotizar_prod'])) {
 				  echo "</ul>";
 				echo "</div>";
 			echo "</div>";		
-        }	      
+        }	  
+		*/
         ?>
 		
       </div>

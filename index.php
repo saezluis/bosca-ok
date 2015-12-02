@@ -47,7 +47,23 @@ function validarmail(){
 
 }
 
+function comentario(){
+	alert('Su comentario fue recibido satisfactoriamente. Lo contactaremos a la brevedad.');
+}
+
 </script>	
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70935704-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 
 </head>
 <body>
@@ -69,15 +85,16 @@ function validarmail(){
 	?>
   <div class="collapsible">
     <button> </button>
-    <form class="desple">
+    <form class="desple" method="post" action="procesar-contactanos.php">
       <div id="servicio--cliente">
         <p>Servicio al cliente 800 200 567</p>
       </div>
       <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
-      <input type="text" name="" value="" placeholder="Ingresa nombre">
-      <input type="mail" name="" value="" placeholder="ingresa tu mail">
-      <input type="text" name="" value="" placeholder="Asunto">
-      <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
+      <input type="text" name="nombre" placeholder="Ingresa nombre" >
+      <input type="mail" name="email" placeholder="ingresa tu mail" >
+      <input type="text" name="asunto" placeholder="Asunto" >
+      <textarea type="text-area" name="comentario" ></textarea>
+	  <a href="#" class="send" onclick="comentario(); $(this).closest('form').submit();">Enviar</a>
     </form>
   </div><a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
   <header id="header">
@@ -111,7 +128,19 @@ function validarmail(){
       <div class="banner">
         <div id="owl-demo" class="owlcarousel owl-theme">          
           <div class="item"><img src="img/banner-navidad.jpg"></div>      
-          <div class="item"><img src="img/bg_banner.jpg"></div>    
+          <?php
+		  
+		  $var = 'valor3';
+		  
+		  echo "<form method=\"post\" action=\"calefaccion.php\">";
+		  echo "<input type=\"text\" name=\"opcion\" value=\"valor1\" hidden=hidden >";		  
+		  echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img src=\"img/banner_climastar.jpg\"> </a> </div>";		  
+		  echo "</form>";
+		
+		//echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img data-src=\"img-pt/$foto\" title=\"$modelo\" class=\"lazyOwl\"> </a></div>";	
+		
+		  ?>
+		  <div class="item"><img src="img/bg_banner.jpg"></div>    
         </div>
       </div>
     </div>

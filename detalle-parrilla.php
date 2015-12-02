@@ -57,7 +57,21 @@ if(isset($_POST['cotizar_prod'])) {
 		  return( true );
 
 		}
+		
+		function comentario(){
+			alert('Su comentario fue recibido satisfactoriamente. Lo contactaremos a la brevedad.');
+		}
 
+	</script>
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-70935704-1', 'auto');
+		ga('send', 'pageview');
 	</script>
 	
   </head>
@@ -140,6 +154,7 @@ if(isset($_POST['cotizar_prod'])) {
 		$atributo_04 = @$reg['atributo_04'];
 		$atributo_05 = @$reg['atributo_05'];
 		$atributo_06 = @$reg['atributo_06'];
+		$ficha_t = $reg['ficha_tecnica'];
 		
 		
 		$sku = $reg['sku'];			
@@ -149,16 +164,17 @@ if(isset($_POST['cotizar_prod'])) {
 	
     <div class="collapsible">
       <button> </button>
-      <form class="desple">
-        <div id="servicio--cliente">
-          <p>Servicio al cliente 800 200 567</p>
-        </div>
-        <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
-        <input type="text" name="" value="" placeholder="Ingresa nombre">
-        <input type="mail" name="" value="" placeholder="ingresa tu mail">
-        <input type="text" name="" value="" placeholder="Asunto">
-        <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
-      </form>
+      <form class="desple" method="post" action="procesar-contactanos.php">
+      <div id="servicio--cliente">
+        <p>Servicio al cliente 800 200 567</p>
+      </div>
+      <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
+      <input type="text" name="nombre" placeholder="Ingresa nombre" >
+      <input type="mail" name="email" placeholder="ingresa tu mail" >
+      <input type="text" name="asunto" placeholder="Asunto" >
+      <textarea type="text-area" name="comentario" ></textarea>
+	  <a href="#" class="send" onclick="comentario(); $(this).closest('form').submit();">Enviar</a>
+    </form>
     </div><a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
     <header id="header">
       <div class="grupo">
@@ -223,11 +239,15 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="full--ficha">
         <!--para movil-->
           <div class="foto--producto-movil"><img src="img/<?php echo $foto; ?>">
+		  <!--
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+			-->
           </div>
         <!--fin para movil-->
           <div class="foto--producto-big"><img src="img/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/<?php echo $foto_zoom; ?>">
+		  <!--
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+			-->
           </div>
           <div id="demo-container"></div>
         </div>
@@ -314,8 +334,18 @@ if(isset($_POST['cotizar_prod'])) {
 			  </ul>	
 				</div>
 			
-			<a href="#" class="descarga--fichas">Descargar ficha técnica en pdf </a>
+			<?php 
+			if($ficha_t!=''){
+						  echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf </a>"; 
+					  }else{						  
+							//echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
+					  }
+			
+			
+			?>
+			<!--
 			<a href="#" class="descarga--fichas">Descargar manual de uso en pdf	</a>
+			-->
           </div>
 		  
         </div>
@@ -323,7 +353,7 @@ if(isset($_POST['cotizar_prod'])) {
           <h5>productos relacionados</h5>
           <div id="owl-demo2" class="owlcarousel">
 			<?php
-				
+				/*
 				if($atributo_06=='electrica'){
 					$productosRelacionados=mysqli_query($conexion,"select * from parrilla where sku != '$detalle_producto' and atributo_06 = 'electrica'")
 					or die("Problemas en el select:".mysqli_error($conexion));	
@@ -343,15 +373,26 @@ if(isset($_POST['cotizar_prod'])) {
 					$productosRelacionados=mysqli_query($conexion,"select * from parrilla where sku != '$detalle_producto' and atributo_06 = 'mueble'")
 					or die("Problemas en el select:".mysqli_error($conexion));	
 				}
-								
+					*/
+				
+				$productosRelacionados=mysqli_query($conexion,"select * from accparrilla ORDER BY precio ASC")
+				or die("Problemas en el select:".mysqli_error($conexion));	
+				
+					
 				while($proRel=mysqli_fetch_array($productosRelacionados)){
 					$foto = $proRel['foto_producto'];
-					$var = $proRel['sku'];
+					$var = 'valor3';
 					$modelo = $proRel['modelo'];
 					
-					echo "<div class=\"item\"><a href=\"detalle-parrilla.php?deta=",urlencode($var)," \"><img data-src=\"img-pt/$foto\" title=\"$modelo\" class=\"lazyOwl\"></a></div>";	
+					echo "<form method=\"post\" action=\"terraza-parrilla.php\">";
+					echo "<input type=\"text\" name=\"opcion\" value=\"valor3\" hidden=hidden >";
 					
+					echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img data-src=\"img-pt/$foto\" title=\"$modelo\" class=\"lazyOwl\"> </a></div>";	
 					
+					echo "</form>";
+					//<a href=\"terraza-parrilla.php?deta=",urlencode($var)," \">
+					
+					//<a href="terraza-parrilla.php" onclick="$(this).closest('form').submit()">Submit Link</a>
 				}				
 				
 			?>

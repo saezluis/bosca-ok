@@ -11,6 +11,10 @@
     <script src="sass/tema/js/scripts.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
 	
+	<link rel="stylesheet" type="text/css" href="css/drop.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
 	<script type="text/javascript">
 
 		function validarmail(){
@@ -251,6 +255,67 @@
 
 	</script>
 	
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			//alert('test');
+			$("#div1").load("huechuraba.php");
+		});
+		
+		function Vregion(){
+			$("#div1").load("Vregion.php");
+		}
+		
+		function huechuraba(){
+			$("#div1").load("huechuraba.php");
+		}
+		
+		function Chicureo(){
+			$("#div1").load("chicureo.php");
+		}
+		
+		function Vitacura(){
+			$("#div1").load("vitacura.php");
+		}
+		
+		function VIregion(){
+			$("#div1").load("VIregion.php");
+		}
+		
+		function Concepcion(){
+			$("#div1").load("concepcion.php");
+		}
+		
+		function SanPedro(){
+			$("#div1").load("san-pedro.php");
+		}
+		
+		function Temuco(){
+			$("#div1").load("Temuco.php");
+		}
+		
+		function PuertoMontt(){
+			$("#div1").load("PuertoMontt.php");
+		}
+		
+		
+		
+		function comentario(){
+			alert('Su comentario fue recibido satisfactoriamente. Lo contactaremos a la brevedad.');
+		}
+	
+	</script>
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-70935704-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	
   </head>
   <body>
 	
@@ -273,16 +338,17 @@
 	
     <div class="collapsible">
       <button> </button>
-      <form class="desple">
-        <div id="servicio--cliente">
-          <p>Servicio al cliente 800 200 567</p>
-        </div>
-        <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
-        <input type="text" name="" value="" placeholder="Ingresa nombre">
-        <input type="mail" name="" value="" placeholder="ingresa tu mail">
-        <input type="text" name="" value="" placeholder="Asunto">
-        <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
-      </form>
+      <form class="desple" method="post" action="procesar-contactanos.php">
+		<div id="servicio--cliente">
+			<p>Servicio al cliente 800 200 567</p>
+		</div>
+		<h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
+		<input type="text" name="nombre" placeholder="Ingresa nombre" >
+		<input type="mail" name="email" placeholder="ingresa tu mail" >
+		<input type="text" name="asunto" placeholder="Asunto" >
+		<textarea type="text-area" name="comentario" ></textarea>
+		<a href="#" class="send" onclick="comentario(); $(this).closest('form').submit();">Enviar</a>
+	  </form>
     </div><a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
     <header id="header">
       <div class="grupo">
@@ -325,356 +391,43 @@
         </div>
         <div class="caja movil-70">
           <div class="side-ellos">
-            <ul class="tabs">
-
-				
-				
 			
 			
-				<!-- 
-				
-				
-				V region 
-				
-				
-				-->	
-              <li>
-                <input id="tab1" type="radio"  name="tabs">
-                <label for="tab1">V Región</label>
-                <div id="tab-content1" class="tab-content">
-                  <h3>Viña del Mar</h3>
-                  <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.6004785678447!2d-71.54987429999998!3d-33.01430709999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689dde7e8651a8b%3A0x354ff995ba997777!2sLibertad%2C+Vi%C3%B1a+del+Mar%2C+Regi%C3%B3n+de+Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1435301453016" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                  </div>
-                  <div class="data-direcciones">
-                    <p class="jefe--tienda">Jefe de Tienda</p>
-                    <p class="nombre--jefe--tienda">Jazmín Valencia</p>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Teléfonos</p>
-                        <li class="color-gris">(032) 2686026</li>
-                        <li class="color-gris">(032) 2686118</li>
-                        <li class="color-gris">(032) 2686031</li>
-                      </ul>
-                    </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>Av. Libertad 1040, Esquina 11 1/2 Norte.</p>
-                  </div>
+			<nav id="primary_nav_wrap">
+				<ul>
+					<li>
+						<a onClick="Vregion();" href="#">V Region</a>
+					</li>
+					<li class="current-menu-item"><a href="#">RM</a>
+						<ul>
+							<li><a onClick="huechuraba();" href="#">Huechuraba</a></li>							
+							<li><a onClick="Chicureo();" href="#">Chicureo</a></li>
+							<li><a onClick="Vitacura();" href="#">Vitacura</a></li>					  
+						</ul>	
+					</li>					
+					<li><a onClick="VIregion();" href="#">VI Region</a></li>
+					<li><a href="#">VIII Region</a>
+						<ul>
+							<li><a onClick="Concepcion();" href="#">Concepción</a></li>
+							<li><a onClick="SanPedro();" href="#">San Pedro de la Paz</a></li>
+						</ul>
+					</li>						
+					<li><a href="#">IX Region</a>
+						<ul>
+							<li><a onClick="Temuco();" href="#">Temuco</a></li>
+							<li><a onClick="PuertoMontt();" href="#">Puerto Montt</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			
+			<div id="div1">
+			
+			</div>
 				  
-                  <form method="post" name="Vregion" accept-charset="utf-8" class="form--encuentranos">
-                    <h2>Contáctanos</h2>
-                    <div class="lado--a">
-                      <p class="label">Nombre y apellido</p>
-						<input type="text" name="nombre_apellido" placeholder="" class="is--not">
-                      <p class="label">Mail</p>
-						<input name="mail" type="email" placeholder="" class="is--not">
-                    </div>
-                    <div class="lado--b">
-                      <p class="label">Teléfono</p>
-						<input type="text" name="telefono"  placeholder="" class="is--not">
-                      <p class="label">Motivo</p>
-						<input type="text" name="motivo"  placeholder="" class="is--not">
-                    </div>
-                    <textarea name="comentario" class="text-area"></textarea>
-					
-					<input type="text" name="region" value="V Region" hidden=hidden>
-					
-                    <button type="submit" class="enviar--encuentranos" onclick="return(validarVRegion())" formaction="registro-encuentranos.php">Enviar</button>
-					
-                  </form>
-
-                </div>
-              </li>
-			  
-			  
-			    <!-- 
-				
-				
-				RM 
-				
-				
-				-->	
-              <li>
-                <input id="tab2" type="radio" checked="" name="tabs">
-                <label for="tab2">RM</label>
-                <div id="tab-content2" class="tab-content">
-                  <h3>Casa Matriz / Huechuraba</h3>
-                  <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13328.784548046824!2d-70.6881358!3d-33.3659451!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e1d98caaae546e!2sIngenieria+de+Combustion+Bosca+Chile!5e0!3m2!1ses!2scl!4v1435303675223" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                  </div>
-                  <div class="data-direcciones">
-                    <p class="jefe--tienda">Jefe de Tienda</p>
-                    <p class="nombre--jefe--tienda">Demetrio Larraín</p>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Teléfonos</p>
-                        <li class="color-gris">(02) 2328 8538</li>
-                      </ul>
-                    </div>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Fax Gerencia</p>
-                        <li class="color-gris">(02) 2624 1891</li>
-                      </ul>
-                    </div>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Fax Servicio Técnico</p>
-                        <li class="color-gris">(02) 2624 1891</li>
-                      </ul>
-                    </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>Av. Américo Vespucio 2077, Huechuraba</p>
-                  </div>
-				  
-                  <form method="post" name="RM" accept-charset="utf-8" class="form--encuentranos">
-                    <h2>Contáctanos</h2>
-                    <div class="lado--a">
-                      <p class="label">Nombre y apellido</p>
-                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
-                      <p class="label">Mail</p>
-                      <input type="text" name="mail" value="" placeholder="" class="is--not">
-                    </div>
-                    <div class="lado--b">
-                      <p class="label">Teléfono</p>
-                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
-                      <p class="label">Motivo</p>
-                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
-                    </div>
-                    <textarea name="comentario" class="text-area"></textarea>
-					
-					<input type="text" name="region" value="RM" hidden=hidden>
-					
-                    <button type="submit" class="enviar--encuentranos" onclick="return(validarRM())" formaction="registro-encuentranos.php">Enviar</button>
-                  </form>
                   <!-- Your content goes here-->
-                </div>
-              </li>
-			  
-		  
-			  <!-- 
-				
-				
-				VI region 
-				
-				
-				-->	
-              <li>
-                <input id="tab3" type="radio" name="tabs">
-                <label for="tab3">VI Región</label>
-                <div id="tab-content3" class="tab-content">
-                  <h3>Rancagua</h3>
-                  <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.9904005130415!2d-70.7355058!3d-34.172163100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966343417059ba1b%3A0x536cc6b37a2e5595!2sRam%C3%B3n+Freire+%26+O'carrol%2C+Rancagua%2C+VI+Regi%C3%B3n!5e0!3m2!1ses!2scl!4v1435304001620" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                  </div>
-                  <div class="data-direcciones">
-                    <p class="jefe--tienda">Jefe de Tienda</p>
-                    <p class="nombre--jefe--tienda">José Antonio Elortegui</p>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Teléfonos</p>
-                        <li class="color-gris">(9) 68326735</li>
-                        <li class="color-gris">(072)-2426768</li>
-                      </ul>
-                    </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>O’Carrol 11 Esq. Freire . Local 5, Rancagua.</p>
-                  </div>
-				  
-                  <form  method="post" name="VIregion" accept-charset="utf-8" class="form--encuentranos">
-                    <h2>Contáctanos</h2>
-                    <div class="lado--a">
-                      <p class="label">Nombre y apellido</p>
-                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
-                      <p class="label">Mail</p>
-                      <input type="text" name="mail" value="" placeholder="" class="is--not">
-                    </div>
-                    <div class="lado--b">
-                      <p class="label">Teléfono</p>
-                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
-                      <p class="label">Motivo</p>
-                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
-                    </div>
-                    <textarea name="comentario" class="text-area"></textarea>
-					
-                    <input type="text" name="region" value="VI Region" hidden=hidden>
-					
-                    <button type="submit" class="enviar--encuentranos" onclick="return(validarVIregion())" formaction="registro-encuentranos.php">Enviar</button>
-                  </form>
-                  <!-- Your content goes here-->
-                </div>
-              </li>
-			  
-			  
-			  
-			  
-			  <!-- 
-				
-				
-				VIII region 
-				
-				
-				-->	
-              <li>
-                <input id="tab4" type="radio" name="tabs">
-                <label for="tab4">VIII Región</label>
-                <div id="tab-content4" class="tab-content">
-                  <h3>Concepción</h3>
-                  <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.3943143666074!2d-73.05677039999999!3d-36.833031399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b5d93b15c4eb%3A0xed9084f5e5667feb!2zQXJ0dXJvIFByYXQgMjAyLCBDb25jZXBjacOzbiwgUmVnacOzbiBkZWwgQsOtbyBCw61v!5e0!3m2!1ses!2scl!4v1435304316493" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                  </div>
-                  <div class="data-direcciones">
-                    <p class="jefe--tienda">Jefe de Tienda</p>
-                    <p class="nombre--jefe--tienda">Clara Gajardo</p>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Teléfonos</p>
-                        <li class="color-gris">(041) 2235006</li>
-                        <li class="color-gris">(041) 2245687</li>
-                      </ul>
-                    </div>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Fax</p>
-                        <li class="color-gris">(041) 2219892</li>
-                      </ul>
-                    </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>Arturo Prat 202, Concepción.</p>
-                  </div>
-				  
-                  <form method="post" name="VIIIregion" accept-charset="utf-8" class="form--encuentranos">
-                    <h2>Contáctanos</h2>
-                    <div class="lado--a">
-                      <p class="label">Nombre y apellido</p>
-                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
-                      <p class="label">Mail</p>
-                      <input type="text" name="mail" value="" placeholder="" class="is--not">
-                    </div>
-                    <div class="lado--b">
-                      <p class="label">Teléfono</p>
-                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
-                      <p class="label">Motivo</p>
-                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
-                    </div>
-                    <textarea name="comentario" class="text-area"></textarea>
-					
-					<input type="text" name="region" value="VIII Region" hidden=hidden>
-					
-                    <button type="submit" class="enviar--encuentranos" onclick="return(validarVIIIregion())" formaction="registro-encuentranos.php">Enviar</button>
-                  </form>
-                  <!-- Your content goes here-->
-                </div>
-              </li>
-			  
-			  
-			  
-			  
-			  <!-- 
-				
-				
-				IX region 
-				
-				
-				-->	
-              <li>
-                <input id="tab5" type="radio" name="tabs">
-                <label for="tab5">IX Región</label>
-                <div id="tab-content5" class="tab-content">
-                  <h3>Temuco</h3>
-                  <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2765087388266!2d-72.6123319!3d-38.7344166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f67b1260a5%3A0xf2cf98dabe226391!2sAlemania+715%2C+Temuco%2C+IX+Regi%C3%B3n!5e0!3m2!1ses!2scl!4v1435304608155" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                  </div>
-                  <div class="data-direcciones">
-                    <p class="jefe--tienda">Jefe de Tienda</p>
-                    <p class="nombre--jefe--tienda">Sergio Sáez</p>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Teléfonos</p>
-                        <li class="color-gris">(045) 263906</li>
-                      </ul>
-                    </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>Av. Alemania 0715, Temuco.</p>
-                  </div>
-                  <form method="post" name="IXregion" accept-charset="utf-8" class="form--encuentranos">
-                    <h2>Contáctanos</h2>
-                    <div class="lado--a">
-                      <p class="label">Nombre y apellido</p>
-                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
-                      <p class="label">Mail</p>
-                      <input type="text" name="mail" value="" placeholder="" class="is--not">
-                    </div>
-                    <div class="lado--b">
-                      <p class="label">Teléfono</p>
-                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
-                      <p class="label">Motivo</p>
-                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
-                    </div>
-                    <textarea name="comentario" class="text-area"></textarea>
-					
-					<input type="text" name="region" value="IX Region" hidden=hidden>
-					
-                    <button type="submit" class="enviar--encuentranos" onclick="return(validarIXregion())" formaction="registro-encuentranos.php">Enviar</button>
-                  </form>
-                  <!-- Your content goes here-->
-                </div>
-              </li>
-			  
-			  
-			  
-			  <!-- 
-				
-				
-				X region 
-				
-				
-				-->	
-              <li>
-                <input id="tab6" type="radio" name="tabs">
-                <label for="tab6">X Región</label>
-                <div id="tab-content6" class="tab-content">
-                  <h3>Puerto Montt</h3>
-                  <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2765087388266!2d-72.6123319!3d-38.7344166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f67b1260a5%3A0xf2cf98dabe226391!2sAlemania+715%2C+Temuco%2C+IX+Regi%C3%B3n!5e0!3m2!1ses!2scl!4v1435304608155" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                  </div>
-                  <div class="data-direcciones">
-                    <p class="jefe--tienda">Jefe de Tienda</p>
-                    <p class="nombre--jefe--tienda">Mauricio Hinojosa</p>
-                    <div class="telefonos">
-                      <ul>
-                        <p>Teléfonos</p>
-                        <li class="color-gris">(065) 313214</li>
-                      </ul>
-                    </div>
-                    <p class="horarios"><span class="atencion">Horario de atención</span><br>Lunes a viernes de 9:30 a 19:00 hrs. Sábados de 10:00 a 14:00 hrs.</p>
-                    <p class="horarios"><span class="atencion">Dirección</span><br>Caletera Presidente Ibáñez 328, Local A, esquina Circunvalación, Puerto Montt.</p>
-                  </div>
-				  
-                  <form method="post" name="Xregion" accept-charset="utf-8" class="form--encuentranos">
-                    <h2>Contáctanos</h2>
-                    <div class="lado--a">
-                      <p class="label">Nombre y apellido</p>
-                      <input type="text" name="nombre_apellido" value="" placeholder="" class="is--not">
-                      <p class="label">Mail</p>
-                      <input type="text" name="mail" value="" placeholder="" class="is--not">
-                    </div>
-                    <div class="lado--b">
-                      <p class="label">Teléfono</p>
-                      <input type="text" name="telefono" value="" placeholder="" class="is--not">
-                      <p class="label">Motivo</p>
-                      <input type="text" name="motivo" value="" placeholder="" class="is--not">
-                    </div>
-                    <textarea name="comentario" class="text-area"></textarea>
-					
-                    <input type="text" name="region" value="X Region" hidden=hidden>
-					
-                    <button type="submit" class="enviar--encuentranos" onclick="return(validarXregion())" formaction="registro-encuentranos.php">Enviar</button>
-                  </form>
-                  <!-- Your content goes here-->
-                </div>
-              </li>
-            </ul>
+            
+		   
           </div>
         </div>
       </div>

@@ -57,9 +57,23 @@ if(isset($_POST['cotizar_prod'])) {
 		  return( true );
 
 		}
+		
+		function comentario(){
+			alert('Su comentario fue recibido satisfactoriamente. Lo contactaremos a la brevedad.');
+		}
 
 	</script>
-	
+  
+   <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-70935704-1', 'auto');
+		ga('send', 'pageview');
+	</script>	
+  
   </head>
   <body>
 	<?php			
@@ -134,23 +148,30 @@ if(isset($_POST['cotizar_prod'])) {
 		$nombre = $reg['nombre'];	
 		$modelo = $reg['modelo'];	
 		$combustion = $reg['combustion'];	
+		$ficha_t = $reg['ficha_tecnica'];	
+		$sello_sec = $reg['sello_sec'];	
+		
+		$logo_detalle = $reg['logo_detalle'];
+		$mini_descripcion =	$reg['mini_descripcion'];
 		
 	}
-
+		
+	
 	?>
 	
     <div class="collapsible">
       <button> </button>
-      <form class="desple">
-        <div id="servicio--cliente">
-          <p>Servicio al cliente 800 200 567</p>
-        </div>
-        <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
-        <input type="text" name="" value="" placeholder="Ingresa nombre">
-        <input type="mail" name="" value="" placeholder="ingresa tu mail">
-        <input type="text" name="" value="" placeholder="Asunto">
-        <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
-      </form>
+      <form class="desple" method="post" action="procesar-contactanos.php">
+      <div id="servicio--cliente">
+        <p>Servicio al cliente 800 200 567</p>
+      </div>
+      <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
+      <input type="text" name="nombre" placeholder="Ingresa nombre" >
+      <input type="mail" name="email" placeholder="ingresa tu mail" >
+      <input type="text" name="asunto" placeholder="Asunto" >
+      <textarea type="text-area" name="comentario" ></textarea>
+	  <a href="#" class="send" onclick="comentario(); $(this).closest('form').submit();">Enviar</a>
+    </form>
     </div><a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
     <header id="header">
       <div class="grupo">
@@ -216,19 +237,34 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="full--ficha">
         <!--para movil-->
           <div class="foto--producto-movil"><img src="img/<?php echo $foto; ?>">
-            <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+		  
+		  <div class="mini--sec"></div>
+		  
+           
           </div>
         <!--fin para movil-->
           <div class="foto--producto-big"><img src="img/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/<?php echo $foto_zoom; ?>">
-            <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+             <div class="mini--sec"></div>
+		 
+		  <!--
+			<div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+		   -->
           </div>
           <div id="demo-container"></div>
         </div>
-        <div class="icon-pretaciones">
-          <input id="spoiler1" type="checkbox">
-          <label for="spoiler1">Ver sello SEC</label>
-          <div class="spoiler"> <img src="img/sello-limit360.gif" alt=""></div>
-        </div>
+        
+		<?php
+			
+			if($nombre=='Estufa a leña'){
+				echo "<div class=\"icon-pretaciones\">";
+				  echo "<input id=\"spoiler1\" type=\"checkbox\">";			  
+				  echo "<label for=\"spoiler1\">Ver sello SEC</label>";
+				  echo "<div class=\"spoiler\"> <img src=\"img2/$sello_sec\" alt=\"\"></div>";
+				echo "</div>";
+			}
+			
+		?>
+		
       </div>
       <div class="caja movil-60">
         <div class="full--ficha-datos">
@@ -261,29 +297,64 @@ if(isset($_POST['cotizar_prod'])) {
             </div>
           </div>
           <div class="caracteristicas--producto bor">
-            <p class="caracteristicas--titulo">características		</p>
-            <div class="caract--datos">
-              <ul>
-                <li>
-                  <p class="carga">Carga:  <span class="datos--d">Tipo Superior</span></p>
-                </li>
-                <li>
-                  <p class="potencia">Potencia:  <span class="datos--d"><?php echo $potencia; ?></span></p>
-                </li>
-                <li>
-                  <p class="calefa">Á. Calefacción: <span class="datos--d"><?php echo $area; ?></span></p>
-                </li>
-                <li>
-                  <p class="dimension">Dimensión: <span class="datos--d"><?php echo $dimension; ?>		</span></p>
-                </li>
-                <li>
-                  <p class="diametro">Diámetro de cañon: <span class="datos--d"><?php echo $diametro; ?></span></p>
-                </li>
-                <li>
-                  <p class="garantia">Garantía:  <span class="datos--d"><?php echo $garantia; ?></span><a href="#" class="pdf--condiciones">(ver condiciones)</a></p>
-                </li>
-              </ul>
-            </div><a href="#" class="descarga--fichas">Descargar ficha técnica en pdf		</a><a href="#" class="descarga--fichas">Descargar manual de uso en pdf	</a>
+		  <?php
+			if($logo_detalle=='climastar'){
+				echo "<p class=\"caracteristicas--titulo\">características</p>";
+            echo "<div class=\"caract--datos\">";
+              echo "<ul>";                
+                echo "<li>";
+                  echo "<p class=\"potencia\">Potencia:  <span class=\"datos--d\"> $potencia </span></p>";
+                echo "</li>";
+                echo "<li>";
+                  echo "<p class=\"calefa\">Á. Calefacción: <span class=\"datos--d\"> $area </span></p>";
+                echo "</li>";
+                echo "<li>";
+                  echo "<p class=\"dimension\">Dimensión: <span class=\"datos--d\"> $dimension </span></p>";
+                echo "</li>";                
+				echo "<li>";
+						  echo "<p class=\"diametro\">Tipo de control: <span class=\"datos--d\"> $mini_descripcion </span></p>";
+				echo "</li>";
+                echo "<li>";
+                  echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"> $garantia </span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
+                echo "</li>";
+              echo "</ul>";
+			  echo "</div>";
+             //echo "</div><a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
+			}else{
+					echo "<p class=\"caracteristicas--titulo\">características</p>";
+					echo "<div class=\"caract--datos\">";
+					  echo "<ul>";
+						echo "<li>";
+						  echo "<p class=\"carga\">Carga:  <span class=\"datos--d\">Tipo Superior</span></p>";
+						echo "</li>";
+						echo "<li>";
+						  echo "<p class=\"potencia\">Potencia:  <span class=\"datos--d\"> $potencia </span></p>";
+						echo "</li>";
+						echo "<li>";
+						  echo "<p class=\"calefa\">Á. Calefacción: <span class=\"datos--d\"> $area </span></p>";
+						echo "</li>";
+						echo "<li>";
+						  echo "<p class=\"dimension\">Dimensión: <span class=\"datos--d\"> $dimension </span></p>";
+						echo "</li>";
+						echo "<li>";
+						  echo "<p class=\"diametro\">Diámetro de cañon: <span class=\"datos--d\"> $diametro </span></p>";
+						echo "</li>";						
+						echo "<li>";
+						  echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"> $garantia </span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
+						echo "</li>";
+					  echo "</ul>";
+					  echo "</div>";
+					  if($ficha_t!=''){
+						  echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
+					  }else{						  
+							//echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
+					  }
+					 
+						//<!--
+						//<a href=\"\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>
+						//-->
+				}
+			?>
           </div>
         </div>
         <div class="relacionados">
@@ -302,7 +373,7 @@ if(isset($_POST['cotizar_prod'])) {
 				}
 				
 				if($combustion=='electrica'){
-					$productosRelacionados=mysqli_query($conexion,"select * from producto where sku != '$detalle_producto' and combustion = 'electrica'")
+					$productosRelacionados=mysqli_query($conexion,"select * from producto where sku != '$detalle_producto' and combustion = 'electrica' LIMIT 8")
 					or die("Problemas en el select:".mysqli_error($conexion));	
 				}
 								

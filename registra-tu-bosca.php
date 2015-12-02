@@ -151,7 +151,22 @@
 		  return( true );
 
 		}
+		
+		function comentario(){
+			alert('Su comentario fue recibido satisfactoriamente. Lo contactaremos a la brevedad.');
+		}
 
+
+	</script>
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-70935704-1', 'auto');
+		ga('send', 'pageview');
 	</script>
 	
   </head>
@@ -161,7 +176,7 @@
 	
 	include_once 'config.php';
 		
-	 $conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
+	$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	
 	if(isset($_REQUEST['nombres']) and isset($_REQUEST['email'])){
@@ -176,16 +191,17 @@
 	
     <div class="collapsible">
       <button> </button>
-      <form class="desple">
-        <div id="servicio--cliente">
-          <p>Servicio al cliente 800 200 567</p>
-        </div>
-        <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
-        <input type="text" name="" value="" placeholder="Ingresa nombre">
-        <input type="mail" name="" value="" placeholder="ingresa tu mail">
-        <input type="text" name="" value="" placeholder="Asunto">
-        <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
-      </form>
+      <form class="desple" method="post" action="procesar-contactanos.php">
+		<div id="servicio--cliente">
+			<p>Servicio al cliente 800 200 567</p>
+		</div>
+		<h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
+		<input type="text" name="nombre" placeholder="Ingresa nombre" >
+		<input type="mail" name="email" placeholder="ingresa tu mail" >
+		<input type="text" name="asunto" placeholder="Asunto" >
+		<textarea type="text-area" name="comentario" ></textarea>
+		<a href="#" class="send" onclick="comentario(); $(this).closest('form').submit();">Enviar</a>
+	  </form>
     </div>
 	<a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
     <header id="header">
@@ -254,19 +270,14 @@
               <label>Nombre del instalador</label>
               <select name="nombre_instalador" class="region">
                 <option value="-1">seleccionar</option>
-                <option value="">Nombre 1</option>
-                <option value="">Nombre 2</option>
-                <option value="">Nombre 3</option>
-                <option value="">Nombre 4</option>
-                <option value="">Nombre 5</option>
-                <option value="">Nombre 6</option>
-                <option value="">Nombre 7</option>
-                <option value="">Nombre 8</option>
-                <option value="">Nombre 9</option>
-                <option value="">Nombre 10</option>
-                <option value="">Nombre 11</option>
-                <option value="">Nombre 12</option>
-                <option value="">Nombre 13</option>
+				<?php
+					$registros=mysqli_query($conexion,"select * from servicio")or die("Problemas en el select:".mysqli_error($conexion));					
+					while($reg=mysqli_fetch_array($registros)){
+						$nombre = $reg['nombre'];	
+						
+						echo "<option value=\"$nombre\">$nombre</option>";
+					}
+                ?>				
               </select>
               <label>Ciudad</label>
               <input name="ciudad" type="text" class="ciudad">

@@ -56,8 +56,22 @@ if(isset($_POST['cotizar_prod'])) {
 		  return( true );
 
 		}
+		
+		function comentario(){
+			alert('Su comentario fue recibido satisfactoriamente. Lo contactaremos a la brevedad.');
+		}
 
 		</script>
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-70935704-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 	
   </head>
   <body>
@@ -142,6 +156,8 @@ if(isset($_POST['cotizar_prod'])) {
 			$logo_up_left = $reg['logo_up_left'];
 			$foto = $reg['foto_producto'];
 			
+			$ficha_t = $reg['ficha_tecnica'];
+			
 			
 		
 		}
@@ -150,16 +166,17 @@ if(isset($_POST['cotizar_prod'])) {
 	
     <div class="collapsible">
       <button> </button>
-      <form class="desple">
-        <div id="servicio--cliente">
-          <p>Servicio al cliente 800 200 567</p>
-        </div>
-        <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
-        <input type="text" name="" value="" placeholder="Ingresa nombre">
-        <input type="mail" name="" value="" placeholder="ingresa tu mail">
-        <input type="text" name="" value="" placeholder="Asunto">
-        <textarea type="text-area" name="" value=""></textarea><a href="#" class="send">Enviar</a>
-      </form>
+      <form class="desple" method="post" action="procesar-contactanos.php">
+      <div id="servicio--cliente">
+        <p>Servicio al cliente 800 200 567</p>
+      </div>
+      <h1 class="dudas">¿Tienes dudas sobre algunos de nuestros productos?</h1>
+      <input type="text" name="nombre" placeholder="Ingresa nombre" >
+      <input type="mail" name="email" placeholder="ingresa tu mail" >
+      <input type="text" name="asunto" placeholder="Asunto" >
+      <textarea type="text-area" name="comentario" ></textarea>
+	  <a href="#" class="send" onclick="comentario(); $(this).closest('form').submit();">Enviar</a>
+    </form>
     </div><a href="medio-ambiente.php" class="btn-compromiso">Compromiso verde<img src="img/compromiso-verde.jpg" alt=""></a>
     <header id="header">
       <div class="grupo">
@@ -225,19 +242,25 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="full--ficha">
         <!--para movil-->
           <div class="foto--producto-movil"><img src="img-ac/<?php echo $foto; ?>">
+		  <!--
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+			-->
           </div>
         <!--fin para movil-->
           <div class="foto--producto-big"><img src="img-ac/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/large/big.pngg">
+		  <!--
             <div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+			-->
           </div>
           <div id="demo-container"></div>
         </div>
+		<!--
         <div class="icon-pretaciones">
           <input id="spoiler1" type="checkbox">
           <label for="spoiler1">Ver sello SEC</label>
           <div class="spoiler"> <img src="img/sello-limit360.gif" alt=""></div>
         </div>
+		-->
       </div>
       <div class="caja movil-60">
         <div class="full--ficha-datos">
@@ -318,7 +341,8 @@ if(isset($_POST['cotizar_prod'])) {
 								echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"></span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
 							echo "</li>";
 						echo "</ul>";
-					echo "</div><a href=\"#\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a><a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>";
+						echo "</div>";
+					//echo "</div><a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>"; //<a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>
 				echo "</div>";
 			  
 			}
@@ -369,7 +393,7 @@ if(isset($_POST['cotizar_prod'])) {
 							echo "</li>";
 							
 						echo "</ul>";
-					echo "</div><a href=\"#\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a><a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>";
+					echo "</div><a href=\"#\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>"; //<a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>
 				echo "</div>";
 			  
 			}
@@ -394,7 +418,7 @@ if(isset($_POST['cotizar_prod'])) {
 							echo "</li>";
 							
 						echo "</ul>";
-					echo "</div><a href=\"#\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a><a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>";
+					echo "</div><a href=\"#\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>"; //<a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>
 				echo "</div>";
 			  
 			}
