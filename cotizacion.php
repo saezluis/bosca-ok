@@ -389,9 +389,9 @@ $(window).load(function() {
             <li class="menu__item"><a href="encuentranos.php" class="menu__link">Encuéntranos</a></li>
             <li class="menu__item"><a href="registra-tu-bosca.php" class="menu__link">Garantiza tu Bosca</a></li>
             <li class="menu__item"><a href="servicio-tecnico.php" class="menu__link">Servicio técnico</a></li>
-            <li class="menu__item"><a href="preguntas-frecuentes.html" class="menu__link">Preguntas frecuentes</a></li>
+            <li class="menu__item"><a href="preguntas-frecuentes.php" class="menu__link">Preguntas frecuentes</a></li>
           	<li class="menu__item"><a href="medio-ambiente.php" class="menu__link solo-movil">Medio Ambiente</a></li>
-            <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
+            <li class="menu__item"><a href="contacto.php" class="menu__link">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -427,6 +427,7 @@ $(window).load(function() {
 				$_SESSION['venti'] = array();
 				$_SESSION['accParri'] = array();
 				
+				$_SESSION['accLena'] = array();
 				
 				
 				for ($i = 0; $i < $tamano_nombres; $i++){
@@ -660,6 +661,53 @@ $(window).load(function() {
 						$total = $total + ($precio * $cantidad_productos);
 						
 						$_SESSION['accParri'][$w] = array('nombre' => $nombre,'modelo' => $modelo,'cantidad' => $cantidad_productos,'precio' => $precio,'sku' => $sku);
+						
+					}
+				}
+				
+				
+				for ($z= 0; $z < $tamano_nombres; $z++){
+					
+					//echo "Esto llevar el Array definitivo: ".$cotizar_esto[$i]['productoCotizar'];
+					$detalle_producto = $Arreglo_productos[$z];
+					$cantidad_productos = $Arreglo_cantidades[$z];
+					
+					//Con esta funcion elimino valores duplicados del array
+					//(array_unique($a));
+					
+					$registroAccLena=mysqli_query($conexion,"select * from acclena where sku = '$detalle_producto'")or die("Problemas en el select:".mysqli_error($conexion));
+	
+					if($reg=mysqli_fetch_array($registroAccLena)){
+					
+						$foto = $reg['foto_producto'];	
+						//$ventaja_comparativa = $reg['ventaja_comparativa'];	
+						
+						$precio = $reg['precio'];	
+						//echo "Precio: ".$precio;
+						
+						$nombre = $reg['nombre'];	
+						$modelo = $reg['modelo'];	
+						
+						//$potencia = $reg['potencia'];	
+						//$area = $reg['rango_calefaccion'];	
+						//$dimension = $reg['dimensiones'];	
+						//$diametro = $reg['diametro_canon'];	
+						//$garantia = $reg['garantia'];	
+						$sku = $reg['sku'];	
+						
+						echo "<div class=\"items--cotizacion\">";
+							echo "<div class=\"bar--cotizacion\"><img height=\"134px\" width=\"120px\" src=\"img2/".$foto."\" class=\"box--borders\"></div>";
+								echo "<div class=\"data--cotizacion\">";
+									echo "<p class=\"nombre--item\">".$nombre."</p>";
+									echo "<p class=\"nombre--modelo\">".$modelo."</p>";
+									echo "<p class=\"cantidad\">".$cantidad_productos." Item</p>";
+									echo "<p class=\"cantidad\">Precio unitario: $".number_format($precio,0, '.', '.')."</p>";
+								echo "</div>";
+						echo "</div>";
+						
+						$total = $total + ($precio * $cantidad_productos);
+						
+						$_SESSION['accLena'][$z] = array('nombre' => $nombre,'modelo' => $modelo,'cantidad' => $cantidad_productos,'precio' => $precio,'sku' => $sku);
 						
 					}
 				}

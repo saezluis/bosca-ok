@@ -109,6 +109,24 @@ if(isset($_POST['cotizar_prod'])) {
      $desde = @$_REQUEST['desde'];
      $hasta = @$_REQUEST['hasta'];
      
+	 
+	@$_SESSION["var"] = @$_SESSION["var"] + 1;
+	$itemID = $_SESSION["var"]; 
+	 
+	if (!isset($_SESSION['items'])) {
+		$_SESSION['items'] = array();
+	}
+	
+	//Agrego items cada vez que la pagina refresca y solo recibe SKU cuando el usuario presiona cotizar
+	$_SESSION['items'][$itemID] = array('Detalle' => @$_REQUEST['cotizar_prod']);
+	
+	//Esto me trae la cantidad de valores en el arreglo
+	$cantidad = count($_SESSION['items']);
+	
+	//Envio el total de valores del arreglo por variables de sesion
+	$_SESSION['tope'] = $cantidad;
+	
+	
 	/*
 	echo "Esto llega del boton: " .$variable;
 	echo "<br>";
@@ -149,6 +167,12 @@ if(isset($_POST['cotizar_prod'])) {
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
+	if($variable=='valorC'){
+		$registros=mysqli_query($conexion,"select * from producto where logo_detalle = 'climastar'") 
+		or die("Problemas en el select:".mysqli_error($conexion));		
+	}
+	
+	
 	if($valor_busqueda!=''){
 		$registros=mysqli_query($conexion,"select * from producto where nombre like '%$valor_busqueda%' ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
@@ -174,6 +198,36 @@ if(isset($_POST['cotizar_prod'])) {
 		//SELECT * FROM contacts WHERE contact_id BETWEEN 100 AND 200;
 	}
 	
+	if($variable=='valorAcc'){
+		$registros=mysqli_query($conexion,"select * from acclena") 
+		or die("Problemas en el select:".mysqli_error($conexion));		
+	}
+	
+	if ($variable=='valorAcc'){
+		
+		if($campo_select=='value1'){
+			$registros=mysqli_query($conexion,"select * from acclena ORDER BY precio ASC") 
+			or die("Problemas en el select:".mysqli_error($conexion));		
+			//echo "Valor del select ahora lleva algo";
+		}
+		
+		if($campo_select=='value2'){
+			$registros=mysqli_query($conexion,"select * from acclena ORDER BY precio DESC") 
+			or die("Problemas en el select:".mysqli_error($conexion));		
+			//echo "Valor del select ahora lleva algo";
+		}
+		
+	}
+	
+	if ($variable=='valorAcc'){
+	
+			if($desde!='' and $hasta!=''){
+			$registros=mysqli_query($conexion,"select * from acclena WHERE precio BETWEEN $desde AND $hasta") 
+			or die("Problemas en el select:".mysqli_error($conexion));		
+			//echo "Valor del select ahora lleva algo";
+			//SELECT * FROM contacts WHERE contact_id BETWEEN 100 AND 200;
+		}	
+	}
 	
 	
 	?>
@@ -264,6 +318,8 @@ if(isset($_POST['cotizar_prod'])) {
         <li><button name="opcion" value="valor1" type="submit" formaction="calefaccion.php">Calefactor Eléctrico</button></li>
         <li><button name="opcion" value="valor2" type="submit" formaction="calefaccion.php">Estufas Pellet</button></li>
         <li><button name="opcion" value="valor3" type="submit" formaction="calefaccion.php">Estufas leña</button></li>
+		<li><button name="opcion" value="valorC" type="submit" formaction="calefaccion.php">Climastar</button></li>
+		<li><button name="opcion" value="valorAcc" type="submit" formaction="calefaccion.php">Accesorios</button></li>
         <!-- <li><button name="opcion" value="valor4" type="submit" formaction="productos.php">Calderas</button></li> -->				
       </form>
     </ul>
@@ -285,6 +341,11 @@ if(isset($_POST['cotizar_prod'])) {
       <input name="desde" value="<?php echo isset($_POST['desde']) ? $_POST['desde'] : '' ?>" type="text" placeholder="desde">
       <input name="hasta" value="<?php echo isset($_POST['hasta']) ? $_POST['hasta'] : '' ?>" type="text" placeholder="hasta">
       <button type="submit" class="buscar_button" onclick="return(validate())" formaction="productos.php"></button>
+	  
+	  <?php
+			echo "<input type=\"text\" name=\"opcion\" value=\"$variable\" hidden=hidden >";
+	   ?>
+	  
     </form>
     
     <p class="FP">Ordenar</p>
@@ -296,6 +357,9 @@ if(isset($_POST['cotizar_prod'])) {
        <option value="value1">de menor a mayor</option>
        <option value="value2">de mayor a menor</option>
      </select>
+	 <?php
+			echo "<input type=\"text\" name=\"opcion\" value=\"$variable\" hidden=hidden >";
+	   ?>
    </form>
  </div>
  
@@ -320,9 +384,26 @@ if(isset($_POST['cotizar_prod'])) {
        
        echo "<div class=\"imagen--productos electrico\">";
        echo "<div class=\"logo--marca--float\"><img src=\"img2/".$reg['logo_up_left']."\"></div>";
-       echo "<div class=\"foto--producto\"> <a href=\"detalle-producto.php?deta=",urlencode($detalle)," \"> <img src=\"img2/".$reg['foto_producto']."\"> </a> </div>";
-       echo "<div class=\"tipo--producto\">".$reg['nombre']."</div>";
-       echo "<div class=\"modelo--producto\">".$reg['modelo']."</div>";
+	   
+	   if($variable!='valorAcc'){
+			$inicio_a = " <a href=\"detalle-producto.php?deta=".urlencode($detalle)." \"> ";
+			$cerrar_a = " </a> ";
+	   }else{
+		   $inicio_a = "";
+		   $cerrar_a = "";
+	   }
+	   echo "<div class=\"foto--producto\"> $inicio_a <img src=\"img2/".$reg['foto_producto']."\"> $cerrar_a </div>";
+	   
+       //echo "<div class=\"foto--producto\"> <a href=\"detalle-producto.php?deta=",urlencode($detalle)," \"> <img src=\"img2/".$reg['foto_producto']."\"> </a> </div>";
+       
+	   echo "<div class=\"tipo--producto\">".$reg['nombre']."</div>";
+	   
+	   if($variable=='valorAcc'){
+			echo "<div class=\"modelo--producto\"><font size=\"1\">SKU: ".$reg['sku']."</font></div>";
+		}
+       echo "<div class=\"modelo--producto\">".$reg['modelo']."</div>";	   
+       //echo "<div class=\"modelo--producto\">".$reg['modelo']."</div>";
+	   
        echo "<div class=\"caja--precio--detalle\">";
        echo "<ul>";
        echo "<li>";
@@ -333,7 +414,17 @@ if(isset($_POST['cotizar_prod'])) {
        echo "<form method=\"post\" >";
        echo "<input type=\"text\" name=\"detalle_prod\" value=\"$detalle\" hidden=hidden>";
 						//echo "<li><a name=\"$detalle\" href=\"detalle-producto.php\" class=\"precio--detail-ver\">ver detalle</a></li>";
-       echo "<li><button type=\"submit\" formaction=\"detalle-producto.php\">ver detalle</button></li>";
+		
+		if($variable!='valorAcc'){
+			echo "<li><button type=\"submit\" formaction=\"detalle-producto.php\">ver detalle</button></li>";
+		}
+		if($variable=='valorAcc'){
+			echo "<li><button type=\"submit\" onclick=\"return(mensajeCotizar())\" name=\"cotizar_prod\" value=\"$detalle\">Cotizar</button></li>";
+			echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$detalle\">";
+			echo "<input type=\"text\" hidden=hidden name=\"opcion\" value=\"$variable\"  >";
+		}
+		
+		
        echo "</form>";
        echo "</ul>";
        echo "</div>";

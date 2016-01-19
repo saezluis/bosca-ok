@@ -344,7 +344,31 @@ session_start();
 		}
 		
 		
-	  $totalCotizacion = @$subTotalCalefa + @$subTotalParri + @$subTotalCoci + @$subTotalVenti + @$subTotalaccParri;
+		$new_accLena = array();
+		$new_accLena = $_SESSION['accLena'];
+		
+		//echo "<br>";
+		
+		foreach ($new_accLena as $accLena) {
+				echo "<div id=\"print-items-cajas-prod\">";
+					echo "<div class=\"caja base-40\">";
+						echo "<p>".$accLena['nombre']." ".$accLena['modelo']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$accLena['cantidad']."</p>";
+					echo "</div>";
+					echo "<div class=\"caja base-20\">";
+						echo "<p class=\"centrarItems\">".$accLena['sku']."</p>";
+					echo "</div>";
+						echo "<div class=\"caja base-20\">";	
+						$subTotalaccLena = $accLena['cantidad'] * $accLena['precio'];
+						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalaccLena,0,",",".")."</span></p>";	
+					echo "</div>";
+					echo "</div>";	
+		}
+		
+		
+	  $totalCotizacion = @$subTotalCalefa + @$subTotalParri + @$subTotalCoci + @$subTotalVenti + @$subTotalaccParri + @$subTotalaccLena;
 	  $totalFinalMasIva = (($totalCotizacion * 1.19) / 100) + $totalCotizacion;
 	  
 	  

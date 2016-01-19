@@ -422,6 +422,7 @@ if(isset($_POST['cotizar_prod'])) {
 	   
 	   
        echo "<div class=\"tipo--producto\">".$reg['nombre']."</div>";
+	   
 	   if($variable=='valor3'){
 			echo "<div class=\"modelo--producto\"><font size=\"1\">SKU: ".$reg['sku']."</font></div>";
 		}

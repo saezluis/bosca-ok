@@ -11,8 +11,7 @@
 	$image_info = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 	$image_width = $image_info[0];
 	$image_height = $image_info[1];
-	
-	
+		
 	echo "ancho img: ".$image_width;
 	echo "<br>";
 	echo "alto img: ".$image_height;
