@@ -42,6 +42,27 @@
   				font-size: 1em;
   			}
 		}
+
+	}
+	.sociales-boleta{
+		width: 100%;
+		height: auto;
+		text-align: center;
+		font-size: 0.7em;
+		overflow: hidden;
+		margin-top: 10px;
+		@include desde (web){
+			text-align: right;
+		}
+		a.boleta{
+			text-decoration:none;
+			color:#fff;
+			padding: 10px 0;
+			&:hover{
+				text-decoration: underline;
+				color:$color-corporativo;
+			}
+		}
 	}
 
 }

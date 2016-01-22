@@ -1645,6 +1645,23 @@ h6 {
         #footer .sociales a.intra {
           text-align: right;
           font-size: 1em; } }
+  #footer .sociales-boleta {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 0.7em;
+    overflow: hidden;
+    margin-top: 10px; }
+    @media screen and (min-width: 1025px) {
+      #footer .sociales-boleta {
+        text-align: right; } }
+    #footer .sociales-boleta a.boleta {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 0; }
+      #footer .sociales-boleta a.boleta:hover {
+        text-decoration: underline;
+        color: #E65524; }
 
 @media screen and (min-width: 480px) {
   .auxT {
