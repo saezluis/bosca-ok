@@ -414,10 +414,14 @@
 					</li>						
 					<li><a href="#">IX Region</a>
 						<ul>
-							<li><a onClick="Temuco();" href="#">Temuco</a></li>
-							<li><a onClick="PuertoMontt();" href="#">Puerto Montt</a></li>
+							<li><a onClick="Temuco();" href="#">Temuco</a></li>							
 						</ul>
 					</li>
+					<li><a href="#">X Region</a>
+						<ul>
+							<li><a onClick="PuertoMontt();" href="#">Puerto Montt</a></li>
+						</ul>
+					<li>
 				</ul>
 			</nav>
 			

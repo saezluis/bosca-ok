@@ -3,7 +3,13 @@
 				  <br>
 				<h3>Puerto Montt</h3>
                   <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2765087388266!2d-72.6123319!3d-38.7344166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f67b1260a5%3A0xf2cf98dabe226391!2sAlemania+715%2C+Temuco%2C+IX+Regi%C3%B3n!5e0!3m2!1ses!2scl!4v1435304608155" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    <!--
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2765087388266!2d-72.6123319!3d-38.7344166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f67b1260a5%3A0xf2cf98dabe226391!2sAlemania+715%2C+Temuco%2C+IX+Regi%C3%B3n!5e0!3m2!1ses!2scl!4v1435304608155" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+					-->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1257.1079938783205!2d-72.93397975390582!3d-41.46257361210395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96183af7eff46431%3A0x7e614b107e70a215!2zUGR0ZS4gSWLDocOxZXogMzI4LCBQdWVydG8gTW9udHQsIFggUmVnacOzbg!5e0!3m2!1ses!2scl!4v1454505715467" width="275" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+					<!--
+					<iframe src= width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					-->
                   </div>
                   <div class="data-direcciones">
                     <p class="jefe--tienda">Jefe de Tienda</p>
