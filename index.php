@@ -116,7 +116,7 @@ function comentario(){
           <li class="menu__item"><a href="encuentranos.php" class="menu__link">Encuéntranos</a></li>
           <li class="menu__item"><a href="registra-tu-bosca.php" class="menu__link">Garantiza tu Bosca</a></li>
           <li class="menu__item"><a href="servicio-tecnico.php" class="menu__link">Servicio técnico</a></li>
-          <li class="menu__item"><a href="preguntas-frecuentes.php" class="menu__link">Preguntas frecuentes</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Preguntas frecuentes</a></li>
           <li class="menu__item"><a href="medio-ambiente.php" class="menu__link solo-movil">Medio Ambiente</a></li>
           <li class="menu__item"><a href="contacto.php" class="menu__link">Contacto</a></li>
         </ul>
@@ -127,12 +127,12 @@ function comentario(){
     <div class="caja no-padding">
       <div class="banner">
         <div id="owl-demo" class="owlcarousel owl-theme">          
-          <div class="item"><img src="img/banner-navidad.jpg"></div>      
+          <div class="item"><img src="img/banner-asombra3.jpg"></div>      
           <?php
 		  
 		  $var = 'valor3';
 		  
-		  echo "<form method=\"post\" action=\"calefaccion.php\">";
+		  echo "<form method=\"post\" action=\"terraza-parrilla.php\">";
 		  echo "<input type=\"text\" name=\"opcion\" value=\"valor1\" hidden=hidden >";		  
 		  echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img src=\"img/banner_climastar.jpg\"> </a> </div>";		  
 		  echo "</form>";
@@ -140,7 +140,7 @@ function comentario(){
 		//echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img data-src=\"img-pt/$foto\" title=\"$modelo\" class=\"lazyOwl\"> </a></div>";	
 		
 		  ?>
-		  <div class="item"><img src="img/bg_banner.jpg"></div>    
+		  <div class="item"><img src="img/banner-terraza.jpg"></div>    
         </div>
       </div>
     </div>
@@ -257,7 +257,7 @@ function comentario(){
         <p class="servicioCliente">Servicio al cliente <a href="tel:+56 800200657" class="telF">800 200 657</a></p>
         <p class="direccion">Av. Américo Vespucio 2077, Huechuraba, Santiago.</p>
         <div class="sociales">
-          <a href="https://www.facebook.com/boscachile" class="fb" target="_blank"><img src="img/fb-mini.jpg"></a>
+        	<a href="https://www.facebook.com/boscachile" class="fb" target="_blank"><img src="img/fb-mini.jpg"></a>
         </div>
         <div class="sociales-boleta">
           <a href="http://boleta.bosca.cl/" class="boleta" target="_blank">Ir Boleta Electrónica</a>

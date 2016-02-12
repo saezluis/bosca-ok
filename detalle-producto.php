@@ -243,6 +243,16 @@ if(isset($_POST['cotizar_prod'])) {
            
           </div>
         <!--fin para movil-->
+		<?php
+		/*
+			if($modelo=='50 x 50 tocuh 1000 w'){
+			}
+			if($modelo=='100 x 50 touch 1500 w'){
+			}
+			if($modelo=='100 x 50 touch 2000 w'){
+			}
+			*/
+		?>
           <div class="foto--producto-big"><img src="img/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/<?php echo $foto_zoom; ?>">
              <div class="mini--sec"></div>
 		 
@@ -270,14 +280,14 @@ if(isset($_POST['cotizar_prod'])) {
         <div class="full--ficha-datos">
           <div class="logo-marca"><img src="img/mini-bosca.png"></div>
           <div class="caracteristicas--producto border-none">
-		  <?php 
+		  <?php
 			$cond = 0;
 		    if($cond == -1){
 				echo "<img src=\"img/ecoflame360.png\">";
 			}else{
 				echo "<h2>$modelo</h2>";
 				echo "<h5><b>$nombre</b></h5>";
-			}			
+			}
 		  ?>		  
             <p class="sku">SKU: <?php echo $sku; ?></p>
             <p class="resena"><?php echo $ventaja_comparativa; ?></p>

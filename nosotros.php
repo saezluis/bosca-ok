@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
     <script src="sass/tema/js/scripts.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
-    <script src="sass/tema/js/jquery.timelinr-0.9.54.js">		</script>
+    <script src="sass/tema/js/jquery.timelinr-0.9.54.js"></script>
 	
 	<script type="text/javascript">
 
@@ -101,7 +101,7 @@
             <li class="menu__item"><a href="encuentranos.php" class="menu__link">Encuéntranos</a></li>
             <li class="menu__item"><a href="registra-tu-bosca.php" class="menu__link">Garantiza tu Bosca</a></li>
             <li class="menu__item"><a href="servicio-tecnico.php" class="menu__link">Servicio técnico</a></li>
-            <li class="menu__item"><a href="preguntas-frecuentes.php" class="menu__link">Preguntas frecuentes</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Preguntas frecuentes</a></li>
             <li class="menu__item"><a href="medio-ambiente.php" class="menu__link solo-movil">Medio Ambiente</a></li>
             <li class="menu__item"><a href="contacto.php" class="menu__link">Contacto</a></li>
           </ul>
@@ -110,7 +110,9 @@
     </header>
     <section class="grupo">
       <div class="caja">
-        <div id="logos_juntos"><img src="img/logos-juntos.png"></div>
+		<?php
+			include "logosMarcas.php";
+		?>
       </div>
     </section>
     <section class="grupo margen-top">
@@ -138,7 +140,7 @@
                 <li><a href="#1988">1988</a></li>
                 <li><a href="#1994">1994</a></li>
                 <li><a href="#1998">1998	</a></li>
-                <li><a href="#1999">99 - 00</a></li>
+                <li><a href="#1999">1999</a></li>
                 <li><a href="#2006">2006</a></li>
                 <li><a href="#2014">2014</a></li>
                 <li><a href="#2015">2015	</a></li>
@@ -155,7 +157,7 @@
                   <p>Traspaso de la totalidad de la marca a la familia Ossandon. Los calefactores pasan a ser fabricados en Chile.Traduciendo como beneficio al consumidor,los precios más competitivos de la industria	</p>
                 </li>
                 <li id="1994"><div><img src="img/timeline/multitiendas-mini.jpg"></div>
-                  <p>Expanción de la marca a mercados mayoristas.</p>
+                  <p>Expansión de la marca a mercados mayoristas.</p>
                 </li>
                 <li id="1998"><div><img src="img/timeline/hergome-mini.jpg"></div>
                   <p>Alianza con Hergom (España), siendo Bosca la única marca representante en Chile.</p>
@@ -205,7 +207,7 @@
                   <li>Accesorios</li>
                 </ul>
               </div>
-              <div class="filas"><img src="img/timeline/industrial.png">
+              <div class="filas"><a href="http://www.boscaindustrial.cl" target="_blank"><img src="img/timeline/industrial.png"></a>
                 <ul>
                   <li>Servicios en acero</li>
                   <li>Corte Láser</li>
@@ -241,15 +243,10 @@
           <p class="servicioCliente">Servicio al cliente <a href="tel:+56 800200657" class="telF">800 200 657</a></p>
           <p class="direccion">Av. Américo Vespucio 2077, Huechuraba, Santiago.</p>
           <div class="sociales"><a href="https://www.facebook.com/boscachile" class="fb" target="_blank"><img src="img/fb-mini.jpg"></a>
-            
-            
-            
-            
-            
-            
-            
-            
           </div>
+		  <div class="sociales-boleta">
+          	<a href="http://boleta.bosca.cl/" class="boleta" target="_blank">Ir Boleta Electrónica</a>
+         </div>
         </div>
       </div>
     </footer>

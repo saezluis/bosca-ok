@@ -294,7 +294,9 @@ if(isset($_POST['cotizar_prod'])) {
             <li><a href="#">Calefacción<span> / </span></a></li>            
           </ul>
         </div>
-        <img src="img/logos-juntos.png">
+        <?php
+			include "logosMarcasBread.php";
+		?>
       </div>
     </div>
   </section>
