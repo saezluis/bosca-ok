@@ -2,3 +2,13 @@
 *.zip
 
 img/.DS_Store
+
+cupon.jade
+
+css/popup.css
+
+css/colorbox.css
+
+js/colorbox.js
+
+js/.DS_Store

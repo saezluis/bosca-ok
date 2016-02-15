@@ -1436,6 +1436,36 @@ h5 {
 h6 {
   font-size: 0.8em; }
 
+.imgCupon {
+  width: 480px;
+  position: relative; }
+  .imgCupon p.textLight {
+    position: absolute;
+    top: 180px;
+    right: 20px;
+    width: 45%;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: right; }
+  .imgCupon a.getCupon {
+    color: #fff;
+    width: 43%;
+    padding: 13px;
+    text-align: center;
+    font-size: 1.2em;
+    background: #f04d1d;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    position: absolute;
+    text-decoration: none;
+    right: 20px;
+    bottom: 120px;
+    transition: .3s all; }
+    .imgCupon a.getCupon:hover {
+      background: #da3f11; }
+
 .contact_form {
   margin: 0 auto; }
   .contact_form ul {
