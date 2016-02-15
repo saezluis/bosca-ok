@@ -1475,7 +1475,9 @@ h6 {
   text-align: center;
   font-size: 0.8em;
   text-decoration: none;
-  border: none; }
+  border: none;
+  position: relative;
+  z-index: 9000000; }
   .ver-imagen-ambiente input#abrirXd {
     border: none;
     background: transparent;

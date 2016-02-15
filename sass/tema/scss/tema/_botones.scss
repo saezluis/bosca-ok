@@ -46,6 +46,8 @@
     text-decoration: none;
     //float: left;
     border: none;
+	position: relative;
+    z-index: 9000000;
     input#abrirXd{
     	border: none;
     	background: transparent;
