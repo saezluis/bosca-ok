@@ -23,10 +23,13 @@ if(isset($_POST['cotizar_prod'])) {
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="main.js"></script>
     <script src="sass/tema/js/scripts.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
     <script src="sass/tema/js/jquery.isotope.js"></script>
-    <script src="sass/tema/js/jquery.elevatezoom.js"></script>			
+    <script src="sass/tema/js/jquery.elevatezoom.js"></script>	
+	
+	<link rel="stylesheet" href="main.css">
 		
 	<script type="text/javascript">
 
@@ -261,6 +264,15 @@ if(isset($_POST['cotizar_prod'])) {
 		   -->
           </div>
           <div id="demo-container"></div>
+		  
+		</div>
+		
+		  <div style="text-align: center;">
+			  
+			  <input id="abrirXd" type="button" value="Míralo en su ambiente"></button>
+			  
+		  </div>
+		  
         </div>
         
 		<?php
@@ -447,6 +459,24 @@ if(isset($_POST['cotizar_prod'])) {
         </div>
       </div>
     </footer>
+	
+	<div id="boxes">
+		<div style="display: none; background:url(strip.jpg) no-repeat #fff; width:450px !important;" id="dialog" class="window centrado-porcentual"> 
+			<!--
+			<h1>Súbete al programa donde todos crecemos, siguiendo estas indicaciones.</h1>
+				<div id="lorem">
+					<ul class="lista-pop">
+						<li>Ingresa tu rut sin puntos ni dígito verificador.</li>
+						<li>*ingresa tu clave (tres últimos dígitos de tu rut)</li>
+					</ul>
+				</div>
+				-->
+				<img src="img/ambientes/1.jpg">
+				<div id="popupfoot"> <a href="#" class="close agree acept-ok">Aceptar</a>  </div>
+		</div>
+				<div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+	</div>
+	
   </body>
 </html>
 <script>$("#zoom_01").elevateZoom({zoomWindowPosition: "demo-container", zoomWindowHeight: 500, zoomWindowWidth:630, borderSize: 0, easing:true, cursor:"crosshair"});</script>
