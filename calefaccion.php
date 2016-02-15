@@ -27,7 +27,13 @@ if(isset($_POST['cotizar_prod'])) {
   <script src="sass/tema/js/jquery.isotope.js"></script>
   
   <script type="text/javascript">
-  <!--
+  
+	function mensajeCotizar(){
+	  
+		alert( "El producto fue agregado con exito a la cotización" );
+		
+	}
+  <!--  
       // Form validation code will come here.
       function validate(){
         
@@ -139,12 +145,18 @@ if(isset($_POST['cotizar_prod'])) {
 	
 	if($variable==''){
 		$registros=mysqli_query($conexion,"select * from producto") 
-		or die("Problemas en el select:".mysqli_error($conexion));		
+		or die("Problemas en el select:".mysqli_error($conexion));	
+		
+		$registrosAcc=mysqli_query($conexion,"select * from acclena") 
+		or die("Problemas en el select:".mysqli_error($conexion));
 	}
 	
 	if($variable=='valor0'){
 		$registros=mysqli_query($conexion,"select * from producto") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
+		
+		$registrosAcc=mysqli_query($conexion,"select * from acclena") 
+		or die("Problemas en el select:".mysqli_error($conexion));
 	}
 	
 	if($variable=='valor1'){
@@ -433,6 +445,41 @@ if(isset($_POST['cotizar_prod'])) {
        echo "</div>";
     
      }
+	 
+	 while (@$reg=mysqli_fetch_array(@$registrosAcc)){
+       
+		$detalle = $reg['sku'];
+       
+		echo "<div class=\"imagen--productos electrico\">";
+		echo "<div class=\"logo--marca--float\"><img src=\"img2/".$reg['logo_up_left']."\"></div>";
+	   
+		echo "<div class=\"foto--producto\"> $inicio_a <img src=\"img2/".$reg['foto_producto']."\"> $cerrar_a </div>";
+	  
+		echo "<div class=\"tipo--producto\">".$reg['nombre']."</div>";
+	   
+		echo "<div class=\"modelo--producto\">".$reg['modelo']."</div>";	   
+     
+		echo "<div class=\"caja--precio--detalle\">";
+		echo "<ul>";
+		echo "<li>";
+
+		echo "<p class=\"precio--detail\">$ ".number_format($reg['precio'],0, '.', '.')."</p>";
+		echo "</li>";
+
+		echo "<form method=\"post\" >";
+		echo "<input type=\"text\" name=\"detalle_prod\" value=\"$detalle\" hidden=hidden>";
+	
+		echo "<li><button type=\"submit\" onclick=\"return(mensajeCotizar())\" name=\"cotizar_prod\" value=\"$detalle\">Cotizar</button></li>";
+		echo "<input type=\"text\" hidden=hidden  name=\"detalle_prod\" value=\"$detalle\">";
+		echo "<input type=\"text\" hidden=hidden name=\"opcion\" value=\"$variable\"  >";
+	
+		echo "</form>";
+		echo "</ul>";
+		echo "</div>";
+		echo "</div>";
+    
+     }
+	 
      ?>
                       
       </div>
