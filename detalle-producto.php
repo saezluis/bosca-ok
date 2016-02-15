@@ -157,6 +157,8 @@ if(isset($_POST['cotizar_prod'])) {
 		$logo_detalle = $reg['logo_detalle'];
 		$mini_descripcion =	$reg['mini_descripcion'];
 		
+		$color = $reg['color'];
+		
 	}
 		
 	
@@ -266,13 +268,15 @@ if(isset($_POST['cotizar_prod'])) {
           <div id="demo-container"></div>
 		  
 		</div>
+		<?php		
+			if($logo_detalle=='climastar' && $precio!=169900){
+				echo "<div class=\"ver-imagen-ambiente\">";			  
+					echo "<input id=\"abrirXd\" type=\"button\" value=\"Míralo en su ambiente\"></button>";
+				echo "</div>";
+			}
+			
+		?>
 		
-		  <div class="ver-imagen-ambiente">
-			  
-			  <input id="abrirXd" type="button" value="Míralo en su ambiente"></button>
-			  
-		  </div>
-		  
         </div>
         
 		<?php
@@ -471,7 +475,7 @@ if(isset($_POST['cotizar_prod'])) {
 					</ul>
 				</div>
 				-->
-				<img src="img/ambientes/1.jpg">
+				<?php echo "<img src=\"img/ambientes/$color\">";  ?>
 				<a href="#" class="close close-imagenes">X</a>
 		</div>
 				<div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
