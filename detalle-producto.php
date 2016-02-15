@@ -267,7 +267,7 @@ if(isset($_POST['cotizar_prod'])) {
 		  
 		</div>
 		
-		  <div style="text-align: center;">
+		  <div class="ver-imagen-ambiente">
 			  
 			  <input id="abrirXd" type="button" value="Míralo en su ambiente"></button>
 			  
@@ -461,7 +461,7 @@ if(isset($_POST['cotizar_prod'])) {
     </footer>
 	
 	<div id="boxes">
-		<div style="display: none; background:url(strip.jpg) no-repeat #fff; width:450px !important;" id="dialog" class="window centrado-porcentual"> 
+		<div style="display: none; position:relative;" id="dialog" class="window centrado-porcentual"> 
 			<!--
 			<h1>Súbete al programa donde todos crecemos, siguiendo estas indicaciones.</h1>
 				<div id="lorem">
@@ -472,7 +472,7 @@ if(isset($_POST['cotizar_prod'])) {
 				</div>
 				-->
 				<img src="img/ambientes/1.jpg">
-				<div id="popupfoot"> <a href="#" class="close agree acept-ok">Aceptar</a>  </div>
+				<a href="#" class="close close-imagenes">X</a>
 		</div>
 				<div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
 	</div>
