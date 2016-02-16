@@ -1437,8 +1437,25 @@ h6 {
   font-size: 0.8em; }
 
 .imgCupon {
-  width: 480px;
-  position: relative; }
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+  max-height: 100%;
+  margin: 0 auto;
+  background: url(../img/bg-light.jpg) repeat; }
+  .imgCupon .pro-l {
+    width: 70%;
+    margin: 20px auto 0 auto; }
+    @media screen and (min-width: 768px) {
+      .imgCupon .pro-l {
+        width: 90%; } }
+  .imgCupon .logo-light-L {
+    width: 70%;
+    margin: 0 auto; }
+  .imgCupon .texti-L {
+    width: 78%;
+    margin: 0 auto; }
   .imgCupon p.textLight {
     position: absolute;
     top: 180px;
@@ -1449,20 +1466,20 @@ h6 {
     text-align: right; }
   .imgCupon a.getCupon {
     color: #fff;
-    width: 43%;
-    padding: 13px;
+    width: 100%;
+    padding: 9px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     background: #f04d1d;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     text-transform: uppercase;
-    position: absolute;
     text-decoration: none;
-    right: 20px;
-    bottom: 120px;
-    transition: .3s all; }
+    transition: .3s all;
+    /* margin: 0 auto; */
+    margin-bottom: 20px;
+    display: block; }
     .imgCupon a.getCupon:hover {
       background: #da3f11; }
 

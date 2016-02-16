@@ -547,6 +547,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
+	"\/detalle-producto.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/detalle-producto.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/detalle-ventilacion.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2634,6 +2643,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/bg-light.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 91926,
+		"inputAbbreviatedPath": "\/img\/bg-light.jpg",
+		"outputAbbreviatedPath": "\/img\/bg-light.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/bg_banner.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3646,6 +3666,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/logo-light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23306,
+		"inputAbbreviatedPath": "\/img\/logo-light.png",
+		"outputAbbreviatedPath": "\/img\/logo-light.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/logo-print.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3910,6 +3941,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/productos_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 100581,
+		"inputAbbreviatedPath": "\/img\/productos_light.png",
+		"outputAbbreviatedPath": "\/img\/productos_light.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/search.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3994,6 +4036,17 @@
 		"initialSize": 334766,
 		"inputAbbreviatedPath": "\/img\/terrazas.png",
 		"outputAbbreviatedPath": "\/img\/terrazas.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/texto-light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12629,
+		"inputAbbreviatedPath": "\/img\/texto-light.png",
+		"outputAbbreviatedPath": "\/img\/texto-light.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
