@@ -239,43 +239,44 @@ if(isset($_POST['cotizar_prod'])) {
     </section>
     <section class="grupo margen-top">
       <div class="caja movil-40 tablet-40 web-40">
-        <div class="full--ficha">
-        <!--para movil-->
-          <div class="foto--producto-movil"><img src="img/<?php echo $foto; ?>">
-		  
-		  <div class="mini--sec"></div>
-		  
-           
-          </div>
-        <!--fin para movil-->
-		<?php
-		/*
-			if($modelo=='50 x 50 tocuh 1000 w'){
-			}
-			if($modelo=='100 x 50 touch 1500 w'){
-			}
-			if($modelo=='100 x 50 touch 2000 w'){
-			}
-			*/
-		?>
-          <div class="foto--producto-big"><img src="img/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/<?php echo $foto_zoom; ?>">
-             <div class="mini--sec"></div>
-		 
-		  <!--
-			<div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
-		   -->
-          </div>
-          <div id="demo-container"></div>
-		  
-		</div>
-		<?php		
-			if($logo_detalle=='climastar' && $precio!=169900){
-				echo "<div class=\"ver-imagen-ambiente\">";			  
-					echo "<input id=\"abrirXd\" type=\"button\" value=\"Míralo en su ambiente\"></button>";
-				echo "</div>";
-			}
+			<div class="full--ficha">
+			<!--para movil-->
+			  <div class="foto--producto-movil"><img src="img/<?php echo $foto; ?>">
+			  
+			  <div class="mini--sec"></div>
+			  
+			   
+			  </div>
+			<!--fin para movil-->
+			<?php
+			/*
+				if($modelo=='50 x 50 tocuh 1000 w'){
+				}
+				if($modelo=='100 x 50 touch 1500 w'){
+				}
+				if($modelo=='100 x 50 touch 2000 w'){
+				}
+				*/
+			?>
+			  <div class="foto--producto-big"><img src="img/<?php echo $foto; ?>" id="zoom_01" data-zoom-image="img/<?php echo $foto_zoom; ?>">
+				 <div class="mini--sec"></div>
+			 
+			  <!--
+				<div class="mini--sec"><img src="img/small-sellolimit360.gif" alt=""></div>
+			   -->
+			  </div>
+			  <div id="demo-container"></div>
+			  
+			</div>
 			
-		?>
+			<?php		
+				if($logo_detalle=='climastar' && $precio!=169900){
+					echo "<div class=\"ver-imagen-ambiente\">";			  
+						echo "<input id=\"abrirXd\" type=\"button\" value=\"Míralo en su ambiente\"></button>";
+					echo "</div>";
+				}
+				
+			?>
 		
         </div>
         
