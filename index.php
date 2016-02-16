@@ -28,7 +28,7 @@ if(isset($_POST['cotizar_prod'])) {
 <script src="sass/tema/js/scripts.js"></script>
 <script src="owl-carousel/owl.carousel.min.js"></script>
 
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main2.css">
 
 <script type="text/javascript">
 
