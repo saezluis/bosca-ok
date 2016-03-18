@@ -69,7 +69,7 @@ session_start();
 	$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	
-	$registrosTodos=mysqli_query($conexion,"select * from producto") or die("Problemas en el select:".mysqli_error($conexion));
+	$registrosTodos=mysqli_query($conexion,"select * from parrilla") or die("Problemas en el select:".mysqli_error($conexion));
 	
 	$TAMANO_PAGINA = 2; 
 		
@@ -87,7 +87,7 @@ session_start();
 		//calculo el total de páginas 
 		$total_paginas = ceil($num_total_registros / $TAMANO_PAGINA); 
 		
-		$ssql = "select * from producto LIMIT " . $inicio . "," . $TAMANO_PAGINA; 
+		$ssql = "select * from parrilla LIMIT " . $inicio . "," . $TAMANO_PAGINA; 
 		
 		$rs = mysqli_query($conexion,$ssql); 
 	
@@ -100,7 +100,7 @@ session_start();
 		<div class="row">
 			<div class="col-md-12">
 				<h3 class="text-left">
-					<a href="index.html">Administrador Bosca</a>
+					<a href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
@@ -108,82 +108,97 @@ session_start();
 			<div class="col-md-9">
 			<h3 class="text-left">
 				<?php
-				echo "<a href=\"index.php\">Inicio</a> - <a href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Consultar calefacción";
+				echo "<a href=\"index.php\">Inicio</a> - <a href=\"parrilla-home.php\">Tipo de producto: Parrilla / Terraza</a> - Consultar";
 				?>
 			</h3>
 			<br>
 			<?php			
 				
-			
-				while($reg=mysqli_fetch_array($rs)){	
+				//parrilla y Accparrilla son las tablas que deberia cargar para consulta
 				
-				$nombre = $reg['nombre'];
-				$modelo = $reg['modelo'];
-				$precio = $reg['precio'];
+				while($reg=mysqli_fetch_array($rs)){
 				
-				$logo_up_left = $reg['logo_up_left'];
-				$foto_producto = $reg['foto_producto'];
-				$foto_zoom = $reg['foto_zoom'];
-				
-					$logo_detalle = $reg['logo_detalle'];
-					$mini_descripcion = $reg['mini_descripcion'];
+					$nombre = $reg['nombre'];
+					$modelo = $reg['modelo'];
+					$sku = $reg['sku'];
 					
-				$fabricacion = $reg['fabricacion'];
-				$combustion = $reg['combustion'];
-				$panel_programable = $reg['panel_programable'];
+					$precio = $reg['precio'];
+					$alto = $reg['alto'];
+					$ancho = $reg['ancho'];
 					
-				$conexion_electrica = $reg['conexion_electrica'];
-				$capacidad_carga = $reg['capacidad_carga'];
-				$potencia = $reg['potencia'];
-				
-				$rango_calefaccion = $reg['rango_calefaccion'];
-				$color = $reg['color'];
-				$vidrio_autolimpiante = $reg['vidrio_autolimpiante'];
+					$profundidad = $reg['profundidad'];
+					$peso = $reg['peso'];
+					$material = $reg['material'];
 					
-				$cenicero = $reg['cenicero'];
-				$vermiculita_refractaria = $reg['vermiculita_refractaria'];
-				$templador = $reg['templador'];
+					$atributo_01 = $reg['atributo_01'];
+					$atributo_02 = $reg['atributo_02'];
+					$atributo_03 = $reg['atributo_03'];
+					$atributo_04 = $reg['atributo_04'];
+					$atributo_05 = $reg['atributo_05'];
+					$atributo_06 = $reg['atributo_06'];
 					
-				$ventaja_comparativa = $reg['ventaja_comparativa'];
-				$dimensiones = $reg['dimensiones'];
-				$diametro_canon = $reg['diametro_canon'];
+					$foto_producto = $reg['foto_producto'];
+					$foto_zoom = $reg['foto_zoom'];
 					
-				$garantia = $reg['garantia'];
-				$sku = $reg['sku'];
+					$logo_up_left = $reg['logo_up_left'];
+					$ficha_tecnica = $reg['ficha_tecnica'];
 
 					
 					echo "<span class=\"texto\"><input type=\"text\" value=\"Nombre:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$nombre\" size=\"50\" readonly> </span>";		
 					echo "<br>";
 					echo "<span class=\"texto\"><input type=\"text\" value=\"Modelo:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$modelo\" size=\"50\" readonly> </span>";		
 					echo "<br>";
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Precio:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$precio\" size=\"50\" readonly> </span>";
+					echo "<span class=\"texto\"><input type=\"text\" value=\"SKU:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$sku\" size=\"50\" readonly> </span>";
 					echo "<br>";
 					
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Fabricacion:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$fabricacion\" size=\"50\" readonly> </span>";		
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Precio:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$precio\" size=\"50\" readonly> </span>";		
 					echo "<br>";
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Combustion:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$combustion\" size=\"50\" readonly> </span>";		
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Alto:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$alto\" size=\"50\" readonly> </span>";		
 					echo "<br>";
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Panel programable:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$panel_programable\" size=\"50\" readonly> </span>";
-					echo "<br>";
-					
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Conexion electrica:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$conexion_electrica\" size=\"50\" readonly> </span>";		
-					echo "<br>";
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Capacidad de carga:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$capacidad_carga\" size=\"50\" readonly> </span>";		
-					echo "<br>";
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Potencia:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$potencia\" size=\"50\" readonly> </span>";		
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Ancho:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$ancho\" size=\"50\" readonly> </span>";
 					echo "<br>";
 					
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Rango Calefaccion:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$rango_calefaccion\" size=\"50\" readonly> </span>";		
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Profunidad:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$profundidad\" size=\"50\" readonly> </span>";		
 					echo "<br>";
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Color:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$color\" size=\"50\" readonly> </span>";		
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Peso:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$peso\" size=\"50\" readonly> </span>";		
 					echo "<br>";
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Vidrio Autolimpiante:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$vidrio_autolimpiante\" size=\"50\" readonly> </span>";		
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Material:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$material\" size=\"50\" readonly> </span>";		
 					echo "<br>";
 					
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Cenicero:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$cenicero\" size=\"50\" readonly> </span>";		
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Atributo 01:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$atributo_01\" size=\"70\" readonly> </span>";		
 					echo "<br>";
-					echo "<span class=\"texto\"><input type=\"text\" value=\"Vermiculita Refractaria:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$vermiculita_refractaria\" size=\"70\" readonly> </span>";		
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Atributo 02:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$atributo_02\" size=\"70\" readonly> </span>";		
 					echo "<br>";
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Atributo 03:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$atributo_03\" size=\"70\" readonly> </span>";		
+					echo "<br>";					
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Atributo 04:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$atributo_04\" size=\"70\" readonly> </span>";		
+					echo "<br>";
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Atributo 05:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$atributo_05\" size=\"70\" readonly> </span>";
+					echo "<br>";
+					echo "<span class=\"texto\"><input type=\"text\" value=\"Atributo 06:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$atributo_06\" size=\"70\" readonly> </span>";
+					echo "<br>";
+					
+					//validar ficha tecnica si, tiene la muestra, sino tiene no..
+					if($ficha_tecnica==''){
+						$jared = 'x';
+					}
+					if($ficha_tecnica!=''){
+						echo "<span class=\"texto\"><input type=\"text\" value=\"Ficha Tecnica:\" class=\"rightJustified\" readonly> <a href=\"../fichas-tecnicas/$ficha_tecnica\">Ficha Técnica</a> </span>";							
+					}
+					echo "<br>";
+					echo "<span class=\"texto\">Mini logo superior izquierdo: <img src=\"../img/$logo_up_left\"></span>";	
+					echo "<br>";
+					echo "<span class=\"texto\">Foto producto (Vista Catalogo) <a href=\"#\" data-featherlight=\"../img/$foto_producto\">Ver foto</a> </span>"; //<img src=\"../img2/$foto_producto\">
+					//echo "<span class=\"texto\"> -- </span>";
+					if($foto_zoom==''){
+						$jaredL = 'x';
+					}
+					if($foto_zoom!=''){
+						echo "<span class=\"texto\">Foto producto con Zoom <a href=\"#\" data-featherlight=\"../img/$foto_zoom\">Ver foto con zoom</a></span>"; //<img src=\"../img2/$foto_zoom\">
+					}
+					echo "<br>";					
+					echo "<br>";
+					/*
 					echo "<span class=\"texto\"><input type=\"text\" value=\"Templador:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$templador\" size=\"50\" readonly> </span>";		
 					echo "<br>";
 					
@@ -208,7 +223,7 @@ session_start();
 					echo "<br>";
 					echo "<span class=\"texto\">Foto producto con Zoom <a href=\"#\" data-featherlight=\"../img/$foto_zoom\">Ver foto con zoom</a></span>"; //<img src=\"../img2/$foto_zoom\">
 					echo "<br>";
-					
+					*/
 
 					
 					echo "<br>";
@@ -224,7 +239,7 @@ session_start();
 							echo "<span class=\"pag--cube textSize\">" . $pagina . "</span>" . " "; 
 						else 
 							//si el índice no corresponde con la página mostrada actualmente, coloco el enlace para ir a esa página 				
-							echo "<a href='consultar-calefaccion.php?pagina=" . $i . "' class=\"textSize\">"  . $i .  "</a> " ; 
+							echo "<a href='consultar-parrilla.php?pagina=" . $i . "' class=\"textSize\">"  . $i .  "</a> " ; 
 					}   
 				}
 				

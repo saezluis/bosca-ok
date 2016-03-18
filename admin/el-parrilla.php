@@ -1,25 +1,7 @@
 <?php
-session_start();
-
-	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-
-	}
-	else{
-	
-		header('Content-Type: text/html; charset=UTF-8'); 	
-		echo "<br/>" . "Esta pagina es solo para usuarios registrados." . "<br/>";
-		echo "<br/>" . "<a href='login-admin.php'>Hacer Login</a>";
-		exit;
-	}
-	
-	$now = time(); // checking the time now when home page starts
-
-	if($now > $_SESSION['expire']){
-		session_destroy();
-		echo "<br/><br />" . "Su sesion a terminado, <a href='login-admin.php'> Necesita Hacer Login</a>";
-		exit;
-	}
-?>
+  session_start();
+  
+?> 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,12 +26,10 @@ session_start();
 		
 	include_once 'config.php';
 		
-		$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
+		$conexion = mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 		$acentos = $conexion->query("SET NAMES 'utf8'");
 
-		$registrosCalefaccion=mysqli_query($conexion,"select * from producto") or die("Problemas en el select:".mysqli_error($conexion));
-		
-		
+		$registrosParrilla=mysqli_query($conexion,"select * from parrilla") or die("Problemas en el select de parrilla".mysqli_error($conexion));
 		
 	?>
 	<div>	
@@ -66,23 +46,23 @@ session_start();
 				<div class="col-md-10">
 					<h3 class="text-left">
 					<?php
-						echo "<a href=\"index.php\">Inicio</a> - <a href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Modificar calefacción";
-					?>						
+						echo "<a href=\"index.php\">Inicio</a> - <a href=\"parrilla-home.php\">Tipo de producto: Parrilla / Terraza </a> - Eliminar";
+					?>
 					</h3>
 					<br>					
 						<?php
-						while($reg=mysqli_fetch_array($registrosCalefaccion)){
-							$id_producto = $reg['id_producto'];
+						while($reg=mysqli_fetch_array($registrosParrilla)){
+							$id_parrilla = $reg['id_parrilla'];
 							$nombre = $reg['nombre'];
 							$modelo = $reg['modelo'];
 							$sku = $reg['sku'];
 							//$contenido_seguridad = $reg['contenido_seguridad'];
 							
-							echo "<li>Nombre: $nombre  Modelo: $modelo  SKU: <a href=\"edit-calefaccion.php?id_send=",urlencode($id_producto)," \">$sku</a> </li>";
+							echo "<li>Nombre: $nombre  Modelo: $modelo  SKU: <a href=\"eliminar-parrilla.php?id_send=",urlencode($id_parrilla)," \">$sku</a> </li>";
 							echo "<br>";
 
 						}
-						?>											
+						?>						
 				</div>
 			</div>
 		</div>

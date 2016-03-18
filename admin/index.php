@@ -1,3 +1,25 @@
+<?php
+session_start();
+
+	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+
+	}
+	else{
+	
+		header('Content-Type: text/html; charset=UTF-8'); 	
+		echo "<br/>" . "Esta pagina es solo para usuarios registrados." . "<br/>";
+		echo "<br/>" . "<a href='login-admin.php'>Hacer Login</a>";
+		exit;
+	}
+	
+	$now = time(); // checking the time now when home page starts
+
+	if($now > $_SESSION['expire']){
+		session_destroy();
+		echo "<br/><br />" . "Su sesion a terminado, <a href='login-admin.php'> Necesita Hacer Login</a>";
+		exit;
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,10 +61,13 @@
 							<a href="calefaccion-home.php" >Calefacción</a>
 						</div>						
 						<div class="panel-body">
-							<a href=".php" >Terraza y Parrilla</a>
+							<a href="parrilla-home.php" >Terraza y Parrilla</a>
 						</div>
 						<div class="panel-body">
-							<a href="editar-usuario.php" >Cocina y Calderas</a>
+							<a href="accparrilla-home.php" >Accesorios Parrilla</a>
+						</div>
+						<div class="panel-body">
+							<a href="cocina-home.php" >Cocina y Calderas</a>
 						</div>
 						<div class="panel-body">
 							<a href="eliminar-usuario.php" >Ventilación y aire acondicionado</a>

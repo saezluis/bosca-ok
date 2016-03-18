@@ -24,7 +24,9 @@ if(isset($_POST['cotizar_prod'])) {
 <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
 <link rel="stylesheet" href="owl-carousel/owl.theme.css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!--
 <script src="main2.js"></script>
+-->
 <script src="sass/tema/js/scripts.js"></script>
 <script src="owl-carousel/owl.carousel.min.js"></script>
 
@@ -268,8 +270,9 @@ function comentario(){
       </div>
     </div>
   </footer>  
-  
-  <div id="boxes">
+	
+	<!--
+	<div id="boxes">
 	  <div style="display: none; position:relative;" id="dialog" class="window centrado-porcentual"> 
 			<!--
 			<h1>Súbete al programa donde todos crecemos, siguiendo estas indicaciones.</h1>
@@ -279,7 +282,7 @@ function comentario(){
 						<li>*ingresa tu clave (tres últimos dígitos de tu rut)</li>
 					</ul>
 				</div>
-				-->
+				
 				<div class="grupo">
 				  <div class="imgCupon">
 					<div class="caja base-100 tablet-50">
@@ -295,10 +298,11 @@ function comentario(){
 				
 				<!--
 				<a href="#" class="close close-imagenes">X</a>
-				-->
+				
 		</div>
 				<div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
 	</div>
+	-->
   
 </body>
 </html>

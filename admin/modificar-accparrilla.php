@@ -19,7 +19,7 @@ session_start();
 		echo "<br/><br />" . "Su sesion a terminado, <a href='login-admin.php'> Necesita Hacer Login</a>";
 		exit;
 	}
-?> 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,9 +36,20 @@ session_start();
     <link href="css/style.css" rel="stylesheet">
 	
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
+		
 
   </head>
   <body>
+	<?php
+		
+	include_once 'config.php';
+		
+		$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
+		$acentos = $conexion->query("SET NAMES 'utf8'");
+
+		$registrosParrilla=mysqli_query($conexion,"select * from accparrilla") or die("Problemas en el select de parrilla".mysqli_error($conexion));
+		
+	?>
 	<div>	
 		<div class="container-fluid">
 		<div class="row">
@@ -52,42 +63,33 @@ session_start();
 			<div class="row">
 				<div class="col-md-10">
 					<h3 class="text-left">
-						<a href="index.php">Inicio</a> - Tipo de producto: Calefacción
+					<?php
+						echo "<a href=\"index.php\">Inicio</a> - <a href=\"parrilla-home.php\">Tipo de producto: Accesorios Parrilla</a> - Modificar";
+					?>						
 					</h3>
-					<div class="btn-group">
-						<br>												
-						<ul>
-							<li>
-								<?php
-								echo "<a href=\"consultar-calefaccion.php\">Consultar productos</a>";
-								?>
-								
-							</li>
-							<li>
-								<?php
-								echo "<a href=\"agregar-calefaccion.php\">Agregar calefacción</a>";
-								?>
-							</li>							
-							<li>
-								<?php
-								echo "<a href=\"modificar-calefaccion.php\">Modificar producto</a>";
-								?>
-							</li>
-							<li>
-								<?php
-								echo "<a href=\"el-calefaccion.php\">Eliminar producto</a>";
-								?>
-							</li>							
-						</ul>
-					</div>
+					<br>					
+						<?php
+						while($reg=mysqli_fetch_array($registrosParrilla)){
+							$id_accparrilla = $reg['id_accparrilla'];
+							$nombre = $reg['nombre'];
+							$modelo = $reg['modelo'];
+							$sku = $reg['sku'];
+							//$contenido_seguridad = $reg['contenido_seguridad'];
+							
+							echo "<li>Nombre: $nombre  Modelo: $modelo  SKU: <a href=\"edit-accparrilla.php?id_send=",urlencode($id_accparrilla)," \">$sku</a> </li>";
+							echo "<br>";
+
+						}
+						?>											
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	
+		
 	<script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+	
   </body>
 </html>

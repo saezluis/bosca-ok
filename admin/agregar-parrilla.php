@@ -74,60 +74,46 @@ session_start();
 			<div class="col-md-9">
 			<h3 class="text-left">
 				<?php
-				echo "<a href=\"index.php\">Inicio</a> - <a href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Agregar calefacción";
+				echo "<a href=\"index.php\">Inicio</a> - <a href=\"parrilla-home.php\">Tipo de producto: Parrilla / Terraza </a> - Agregar";
 				?>
 			</h3>
 			<br>
 			
-			<form name="formProducto" method="post" action="procesar-agregar-calefaccion.php" enctype="multipart/form-data">
+			<form name="formProducto" method="post" action="procesar-agregar-parrilla.php" enctype="multipart/form-data">
 			
 			<span class="texto"><input type="text" value="Nombre:" class="rightJustified" readonly> <input type="text" name="nombre" size="50" required> </span>
 			<br>
 			<span class="texto"><input type="text" value="Modelo:" class="rightJustified" readonly> <input type="text" name="modelo" size="50" required> </span>
 			<br>
-			<span class="texto"><input type="text" value="Precio:" class="rightJustified" readonly> <input type="text" name="precio" size="50" required> </span>
-			<br>
-					
-			<span class="texto"><input type="text" value="Fabricacion:" class="rightJustified" readonly> <input type="text" name="fabricacion" size="50" required> </span>
-			<br>
-			<span class="texto"><input type="text" value="Combustion:" class="rightJustified" readonly> <input type="text" name="combustion" size="50"> </span>
-			<br>
-			<span class="texto"><input type="text" value="Panel programable:" class="rightJustified" readonly> <input type="text" name="panel_programable" size="50"> </span>
-			<br>
-					
-			<span class="texto"><input type="text" value="Conexion electrica:" class="rightJustified" readonly> <input type="text" name="conexion_electrica" size="50"> </span>
-			<br>
-			<span class="texto"><input type="text" value="Capacidad de carga:" class="rightJustified" readonly> <input type="text" name="capacidad_carga" size="50"> </span>
-			<br>
-			<span class="texto"><input type="text" value="Potencia:" class="rightJustified" readonly> <input type="text" name="potencia" size="50"> </span>
-			<br>
-					
-			<span class="texto"><input type="text" value="Rango Calefaccion:" class="rightJustified" readonly> <input type="text" name="rango_calefaccion" size="50" required> </span>	
-			<br>
-			<span class="texto"><input type="text" value="Color:" class="rightJustified" readonly> <input type="text" name="color" size="50"> </span>	
-			<br>
-			<span class="texto"><input type="text" value="Vidrio Autolimpiante:" class="rightJustified" readonly> <input type="radio" name="vidrio_autolimpiante" value="si"> Si <input type="radio" name="vidrio_autolimpiante" value="no"> No  </span>	<!-- Radio Button-->
-			<br>
-					
-			<span class="texto"><input type="text" value="Cenicero:" class="rightJustified" readonly> <input type="radio" name="cenicero" value="si"> Si <input type="radio" name="cenicero" value="no"> No </span>   <!-- Radio Button-->
-			<br>
-			<span class="texto"><input type="text" value="Vermiculita Refractaria:" class="rightJustified" readonly> <input type="text" name="vermiculita_refractaria" size="70" > </span>
-			<br>
-			<span class="texto"><input type="text" value="Templador:" class="rightJustified" readonly> <input type="text" name="templador" size="50" > </span>
-			<br>
-					
-			<span class="texto"><input type="text" value="Ventaja Comparativa:" class="rightJustified" readonly> <input type="text" name="ventaja_comparativa" size="50" required> </span>
-			<br>
-			<span class="texto"><input type="text" value="Dimensiones:" class="rightJustified" readonly> <input type="text" name="dimensiones" size="70" required> </span>
-			<br>
-			<span class="texto"><input type="text" value="Diametro cañon:" class="rightJustified" readonly> <input type="text" name="diametro_canon" size="50" > </span>
-			<br>
-					
-			<span class="texto"><input type="text" value="Garantia:" class="rightJustified" readonly> <input type="text" name="garantia" size="50" required> </span>
-			<br>
 			<span class="texto"><input type="text" value="SKU:" class="rightJustified" readonly> <input type="text" name="sku" size="50" required> </span>
 			<br>
-			<br>		
+					
+			<span class="texto"><input type="text" value="Precio:" class="rightJustified" readonly> <input type="text" name="precio" size="50" required> </span>
+			<br>
+			<span class="texto"><input type="text" value="Alto:" class="rightJustified" readonly> <input type="text" name="alto" size="50"> </span>
+			<br>
+			<span class="texto"><input type="text" value="Ancho:" class="rightJustified" readonly> <input type="text" name="ancho" size="50"> </span>
+			<br>
+					
+			<span class="texto"><input type="text" value="Profundidad:" class="rightJustified" readonly> <input type="text" name="profundidad" size="50"> </span>
+			<br>
+			<span class="texto"><input type="text" value="Peso:" class="rightJustified" readonly> <input type="text" name="peso" size="50"> </span>
+			<br>
+			<span class="texto"><input type="text" value="Material:" class="rightJustified" readonly> <input type="text" name="material" size="50"> </span>
+			<br>
+					
+			<span class="texto"><input type="text" value="Atributo 01:" class="rightJustified" readonly> <input type="text" name="atributo_01" size="50" required> </span>	
+			<br>
+			<span class="texto"><input type="text" value="Atributo 02:" class="rightJustified" readonly> <input type="text" name="atributo_02" size="50" required> </span>	
+			<br>
+			<span class="texto"><input type="text" value="Atributo 03:" class="rightJustified" readonly> <input type="text" name="atributo_03" size="50"> </span>	
+			<br>
+			<span class="texto"><input type="text" value="Atributo 04:" class="rightJustified" readonly> <input type="text" name="atributo_04" size="50"> </span>	
+			<br>
+			<span class="texto"><input type="text" value="Atributo 05:" class="rightJustified" readonly> <input type="text" name="atributo_05" size="50"> </span>	
+			<br>
+			<span class="texto"><input type="text" value="Atributo 06:" class="rightJustified" readonly> <input type="text" name="atributo_06" size="50"> </span>	
+			<br>
 			
 			<!-- Aqui deberia poder seleccionar el logo con las posibles opciones que son tres hasta ahora -->	
 			<span class="texto">Mini logo superior izquierdo: 
@@ -146,7 +132,13 @@ session_start();
 			<br>
 			<span class="texto">Foto producto con Zoom - - Seleccione foto para cargar: </span>
 			<span class="texto">Única resolución aceptada: <b>900 x 1075</b></span>
-			<input type="file" name="fileToUploadDos" id="fileToUploadDos" required>
+			<input type="file" name="fileToUploadDos" id="fileToUploadDos" >
+			<br>
+			<br>
+			
+			<br>
+			<span class="texto">Ficha Técnica - - Seleccione ficha en formato PDF para cargar: </span>
+			<input type="file" name="fileToUploadTres" id="fileToUploadTres" >
 			<br>
 			<br>
 			

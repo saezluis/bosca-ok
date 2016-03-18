@@ -39,7 +39,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3 class="text-left">
-					<a href="index.html">Administrador Bosca</a>
+					<a href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
@@ -48,7 +48,7 @@
 				<div class="col-md-10">
 					<h3 class="text-left">
 					<?php
-						echo "<a href=\"index.html\">Inicio</a> - <a href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Eliminar producto";
+						echo "<a href=\"index.php\">Inicio</a> - <a href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Eliminar producto";
 					?>						
 					</h3>
 					<br>					

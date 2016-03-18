@@ -1,24 +1,6 @@
 <?php
-session_start();
-
-	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-
-	}
-	else{
-	
-		header('Content-Type: text/html; charset=UTF-8'); 	
-		echo "<br/>" . "Esta pagina es solo para usuarios registrados." . "<br/>";
-		echo "<br/>" . "<a href='login-admin.php'>Hacer Login</a>";
-		exit;
-	}
-	
-	$now = time(); // checking the time now when home page starts
-
-	if($now > $_SESSION['expire']){
-		session_destroy();
-		echo "<br/><br />" . "Su sesion a terminado, <a href='login-admin.php'> Necesita Hacer Login</a>";
-		exit;
-	}
+  session_start();
+	  	
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,30 +34,29 @@ session_start();
 			<div class="row">
 				<div class="col-md-10">
 					<h3 class="text-left">
-						<a href="index.php">Inicio</a> - Tipo de producto: Calefacción
+						<a href="index.php">Inicio</a> - Tipos de productos: Parrilla / Terraza
 					</h3>
 					<div class="btn-group">
 						<br>												
 						<ul>
 							<li>
 								<?php
-								echo "<a href=\"consultar-calefaccion.php\">Consultar productos</a>";
+								echo "<a href=\"consultar-parrilla.php\">Consultar productos</a>";
 								?>
-								
 							</li>
 							<li>
 								<?php
-								echo "<a href=\"agregar-calefaccion.php\">Agregar calefacción</a>";
+								echo "<a href=\"agregar-parrilla.php\">Agregar productos</a>";
 								?>
 							</li>							
 							<li>
 								<?php
-								echo "<a href=\"modificar-calefaccion.php\">Modificar producto</a>";
+								echo "<a href=\"modificar-parrilla.php\">Modificar productos</a>";
 								?>
 							</li>
 							<li>
 								<?php
-								echo "<a href=\"el-calefaccion.php\">Eliminar producto</a>";
+								echo "<a href=\"el-parrilla.php\">Eliminar productos</a>";
 								?>
 							</li>							
 						</ul>
