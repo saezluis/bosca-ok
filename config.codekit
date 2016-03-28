@@ -326,6 +326,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/admin\/img\/logo--2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5538,
+		"inputAbbreviatedPath": "\/admin\/img\/logo--2.png",
+		"outputAbbreviatedPath": "\/admin\/img\/logo--2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/admin\/img\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -336,15 +347,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
-		},
-	"\/admin\/index.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/admin\/index.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/admin\/js\/bootstrap.min.js": {
 		"fileType": 64,
@@ -1538,17 +1540,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img-ac\/vent-normal.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 17096,
-		"inputAbbreviatedPath": "\/img-ac\/vent-normal.jpg",
-		"outputAbbreviatedPath": "\/img-ac\/vent-normal.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img-ac\/vent-piso-zoom.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1567,17 +1558,6 @@
 		"initialSize": 218115,
 		"inputAbbreviatedPath": "\/img-ac\/vent-sobremesa-zoom.jpg",
 		"outputAbbreviatedPath": "\/img-ac\/vent-sobremesa-zoom.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img-ac\/vent-zoom.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 62958,
-		"inputAbbreviatedPath": "\/img-ac\/vent-zoom.jpg",
-		"outputAbbreviatedPath": "\/img-ac\/vent-zoom.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
