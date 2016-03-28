@@ -41,7 +41,9 @@ session_start();
 	
 	<style>
 	.texto {
-		font-family: Arial;	
+		font-family: 'Open Sans', sans-serif;
+		display: block;
+		text-align: center;
 	}
 	
 	.textSize {
@@ -50,9 +52,10 @@ session_start();
 	</style>
 	
 	<style>
-   .rightJustified {
-        text-align: right;
-		border: none
+   .rightJustified, .leftJustified {
+        text-align: left;
+		border: none;
+		background: transparent;
     }
 	</style>
 	
@@ -60,51 +63,56 @@ session_start();
 	
   </head>
   <body>
-	<div>
+	<div class="full">
 	
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.php">Administrador Bosca</a>
-				</h3>
-			</div>			
-		</div>
-		<div class="row">
-			<div class="col-md-9">
-			<h3 class="text-left">
+		<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 no-padding">
+					<div class="logotipo">
+						<img src="img/logo--2.png" alt="">
+					</div>
+						<h3 class="text-center">
+							<a class="color-link" href="index.php">Administrador Bosca</a>
+						</h3>
+					</div>			
+				</div>
+			<div class="row">
+				<div class="col-md-12">
+				<h3 class="text-center bread-back">
 				<?php
-				echo "<a href=\"index.php\">Inicio</a> - <a href=\"accparrilla-home.php\">Tipo de producto: Accesorios Parrilla</a> - Agregar";
+					echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"accparrilla-home.php\">Tipo de producto: Accesorios Parrilla</a> - Agregar";
 				?>
 			</h3>
 			<br>
 			
-			<form name="formProducto" method="post" action="procesar-agregar-accparrilla.php" enctype="multipart/form-data">
+			<form id="back-form" name="formProducto" method="post" action="procesar-agregar-accparrilla.php" enctype="multipart/form-data">
 			
-			<span class="texto"><input type="text" value="Nombre:" class="rightJustified" readonly> <input type="text" name="nombre" size="50" required> </span>
-			<br>
-			<span class="texto"><input type="text" value="Modelo:" class="rightJustified" readonly> <input type="text" name="modelo" size="50" required> </span>
-			<br>
-			<span class="texto"><input type="text" value="SKU:" class="rightJustified" readonly> <input type="text" name="sku" size="50" required> </span>
-			<br>
-			<span class="texto"><input type="text" value="Precio:" class="rightJustified" readonly> <input type="text" name="precio" size="50" required> </span>
-			<br>
-			
-			<!-- Aqui deberia poder seleccionar el logo con las posibles opciones que son tres hasta ahora -->	
-			<span class="texto">Mini logo superior izquierdo: 
-				<input type="radio" name="mini_logo" value="mini-bosca.png"><img src="../img2/mini-bosca.png">
-				<input type="radio" name="mini_logo" value="mini-hergom.png"><img src="../img2/mini-hergom.png"> 
-				<input type="radio" name="mini_logo" value="mini-xeoos.png"><img src="../img2/mini-xeoos.png"> 
-			</span>
-			
-			<br>
-			<br>
-			<span class="texto">Foto producto (Vista Catalogo) - - Seleccione foto para cargar: </span>
-			<span class="texto">Única resolución aceptada: <b>490 x 530</b></span>
-			<input type="file" name="fileToUpload" id="fileToUpload" required>
-			<br>
-			
-			<input type="submit" ></input>
+				<span class="texto"><input type="text" value="Nombre:" class="rightJustified" readonly> <input type="text" name="nombre" size="50" required> </span>
+				<br>
+				<span class="texto"><input type="text" value="Modelo:" class="rightJustified" readonly> <input type="text" name="modelo" size="50" required> </span>
+				<br>
+				<span class="texto"><input type="text" value="SKU:" class="rightJustified" readonly> <input type="text" name="sku" size="50" required> </span>
+				<br>
+				<span class="texto"><input type="text" value="Precio:" class="rightJustified" readonly> <input type="text" name="precio" size="50" required> </span>
+				<br>
+				
+				<!-- Aqui deberia poder seleccionar el logo con las posibles opciones que son tres hasta ahora -->	
+				<span class="texto">Mini logo superior izquierdo: 
+					<input type="radio" name="mini_logo" value="mini-bosca.png"><img src="../img2/mini-bosca.png" class="marg-side-logo">
+					<input type="radio" name="mini_logo" value="mini-hergom.png"><img src="../img2/mini-hergom.png" class="marg-side-logo"> 
+					<input type="radio" name="mini_logo" value="mini-xeoos.png"><img src="../img2/mini-xeoos.png" class="marg-side-logo"> 
+				</span>
+				
+				<br>
+				<br>
+				<div class="cajaborder">
+					<span class="texto">Foto producto (Vista Catalogo) - - Seleccione foto para cargar: </span>
+					<span class="texto">Única resolución aceptada: <b>490 x 530</b></span>
+					<input class="inp-file" type="file" name="fileToUpload" id="fileToUpload" required>
+				</div>
+				<br>
+				
+				<input class="button-change" type="submit" ></input>
 			
 			</form>
 			

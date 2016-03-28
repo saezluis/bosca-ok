@@ -39,9 +39,12 @@ session_start();
 	
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	
-	<style>
+	
+<style>
 	.texto {
-		font-family: Arial;	
+		font-family: 'Open Sans', sans-serif;
+		display: block;
+		text-align: center;
 	}
 	
 	.textSize {
@@ -50,11 +53,12 @@ session_start();
 	</style>
 	
 	<style>
-   .rightJustified {
-        text-align: right;
-		border: none
+   .rightJustified, .leftJustified {
+        text-align: left;
+		border: none;
+		background: transparent;
     }
-	</style>
+</style>
 
   </head>
   <body>
@@ -94,23 +98,28 @@ session_start();
 
 	?>
 	
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.html">Administrador Bosca</a>
-				</h3>
-			</div>			
-		</div>
-		<div class="row">
-			<div class="col-md-9">
-			<h3 class="text-left">
-				<?php
-				echo "<a href=\"index.php\">Inicio</a> - <a href=\"ventilacion-home.php\">Tipo de producto: Ventilación y A/C </a> - Consultar";
-				?>
+	<div class="full">
+	
+		<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 no-padding">
+					<div class="logotipo">
+						<img src="img/logo--2.png" alt="">
+					</div>
+						<h3 class="text-center">
+							<a class="color-link" href="index.php">Administrador Bosca</a>
+						</h3>
+					</div>			
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="text-center bread-back">
+					<?php
+					echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"ventilacion-home.php\">Tipo de producto: Ventilación y A/C </a> - Agregar";
+					?>
 			</h3>
 			<br>
-			<form name="formProducto" method="post" action="procesar-agregar-ventilacion.php" enctype="multipart/form-data">
+			<form id="back-form" name="formProducto" method="post" action="procesar-agregar-ventilacion.php" enctype="multipart/form-data">
 			
 				<?php			
 			
@@ -146,28 +155,33 @@ session_start();
 				echo "<br>";
 				
 				echo "<span class=\"texto\">Mini logo superior izquierdo: ";
-					echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-bosca.png\"><img src=\"../img2/mini-bosca.png\">";					
+					echo "<input class=\"marg-side-logo\"type=\"radio\" name=\"mini_logo\" value=\"mini-bosca.png\"><img src=\"../img2/mini-bosca.png\">";					
 				echo "</span>";
 				echo "<br>";
 				echo "<br>";
-				
-				echo "<span class=\"texto\">Foto producto (Vista Catalogo) - - Seleccione foto para cargar: </span>";
-				echo "<span class=\"texto\">Única resolución aceptada: <b>330 x 310</b></span>";
-				echo "<input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\" required>";
+
+				echo "<div class=\"cajaborder\">";
+					echo "<span class=\"texto\">Foto producto (Vista Catalogo) - - Seleccione foto para cargar: </span>";
+					echo "<span class=\"texto\">Única resolución aceptada: <b>330 x 310</b></span>";
+					echo "<input class=\"inp-file\" type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\" required>";
+				echo "</div>";
+
 				echo "<br>";
 				
 			
 				echo "<br>";
-				echo "<span class=\"texto\">Foto producto con Zoom - - Seleccione foto para cargar: </span>";
-				echo "<span class=\"texto\">Única resolución aceptada: <b>900 x 1075</b></span>";
-				echo "<input type=\"file\" name=\"fileToUploadDos\" id=\"fileToUploadDos\" required>";
+				echo "<div class=\"cajaborder\">";
+					echo "<span class=\"texto\">Foto producto con Zoom - - Seleccione foto para cargar: </span>";
+					echo "<span class=\"texto\">Única resolución aceptada: <b>900 x 1075</b></span>";
+					echo "<input class=\"inp-file\" type=\"file\" name=\"fileToUploadDos\" id=\"fileToUploadDos\" required>";
+				echo "</div>";
 				echo "<br>";
 				echo "<br>";
 					
 				
 				?>
 			
-			<input type="submit" ></input>
+			<input class="button-change" type="submit" ></input>
 			
 			</form>
 			

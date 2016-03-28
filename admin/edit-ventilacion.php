@@ -40,20 +40,23 @@ session_start();
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	
 	<style>
-	.texto {
-		font-family: Arial;	
-	}
-	
-	.textSize {
-		font-size: 24px;
-	}
-	</style>
-	
-	<style>
-   .rightJustified {
-        text-align: right;
-		border: none
-    }
+		.texto {
+			font-family: 'Open Sans', sans-serif;
+			display: block;
+			text-align: center;
+		}
+		
+		.textSize {
+			font-size: 24px;
+		}
+		</style>
+		
+		<style>
+	   .rightJustified, .leftJustified {
+	        text-align: left;
+			border: none;
+			background: transparent;
+	    }
 	</style>
 
   </head>
@@ -101,23 +104,28 @@ session_start();
 
 	?>
 	
-	<div class="container-fluid">
+	<div class="full">	
+		<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.html">Administrador Bosca</a>
+			<div class="col-md-12 no-padding">
+				<div class="logotipo">
+					<img src="img/logo--2.png" alt="">
+				</div>
+				<h3 class="text-center">
+					<a class="color-link" href="index.html">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
-		<div class="row">
-			<div class="col-md-9">
-			<h3 class="text-left">
+		
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="text-center bread-back">
 				<?php
-				echo "<a href=\"index.php\">Inicio</a> - <a href=\"ventilacion-home.php\">Tipo de producto: Ventilación y A/C </a> - Consultar";
+				echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"ventilacion-home.php\">Tipo de producto: Ventilación y A/C </a> - Consultar";
 				?>
 			</h3>
 			<br>
-			<form name="formProducto" method="post" action="procesar-agregar-ventilacion.php" enctype="multipart/form-data">
+			<form id="back-form" name="formProducto" method="post" action="procesar-agregar-ventilacion.php" enctype="multipart/form-data">
 			
 				<?php			
 				
@@ -166,34 +174,37 @@ session_start();
 					$stuff_1 = 'checked=\"checked\"';							
 				}
 				
-				echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-bosca.png\" $stuff_1 ><img src=\"../img2/mini-bosca.png\">";
+				echo "<input class=\"marg-side-logo\" type=\"radio\" name=\"mini_logo\" value=\"mini-bosca.png\" $stuff_1 ><img src=\"../img2/mini-bosca.png\">";
 				//echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-hergom.png\" $stuff_2 ><img src=\"../img2/mini-hergom.png\">";				
 				echo "</span>";
 						
 				echo "<br>";
 				echo "<br>";
 				
-				echo "<span class=\"texto\">Foto producto (Vista Catalogo) <a href=\"#\" data-featherlight=\"../img-ac/$foto_producto\">Ver foto actual</a> </span>"; 
-				echo "<br>";
-				echo "<span class=\"texto\">Seleccione foto para <b><i>cambiar</i></b>: </span>";
-				echo "<span class=\"texto\">Única resolución aceptada: <b>330 x 310</b></span>";
-				echo "<input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">";
+
+					echo "<span class=\"texto\">Foto producto (Vista Catalogo) <a href=\"#\" data-featherlight=\"../img-ac/$foto_producto\">Ver foto actual</a> </span>"; 
+					echo "<br>";
+				echo "<div class=\"cajaborder\">";
+					echo "<span class=\"texto\">Seleccione foto para <b><i>cambiar</i></b>: </span>";
+					echo "<span class=\"texto\">Única resolución aceptada: <b>330 x 310</b></span>";
+					echo "<input style=\"margin:1em auto 0 auto;\" type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">";
+				echo "</div>";
 						
 				echo "<br>";
 				echo "<br>";
 						
 				echo "<span class=\"texto\">Foto producto con Zoom <a href=\"#\" data-featherlight=\"../img-ac/$foto_zoom\">Ver foto con zoom</a></span>"; 
 				echo "<br>";
-				echo "<span class=\"texto\">Seleccione foto para <b><i>cambiar</i></b>: </span>";
-				echo "<span class=\"texto\">Única resolución aceptada: <b>900 x 1075</b></span>";
-				echo "<input type=\"file\" name=\"fileToUploadDos\" id=\"fileToUploadDos\">";
-					
+				echo "<div class=\"cajaborder\">";
+					echo "<span class=\"texto\">Seleccione foto para <b><i>cambiar</i></b>: </span>";
+					echo "<span class=\"texto\">Única resolución aceptada: <b>900 x 1075</b></span>";
+					echo "<input style=\"margin:1em auto 0 auto;\" type=\"file\" name=\"fileToUploadDos\" id=\"fileToUploadDos\">";
+				echo "</div>";
 				
 				?>
-				<br>
-				<br>
 			
-			<button type="submit" onClick="alert('El contenido fue actualizado')">Modificar</button>  &nbsp; &nbsp;  <button type="button"><a href="ventilacion-home.php">Cancelar</a></button>
+			<button class="button-change"  type="submit" onClick="alert('El contenido fue actualizado')">Modificar</button>
+			<a class="button-change" href="ventilacion-home.php">Cancelar</a>
 			
 			</form>
 			

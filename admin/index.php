@@ -39,95 +39,49 @@ session_start();
 
   </head>
   <body>
-	 	
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<h3 class="text-left">
-				Administrador Bosca
-			</h3>
-		</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-md-2">
-			<div class="panel-group" id="panel-142934">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-142934" href="#panel-element-230870">Productos</a>
+	 <div class="full">
+	    <div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 no-padding">
+					<div class="logotipo">
+						<img src="img/logo--2.png" alt="">
 					</div>
-					<div id="panel-element-230870" class="panel-collapse collapse">
-						<div class="panel-body">
-							<a href="calefaccion-home.php" >Calefacción</a>
-						</div>						
-						<div class="panel-body">
-							<a href="parrilla-home.php" >Terraza y Parrilla</a>
-						</div>
-						<div class="panel-body">
-							<a href="accparrilla-home.php" >Accesorios Parrilla</a>
-						</div>
-						<div class="panel-body">
-							<a href="cocina-home.php" >Cocina y Calderas</a>
-						</div>
-						<div class="panel-body">
-							<a href="ventilacion-home.php" >Ventilación y aire acondicionado</a>
-						</div>
-					</div>
+					<h3 class="text-center">
+						Administrador de Productos
+					</h3>
 				</div>
-				<!--
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-142934" href="#panel-element-543909">Pilares Súbete</a>
-					</div>
-					<div id="panel-element-543909" class="panel-collapse collapse">
-						<div class="panel-body">
-							<a href="seguridad-home.php" >Seguridad</a>
-						</div>
-						<div class="panel-body">
-							<a href="productividad-home.php" >Productividad</a>
-						</div>
-						<div class="panel-body">
-							<a href="responsabilidad-home.php" >Responsabilidad</a>
-						</div>
-						<div class="panel-body">
-							<a href="superacion-home.php" >Superación</a>
-						</div>
-						<div class="panel-body">
-							<a href="optimismo-home.php" >Optimismo</a>
-						</div>
-						<div class="panel-body">
-							<a href="profesionalismo-home.php" >Profesionalismo</a>
-						</div>						
-					</div>
-				</div>
-				
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-142934" href="#panel-element-230871">Noticias</a>
-					</div>
-					<div id="panel-element-230871" class="panel-collapse collapse">
-						<div class="panel-body">
-							<a href="consultar-noticias.php" >Consultar noticias</a>
-						</div>						
-						<div class="panel-body">
-							<a href="agregar-noticias.php" >Agregar noticias</a>
-						</div>
-						<div class="panel-body">
-							<a href="noticia-activa.php" >Establecer noticia activa</a>
-						</div>
-						<div class="panel-body">
-							<a href="editar-noticia.php" >Editar noticias</a>
-						</div>
-						<div class="panel-body">
-							<a href="el-noticias.php" >Eliminar noticias</a>
-						</div>
-					</div>
-				</div>
-				-->
 			</div>
-		</div>
-	</div>
-</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel-group" id="panel-142934">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-142934" href="#panel-element-230870">Elige una categoría</a>
+							</div>
+							<div id="panel-element-230870" class="panel-collapse collapse">
+								<div class="panel-body">
+									<a class="color-link-prod" href="calefaccion-home.php" >Calefacción</a>
+								</div>						
+								<div class="panel-body">
+									<a class="color-link-prod" href="parrilla-home.php" >Terraza y Parrilla</a>
+								</div>
+								<div class="panel-body">
+									<a class="color-link-prod" href="accparrilla-home.php" >Accesorios Parrilla</a>
+								</div>
+								<div class="panel-body">
+									<a class="color-link-prod" href="cocina-home.php" >Cocina y Calderas</a>
+								</div>
+								<div class="panel-body">
+									<a class="color-link-prod" href="ventilacion-home.php" >Ventilación y aire acondicionado</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--fin.container-fluid-->
+	</div><!--fin.full-->
 
 	
 

@@ -50,24 +50,28 @@ session_start();
 		$registrosVentilacion = mysqli_query($conexion,"select * from ventilacion") or die("Problemas en el select:".mysqli_error($conexion));
 		
 	?>
-	<div>	
+	<div class="full">	
 		<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.php">Administrador Bosca</a>
+			<div class="col-md-12 no-padding">
+				<div class="logotipo">
+					<img src="img/logo--2.png" alt="">
+				</div>
+				<h3 class="text-center">
+					<a class="color-link" href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
 		
 			<div class="row">
-				<div class="col-md-10">
-					<h3 class="text-left">
+				<div class="col-md-12">
+					<h3 class="text-center bread-back">
 					<?php
-						echo "<a href=\"index.php\">Inicio</a> - <a href=\"ventilacion-home.php\">Tipo de producto: Ventilación y A/C</a> - Modificar";
+						echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"ventilacion-home.php\">Tipo de producto: Ventilación y A/C</a> - Modificar";
 					?>						
 					</h3>
-					<br>					
+					<br>	
+					<form id="back-form" >				
 						<?php
 						while($reg=mysqli_fetch_array($registrosVentilacion)){
 							$id_ventilacion = $reg['id_ventilacion'];
@@ -76,11 +80,12 @@ session_start();
 							$sku = $reg['sku'];
 							//$contenido_seguridad = $reg['contenido_seguridad'];
 							
-							echo "<li>Nombre: $nombre  Modelo: $modelo  SKU: <a href=\"edit-ventilacion.php?id_send=",urlencode($id_ventilacion)," \">$sku</a> </li>";
+							echo "<li class=\"briankeaton\">Nombre: $nombre  Modelo: $modelo  SKU: <a class=\"linksis\" href=\"edit-ventilacion.php?id_send=",urlencode($id_ventilacion)," \">$sku</a> </li>";
 							echo "<br>";
 
 						}
-						?>											
+						?>	
+					</form>										
 				</div>
 			</div>
 		</div>

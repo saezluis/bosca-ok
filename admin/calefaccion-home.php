@@ -39,23 +39,25 @@ session_start();
 
   </head>
   <body>
-	<div>	
+	<div class="full">	
 		<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.php">Administrador Bosca</a>
+			<div class="col-md-12 no-padding">
+					<div class="logotipo">
+						<img src="img/logo--2.png" alt="">
+					</div>
+				<h3 class="text-center">
+					<a class="color-link" href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
 		
 			<div class="row">
-				<div class="col-md-10">
-					<h3 class="text-left">
+				<div class="col-md-12">
+					<h3 class="text-center bread-back">
 						<a href="index.php">Inicio</a> - Tipo de producto: Calefacción
 					</h3>
-					<div class="btn-group">
-						<br>												
+					<div class="btn-group">												
 						<ul>
 							<li>
 								<?php
@@ -83,7 +85,7 @@ session_start();
 				</div>
 			</div>
 		</div>
-	</div>
+	</div><!--fin.full-->
 	
 	
 	<script src="js/jquery.min.js"></script>

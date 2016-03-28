@@ -32,24 +32,28 @@
 		$registrosCocina = mysqli_query($conexion,"select * from cocinas") or die("Problemas en el select:".mysqli_error($conexion));
 		
 	?>
-	<div>	
+	<div class="full">	
 		<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.php">Administrador Bosca</a>
+			<div class="col-md-12 no-padding">
+				<div class="logotipo">
+					<img src="img/logo--2.png" alt="">
+				</div>
+				<h3 class="text-center">
+					<a class="color-link" href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
 		
 			<div class="row">
-				<div class="col-md-10">
-					<h3 class="text-left">
+				<div class="col-md-12">
+					<h3 class="text-center bread-back">
 					<?php
-						echo "<a href=\"index.php\">Inicio</a> - <a href=\"cocina-home.php\">Tipo de producto: Cocinas y Calderas</a> - Eliminar producto";
+						echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"cocina-home.php\">Tipo de producto: Cocinas y Calderas</a> - Eliminar producto";
 					?>						
 					</h3>
-					<br>					
+					<br>
+					<form id="back-form" >						
 						<?php
 						while($reg=mysqli_fetch_array($registrosCocina)){
 							$id_cocina = $reg['id_cocina'];
@@ -58,11 +62,12 @@
 							$sku = $reg['sku'];
 							//$contenido_seguridad = $reg['contenido_seguridad'];
 							
-							echo "<li>Nombre: $nombre  Modelo: $modelo  SKU: <a href=\"elim-cocina.php?id_send=",urlencode($id_cocina)," \">$sku</a> </li>";
+							echo "<li class=\"briankeaton\">Nombre: $nombre  Modelo: $modelo  SKU: <a class=\"delete\" href=\"elim-cocina.php?id_send=",urlencode($id_cocina)," \">$sku</a> </li>";
 							echo "<br>";
 
 						}
-						?>						
+						?>
+					</form>						
 				</div>
 			</div>
 		</div>

@@ -37,14 +37,24 @@ session_start();
 	
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 		
-	<style>
+		<style>
 	.texto {
-		font-family: Arial;	
+		font-family: 'Open Sans', sans-serif;
+		display: block;
+		text-align: center;
 	}
 	
 	.textSize {
 		font-size: 24px;
 	}
+	</style>
+	
+	<style>
+   .rightJustified, .leftJustified {
+        text-align: left;
+		border: none;
+		background: transparent;
+    }
 	</style>
 	
   </head>
@@ -99,25 +109,28 @@ session_start();
 	
 	?>
   
-	<div>	
+	<div class="full">	
 		<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 no-padding">
+				<div class="logotipo">
+					<img src="img/logo--2.png" alt="">
+				</div>
 				<h3 class="text-center">
-					<a href="index.html">Administrador Bosca</a>
+					<a class="color-link" href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
 		
 			<div class="row">
-				<div class="col-md-10">
-					<h3 class="text-left">
+				<div class="col-md-12">
+					<h3 class="text-center  bread-back">
 					<?php
-						echo "<a href=\"index.html\">Inicio</a> - <a href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Eliminar producto";
+						echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Eliminar producto";
 					?>						
 					</h3>
 					<br>
-					<form method="post" action="delete-calefaccion.php">					
+					<form id="back-form" method="post" action="delete-calefaccion.php">					
 						<?php	
 						
 						echo "<input type=\"text\" name=\"id-producto-send\" value=\"$id_producto\" hidden=hidden>";
@@ -155,14 +168,14 @@ session_start();
 						
 						echo "<span class=\"texto\"><input type=\"text\" value=\"Cenicero:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$cenicero\" size=\"50\" readonly> </span>";		
 						echo "<br>";
-						echo "<span class=\"texto\"><input type=\"text\" value=\"Vermiculita Refractaria:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$vermiculita_refractaria\" size=\"70\" readonly> </span>";		
+						echo "<span class=\"texto\"><input type=\"text\" value=\"Vermiculita Refractaria:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$vermiculita_refractaria\" size=\"50\" readonly> </span>";		
 						echo "<br>";
 						echo "<span class=\"texto\"><input type=\"text\" value=\"Templador:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$templador\" size=\"50\" readonly> </span>";		
 						echo "<br>";
 						
 						echo "<span class=\"texto\"><input type=\"text\" value=\"Ventaja Comparativa:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$ventaja_comparativa\" size=\"50\" readonly> </span>";		
 						echo "<br>";
-						echo "<span class=\"texto\"><input type=\"text\" value=\"Dimensiones:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$dimensiones\" size=\"70\" readonly> </span>";		
+						echo "<span class=\"texto\"><input type=\"text\" value=\"Dimensiones:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$dimensiones\" size=\"50\" readonly> </span>";		
 						echo "<br>";
 						echo "<span class=\"texto\"><input type=\"text\" value=\"Diametro cañon:\" class=\"rightJustified\" readonly> <input type=\"text\" value=\"$diametro_canon\" size=\"50\" readonly> </span>";		
 						echo "<br>";
@@ -175,7 +188,8 @@ session_start();
 						?>
 						
 						<br>						
-						<button type="submit" onClick="alert('El contenido fue eliminado')">Eliminar</button>  &nbsp; &nbsp;  <button type="button"><a href="calefaccion-home.php">Cancelar</a></button>
+						<button class="button-change" type="submit" onClick="alert('El contenido fue eliminado')">Eliminar</button>
+						<a class="button-change" href="calefaccion-home.php">Cancelar</a>
 					</form>					
 				</div>
 			</div>

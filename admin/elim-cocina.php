@@ -41,7 +41,9 @@ session_start();
 	
 	<style>
 	.texto {
-		font-family: Arial;	
+		font-family: 'Open Sans', sans-serif;
+		display: block;
+		text-align: center;
 	}
 	
 	.textSize {
@@ -50,9 +52,10 @@ session_start();
 	</style>
 	
 	<style>
-   .rightJustified {
-        text-align: right;
-		border: none
+   .rightJustified, .leftJustified {
+        text-align: left;
+		border: none;
+		background: transparent;
     }
 	</style>
 
@@ -103,24 +106,29 @@ session_start();
 	
 	?>
 	
-	<div class="container-fluid">
+	<div class="full">	
+		<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.html">Administrador Bosca</a>
+			<div class="col-md-12 no-padding">
+				<div class="logotipo">
+					<img src="img/logo--2.png" alt="">
+				</div>
+				<h3 class="text-center">
+					<a class="color-link" href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
-		<div class="row">
-			<div class="col-md-9">
-			<h3 class="text-left">
+		
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="text-center  bread-back">
 				<?php
 				echo "<a href=\"index.php\">Inicio</a> - <a href=\"cocina-home.php\">Tipo de producto: Cocina y Calderas</a> - Eliminar";
 				?>
 			</h3>
 			<br>
 			
-			<form method="post" action="delete-cocina.php">
+			<form id="back-form" method="post" action="delete-cocina.php">
 			
 			<?php			
 				
@@ -236,7 +244,8 @@ session_start();
 			
 			?>
 			
-			<button type="submit" onClick="alert('El contenido fue eliminado')">Eliminar</button>  &nbsp; &nbsp;    <button type="button"><a href="cocina-home.php">Cancelar</a></button>
+			<button class="button-change" type="submit" onClick="alert('El contenido fue eliminado')">Eliminar</button>
+			<a class="button-change"  href="cocina-home.php">Cancelar</a>
 			
 			</form>
 			 

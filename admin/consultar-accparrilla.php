@@ -40,78 +40,85 @@ session_start();
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	
 	<style>
-	.texto {
-		font-family: Arial;	
-	}
-	
-	.textSize {
-		font-size: 24px;
-	}
-	</style>
-	
-	<style>
-   .rightJustified {
-        text-align: right;
-		border: none
-    }
+		.texto {
+			font-family: 'Open Sans', sans-serif;
+			display: block;
+			text-align: center;
+		}
+		
+		.textSize {
+			font-size: 24px;
+		}
+		</style>
+		
+		<style>
+	   .rightJustified, .leftJustified {
+	        text-align: left;
+			border: none;
+			background: transparent;
+	    }
 	</style>
 
   </head>
   <body>
-	<div>
+	<div class="full">
 	
 	
-	<?php
-	
-	
-	include_once 'config.php';
-	
-	$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
-	$acentos = $conexion->query("SET NAMES 'utf8'");
-	
-	$registrosTodos=mysqli_query($conexion,"select * from accparrilla") or die("Problemas en el select:".mysqli_error($conexion));
-	
-	$TAMANO_PAGINA = 3; 
-		
-		//examino la página a mostrar y el inicio del registro a mostrar 
-		@$pagina = $_GET["pagina"]; 
-		if (!$pagina) { 
-			$inicio = 0; 
-			$pagina=1; 
-		} 
-		else { 
-			$inicio = ($pagina - 1) * $TAMANO_PAGINA; 
-		}
-		
-		$num_total_registros = mysqli_num_rows($registrosTodos); 
-		//calculo el total de páginas 
-		$total_paginas = ceil($num_total_registros / $TAMANO_PAGINA); 
-		
-		$ssql = "select * from accparrilla LIMIT " . $inicio . "," . $TAMANO_PAGINA; 
-		
-		$rs = mysqli_query($conexion,$ssql); 
-	
+			<?php
+			
+			
+				include_once 'config.php';
+				
+				$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
+				$acentos = $conexion->query("SET NAMES 'utf8'");
+				
+				$registrosTodos=mysqli_query($conexion,"select * from accparrilla") or die("Problemas en el select:".mysqli_error($conexion));
+				
+				$TAMANO_PAGINA = 3; 
+					
+					//examino la página a mostrar y el inicio del registro a mostrar 
+					@$pagina = $_GET["pagina"]; 
+					if (!$pagina) { 
+						$inicio = 0; 
+						$pagina=1; 
+					} 
+					else { 
+						$inicio = ($pagina - 1) * $TAMANO_PAGINA; 
+					}
+					
+					$num_total_registros = mysqli_num_rows($registrosTodos); 
+					//calculo el total de páginas 
+					$total_paginas = ceil($num_total_registros / $TAMANO_PAGINA); 
+					
+					$ssql = "select * from accparrilla LIMIT " . $inicio . "," . $TAMANO_PAGINA; 
+					
+					$rs = mysqli_query($conexion,$ssql); 
+			
 
-	?>
-	
+			?>
+			
 	
 	
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.php">Administrador Bosca</a>
+			<div class="col-md-12 no-padding">
+				<h3 class="text-center  no-padding">
+					<div class="logotipo">
+						<img src="img/logo--2.png" alt="">
+					</div>
+					<a class="color-link" href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
 		<div class="row">
-			<div class="col-md-9">
-			<h3 class="text-left">
+			<div class="col-md-12">
+			<h3 class="text-center bread-back">
 				<?php
-				echo "<a href=\"index.php\">Inicio</a> - <a href=\"accparrilla-home.php\">Tipo de producto: Accesorios Parrilla</a> - Consultar";
+				echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"accparrilla-home.php\">Tipo de producto: Accesorios parrilla</a> - Consultar Accesorios parrilla";
 				?>
 			</h3>
 			<br>
+			<form id="back-form" >
 			<?php			
 				
 				//parrilla y Accparrilla son las tablas que deberia cargar para consulta
@@ -149,18 +156,18 @@ session_start();
 				}
 				
 				mysqli_free_result($rs); 
-				
-				if ($total_paginas > 1){ 
-					for ($i=1;$i<=$total_paginas;$i++){ 
-						if ($pagina == $i) 
-							//si muestro el índice de la página actual, no coloco enlace 
-							echo "<span class=\"pag--cube textSize\">" . $pagina . "</span>" . " "; 
-						else 
-							//si el índice no corresponde con la página mostrada actualmente, coloco el enlace para ir a esa página 				
-							echo "<a href='consultar-accparrilla.php?pagina=" . $i . "' class=\"textSize\">"  . $i .  "</a> " ; 
-					}   
-				}
-				
+				echo "<div class=\"paginadors\">";
+					if ($total_paginas > 1){ 
+						for ($i=1;$i<=$total_paginas;$i++){ 
+							if ($pagina == $i) 
+								//si muestro el índice de la página actual, no coloco enlace 
+								echo "<span class=\"pag--cube textSize\">" . $pagina . "</span>" . " "; 
+							else 
+								//si el índice no corresponde con la página mostrada actualmente, coloco el enlace para ir a esa página 				
+								echo "<a href='consultar-accparrilla.php?pagina=" . $i . "' class=\"textSize yque\">"  . $i .  "</a> " ; 
+						}   
+					}
+				echo "</div>";
 			?>
 			
 			</div>

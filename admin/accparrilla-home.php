@@ -34,24 +34,47 @@ session_start();
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+	<style>
+	.texto {
+		font-family: 'Open Sans', sans-serif;
+		display: block;
+		text-align: center;
+	}
+	
+	.textSize {
+		font-size: 24px;
+	}
+	</style>
+	
+	<style>
+   .rightJustified, .leftJustified {
+        text-align: left;
+		border: none;
+		background: transparent;
+    }
+	</style>
 	
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 
   </head>
   <body>
-	<div>	
+	<div class="full">
+	
 		<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.php">Administrador Bosca</a>
-				</h3>
-			</div>			
-		</div>
-		
+				<div class="row">
+					<div class="col-md-12 no-padding">
+					<div class="logotipo">
+						<img src="img/logo--2.png" alt="">
+					</div>
+						<h3 class="text-center">
+							<a class="color-link" href="index.php">Administrador Bosca</a>
+						</h3>
+					</div>			
+				</div>
 			<div class="row">
-				<div class="col-md-10">
-					<h3 class="text-left">
+				<div class="col-md-12">
+					<h3 class="text-center bread-back">
 						<a href="index.php">Inicio</a> - Tipos de productos: Accesorios Parrilla
 					</h3>
 					<div class="btn-group">

@@ -22,20 +22,23 @@
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	
 	<style>
-	.texto {
-		font-family: Arial;	
-	}
-	
-	.textSize {
-		font-size: 24px;
-	}
-	</style>
-	
-	<style>
-   .rightJustified {
-        text-align: right;
-		border: none
-    }
+		.texto {
+			font-family: 'Open Sans', sans-serif;
+			display: block;
+			text-align: center;
+		}
+		
+		.textSize {
+			font-size: 24px;
+		}
+		</style>
+		
+		<style>
+	   .rightJustified, .leftJustified {
+	        text-align: left;
+			border: none;
+			background: transparent;
+	    }
 	</style>
 
   </head>
@@ -93,25 +96,28 @@
 	
 	?>
   
-	<div>	
+	<div class="full">	
 		<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.html">Administrador Bosca</a>
+			<div class="col-md-12 no-padding">
+				<div class="logotipo">
+					<img src="img/logo--2.png" alt="">
+				</div>
+				<h3 class="text-center">
+					<a class="color-link" href="index.html">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
 		
 			<div class="row">
-				<div class="col-md-10">
-					<h3 class="text-left">
+				<div class="col-md-12">
+					<h3 class="text-center bread-back">
 					<?php						
-						echo "<a href=\"index.html\">Inicio</a> - <a href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Modificar calefacción";
+						echo "<a class=\"bread\" href=\"index.html\">Inicio</a> - <a class=\"bread\" href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Modificar calefacción";
 					?>						
 					</h3>
 					<br>
-					<form method="post" action="update-calefaccion.php" enctype="multipart/form-data">					
+					<form id="back-form" method="post" action="update-calefaccion.php" enctype="multipart/form-data">					
 						<?php	
 						
 						//Aqui se envian los campos "Ocultos xD"
@@ -159,14 +165,14 @@
 						}
 						
 						echo "<br>";
-						echo "<span class=\"texto\"><input type=\"text\" value=\"Vermiculita Refractaria:\" class=\"rightJustified\" readonly> <input type=\"text\" name=\"vermiculita_refractaria\" size=\"70\" value=\"$vermiculita_refractaria\"> </span>";
+						echo "<span class=\"texto\"><input type=\"text\" value=\"Vermiculita Refractaria:\" class=\"rightJustified\" readonly> <input type=\"text\" name=\"vermiculita_refractaria\" size=\"50\" value=\"$vermiculita_refractaria\"> </span>";
 						echo "<br>";
 						echo "<span class=\"texto\"><input type=\"text\" value=\"Templador:\" class=\"rightJustified\" readonly> <input type=\"text\" name=\"templador\" size=\"50\" value=\"$templador\"> </span>";
 						echo "<br>";
 					
 						echo "<span class=\"texto\"><input type=\"text\" value=\"Ventaja Comparativa:\" class=\"rightJustified\" readonly> <input type=\"text\" name=\"ventaja_comparativa\" size=\"50\" value=\"$ventaja_comparativa\"> </span>";
 						echo "<br>";
-						echo "<span class=\"texto\"><input type=\"text\" value=\"Dimensiones:\" class=\"rightJustified\" readonly> <input type=\"text\" name=\"dimensiones\" size=\"70\" value=\"$dimensiones\"> </span>";
+						echo "<span class=\"texto\"><input type=\"text\" value=\"Dimensiones:\" class=\"rightJustified\" readonly> <input type=\"text\" name=\"dimensiones\" size=\"50\" value=\"$dimensiones\"> </span>";
 						echo "<br>";
 						echo "<span class=\"texto\"><input type=\"text\" value=\"Diametro cañon:\" class=\"rightJustified\" readonly> <input type=\"text\" name=\"diametro_canon\" size=\"50\" value=\"$diametro_canon\"> </span>";
 						echo "<br>";
@@ -192,19 +198,23 @@
 						if($logo_up_left=='mini-xeoos.png'){
 							$stuff_3 = 'checked=\"checked\"';
 						}							
-						echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-bosca.png\" $stuff_1 ><img src=\"../img2/mini-bosca.png\">";
-						echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-hergom.png\" $stuff_2 ><img src=\"../img2/mini-hergom.png\">";
-						echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-xeoos.png\" $stuff_3 ><img src=\"../img2/mini-xeoos.png\">";
+						echo "<input class=\"marg-side-logo\" type=\"radio\" name=\"mini_logo\" value=\"mini-bosca.png\" $stuff_1 ><img src=\"../img2/mini-bosca.png\">";
+						echo "<input class=\"marg-side-logo\" type=\"radio\" name=\"mini_logo\" value=\"mini-hergom.png\" $stuff_2 ><img src=\"../img2/mini-hergom.png\">";
+						echo "<input class=\"marg-side-logo\" type=\"radio\" name=\"mini_logo\" value=\"mini-xeoos.png\" $stuff_3 ><img src=\"../img2/mini-xeoos.png\">";
 						echo "</span>";
 						
 						echo "<br>";
 						echo "<br>";
 						
-						echo "<span class=\"texto\">Foto producto (Vista Catalogo) <a href=\"#\" data-featherlight=\"../img/$foto_producto\">Ver foto actual</a> </span>"; 
-						echo "<br>";
-						echo "<span class=\"texto\">Seleccione foto para <b><i>cambiar</i></b>: </span>";
-						echo "<span class=\"texto\">Única resolución aceptada: <b>330 x 310</b></span>";
-						echo "<input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">";
+
+
+							echo "<span class=\"texto\">Foto producto (Vista Catalogo) <a href=\"#\" data-featherlight=\"../img/$foto_producto\">Ver foto actual</a> </span>"; 
+							echo "<br>";
+						echo "<div class=\"cajaborder\">";
+							echo "<span class=\"texto\">Seleccione foto para <b><i>cambiar</i></b>: </span>";
+							echo "<span class=\"texto\">Única resolución aceptada: <b>330 x 310</b></span>";
+							echo "<input style=\"margin:1em auto 0 auto;\" type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">";
+						echo "</div>";
 						
 						echo "<br>";
 						echo "<br>";
@@ -213,13 +223,15 @@
 						echo "<br>";
 						echo "<span class=\"texto\">Seleccione foto para <b><i>cambiar</i></b>: </span>";
 						echo "<span class=\"texto\">Única resolución aceptada: <b>900 x 1075</b></span>";
-						echo "<input type=\"file\" name=\"fileToUploadDos\" id=\"fileToUploadDos\">";
+						echo "<input style=\"margin:1em auto 0 auto;\" type=\"file\" name=\"fileToUploadDos\" id=\"fileToUploadDos\">";
 						
 						
 						?>
 						<br>						
 						<br>						
-						<button type="submit" onClick="alert('El contenido fue actualizado')">Modificar</button>  &nbsp; &nbsp;  <button type="button"><a href="calefaccion-home.php">Cancelar</a></button>
+						<button  class="button-change" type="submit" onClick="alert('El contenido fue actualizado')">Modificar</button>  &nbsp; &nbsp;  
+						<a class="button-change" href="calefaccion-home.php">Cancelar</a>
+
 					</form>					
 				</div>
 			</div>

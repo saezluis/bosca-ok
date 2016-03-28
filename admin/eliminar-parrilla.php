@@ -39,14 +39,24 @@ session_start();
 	
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 		
-	<style>
+		<style>
 	.texto {
-		font-family: Arial;	
+		font-family: 'Open Sans', sans-serif;
+		display: block;
+		text-align: center;
 	}
 	
 	.textSize {
 		font-size: 24px;
 	}
+	</style>
+	
+	<style>
+   .rightJustified, .leftJustified {
+        text-align: left;
+		border: none;
+		background: transparent;
+    }
 	</style>
 	
   </head>
@@ -95,25 +105,28 @@ session_start();
 	
 	?>
   
-	<div>	
+	<div class="full">	
 		<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 no-padding">
+				<div class="logotipo">
+					<img src="img/logo--2.png" alt="">
+				</div>
 				<h3 class="text-center">
-					<a href="index.html">Administrador Bosca</a>
+					<a class="color-link" href="index.php">Administrador Bosca</a>
 				</h3>
 			</div>			
 		</div>
 		
 			<div class="row">
-				<div class="col-md-10">
-					<h3 class="text-left">
+				<div class="col-md-12">
+					<h3 class="text-center  bread-back">
 					<?php
-						echo "<a href=\"index.html\">Inicio</a> - <a href=\"calefaccion-home.php\">Tipo de producto: CalefacciÃ³n</a> - Eliminar producto";
+						echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Eliminar producto";
 					?>						
 					</h3>
 					<br>
-					<form method="post" action="delete-parrilla.php">					
+					<form id="back-form" method="post" action="delete-parrilla.php">					
 						<?php	
 						
 						echo "<input type=\"text\" name=\"id-parrilla-send\" value=\"$id_parrilla\" hidden=hidden>";
@@ -203,9 +216,9 @@ session_start();
 						if($logo_up_left=='mini-xeoos.png'){
 							$stuff_3 = 'checked=\"checked\"';
 						}							
-						echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-bosca.png\" $stuff_1 ><img src=\"../img2/mini-bosca.png\">";
-						echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-hergom.png\" $stuff_2 ><img src=\"../img2/mini-hergom.png\">";
-						echo "<input type=\"radio\" name=\"mini_logo\" value=\"mini-xeoos.png\" $stuff_3 ><img src=\"../img2/mini-xeoos.png\">";
+						echo "<input class=\"marg-side-logo\" type=\"radio\" name=\"mini_logo\" value=\"mini-bosca.png\" $stuff_1 ><img src=\"../img2/mini-bosca.png\">";
+						echo "<input class=\"marg-side-logo\" type=\"radio\" name=\"mini_logo\" value=\"mini-hergom.png\" $stuff_2 ><img src=\"../img2/mini-hergom.png\">";
+						echo "<input class=\"marg-side-logo\" type=\"radio\" name=\"mini_logo\" value=\"mini-xeoos.png\" $stuff_3 ><img src=\"../img2/mini-xeoos.png\">";
 						echo "</span>";
 						
 						echo "<br>";
@@ -242,7 +255,8 @@ session_start();
 						?>
 						
 						<br>						
-						<button type="submit" onClick="alert('El contenido fue eliminado')">Eliminar</button>  &nbsp; &nbsp;  <button type="button"><a href="parrilla-home.php">Cancelar</a></button>
+						<button class="button-change"  type="submit" onClick="alert('El contenido fue eliminado')">Eliminar</button>
+						<a class="button-change"  href="parrilla-home.php">Cancelar</a>
 					</form>					
 				</div>
 			</div>

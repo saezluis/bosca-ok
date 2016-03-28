@@ -40,25 +40,28 @@ session_start();
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	
 	<style>
-	.texto {
-		font-family: Arial;	
-	}
-	
-	.textSize {
-		font-size: 24px;
-	}
-	</style>
-	
-	<style>
-   .rightJustified {
-        text-align: right;
-		border: none
-    }
+		.texto {
+			font-family: 'Open Sans', sans-serif;
+			display: block;
+			text-align: center;
+		}
+		
+		.textSize {
+			font-size: 24px;
+		}
+		</style>
+		
+		<style>
+	   .rightJustified, .leftJustified {
+	        text-align: left;
+			border: none;
+			background: transparent;
+	    }
 	</style>
 
   </head>
   <body>
-	<div>
+	<div class="full">
 	
 	
 	<?php
@@ -96,22 +99,26 @@ session_start();
 	
 	
 	
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="text-left">
-					<a href="index.html">Administrador Bosca</a>
-				</h3>
-			</div>			
-		</div>
-		<div class="row">
-			<div class="col-md-9">
-			<h3 class="text-left">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 no-padding">
+					<h3 class="text-center  no-padding">
+						<div class="logotipo">
+							<img src="img/logo--2.png" alt="">
+						</div>
+						<a class="color-link" href="index.php">Administrador Bosca</a>
+					</h3>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				<h3 class="text-center bread-back">
 				<?php
-				echo "<a href=\"index.php\">Inicio</a> - <a href=\"cocina-home.php\">Tipo de producto: Cocina y Calderas</a> - Consultar";
+				echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"cocina-home.php\">Tipo de producto: Cocina y Calderas</a> - Consultar";
 				?>
 			</h3>
 			<br>
+			<form id="back-form" >
 			<?php			
 				
 			
@@ -218,20 +225,20 @@ session_start();
 			}
 				
 				mysqli_free_result($rs); 
-				
-				if ($total_paginas > 1){ 
-					for ($i=1;$i<=$total_paginas;$i++){ 
-						if ($pagina == $i) 
-							//si muestro el índice de la página actual, no coloco enlace 
-							echo "<span class=\"pag--cube textSize\">" . $pagina . "</span>" . " "; 
-						else 
-							//si el índice no corresponde con la página mostrada actualmente, coloco el enlace para ir a esa página 				
-							echo "<a href='consultar-cocina.php?pagina=" . $i . "' class=\"textSize\">"  . $i .  "</a> " ; 
-					}   
-				}
-				
+				echo "<div class=\"paginadors\">";
+					if ($total_paginas > 1){ 
+						for ($i=1;$i<=$total_paginas;$i++){ 
+							if ($pagina == $i) 
+								//si muestro el índice de la página actual, no coloco enlace 
+								echo "<span class=\"pag--cube textSize\">" . $pagina . "</span>" . " "; 
+							else 
+								//si el índice no corresponde con la página mostrada actualmente, coloco el enlace para ir a esa página 				
+								echo "<a href='consultar-cocina.php?pagina=" . $i . "' class=\"textSize yque\">"  . $i .  "</a> " ; 
+						}   
+					}
+				echo "</div>";
 			?>
-			
+			</form>
 			</div>
 		</div>
 	</div>
