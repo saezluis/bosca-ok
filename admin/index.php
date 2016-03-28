@@ -80,6 +80,9 @@ session_start();
 					</div>
 				</div>
 			</div>
+			
+			
+			
 		</div><!--fin.container-fluid-->
 	</div><!--fin.full-->
 
