@@ -168,6 +168,8 @@ if(isset($_POST['cotizar_prod'])) {
 			$longitud_lena = $reg['longitud_lena'];	
 			//$volumen_carga = $reg['consumo_pellet'];
 			$ficha_t = $reg['ficha_tecnica'];	
+			
+			$logo_up_left = $reg['logo_up_left'];
 		
 		}
 		
@@ -315,7 +317,9 @@ if(isset($_POST['cotizar_prod'])) {
       </div>
       <div class="caja movil-60">
         <div class="full--ficha-datos">
-          <div class="logo-marca"><img src="img/mini-hergom.png"></div>
+		
+          <div class="logo-marca"><?php echo "<img src=\"img/$logo_up_left\"></div>"; ?>
+		  
           <div class="caracteristicas--producto border-none">
           		<h2>Modelo: <?php echo $modelo  ?></h2>
           		<h3 class="mocina-modelo"><?php echo $nombre  ?></h3>
@@ -415,6 +419,62 @@ if(isset($_POST['cotizar_prod'])) {
 							
 							echo "<li>";
 								echo "<p class=\"\">Capacidad Tolva: <span class=\"datos--d\">".$capacidad_tolva." lts</span></p>";
+							echo "</li>";
+
+							echo "<li>";
+								echo "<p class=\"\">Volumen Agua: <span class=\"datos--d\">".$volumen_agua." lts</span></p>";
+							echo "</li>";							
+							
+							echo "<li>";
+								echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"></span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
+							echo "</li>";
+							
+						echo "</ul>";
+						echo "</div>";
+					//echo "</div><a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>"; //<a href=\"#\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>
+				echo "</div>";
+			  
+			}
+			
+			if($modelo=='Optima 500'){
+		  
+				echo "<div class=\"caracteristicas--producto bor\">";
+					echo "<p class=\"caracteristicas--titulo\">Características</p>";
+					echo "<div class=\"caract--datos\">";
+						echo "<ul>";
+							//<li>
+								//<!-- <p class="carga">Carga:  <span class="datos--d">Tipo Superior</span></p> -->
+							//</li>
+							//echo "<li>";
+								//echo "<p class=\"potencia\">Potencia Calorica:  <span class=\"datos--d\">".$potencia." Kcal/h</span></p>";
+							//echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Alto: <span class=\"datos--d\">".$alto." cms</span></p>"; 
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Ancho: <span class=\"datos--d\">".$ancho." cms</span></p>";
+							echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Fondo: <span class=\"datos--d\">".$fondo." cms</span></p>";
+							echo "</li>";
+							
+							//echo "<li>";
+								//echo "<p class=\"\">Diametro Chimenea: <span class=\"datos--d\">".$diametro_chimenea." cms</span></p>"; 
+							//echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\">Material: <span class=\"datos--d\">".$material."</span></p>";
+							echo "</li>";
+							
+							//echo "<li>";
+								//echo "<p class=\"\">Consumo Pellet: <span class=\"datos--d\">".$consumo_pellet." kg/h</span></p>";
+							//echo "</li>";
+							
+							echo "<li>";
+								echo "<p class=\"\"> <span class=\"datos--d\">".$capacidad_tolva." lts</span></p>";
 							echo "</li>";
 
 							echo "<li>";

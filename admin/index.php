@@ -70,7 +70,7 @@ session_start();
 							<a href="cocina-home.php" >Cocina y Calderas</a>
 						</div>
 						<div class="panel-body">
-							<a href="eliminar-usuario.php" >Ventilación y aire acondicionado</a>
+							<a href="ventilacion-home.php" >Ventilación y aire acondicionado</a>
 						</div>
 					</div>
 				</div>

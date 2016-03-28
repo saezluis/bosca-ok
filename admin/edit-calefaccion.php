@@ -111,7 +111,7 @@
 					?>						
 					</h3>
 					<br>
-					<form method="post" action="update-calefaccion.php">					
+					<form method="post" action="update-calefaccion.php" enctype="multipart/form-data">					
 						<?php	
 						
 						//Aqui se envian los campos "Ocultos xD"
