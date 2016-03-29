@@ -76,7 +76,7 @@ session_start();
 							</div>
 							<div id="panel-element-240959" class="panel-collapse collapse">
 								<div class="panel-body">
-									<a href="#">Consultar</a>
+									<a href="consultar-banner.php">Consultar</a>
 								</div>
 								<div class="panel-body">
 									<a href="#">Agregar</a>

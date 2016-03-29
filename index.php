@@ -131,21 +131,36 @@ function comentario(){
   <section class="grupo">
     <div class="caja no-padding">
       <div class="banner">
-        <div id="owl-demo" class="owlcarousel owl-theme">          
-          <div class="item"><img src="img/banner-asombra3.jpg"></div>      
-          <?php
-		  
-		  $var = 'valor3';
-		  
-		  echo "<form method=\"post\" action=\"terraza-parrilla.php\">";
-		  echo "<input type=\"text\" name=\"opcion\" value=\"valor1\" hidden=hidden >";		  
-		  echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img src=\"img/banner_climastar.jpg\"> </a> </div>";		  
-		  echo "</form>";
+        <div id="owl-demo" class="owlcarousel owl-theme">
+		<?php
+			
+			$registrosBanners =	mysqli_query($conexion,"SELECT * FROM banners ORDER BY position ASC") or die("Problemas con la conexión");
+			
+			while($regBann=mysqli_fetch_array($registrosBanners)){
+				$nombre_banner = $regBann['nombre'];
+				$tipo_banner = $regBann['tipo'];
+				$link_banner = $regBann['link'];
+				
+				if($tipo_banner=='vacio'){
+					echo "<div class=\"item\"><img src=\"img/$nombre_banner\"></div>";
+				}
+				
+				if($tipo_banner=='link'){
+					echo "<form method=\"post\" action=\"$link_banner\">";
+					echo "<input type=\"text\" name=\"opcion\" value=\"valor1\" hidden=hidden >";		  
+					echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img src=\"img/$nombre_banner\"> </a> </div>";
+					echo "</form>";
+				}
+				
+			}
+			
+          //echo "<div class=\"item\"><img src=\"img/banner-asombra3.jpg\"></div>";
+          //$var = 'valor3';
 		
-		//echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img data-src=\"img-pt/$foto\" title=\"$modelo\" class=\"lazyOwl\"> </a></div>";	
+		  //echo "<div class=\"item\"> <a href=\"#\" onclick=\"$(this).closest('form').submit()\"> <img data-src=\"img-pt/$foto\" title=\"$modelo\" class=\"lazyOwl\"> </a></div>";	
 		
-		  ?>
-		  <div class="item"><img src="img/banner-terraza.jpg"></div>    
+		  //echo "<div class=\"item\"><img src=\"img/banner-terraza.jpg\"></div>";
+		?>
         </div>
       </div>
     </div>
