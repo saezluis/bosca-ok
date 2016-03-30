@@ -118,7 +118,7 @@ session_start();
 								while($reg=mysqli_fetch_array($registrosBanners)){
 									$nombre_banner = $reg['nombre'];
 									
-									echo "<img src=\"../img/$nombre_banner\">";
+									echo "<div class=\"cons-banner\"><img src=\"../img/$nombre_banner\"></div>";
 									echo "<br>";
 									echo "<br>";
 								}
