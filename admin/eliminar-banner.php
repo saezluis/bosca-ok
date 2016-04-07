@@ -87,10 +87,6 @@ session_start();
 			$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 			$acentos = $conexion->query("SET NAMES 'utf8'");
 			
-			$registrosBanners = mysqli_query($conexion,"select * from banners ") or die("Problemas en el select:".mysqli_error($conexion));
-			
-			$contarRegistros = mysqli_num_rows($registrosBanners);
-			
 			?>
 	
 				<div class="container-fluid">
@@ -108,34 +104,29 @@ session_start();
 						<div class="col-md-12">
 						<h3 class="text-center bread-back">
 							<?php
-							echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - Agregar banners";
+							echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - Eliminar banners";
 							?>
 						</h3>
 						<br>
-						<?php
-						
-						if($contarRegistros==6){
-							echo "<p>Información: Llegaste al máximo en la carga de banners. Si deseas agregar otro asegurate de eliminar el o los que no estén en campaña</p>";
-						}else{
-							echo "<form id=\"back-form\" method=\"POST\" action=\"agregar-banner-procesar.php\" enctype=\"multipart/form-data\">";
-						
-							echo "<div class=\"cajaborder\">";
-								echo "<span class=\"texto\">Foto producto (Vista Catalogo) - - Seleccione foto para cargar: </span>";
-								echo "<span class=\"texto\">Única resolución aceptada: <b>1200 x 385</b></span>";
-								echo "<input class=\"inp-file\" type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\" required>";
-							echo "</div>";
-						
-							echo "<br>";
-				
-							echo "<input class=\"button-change\" type=\"submit\" value=\"Agregar banner\"></input>";
+						<form id="back-form" >
+							<?php
 							
-							echo "</form>";
-						}
-						
-						
-						
-						?>
-						
+								$registrosBanners = mysqli_query($conexion,"select * from banners") or die("Problemas en el select:".mysqli_error($conexion));
+								
+								echo "<h3>Click sobre el banner que desea eliminar</h3>";
+								
+								while($reg=mysqli_fetch_array($registrosBanners)){
+									$nombre_banner = $reg['nombre'];
+									$id_banner = $reg['id_banner'];									
+									
+									//<a class=\"delete\" href=\"elim-calefaccion.php?id_send=",urlencode($id_producto)," \">$sku</a>
+									echo "<div class=\"cons-banner\"> <a href=\"eliminar-banner-procesar.php?id_send=",urlencode($id_banner)," \"> <img src=\"../img/$nombre_banner\"> </a> </div>";
+									echo "<br>";
+									echo "<br>";
+								}
+								
+							?>
+						</form> 
 						</div>
 					</div>
 				</div>

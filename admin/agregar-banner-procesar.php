@@ -23,7 +23,7 @@
 		
 		if($xd!=''){
 			
-			$target_dir = "../img-pt/";
+			$target_dir = "../img/";
 			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -93,17 +93,16 @@
 	
 	$precio = $_REQUEST['precio'];
 	$logo_up_left = $_REQUEST['mini_logo'];
+	*/
 	
-	/*
-	mysqli_query($conexion,"INSERT INTO accparrilla(nombre,modelo,sku,precio,foto_producto,logo_up_left) values 
-									('$nombre',
-									'$modelo',
-									'$sku',
-									'$precio',
-									'$nombreFoto',
-									'$logo_up_left'
+	mysqli_query($conexion,"INSERT INTO banners(nombre,position,mostrar,tipo,link) values 
+									('$nombreFoto',
+									'd',
+									'si',
+									'vacio',
+									''
 									)")
-	or die("Problemas con el insert de los accparrilla");
+	or die("Problemas con el insert de los banners");
 		
 	/*
 	echo "nombre foto: ".$nombreFoto;
@@ -120,6 +119,6 @@
 	
 	echo "<br>";
 	echo "<br>";
-	echo "<a href=\"accparrilla-home.php\">Volver</a> ";
+	echo "<a href=\"agregar-banner.php\">Volver</a> ";
 	
 ?>

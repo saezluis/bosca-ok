@@ -87,10 +87,6 @@ session_start();
 			$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 			$acentos = $conexion->query("SET NAMES 'utf8'");
 			
-			$registrosBanners = mysqli_query($conexion,"select * from banners ") or die("Problemas en el select:".mysqli_error($conexion));
-			
-			$contarRegistros = mysqli_num_rows($registrosBanners);
-			
 			?>
 	
 				<div class="container-fluid">
@@ -108,34 +104,52 @@ session_start();
 						<div class="col-md-12">
 						<h3 class="text-center bread-back">
 							<?php
-							echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - Agregar banners";
+							echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - Modificar posición banners";
 							?>
 						</h3>
 						<br>
-						<?php
-						
-						if($contarRegistros==6){
-							echo "<p>Información: Llegaste al máximo en la carga de banners. Si deseas agregar otro asegurate de eliminar el o los que no estén en campaña</p>";
-						}else{
-							echo "<form id=\"back-form\" method=\"POST\" action=\"agregar-banner-procesar.php\" enctype=\"multipart/form-data\">";
-						
-							echo "<div class=\"cajaborder\">";
-								echo "<span class=\"texto\">Foto producto (Vista Catalogo) - - Seleccione foto para cargar: </span>";
-								echo "<span class=\"texto\">Única resolución aceptada: <b>1200 x 385</b></span>";
-								echo "<input class=\"inp-file\" type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\" required>";
-							echo "</div>";
-						
-							echo "<br>";
-				
-							echo "<input class=\"button-change\" type=\"submit\" value=\"Agregar banner\"></input>";
+						<!--
+						<form id="back-form" method="POST" action="update-banner.php">
+						-->
+							<?php
 							
-							echo "</form>";
-						}
-						
-						
-						
-						?>
-						
+								$registrosBanners = mysqli_query($conexion,"select * from banners WHERE mostrar = 'si' ORDER BY position ASC ") or die("Problemas en el select:".mysqli_error($conexion));
+								
+								echo "<h3>Banners activos</h3>";
+								
+								$c = 0;
+								
+								$number_banners = mysqli_num_rows($registrosBanners);
+								
+								while($reg=mysqli_fetch_array($registrosBanners)){
+									$id_banner = $reg['id_banner'];
+									$nombre_banner = $reg['nombre'];
+									$position = $reg['position'];								
+									$c = $c + 1;
+									
+									echo "<div class=\"cons-banner\"><img src=\"../img/$nombre_banner\"></div>";
+									echo "<br>";
+								
+									//echo "<form id=\"$c\" >";
+										//if($id_banner==1){
+										if($c<$number_banners){
+											echo "<form method=\"POST\" action=\"update-banner.php\">";
+												echo "<input type=\"submit\" value=\"Intercambiar\" >";
+												//echo "<input type=\"text\" value=\"$position\" name=\"position\" hidden=hidden>";
+												echo "<input type=\"text\" value=\"$c\" name=\"id_intercambiar\" hidden=hidden>";
+												//selecciono la posicion 'b' y la actualizo por la 'a'
+												//a esta posicion le asigno la 'b'
+											echo "</form>";
+										}
+											echo "<br>";
+										
+									//echo "</form>";
+								}
+								
+							?>	
+						<!--
+						</form> 						
+						-->
 						</div>
 					</div>
 				</div>

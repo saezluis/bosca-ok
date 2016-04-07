@@ -79,13 +79,13 @@ session_start();
 									<a href="consultar-banner.php">Consultar</a>
 								</div>
 								<div class="panel-body">
-									<a href="#">Agregar</a>
+									<a href="agregar-banner.php">Agregar</a>
 								</div>
 								<div class="panel-body">
-									<a href="#">Modificar</a>
+									<a href="modificar-banner.php">Modificar</a>
 								</div>
 								<div class="panel-body">
-									<a href="#">Eliminar</a>
+									<a href="eliminar-banner.php">Eliminar</a>
 								</div>
 							</div>
 						</div>

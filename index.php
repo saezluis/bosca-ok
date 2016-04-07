@@ -134,6 +134,11 @@ function comentario(){
         <div id="owl-demo" class="owlcarousel owl-theme">
 		<?php
 			
+			//<a class=\"delete\" href=\"eliminar-parrilla.php?id_send=",urlencode($id_parrilla)," \">$sku</a>
+			//http://bosca.cl/detalle-producto.php?deta=101020008
+			$id_pro = 101020008;
+			echo "<div class=\"item\"> <a href=\"detalle-producto.php?deta=",urlencode($id_pro)," \"> <img src=\"img/banner-ecopellet.jpg\"> </a> </div>";
+			/*
 			$registrosBanners =	mysqli_query($conexion,"SELECT * FROM banners ORDER BY position ASC") or die("Problemas con la conexión");
 			
 			while($regBann=mysqli_fetch_array($registrosBanners)){
@@ -153,7 +158,7 @@ function comentario(){
 				}
 				
 			}
-			
+			*/
           //echo "<div class=\"item\"><img src=\"img/banner-asombra3.jpg\"></div>";
           //$var = 'valor3';
 		
