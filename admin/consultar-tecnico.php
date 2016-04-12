@@ -139,10 +139,10 @@ session_start();
 							$region = $reg['region'];
 							
 							echo "<tr>";							
-								echo "<td class=\"minis\">$id_servicio</td>";
+								echo "<td class=\"minis-id\">$id_servicio</td>";
 								echo "<td class=\"minis\">$nombre</td>";
 								echo "<td class=\"minis\">$mail</td>";
-								echo "<td class=\"minis\">$rut</td>";
+								echo "<td class=\"width-an\">$rut</td>";
 								echo "<td class=\"minis\">$telefono</td>";
 								echo "<td class=\"minis\"><img src=\"../img-tecnicos/$foto\" alt=\"\"></td>";
 								echo "<td class=\"minis\">$region</td>";
