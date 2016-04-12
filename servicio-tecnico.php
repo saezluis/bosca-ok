@@ -83,7 +83,8 @@
 	$registros_regionix=mysqli_query($conexion,"select * from servicio where region = 'IX region'") or die("Problemas en el select:".mysqli_error($conexion));	
 	$registros_regionx=mysqli_query($conexion,"select * from servicio where region = 'X region'") or die("Problemas en el select:".mysqli_error($conexion));	
 	$registros_regionmetro=mysqli_query($conexion,"select * from servicio where region = 'region metropolitana'") or die("Problemas en el select:".mysqli_error($conexion));	
-	$registros_regionbosca=mysqli_query($conexion,"select * from servicio where region = 'bosca'") or die("Problemas en el select:".mysqli_error($conexion));	
+	$registros_regionbosca=mysqli_query($conexion,"select * from servicio where region = 'bosca'") or die("Problemas en el select:".mysqli_error($conexion));
+	$registros_regionxiv=mysqli_query($conexion,"select * from servicio where region = 'XIV region'") or die("Problemas en el select de xiv region".mysqli_error($conexion));
 	
 	?>
   
@@ -338,9 +339,36 @@
               </div>
             </div>
 			
-            <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-9" class="accordion-section-title">Servicio Técnico X Región</a></div>
+			
+			<div class="accordion">
+              <div class="accordion-section"><a href="#accordion-9" class="accordion-section-title">Servicio Técnico XIV Región</a></div>
               <div id="accordion-9" class="accordion-section-content">
+                
+				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
+				<?php
+					while ($regxiv=mysqli_fetch_array($registros_regionxiv))
+					{
+						echo "<div class=\"all--tec\">";
+						  echo "<div class=\"foto--tecnico\"><img src=\"img-tecnicos/".$regxiv['foto']."\"></div>";
+						  echo "<ul>";
+							echo "<li>Nombre:<span>".$regxiv['nombre'].".</span></li>";
+							echo "<li>Mail:<span>".$regxiv['mail']."</span></li>";
+							echo "<li>Rut:<span>".$regxiv['rut']."</span></li>";
+							echo "<li>Teléfono:<span>".$regxiv['telefono']."</span></li>";
+							echo "<li>Dirección:<span>".$regxiv['direccion'].".</span></li>";
+						  echo "</ul>";
+						echo "</div>";
+						echo "<hr>";
+					}
+				?>
+				
+              </div>
+            </div>
+			
+			
+            <div class="accordion">
+              <div class="accordion-section"><a href="#accordion-10" class="accordion-section-title">Servicio Técnico X Región</a></div>
+              <div id="accordion-10" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
@@ -364,8 +392,8 @@
             </div>
 			
             <div class="accordion">
-              <div class="accordion-section"><a href="#accordion-10" class="accordion-section-title">Servicio Técnico Región Metropolitana </a></div>
-              <div id="accordion-10" class="accordion-section-content">
+              <div class="accordion-section"><a href="#accordion-11" class="accordion-section-title">Servicio Técnico Región Metropolitana </a></div>
+              <div id="accordion-11" class="accordion-section-content">
                 
 				<!-- Esto deberia ir dentro del while para generar tantos tecnicos como consiga -->	
 				<?php
