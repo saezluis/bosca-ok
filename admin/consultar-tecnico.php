@@ -80,89 +80,81 @@ session_start();
 	<div class="full">
 	
 	
-			<?php
-			
-			
-			include_once 'config.php';
-			
-			$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
-			$acentos = $conexion->query("SET NAMES 'utf8'");
-			
-			$registrosTodos=mysqli_query($conexion,"select * from producto") or die("Problemas en el select:".mysqli_error($conexion));
-			
-			$TAMANO_PAGINA = 2; 
-				
-				//examino la página a mostrar y el inicio del registro a mostrar 
-				@$pagina = $_GET["pagina"]; 
-				if (!$pagina) { 
-					$inicio = 0; 
-					$pagina=1; 
-				} 
-				else { 
-					$inicio = ($pagina - 1) * $TAMANO_PAGINA; 
-				}
-				
-				$num_total_registros = mysqli_num_rows($registrosTodos); 
-				//calculo el total de páginas 
-				$total_paginas = ceil($num_total_registros / $TAMANO_PAGINA); 
-				
-				$ssql = "select * from producto LIMIT " . $inicio . "," . $TAMANO_PAGINA; 
-				
-				$rs = mysqli_query($conexion,$ssql); 
-			
-
-			?>
+	<?php
+	
+	include_once 'config.php';
+	
+	$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
+	$acentos = $conexion->query("SET NAMES 'utf8'");
+	
+	$registrosTecnicos = mysqli_query($conexion,"SELECT * FROM servicio") or die("Problemas en el select:".mysqli_error($conexion));
 	
 	
+		
+	?>
 	
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-12 no-padding">
-							<h3 class="text-center  no-padding">
-								<div class="logotipo">
-									<img src="img/logo--2.png" alt="">
-								</div>
-								<a class="color-link" href="index.php">Administrador Bosca</a>
-							</h3>
-						</div>			
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 no-padding">
+				<h3 class="text-center  no-padding">
+					<div class="logotipo">
+						<img src="img/logo--2.png" alt="">
 					</div>
-					<div class="row">
-						<div class="col-md-12">
-						<h3 class="text-center bread-back">
-							<?php
-							echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Consultar calefacción";
-							?>
-						</h3>
-						<br>
-						<form id="back-form" >
-					      <table class="table-tecnico">
-					        <thead>
-					          <tr class="cabecc-tecnico">
-					            <th>ID</th>
-					            <th>Nombre</th>
-					            <th>Mail</th>
-					            <th>Rut</th>
-					            <th>Teléfono</th>
-					            <th>Foto</th>
-					            <th>Región</th>
-					          </tr>
-					        </thead>
-					        <tbody>
-					          <tr>
-					            <td class="minis">1234567890</td>
-					            <td class="minis">Luis Saez</td>
-					            <td class="minis">lsaez@pm.cl</td>
-					            <td class="minis">1234567890</td>
-					            <td class="minis">956879410</td>
-					            <td class="minis"><img src="img/hugo_arevalo.jpg" alt=""></td>
-					            <td class="minis">V</td>
-					          </tr>
-					        </tbody>
-					      </table>
-						</form> 
-						</div>
-					</div>
-				</div>
+					<a class="color-link" href="index.php">Administrador Bosca</a>
+				</h3>
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+			<h3 class="text-center bread-back">
+				<?php
+				echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - Consultar técnico";
+				?>
+			</h3>
+			<br>
+			<form id="back-form" >
+			  <table class="table-tecnico">
+				<thead>
+				  <tr class="cabecc-tecnico">
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Mail</th>
+					<th>Rut</th>
+					<th>Teléfono</th>
+					<th>Foto</th>
+					<th>Región</th>
+				  </tr>
+				</thead>
+				<tbody>
+					<?php
+						while($reg=mysqli_fetch_array($registrosTecnicos)){
+							
+							$id_servicio = $reg['id_servicio'];
+							$nombre = $reg['nombre'];
+							$mail = $reg['mail'];
+							$rut = $reg['rut'];
+							$telefono = $reg['telefono'];
+							$direccion = $reg['direccion'];
+							$foto = $reg['foto'];
+							$region = $reg['region'];
+							
+							echo "<tr>";							
+								echo "<td class=\"minis\">$id_servicio</td>";
+								echo "<td class=\"minis\">$nombre</td>";
+								echo "<td class=\"minis\">$mail</td>";
+								echo "<td class=\"minis\">$rut</td>";
+								echo "<td class=\"minis\">$telefono</td>";
+								echo "<td class=\"minis\"><img src=\"../img-tecnicos/$foto\" alt=\"\"></td>";
+								echo "<td class=\"minis\">$region</td>";
+							echo "</tr>";
+						}					  
+					?>
+				</tbody>
+			  </table>
+			</form> 
+			</div>
+		</div>
+	</div>
 	
 	</div>
 	
