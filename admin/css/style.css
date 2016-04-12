@@ -239,11 +239,26 @@ form .marg-side-logo{
 
 
 
+form#back-form .table-tecnico{
+	border: 1px solid red;
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 1em;
+	text-align: center;
+}
 
 
+.table-tecnico td,
+.table-tecnico th{
+	border: 1px solid #999;
+	text-align: center;
+	padding: 5px 0;
+}
 
-
-
+.table-tecnico td.minis{
+	font-size: 0.9em;
+}
 
 
 
