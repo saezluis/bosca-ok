@@ -153,13 +153,13 @@ session_start();
 									<a href="consultar-tecnico.php">Consultar</a>
 								</div>
 								<div class="panel-body">
-									<a href="#">Agregar</a>
+									<a href="agregar-tecnico.php">Agregar</a>
 								</div>
 								<div class="panel-body">
-									<a href="#">Modificar</a>
+									<a href="modificar-tecnico.php">Modificar</a>
 								</div>
 								<div class="panel-body">
-									<a href="#">Eliminar</a>
+									<a href="eliminar-tecnico.php">Eliminar</a>
 								</div>
 							</div>
 						</div>

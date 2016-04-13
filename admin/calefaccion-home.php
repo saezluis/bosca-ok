@@ -79,7 +79,12 @@ session_start();
 								<?php
 								echo "<a href=\"el-calefaccion.php\">Eliminar producto</a>";
 								?>
-							</li>							
+							</li>
+							<li>
+								<?php
+								echo "<a href=\"orden-calefaccion.php\">Orden de producto</a>";
+								?>
+							</li>
 						</ul>
 					</div>
 				</div>

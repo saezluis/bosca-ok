@@ -138,37 +138,37 @@ if(isset($_POST['cotizar_prod'])) {
 	*/
 	
 	if($variable==''){
-		$registros=mysqli_query($conexion,"select * from producto") 
+		$registros=mysqli_query($conexion,"select * from producto ORDER BY orden ASC") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor0'){
-		$registros=mysqli_query($conexion,"select * from producto") 
+		$registros=mysqli_query($conexion,"select * from producto ORDER BY orden ASC") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor1'){
-		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calefactor electrico'") 
+		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calefactor electrico' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));	
 	}
 	
 	if($variable=='valor2'){
-		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calefactor a pellet'") 
+		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calefactor a pellet' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor3'){
-		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Estufa a leña'") 
+		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Estufa a leña' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor4'){
-		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calderas'") 
+		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calderas' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valorC'){
-		$registros=mysqli_query($conexion,"select * from producto where logo_detalle = 'climastar'") 
+		$registros=mysqli_query($conexion,"select * from producto where logo_detalle = 'climastar' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
