@@ -54,239 +54,113 @@ session_start();
 
   </head>
   <body>
-    <div class="container-fluid no-padding">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="logotipo">
-					<img src="img/logo--2.png" alt="">
-				</div>
-				<h3 class="text-center" style="margin-bottom: 2em;">
-					Administrador General
-				</h3>
-			</div>
-		</div>
-	</div>
-	<div class="container">		
+	    <div class="container-fluid no-padding">
 			<div class="row">
-				<div class="col-md-6">
-					<div class="panel-group" id="panel-752950">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-752950" href="#panel-element-240959">Banners</a>
-							</div>
-							<div id="panel-element-240959" class="panel-collapse collapse">
-								<div class="panel-body">
-									<a href="consultar-banner.php">Consultar</a>
-								</div>
-								<div class="panel-body">
-									<a href="agregar-banner.php">Agregar</a>
-								</div>
-								<div class="panel-body">
-									<a href="modificar-banner.php">Modificar</a>
-								</div>
-								<div class="panel-body">
-									<a href="eliminar-banner.php">Eliminar</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="panel-group" id="panel-916892">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-916892" href="#panel-element-618663">Productos</a>
-							</div>
-							<div id="panel-element-618663" class="panel-collapse collapse">
-								<div class="panel-body">
-									<a class="color-link-prod" href="calefaccion-home.php" >Calefacción</a>
-								</div>
-								<div class="panel-body">
-									<a class="color-link-prod" href="parrilla-home.php" >Terraza y Parrilla</a>
-								</div>
-								<div class="panel-body">
-									<a class="color-link-prod" href="accparrilla-home.php" >Accesorios Parrilla</a>
-								</div>
-								<div class="panel-body">
-									<a class="color-link-prod" href="cocina-home.php" >Cocina y Calderas</a>
-								</div>
-								<div class="panel-body">
-									<a class="color-link-prod" href="ventilacion-home.php" >Ventilación y aire acondicionado</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="panel-group" id="panel-219875">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-219875" href="#panel-element-89965">Sucursales</a>
-							</div>
-							<div id="panel-element-89965" class="panel-collapse collapse">
-								<div class="panel-body">
-									<a href="#">Consultar</a>
-								</div>
-								<div class="panel-body">
-									<a href="#">Agregar</a>
-								</div>
-								<div class="panel-body">
-									<a href="#">Modificar</a>
-								</div>
-								<div class="panel-body">
-									<a href="#">Eliminar</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="panel-group" id="panel-936307">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-936307" href="#panel-element-49821">Técnicos</a>
-							</div>
-							<div id="panel-element-49821" class="panel-collapse collapse">
-								<div class="panel-body">
-									<a href="consultar-tecnico.php">Consultar</a>
-								</div>
-								<div class="panel-body">
-									<a href="agregar-tecnico.php">Agregar</a>
-								</div>
-								<div class="panel-body">
-									<a href="modificar-tecnico.php">Modificar</a>
-								</div>
-								<div class="panel-body">
-									<a href="eliminar-tecnico.php">Eliminar</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- 	 <div class="full">
-	    <div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12 no-padding">
+				<div class="col-md-12">
 					<div class="logotipo">
 						<img src="img/logo--2.png" alt="">
 					</div>
-					<h3 class="text-center">
-						Administrador de Productos
+					<h3 class="text-center" style="margin-bottom: 2em;">
+						Administrador General
 					</h3>
 				</div>
 			</div>
-			<br>
-<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="panel-group" id="panel-752950">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-752950" href="#panel-element-240959">Collapsible Group Item #1</a>
-							</div>
-							<div id="panel-element-240959" class="panel-collapse collapse">
-								<div class="panel-body">
-									Anim pariatur cliche...
+		</div>
+		<div class="container">		
+				<div class="row">
+					<div class="col-md-6">
+						<div class="panel-group" id="panel-752950">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-752950" href="#panel-element-240959">Banners</a>
+								</div>
+								<div id="panel-element-240959" class="panel-collapse collapse">
+									<div class="panel-body">
+										<a href="consultar-banner.php">Consultar</a>
+									</div>
+									<div class="panel-body">
+										<a href="agregar-banner.php">Agregar</a>
+									</div>
+									<div class="panel-body">
+										<a href="modificar-banner.php">Modificar</a>
+									</div>
+									<div class="panel-body">
+										<a href="eliminar-banner.php">Eliminar</a>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title" data-toggle="collapse" data-parent="#panel-752950" href="#panel-element-349465">Collapsible Group Item #2</a>
-							</div>
-							<div id="panel-element-349465" class="panel-collapse collapse in">
-								<div class="panel-body">
-									Anim pariatur cliche...
+					</div>
+					<div class="col-md-6">
+						<div class="panel-group" id="panel-916892">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-916892" href="#panel-element-618663">Productos</a>
+								</div>
+								<div id="panel-element-618663" class="panel-collapse collapse">
+									<div class="panel-body">
+										<a class="color-link-prod" href="calefaccion-home.php" >Calefacción</a>
+									</div>
+									<div class="panel-body">
+										<a class="color-link-prod" href="parrilla-home.php" >Terraza y Parrilla</a>
+									</div>
+									<div class="panel-body">
+										<a class="color-link-prod" href="accparrilla-home.php" >Accesorios Parrilla</a>
+									</div>
+									<div class="panel-body">
+										<a class="color-link-prod" href="cocina-home.php" >Cocina y Calderas</a>
+									</div>
+									<div class="panel-body">
+										<a class="color-link-prod" href="ventilacion-home.php" >Ventilación y aire acondicionado</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="panel-group" id="panel-916892">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title" data-toggle="collapse" data-parent="#panel-916892" href="#panel-element-618663">Collapsible Group Item #1</a>
-							</div>
-							<div id="panel-element-618663" class="panel-collapse collapse in">
-								<div class="panel-body">
-									Anim pariatur cliche...
+				<div class="row">
+					<div class="col-md-6">
+						<div class="panel-group" id="panel-219875">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-219875" href="#panel-element-89965">Sucursales</a>
 								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-916892" href="#panel-element-113313">Collapsible Group Item #2</a>
-							</div>
-							<div id="panel-element-113313" class="panel-collapse collapse">
-								<div class="panel-body">
-									Anim pariatur cliche...
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="panel-group" id="panel-219875">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-219875" href="#panel-element-89965">Collapsible Group Item #1</a>
-							</div>
-							<div id="panel-element-89965" class="panel-collapse collapse">
-								<div class="panel-body">
-									Anim pariatur cliche...
-								</div>
-								<div class="panel-body">
-									Anim pariatur cliche...
-								</div>
-								<div class="panel-body">
-									Anim pariatur cliche...
-								</div>
-								<div class="panel-body">
-									Anim pariatur cliche...
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title" data-toggle="collapse" data-parent="#panel-219875" href="#panel-element-16373">Collapsible Group Item #2</a>
-							</div>
-							<div id="panel-element-16373" class="panel-collapse collapse">
-								<div class="panel-body">
-									Anim pariatur cliche...
+								<div id="panel-element-89965" class="panel-collapse collapse">
+									<div class="panel-body">
+										<a href="#">Consultar</a>
+									</div>
+									<div class="panel-body">
+										<a href="#">Agregar</a>
+									</div>
+									<div class="panel-body">
+										<a href="#">Modificar</a>
+									</div>
+									<div class="panel-body">
+										<a href="#">Eliminar</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="panel-group" id="panel-936307">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-936307" href="#panel-element-49821">Collapsible Group Item #1</a>
-							</div>
-							<div id="panel-element-49821" class="panel-collapse collapse">
-								<div class="panel-body">
-									Anim pariatur cliche...
+					<div class="col-md-6">
+						<div class="panel-group" id="panel-936307">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-936307" href="#panel-element-49821">Técnicos</a>
 								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title" data-toggle="collapse" data-parent="#panel-936307" href="#panel-element-909407">Collapsible Group Item #2</a>
-							</div>
-							<div id="panel-element-909407" class="panel-collapse collapse">
-								<div class="panel-body">
-									Anim pariatur cliche...
+								<div id="panel-element-49821" class="panel-collapse collapse">
+									<div class="panel-body">
+										<a href="consultar-tecnico.php">Consultar</a>
+									</div>
+									<div class="panel-body">
+										<a href="agregar-tecnico.php">Agregar</a>
+									</div>
+									<div class="panel-body">
+										<a href="modificar-tecnico.php">Modificar</a>
+									</div>
+									<div class="panel-body">
+										<a href="eliminar-tecnico.php">Eliminar</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -294,15 +168,7 @@ session_start();
 				</div>
 			</div>
 		</div>
-	</div> -->
-			
-			
-			
-		<!--</div>fin.container-fluid-->
-	<!--</div>fin.full-->
-
-	
-
+	</div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>

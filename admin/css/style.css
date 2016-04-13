@@ -271,6 +271,26 @@ form#back-form .table-tecnico{
 }
 
 
+form.mozz, h3.stp{
+	width: 60%;
+	margin:0 auto;
+}
+
+form.mozz .change--banner{
+	background: #E65524;
+	padding: 5px 12px;
+	text-align: center;
+	border: none;
+	color: #fff;
+	transition: .3s all;
+}
+form.mozz .change--banner:hover{
+	background: rgb(183, 68, 30);
+}
+
+h3.stp{
+	margin-bottom: 1em;
+}
 
 
 

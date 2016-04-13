@@ -34,27 +34,8 @@ session_start();
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+		
 	
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	
-	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-	
-<!-- 	<style>
-	.texto {
-		font-family: Arial;	
-	}
-	
-	.textSize {
-		font-size: 24px;
-	}
-	</style>
-	
-	<style>
-   .rightJustified {
-        text-align: right;
-		border: none
-    }
-	</style> -->
 	<style>
 		.texto {
 			font-family: 'Open Sans', sans-serif;
@@ -78,89 +59,74 @@ session_start();
   </head>
   <body>
 	<div class="full">
-	
-	
-			<?php
+		<?php
 			
 			include_once 'config.php';
 			
 			$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 			$acentos = $conexion->query("SET NAMES 'utf8'");
 			
-			?>
+		?>
 	
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-12 no-padding">
-							<h3 class="text-center  no-padding">
-								<div class="logotipo">
-									<img src="img/logo--2.png" alt="">
-								</div>
-								<a class="color-link" href="index.php">Administrador Bosca</a>
-							</h3>
-						</div>			
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-						<h3 class="text-center bread-back">
-							<?php
-							echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - Modificar posición banners";
-							?>
-						</h3>
-						<br>
-						<!--
-						<form id="back-form" method="POST" action="update-banner.php">
-						-->
-							<?php
-							
-								$registrosBanners = mysqli_query($conexion,"select * from banners WHERE mostrar = 'si' ORDER BY position ASC ") or die("Problemas en el select:".mysqli_error($conexion));
-								
-								echo "<h3>Banners activos</h3>";
-								
-								$c = 0;
-								
-								$number_banners = mysqli_num_rows($registrosBanners);
-								
-								while($reg=mysqli_fetch_array($registrosBanners)){
-									$id_banner = $reg['id_banner'];
-									$nombre_banner = $reg['nombre'];
-									$position = $reg['position'];								
-									$c = $c + 1;
-									
-									echo "<div class=\"cons-banner\"><img src=\"../img/$nombre_banner\"></div>";
-									echo "<br>";
-								
-									//echo "<form id=\"$c\" >";
-										//if($id_banner==1){
-										if($c<$number_banners){
-											echo "<form method=\"POST\" action=\"update-banner.php\">";
-												echo "<input type=\"submit\" value=\"Intercambiar\" >";
-												//echo "<input type=\"text\" value=\"$position\" name=\"position\" hidden=hidden>";
-												echo "<input type=\"text\" value=\"$c\" name=\"id_intercambiar\" hidden=hidden>";
-												//selecciono la posicion 'b' y la actualizo por la 'a'
-												//a esta posicion le asigno la 'b'
-											echo "</form>";
-										}
-											echo "<br>";
-										
-									//echo "</form>";
-								}
-								
-							?>	
-						<!--
-						</form> 						
-						-->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 no-padding">
+					<h3 class="text-center  no-padding">
+						<div class="logotipo">
+							<img src="img/logo--2.png" alt="">
 						</div>
-					</div>
+						<a class="color-link" href="index.php">Administrador Bosca</a>
+					</h3>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="text-center bread-back">
+						<?php
+						echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - Modificar posición banners";
+						?>
+					</h3>
+					<br>
+					<?php
+					
+						$registrosBanners = mysqli_query($conexion,"select * from banners WHERE mostrar = 'si' ORDER BY position ASC ") or die("Problemas en el select:".mysqli_error($conexion));
+						
+						echo "<h3 class=\"stp\">Banners activos</h3>";
+						
+						$c = 0;
+						
+						$number_banners = mysqli_num_rows($registrosBanners);
+						
+						while($reg=mysqli_fetch_array($registrosBanners)){
+							$id_banner = $reg['id_banner'];
+							$nombre_banner = $reg['nombre'];
+							$position = $reg['position'];								
+							$c = $c + 1;
+							
+							echo "<div class=\"cons-banner bread-back \"><img style=\"width: 100%;\" src=\"../img/$nombre_banner\"></div>";
+							echo "<br>";
+						
+							//echo "<form id=\"$c\" >";
+								//if($id_banner==1){
+							if($c<$number_banners){
+								echo "<form class=\"mozz\" method=\"POST\" action=\"update-banner.php\">";
+									echo "<input class=\"change--banner\"  type=\"submit\" value=\"Intercambiar\" >";
+									//echo "<input type=\"text\" value=\"$position\" name=\"position\" hidden=hidden>";
+									echo "<input type=\"text\" value=\"$c\" name=\"id_intercambiar\" hidden=hidden>";
+									//selecciono la posicion 'b' y la actualizo por la 'a'
+									//a esta posicion le asigno la 'b'
+								echo "</form>";
+							}
+								echo "<br>";
+						}
+					?>	
 				</div>
-				
-	</div>
+			</div><!--.row-->
+		</div><!--.container-fluid-->	
+	</div><!--fin .full-->
 	
 	<script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-	
-	<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-	
   </body>
 </html>
