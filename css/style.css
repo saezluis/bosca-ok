@@ -1464,6 +1464,22 @@ h6 {
     color: #fff;
     font-size: 1.5em;
     text-align: right; }
+  .imgCupon p.comunicado {
+    color: #fff;
+    text-align: center;
+    font-size: 0.7em;
+    margin-top: 1em; }
+    .imgCupon p.comunicado a.mailto {
+      background: #f04d1d;
+      color: #fff;
+      text-decoration: none; }
+      .imgCupon p.comunicado a.mailto:hover {
+        color: #fff; }
+    @media screen and (min-width: 768px) {
+      .imgCupon p.comunicado {
+        text-align: left;
+        padding: 0 100px;
+        margin-bottom: 2em; } }
   .imgCupon a.getCupon {
     color: #fff;
     width: 100%;

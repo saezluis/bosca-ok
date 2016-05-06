@@ -305,12 +305,17 @@ function comentario(){
 				-->
 				<div class="grupo">
 				  <div class="imgCupon">
-					<div class="caja base-100 tablet-50">
-					  <div class="pro-l"><img src="img/productos_light.png" alt=""></div>
+					<div class="caja base-100 tablet-100">
+					  <div class="pro-l"><img src="img/logo--3.png" alt=""></div>
 					</div>
-					<div class="caja base-100 tablet-50">
-					  <div class="logo-light-L"><img src="img/logo-light.png" alt=""></div>
-					  <div class="texti-L"><img src="img/texto-light.png" alt=""><a href="img/cupon.jpg" target="_blank" class="getCupon">¡Lo quiero!</a></div>
+					<div class="caja base-100 tablet-100">
+					  <p class="comunicado">
+                Lamentamos mucho informarles que, debido a un problema entre la empresa a la que arrendamos, la sucursal de Av. Vitacura 9085 y la Ilustre Municipalidad de Vitacura, el local ha sido momentáneamente clausurado. 
+                Al no ser por un problema de BOSCA, tenemos que esperar que los responsables hagan las gestiones necesarias para que podamos volver a atender a nuestros clientes en nuestro tradicional local de ventas.<br>
+                De todas maneras, los invitamos a acercarse a nuestros locales de Avenida Americo Vespucio 2077 (Huechuraba), nuestro local en Casa Nororiente (Acceso lateral, Chicureo) o bien a contactarnos en <a class="mailto" href="mailto:ventas@bosca.cl" target="_top">ventas@bosca.cl</a> En caso de necesitar cualquier producto o servicio, estaremos encantados de atenderlos.
+                Muchos saludos a todos y todas.
+            </p>
+<!-- 					  <div class="texti-L"><img src="img/texto-light.png" alt=""><a href="img/cupon.jpg" target="_blank" class="getCupon">¡Lo quiero!</a></div> -->
 					</div>
 				  </div>
 				</div>

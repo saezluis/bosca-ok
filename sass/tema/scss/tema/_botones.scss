@@ -35,6 +35,26 @@
 			text-align: right;
 		}
 
+		p.comunicado{
+			color:#fff;
+			text-align: center;
+			font-size: 0.7em;
+			margin-top: 1em;
+			a.mailto{
+				background: #f04d1d;
+				color:#fff;
+				text-decoration: none;
+				&:hover{
+					color:#fff;
+				}
+			}
+			@include desde (tablet){
+				text-align: left;
+				padding: 0 100px;
+				margin-bottom: 2em;
+			}
+		}
+
 		a.getCupon{
 			color: #fff;
 		    width: 100%;
