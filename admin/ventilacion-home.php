@@ -80,7 +80,12 @@ session_start();
 								<?php
 								echo "<a href=\"el-ventilacion.php\">Eliminar productos</a>";
 								?>
-							</li>							
+							</li>
+							<li>
+								<?php
+								echo "<a href=\"orden-ventilacion.php\">Orden del producto</a>";
+								?>
+							</li>
 						</ul>
 					</div>
 				</div>

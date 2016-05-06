@@ -82,7 +82,7 @@ session_start();
 							</li>
 							<li>
 								<?php
-								echo "<a href=\"orden-calefaccion.php\">Orden de producto</a>";
+								echo "<a href=\"orden-calefaccion.php\">Orden del producto</a>";
 								?>
 							</li>
 						</ul>

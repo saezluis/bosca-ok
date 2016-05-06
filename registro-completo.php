@@ -42,9 +42,10 @@
 			
 	//fin del upload de la foto
 	
-	
-	$conexion=mysqli_connect("localhost","root","123","bosca") or die("Problemas con la conexión");
-	$acentos = $conexion->query("SET NAMES 'utf8'");
+	include_once 'config.php';
+		
+       $conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
+       $acentos = $conexion->query("SET NAMES 'utf8'");
 	
 	mysqli_query($conexion,"insert into garantia(nombre,apellido,modelo,nro_serie,nro_factura,lugar_compra,nombre_instalador,ciudad,region,direccion,telefono,fecha,foto) 
 												values ('$_REQUEST[nombre]',
@@ -64,7 +65,43 @@
 	
 	or die("Problemas con el insert de la garantia");
 		
+	$nombre = $_REQUEST['nombre'];	
+	$apellido = $_REQUEST['apellido'];
+	$modelo = $_REQUEST['modelo'];
+	$nro_serie = $_REQUEST['nro_serie'];
 	
+	$nro_factura = $_REQUEST['nro_factura'];
+	$lugar_compra = $_REQUEST['lugar_compra'];
+	$nombre_instalador = $_REQUEST['nombre_instalador'];
+	$ciudad = $_REQUEST['ciudad'];
+	
+	$region = $_REQUEST['region'];
+	$direccion = $_REQUEST['direccion'];
+	$telefono = $_REQUEST['telefono'];
+	$fecha = $_REQUEST['fecha'];
+	
+	$to = "lsaez@pm.cl";
+	$subject = "Registra tu Bosca";
+	$headers = "Pagina web Bosca";
+	$message = "Datos de cliente que registró su Bosca en la página web:
+	\n
+	\n Nombre: $nombre
+	\n Apellido: $apellido
+	\n Modelo: $modelo
+	\n Nro Serio: $nro_serie	
+	\n Nro Factura: $nro_factura
+	\n Lugar de compra: $lugar_compra
+	\n Nombre del instalador: $nombre_instalador
+	\n Ciudad: $ciudad	
+	\n Región: $region
+	\n Dirección: $direccion
+	\n Telefono: $telefono
+	\n Fecha: $fecha
+	";
+	
+	//mail($to,$subject,$message,$headers);
+	mail($to, '=?utf-8?B?'.base64_encode($subject).'?=' ,$message, $headers );
+
 	
 	?>
     <div class="collapsible">

@@ -181,12 +181,12 @@ if(isset($_POST['cotizar_prod'])) {
 	*/
 	
 	if($variable==''){
-		$registros=mysqli_query($conexion,"select * from parrilla") 
+		$registros=mysqli_query($conexion,"select * from parrilla ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor0'){
-		$registros=mysqli_query($conexion,"select * from parrilla") 
+		$registros=mysqli_query($conexion,"select * from parrilla ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	

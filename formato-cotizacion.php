@@ -113,7 +113,7 @@ session_start();
 	//echo "<br>";
 	//echo "Despacho: ".$despacho;
 	
-	mysqli_query($conexion,"insert into cotizacion(nombre,apellido,rut,telefono,email,direccion_despacho,tipo_cotizacion,direccion_factura,desea_instalacion,desea_despacho,productos_cotizados) 
+		mysqli_query($conexion,"insert into cotizacion(nombre,apellido,rut,telefono,email,direccion_despacho,tipo_cotizacion,direccion_factura,desea_instalacion,desea_despacho,productos_cotizados) 
 							values ('$nombre',
 									'$apellido',
 									'$rut',
@@ -220,7 +220,23 @@ session_start();
       </div>
 	  
 	  <?php
+		$calefa_add = "";
+		$sumarCalefa = "";
 		
+		$parrilla_add = "";
+		$sumaParrilla = "";
+		
+		$cocina_add = "";
+		$sumCocina = "";
+		
+		$ventilacion_add = "";
+		$sumVenti = "";
+		
+		$AccParrilla_add = "";
+		$sumAccParri = "";
+		
+		$AccLena_add = "";
+		$sumAccLena = "";
 		//tratar de resolver construyendo un solo arreglo
 		
 		// -- Calefacciones -- Calefacciones -- Calefacciones -- Calefacciones -- Calefacciones -- Calefacciones
@@ -230,7 +246,7 @@ session_start();
 		
 		foreach ($new_calefa as $calefa) {	
 				echo "<div id=\"print-items-cajas-prod\">";
-					echo "<div class=\"caja base-40\">";
+					echo "<div class=\"caja base-20\">";
 						echo "<p>".$calefa['nombre']." ".$calefa['modelo']."</p>";
 					echo "</div>";
 					echo "<div class=\"caja base-20\">";
@@ -243,9 +259,12 @@ session_start();
 						$subTotalCalefa = $calefa['cantidad'] * $calefa['precio'];
 						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalCalefa,0,",",".")."</span></p>";
 					echo "</div>";
-					echo "</div>";						
+					echo "</div>";
+					$calefa_add = " ".$calefa['nombre']." ".$calefa['modelo']." / ".$calefa_add;
+					$sumarCalefa = $sumarCalefa + $subTotalCalefa;
 		}
-				
+		
+		//echo "Calefaccion: ".$calefa_add;
 		//-- Parrillas --  Parrillas -- Parrillas -- Parrillas -- Parrillas -- Parrillas -- Parrillas -- 
 		
 		$new_parri = array();				
@@ -255,7 +274,7 @@ session_start();
 		
 		foreach ($new_parri as $parri) {
 				echo "<div id=\"print-items-cajas-prod\">";
-					echo "<div class=\"caja base-40\">";
+					echo "<div class=\"caja base-20\">";
 						echo "<p>".$parri['nombre']." ".$parri['modelo']."</p>";
 					echo "</div>";
 					echo "<div class=\"caja base-20\">";
@@ -268,10 +287,12 @@ session_start();
 						$subTotalParri = $parri['cantidad'] * $parri['precio'];
 						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalParri,0,",",".")."</span></p>";	
 					echo "</div>";
-					echo "</div>";	
+					echo "</div>";
+					$parrilla_add = " ".$parri['nombre']." ".$parri['modelo']." / ".$parrilla_add;
+					$sumaParrilla = $subTotalParri + $sumaParrilla;
 		}
 		
-		
+		//echo "parrilla: ".$parrilla_add;
 		//-- Cocinas -- Cocinas -- Cocinas -- Cocinas -- Cocinas -- Cocinas -- Cocinas -- Cocinas --
 		
 		$new_coci = array();		
@@ -281,7 +302,7 @@ session_start();
 		
 		foreach ($new_coci as $coci) {
 				echo "<div id=\"print-items-cajas-prod\">";
-					echo "<div class=\"caja base-40\">";
+					echo "<div class=\"caja base-20\">";
 						echo "<p>".$coci['nombre']." ".$coci['modelo']."</p>";
 					echo "</div>";
 					echo "<div class=\"caja base-20\">";
@@ -294,8 +315,12 @@ session_start();
 						$subTotalCoci = $coci['cantidad'] * $coci['precio'];
 						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalCoci,0,",",".")."</span></p>";	
 					echo "</div>";
-					echo "</div>";	
+					echo "</div>";
+					$cocina_add = " ".$coci['nombre']." ".$coci['modelo']." / ".$cocina_add;
+					$sumCocina = $subTotalCoci + $sumCocina;
 		}
+		
+		//echo "cocina: ".$cocina_add;
 		
 		$new_venti = array();
 		$new_venti = $_SESSION['venti'];
@@ -304,7 +329,7 @@ session_start();
 		
 		foreach ($new_venti as $venti) {
 				echo "<div id=\"print-items-cajas-prod\">";
-					echo "<div class=\"caja base-40\">";
+					echo "<div class=\"caja base-20\">";
 						echo "<p>".$venti['nombre']." ".$venti['modelo']."</p>";
 					echo "</div>";
 					echo "<div class=\"caja base-20\">";
@@ -318,7 +343,11 @@ session_start();
 						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalVenti,0,",",".")."</span></p>";	
 					echo "</div>";
 					echo "</div>";	
+					$ventilacion_add = " ".$venti['nombre']." ".$venti['modelo']." / ".$ventilacion_add;
+					$sumVenti = $subTotalVenti + $sumVenti;
 		}
+		
+		//echo "ventilacion: ".$ventilacion_add;
 		
 		$new_accParri = array();
 		$new_accParri = $_SESSION['accParri'];
@@ -327,7 +356,7 @@ session_start();
 		
 		foreach ($new_accParri as $accParri) {
 				echo "<div id=\"print-items-cajas-prod\">";
-					echo "<div class=\"caja base-40\">";
+					echo "<div class=\"caja base-20\">";
 						echo "<p>".$accParri['nombre']." ".$accParri['modelo']."</p>";
 					echo "</div>";
 					echo "<div class=\"caja base-20\">";
@@ -340,9 +369,12 @@ session_start();
 						$subTotalaccParri = $accParri['cantidad'] * $accParri['precio'];
 						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalaccParri,0,",",".")."</span></p>";	
 					echo "</div>";
-					echo "</div>";	
+					echo "</div>";
+					$AccParrilla_add = " ".$accParri['nombre']." ".$accParri['modelo']." / ".$AccParrilla_add;
+					$sumAccParri = $sumAccParri + $subTotalaccParri;
 		}
 		
+		//echo "acc parrilla: ". $AccParrilla_add;
 		
 		$new_accLena = array();
 		$new_accLena = $_SESSION['accLena'];
@@ -351,7 +383,7 @@ session_start();
 		
 		foreach ($new_accLena as $accLena) {
 				echo "<div id=\"print-items-cajas-prod\">";
-					echo "<div class=\"caja base-40\">";
+					echo "<div class=\"caja base-20\">";
 						echo "<p>".$accLena['nombre']." ".$accLena['modelo']."</p>";
 					echo "</div>";
 					echo "<div class=\"caja base-20\">";
@@ -364,16 +396,78 @@ session_start();
 						$subTotalaccLena = $accLena['cantidad'] * $accLena['precio'];
 						echo "<p class=\"centrarItems\">$<span>".number_format($subTotalaccLena,0,",",".")."</span></p>";	
 					echo "</div>";
-					echo "</div>";	
+					echo "</div>";
+					$AccLena_add = " ".$accLena['nombre']." ".$accLena['modelo']." / ".$AccLena_add;
+					$sumAccLena = $sumAccLena + $subTotalaccLena;
 		}
 		
+		//echo "acc lena: ".$AccLena_add;
 		
-	  $totalCotizacion = @$subTotalCalefa + @$subTotalParri + @$subTotalCoci + @$subTotalVenti + @$subTotalaccParri + @$subTotalaccLena;
+	  $totalCotizacion = @$sumarCalefa + @$sumaParrilla + @$sumCocina + @$sumVenti + @$sumAccParri + @$sumAccLena;
 	  $totalFinalMasIva = (($totalCotizacion * 1.19) / 100) + $totalCotizacion;
 	  
+	  $productos_agregar = $calefa_add." ".$parrilla_add." ".$cocina_add." ".$ventilacion_add." ".$AccParrilla_add." ".$AccLena_add;
 	  
+	  //echo "productos agregar: ".$productos_agregar;
 	  ?>
-	  	 
+	  	<?php
+		
+		//$productos_cotizar = 
+		date_default_timezone_set("America/Santiago");
+		$date =  date("Y-m-d h:i:sa");
+		$timestamp = date('Y-m-d H:i:s', strtotime($date));
+		
+		//aqui hago un update con los productos
+		mysqli_query($conexion, "UPDATE cotizacion SET productos_cotizados = '$productos_agregar', timestamp = '$timestamp'  WHERE id_cotizacion = '$last_id' ") or
+									die("Problemas en el update:".mysqli_error($conexion));
+		
+		
+		
+		$user = $email;
+		$subject = "Cotización generada en página web Bosca";
+		$headers = "From: Página web Bosca <noreply@bosca.cl>";
+		$message = "Datos del usuario que hace la solicitud de cotización: 
+		
+	Nombre: $nombre
+	Apellido: $apellido
+	Rut: $rut
+	Telefono: $telefono
+	Email: $email
+	Dirección despacho: $direccion_despacho
+	Tipo cotización: $tipo_cotizacion
+	Dirección factura: $direccion_factura
+	Desea instalación: $instalacion
+	Desea despacho: $despacho
+	
+	Productos que cotiza: $productos_agregar
+	
+	Datos del despacho (solo si fueron agregados por el cliente):
+	Región: $regionesDespacho
+	Provincia: $provinciaDespacho
+	Calle: $calleDespacho
+	Nro: $nroDptoDespacho
+	
+	Datos de la entrega de la factura (solo si fueron agregados por el cliente):
+	Región: $regionesFactura		
+	Provincia: $provinciaFactura
+	Calle: $calleFactura
+	Nro: $nroDptoFactura
+	
+	Datos de la factura (solo si fueron agregados por el cliente):
+	Nombre o razón social: $nombre_factura
+	Rut: $rut_factura
+	Telefono: $telefono_factura
+	Giro: $giro_factura
+	
+		
+		";
+		
+		//mail($user,$usersubject,$usermessage,$userheaders);	
+		mail($user, '=?utf-8?B?'.base64_encode($subject).'?=' ,$message, $headers );
+		
+		?>
+		
+		
 	  
       <div id="print-items-cajas-prod-total">
         <div class="caja base-40"></div>

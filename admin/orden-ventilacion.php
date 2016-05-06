@@ -26,12 +26,12 @@ $mysqli = new mysqli('localhost','root','123','bosca');
 	if(isset($_POST["submit"])) {
 		$id_ary = explode(",",$_POST["row_order"]);
 		for($i=0;$i<count($id_ary);$i++) {
-			$mysqli->query("UPDATE producto SET orden='" . $i . "' WHERE id_producto=". $id_ary[$i]);
+			$mysqli->query("UPDATE ventilacion SET orden='" . $i . "' WHERE id_ventilacion=". $id_ary[$i]);
 		}
 	}
 	
 	$mysqli->set_charset("utf8");
-	$result = $mysqli->query("SELECT * FROM producto ORDER BY orden");
+	$result = $mysqli->query("SELECT * FROM ventilacion ORDER BY orden");
 	//	$acentos = $mysqli->query("SET NAMES 'utf8'");
 
 ?>
@@ -98,6 +98,7 @@ $mysqli = new mysqli('localhost','root','123','bosca');
 	  });
 	  
 	  function saveOrder() {
+		alert('Orden actualizado y guardado correctamente');
 		var selectedLanguage = new Array();
 		$('ul#sortable-row li').each(function() {
 		selectedLanguage.push($(this).attr("id"));
@@ -124,7 +125,7 @@ $mysqli = new mysqli('localhost','root','123','bosca');
 				<div class="col-md-12">
 					<h3 class="text-center bread-back">
 						<?php
-						echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"calefaccion-home.php\">Tipo de producto: Calefacción</a> - Ordenar calefacción";
+						echo "<a class=\"bread\" href=\"index.php\">Inicio</a> - <a class=\"bread\" href=\"ventilacion-home.php\">Tipo de producto: Ventilación y A/C </a> - Ordenar productos: ventilación y A/C";
 						?>
 					</h3>
 
@@ -139,7 +140,7 @@ $mysqli = new mysqli('localhost','root','123','bosca');
 							<?php
 							while($row = $result->fetch_assoc()) {
 							?>
-							<li id=<?php echo $row["id_producto"]; ?>><?php echo $row["modelo"]; ?></li>
+							<li id=<?php echo $row["id_ventilacion"]; ?>><?php echo $row["nombre"]." / ".$row['modelo']; ?></li>
 							<?php 
 							}
 							$result->free();

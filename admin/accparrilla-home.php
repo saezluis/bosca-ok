@@ -99,7 +99,12 @@ session_start();
 								<?php
 								echo "<a href=\"el-accparrilla.php\">Eliminar productos</a>";
 								?>
-							</li>							
+							</li>
+							<li>
+								<?php
+								echo "<a href=\"ordenar-accparrilla.php\">Orden del producto</a>";
+								?>
+							</li>
 						</ul>
 					</div>
 				</div>

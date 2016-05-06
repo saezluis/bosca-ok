@@ -122,27 +122,27 @@ if(isset($_POST['cotizar_prod'])) {
 	
 	
 	if($variable==''){
-		$registros=mysqli_query($conexion,"select * from cocinas") or die("Problemas en el select:".mysqli_error($conexion));		
+		$registros=mysqli_query($conexion,"select * from cocinas ORDER BY orden ASC") or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 		
 	
 	if($variable=='valor1'){
-		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Cocina Calefactora'") 
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Cocina Calefactora' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));	
 	}
 		
 	if($variable=='valor2'){
-		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Cocina a leña'") 
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Cocina a leña' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor3'){
-		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Horno a leña'") 
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Horno a leña' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor4'){
-		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Caldera'") 
+		$registros=mysqli_query($conexion,"select * from cocinas WHERE nombre = 'Caldera' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	

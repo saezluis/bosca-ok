@@ -122,26 +122,26 @@ if(isset($_POST['cotizar_prod'])) {
 	
 	
 	if($variable==''){
-		$registros=mysqli_query($conexion,"select * from ventilacion") or die("Problemas en el select:".mysqli_error($conexion));		
+		$registros=mysqli_query($conexion,"select * from ventilacion ORDER BY orden ASC") or die("Problemas en el select:".mysqli_error($conexion));		
 	}	
 	
 	if($variable=='valor1'){
-		$registros=mysqli_query($conexion,"select * from ventilacion WHERE nombre = 'AIRE ACONDICIONADO'") 
+		$registros=mysqli_query($conexion,"select * from ventilacion WHERE nombre = 'AIRE ACONDICIONADO' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));	
 	}
 		
 	if($variable=='valor2'){
-		$registros=mysqli_query($conexion,"select * from ventilacion WHERE anexo_nombre = 'Ventilador'") 
+		$registros=mysqli_query($conexion,"select * from ventilacion WHERE anexo_nombre = 'Ventilador' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor3'){
-		$registros=mysqli_query($conexion,"select * from ventilacion WHERE nombre = 'ENFRIADOR DE AIRE'") 
+		$registros=mysqli_query($conexion,"select * from ventilacion WHERE nombre = 'ENFRIADOR DE AIRE' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
 	if($variable=='valor4'){
-		$registros=mysqli_query($conexion,"select * from ventilacion WHERE nombre = 'KIT VENTANA'") 
+		$registros=mysqli_query($conexion,"select * from ventilacion WHERE nombre = 'KIT VENTANA' ORDER BY orden ASC ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	

@@ -259,7 +259,7 @@
 	
 		$(document).ready(function(){
 			//alert('test');
-			$("#div1").load("huechuraba.php");
+			$("#div1").load("huechuraba2.php");
 		});
 		
 		function Vregion(){
@@ -267,7 +267,7 @@
 		}
 		
 		function huechuraba(){
-			$("#div1").load("huechuraba.php");
+			$("#div1").load("huechuraba2.php");
 		}
 		
 		function Chicureo(){
@@ -323,7 +323,7 @@
 	
 	include_once 'config.php';
 		
-	 $conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
+	$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	
 	if(isset($_REQUEST['nombres']) and isset($_REQUEST['email'])){

@@ -79,7 +79,12 @@ session_start();
 								<?php
 								echo "<a href=\"el-cocina.php\">Eliminar productos</a>";
 								?>
-							</li>							
+							</li>
+							<li>
+								<?php
+								echo "<a href=\"ordenar-cocina.php\">Orden del producto</a>";
+								?>
+							</li>
 						</ul>
 					</div>
 				</div>

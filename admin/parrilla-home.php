@@ -61,7 +61,12 @@
 								<?php
 								echo "<a href=\"el-parrilla.php\">Eliminar productos</a>";
 								?>
-							</li>							
+							</li>
+							<li>
+								<?php
+								echo "<a href=\"orden-terraza.php\">Orden del producto</a>";
+								?>
+							</li>
 						</ul>
 					</div>
 				</div>

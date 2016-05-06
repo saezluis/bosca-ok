@@ -127,7 +127,7 @@ session_start();
 								</div>
 								<div id="panel-element-89965" class="panel-collapse collapse">
 									<div class="panel-body">
-										<a href="#">Consultar</a>
+										<a href="consultar-sucursal.php">Consultar</a>
 									</div>
 									<div class="panel-body">
 										<a href="#">Agregar</a>
