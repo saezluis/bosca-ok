@@ -2143,8 +2143,8 @@ section.margen-top{
 
 
 		.upload {
-		    width: 25%;
-		    height: auto;
+		    width: 100%;//25
+		    height: 3.5em;
 		    position: relative;
 		    background: $color-corporativo;
 		    cursor:pointer;
@@ -2160,7 +2160,7 @@ section.margen-top{
 				width: 30%;
 			}
 			@include desde (web){
-				width: 25%;
+				width: 26%;
 			}
 
  			p{
@@ -2190,13 +2190,17 @@ section.margen-top{
 
 		.confirmacion{
 			position: absolute;
-			top: 10px;
-			left: 180px;
+			top: 60px;
+			left: 0px;
 			@include desde (tablet){
-				left:200px
+				left:200px;
+				top:0px;
 			}
 			@include desde (web){
-				left:180px
+				left:180px;
+			}
+			@include desde (hd){
+				left:188px;
 			}
 		}
 
