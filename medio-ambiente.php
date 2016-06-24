@@ -215,7 +215,21 @@
                       </div>
                     </article>
                     <article class="tab_content" id="tab26">
+					<!--
                       <h3 class="font-lena">Muy pronto tendremos novedades.</h3>
+					  -->
+					 <div align="center"> <img src="img/logo_copy.png" height="300" width="300"></div>
+					  <p>En Bosca Chile estamos enfocados en ofrecer un servicio de calidad, generando el mínimo efecto secundario al medio ambiente. 
+					  En pro de llevar más allá nuestro compromiso ambiental, creamos la campaña digital “Ponle un Sello Verde a este invierno”, que 
+					  busca incentivar a la comunidad BOSCA a contribuir día a día con la disminución de daños ambientales que son causados por actividades 
+					  cotidianas, por la simple razón de desconocer sus efectos dañinos.
+					  </p>
+						
+					  <p>
+						Entregando tips de ahorro de energía, reciclaje y otras buenas prácticas que se pueden aplicar tanto en el hogar como en el 
+						entorno laboral, buscamos mantener a nuestra comunidad consciente de que con pequeños detalles se puede lograr un gran cambio. 
+
+						Con esta campaña, BOSCA sigue afirmando su Sello Verde sobre el planeta.</p>
                     </article>
                     <article class="tab_content" id="tab27">
                       <p class="certificacion-amb">Al hablar de  leña como combustible hay que tener en consideración tres aspectos fundamentales: la humedad de la madera,  la tecnología de la cámara de combustión y costumbre de los usuarios.</p>

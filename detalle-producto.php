@@ -159,6 +159,8 @@ if(isset($_POST['cotizar_prod'])) {
 		
 		$color = $reg['color'];
 		
+		$vermiculita_refractaria = $reg['vermiculita_refractaria'];
+		
 	}
 		
 	
@@ -325,35 +327,44 @@ if(isset($_POST['cotizar_prod'])) {
           </div>
           <div class="caracteristicas--producto bor">
 		  <?php
-			if($logo_detalle=='climastar'){
-				echo "<p class=\"caracteristicas--titulo\">características</p>";
-            echo "<div class=\"caract--datos\">";
-              echo "<ul>";                
-                echo "<li>";
-                  echo "<p class=\"potencia\">Potencia:  <span class=\"datos--d\"> $potencia </span></p>";
-                echo "</li>";
-                echo "<li>";
-                  echo "<p class=\"calefa\">Á. Calefacción: <span class=\"datos--d\"> $area </span></p>";
-                echo "</li>";
-                echo "<li>";
-                  echo "<p class=\"dimension\">Dimensión: <span class=\"datos--d\"> $dimension </span></p>";
-                echo "</li>";                
-				echo "<li>";
-						  echo "<p class=\"diametro\">Tipo de control: <span class=\"datos--d\"> $mini_descripcion </span></p>";
-				echo "</li>";
-                echo "<li>";
-                  echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"> $garantia </span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
-                echo "</li>";
-              echo "</ul>";
-			  echo "</div>";
-             //echo "</div><a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
-			}else{
+		  
+			if($sku=='-'){
 					echo "<p class=\"caracteristicas--titulo\">características</p>";
 					echo "<div class=\"caract--datos\">";
 					  echo "<ul>";
 						echo "<li>";
-						  echo "<p class=\"carga\">Carga:  <span class=\"datos--d\">Tipo Superior</span></p>";
+						  echo "<p class=\"carga\">Rendimiento:  <span class=\"datos--d\"> $vermiculita_refractaria </span></p>";
 						echo "</li>";
+						echo "<li>";
+						  echo "<p class=\"potencia\">Consumo Pellet:  <span class=\"datos--d\"> $diametro </span></p>";
+						echo "</li>";
+						echo "<li>";
+						  echo "<p class=\"calefa\">Dimensión: <span class=\"datos--d\"> $dimension </span></p>";
+						echo "</li>";
+						/*
+						echo "<li>";
+						  echo "<p class=\"dimension\">Dimensión: <span class=\"datos--d\"> $dimension </span></p>";
+						echo "</li>";
+						
+						echo "<li>";
+						  echo "<p class=\"diametro\">Diámetro de cañon: <span class=\"datos--d\"> $diametro </span></p>";
+						echo "</li>";						
+						*/
+						echo "<li>";
+						  echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"> $garantia </span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
+						echo "</li>";
+					  echo "</ul>";
+					  echo "</div>";
+					  if($ficha_t!=''){
+						  echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\" target=\"_blank\">Descargar ficha técnica en pdf</a>";
+					  }				
+				}else{
+				
+				
+						if($logo_detalle=='climastar'){
+						echo "<p class=\"caracteristicas--titulo\">características</p>";
+					echo "<div class=\"caract--datos\">";
+					  echo "<ul>";                
 						echo "<li>";
 						  echo "<p class=\"potencia\">Potencia:  <span class=\"datos--d\"> $potencia </span></p>";
 						echo "</li>";
@@ -362,25 +373,57 @@ if(isset($_POST['cotizar_prod'])) {
 						echo "</li>";
 						echo "<li>";
 						  echo "<p class=\"dimension\">Dimensión: <span class=\"datos--d\"> $dimension </span></p>";
-						echo "</li>";
+						echo "</li>";                
 						echo "<li>";
-						  echo "<p class=\"diametro\">Diámetro de cañon: <span class=\"datos--d\"> $diametro </span></p>";
-						echo "</li>";						
+								  echo "<p class=\"diametro\">Tipo de control: <span class=\"datos--d\"> $mini_descripcion </span></p>";
+						echo "</li>";
 						echo "<li>";
 						  echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"> $garantia </span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
 						echo "</li>";
 					  echo "</ul>";
 					  echo "</div>";
-					  if($ficha_t!=''){
-						  echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
-					  }else{						  
-							//echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
-					  }
-					 
-						//<!--
-						//<a href=\"\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>
-						//-->
+					 //echo "</div><a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
+					}else{
+							echo "<p class=\"caracteristicas--titulo\">características</p>";
+							echo "<div class=\"caract--datos\">";
+							  echo "<ul>";
+								echo "<li>";
+								  echo "<p class=\"carga\">Carga:  <span class=\"datos--d\">Tipo Superior</span></p>";
+								echo "</li>";
+								echo "<li>";
+								  echo "<p class=\"potencia\">Potencia:  <span class=\"datos--d\"> $potencia </span></p>";
+								echo "</li>";
+								echo "<li>";
+								  echo "<p class=\"calefa\">Á. Calefacción: <span class=\"datos--d\"> $area </span></p>";
+								echo "</li>";
+								echo "<li>";
+								  echo "<p class=\"dimension\">Dimensión: <span class=\"datos--d\"> $dimension </span></p>";
+								echo "</li>";
+								echo "<li>";
+								  echo "<p class=\"diametro\">Diámetro de cañon: <span class=\"datos--d\"> $diametro </span></p>";
+								echo "</li>";						
+								echo "<li>";
+								  echo "<p class=\"garantia\">Garantía:  <span class=\"datos--d\"> $garantia </span><a href=\"#\" class=\"pdf--condiciones\">(ver condiciones)</a></p>";
+								echo "</li>";
+							  echo "</ul>";
+							  echo "</div>";
+							  if($ficha_t!=''){
+								  echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\" target=\"_blank\">Descargar ficha técnica en pdf</a>";
+							  }else{						  
+									//echo "<a href=\"fichas-tecnicas/$ficha_t\" class=\"descarga--fichas\">Descargar ficha técnica en pdf</a>";
+							  }
+							 
+								//<!--
+								//<a href=\"\" class=\"descarga--fichas\">Descargar manual de uso en pdf</a>
+								//-->
+						}
+				
+				
 				}
+		  
+			
+				
+				
 			?>
           </div>
         </div>

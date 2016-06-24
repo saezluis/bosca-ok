@@ -61,7 +61,7 @@ session_start();
 						<ul>
 							<li>
 								<?php
-								echo "<a href=\"consultar-calefaccion.php\">Consultar productos</a>";
+								echo "<a href=\"consultar-calefaccion2.php\">Consultar productos</a>";
 								?>
 								
 							</li>

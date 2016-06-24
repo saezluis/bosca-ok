@@ -50,6 +50,13 @@
             return false;
          }
 		 
+		 if( document.formgarantia.email.value == "" )
+         {
+            alert( "Por favor ingrese su Email" );
+            document.formgarantia.email.focus() ;
+            return false;
+         }
+		 
 		 if( document.formgarantia.modelo.value == "" )
          {
             alert( "Por favor ingrese el modelo de su producto" );
@@ -259,6 +266,10 @@
               <input name="nombre" type="text">
               <label>Apellido</label>
               <input name="apellido" type="text">
+			  
+			  <label>Email</label>
+              <input name="email" type="text">
+			  
               <label>Modelo del producto</label>
               <input name="modelo" type="text">
               <label>Número de serie del producto</label>
@@ -315,7 +326,7 @@
                 <div class="adjuntar">
                   
 				  <div class="upload">                    
-					<p>Adjuntar foto de producto</p>	 			
+					<p>Adjuntar foto de la boleta o servicio de instalación</p>	 			
 					<input type="file" name="userfile" onchange="cambioPic()">						
           </div>
 				  <div class="confirmacion">

@@ -24,14 +24,14 @@ if(isset($_POST['cotizar_prod'])) {
 <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
 <link rel="stylesheet" href="owl-carousel/owl.theme.css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-
+<!--
 <script src="main2.js"></script>
-
+-->
 <script src="sass/tema/js/scripts.js"></script>
 <script src="owl-carousel/owl.carousel.min.js"></script>
-
+<!--
 <link rel="stylesheet" href="main2.css">
-
+-->
 <script type="text/javascript">
 
 function validarmail(){
@@ -291,7 +291,7 @@ function comentario(){
     </div>
   </footer>  
 	
-	
+	<!--
 	<div id="boxes">
 	  <div style="display: none; position:relative;" id="dialog" class="window centrado-porcentual"> 
 			<!--
@@ -302,7 +302,7 @@ function comentario(){
 						<li>*ingresa tu clave (tres últimos dígitos de tu rut)</li>
 					</ul>
 				</div>
-				-->
+				
 				<div class="grupo">
 				  <div class="imgCupon">
 					<div class="caja base-100 tablet-100">
@@ -315,7 +315,7 @@ function comentario(){
                 De todas maneras, los invitamos a acercarse a nuestros locales de Avenida Americo Vespucio 2077 (Huechuraba), nuestro local en Casa Nororiente (Acceso lateral, Chicureo) o bien a contactarnos en <a class="mailto" href="mailto:ventas@bosca.cl" target="_top">ventas@bosca.cl</a> En caso de necesitar cualquier producto o servicio, estaremos encantados de atenderlos.
                 Muchos saludos a todos y todas.
             </p>
-<!-- 					  <div class="texti-L"><img src="img/texto-light.png" alt=""><a href="img/cupon.jpg" target="_blank" class="getCupon">¡Lo quiero!</a></div> -->
+<!-- 					  <div class="texti-L"><img src="img/texto-light.png" alt=""><a href="img/cupon.jpg" target="_blank" class="getCupon">¡Lo quiero!</a></div> 
 					</div>
 				  </div>
 				</div>
@@ -327,7 +327,7 @@ function comentario(){
 		</div>
 				<div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
 	</div>
-	
+	-->
   
 </body>
 </html>

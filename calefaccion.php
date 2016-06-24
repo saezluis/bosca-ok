@@ -153,7 +153,7 @@ if(isset($_POST['cotizar_prod'])) {
 	}
 	
 	if($variable=='valor2'){
-		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calefactor a pellet' ORDER BY orden ASC ") 
+		$registros=mysqli_query($conexion,"select * from producto where nombre = 'Calefactor a pellet' OR nombre = 'Estufa a pellet' ") 
 		or die("Problemas en el select:".mysqli_error($conexion));		
 	}
 	
